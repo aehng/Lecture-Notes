@@ -1,0 +1,38 @@
+# Lecture Notes Repository Gitignore
+all_notes.md
+cheatsheet*
+*.cheatsheet
+*.ig
+ig.*
+*.ig.*
+*.pic.*
+*.pre.*
+*.post.*
+answers.*
+idea*.md
+.notes
+
+# LibreOffice lockfiles
+.~lock.*.od?#
+.~lock.*.docx#
+.~lock.*.xlsx#
+.~lock.*.pptx#
+
+# C/C++ build detritus
+main
+tags
+cscope.*
+*.[od]
+
+# Java junk
+*.class
+.gradle
+build
+*.jar
+
+# Python cruft
+*.pyc
+__pycache__
+
+# Crufty cruft
+*.core
