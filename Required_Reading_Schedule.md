@@ -1,24 +1,24 @@
-# Fall 2022 CS 1440 Reading Schedule
+# Spring 2023 CS 1440 Reading Schedule
 
 **TMMM** = *The Mythical Man-Month* by Frederick P. Brooks, Jr.
 
 | Reading  | Module   | Week    | Dates         | Title
 |:--------:|:--------:|:-------:|:-------------:|--------------------------------------
-|          | Module 0 | Week 1  |  8/29 -  9/02 | 
-| 0        | Module 0 | Week 2  |  9/12 -  9/09 | [Simon Tatham: How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html)
-|          | Module 1 | Week 3  |  9/12 -  9/16 |
-| 1        | Module 1 | Week 4  |  9/19 -  9/23 | TMMM Ch. 1: The Tar Pit 
-|          | Module 2 | Week 5  |  9/26 -  9/30 | 
-| 2        | Module 2 | Week 6  | 10/03 - 10/07 | [How to Read Documentation](./Module2/How_to_Read_Documentation.md)
-|          | Module 3 | Week 7  | 10/10 - 10/14 | **Fall Break**
-| 3        | Module 3 | Week 8  | 10/17 - 10/21 | TMMM Ch. 6: Passing the Word
-|          | Module 4 | Week 9  | 10/24 - 10/28 |
-| 4        | Module 4 | Week 10 | 10/31 - 11/04 | TMMM Ch. 15: The Other Face
-|          | Module 5 | Week 11 | 11/07 - 11/11 | 
-| 5        | Module 5 | Week 12 | 11/14 - 11/18 | TMMM Ch. 16: No Silver Bullet
-|          | Module 6 | Week 13 | 11/21 - 11/25 | **Thanksgiving Break**
-| 6        | Module 6 | Week 14 | 11/28 - 12/02 | TMMM Ch. 2: The Mythical-Man Month   
-|          | Module 6 | Week 15 | 12/05 - 12/09 | 
+|          | Module 0 | Week 1  |  1/09 -  1/13 | 
+| 0        | Module 0 | Week 2  |  1/16 -  1/20 | [Simon Tatham: How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html)
+|          | Module 1 | Week 3  |  1/23 -  1/27 |
+| 1        | Module 1 | Week 4  |  1/30 -  2/03 | TMMM Ch. 1: The Tar Pit 
+|          | Module 2 | Week 5  |  2/06 -  2/10 | 
+| 2        | Module 2 | Week 6  |  2/13 -  2/17 | [How to Read Documentation](./Module1/How_to_Read_Documentation.md)
+|          | Module 3 | Week 7  |  2/20 -  2/24 | 
+| 3        | Module 3 | Week 8  |  2/27 -  3/03 | TMMM Ch. 6: Passing the Word
+|          | Module 4 | Week 9  |  3/06 -  3/10 | **Spring Break**
+| 4        | Module 4 | Week 10 |  3/13 -  3/17 | TMMM Ch. 15: The Other Face
+|          | Module 5 | Week 11 |  3/20 -  3/24 | 
+| 5        | Module 5 | Week 12 |  3/27 -  3/31 | TMMM Ch. 16: No Silver Bullet
+|          | Module 6 | Week 13 |  4/03 -  4/07 |
+| 6        | Module 6 | Week 14 |  4/10 -  4/14 | TMMM Ch. 2: The Mythical-Man Month   
+|          | Module 6 | Week 15 |  4/17 -  4/21 | 
 
 
 We will discuss passages from the readings in class and/or online.

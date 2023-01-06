@@ -9,7 +9,7 @@ Code examples written in class, demos and other important resources will be foun
 Clone the repository to your computer *(do this one time)*:
 
 ```
-$ git clone https://gitlab.cs.usu.edu/erik.falor/Sp23-CS1440-lecturenotes
+$ git clone https://gitlab.cs.usu.edu/erik.falor/sp23-cs1440-lecturenotes
 ```
 
 I would like you to *experiment* with the demo programs I include in the lectures.  This is my invitation for you to change and/or break my code.  You can put all files in the repository back to their original state with this command:
@@ -21,7 +21,7 @@ $ git restore :/
 Update your local repo with the latest notes *(do this after each lecture)*:
 
 ```
-$ cd Sp23-CS1440-lecturenotes
+$ cd sp23-cs1440-lecturenotes
 $ git restore :/
 $ git pull origin master
 ```
@@ -29,8 +29,10 @@ $ git pull origin master
 
 ## Table of Contents
 
-*   [This file](README.md)
-*   [To be determined](TBD.md)
+*   Outline of [Topics in CS 1440](./Outline_of_Topics.md)
+*   [What CS 1440 Is About](./What_CS_1440_Is_About.md)
+*   [Required Reading Schedule](./Required_Reading_Schedule.md) for the course
+*   Your Guide to [Using Git](./Using_Git/README.md)
 
 
 
@@ -47,7 +49,7 @@ images and media are left out.
 This program creates a read-only file called `all_notes.md`.
 
 ```
-$ cd Sp23-CS1440-lecturenotes
+$ cd sp23-cs1440-lecturenotes
 $ git pull origin master
 $ ./concatenate.sh
 ```

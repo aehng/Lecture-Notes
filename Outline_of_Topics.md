@@ -1,4 +1,4 @@
-# Fall 2022 CS 1440 Topic Outline
+# Spring 2023 CS 1440 Topic Outline
 
 ## Getting Started With Problem Solving
 *   Learning Your Tools
