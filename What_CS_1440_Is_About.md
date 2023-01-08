@@ -2,8 +2,9 @@
 
 ## This is not a class about programming 
 
-*   Writing programs that work is necessary, but not sufficient
-*   This is a class about solving problems
+*   Writing programs that work is necessary, but **not sufficient**
+*   This is a class about **solving problems**
+*   Programming is just a means to that end
 
 
 ### Let go of the notion that `Computer Science == Computer Programming`
