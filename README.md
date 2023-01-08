@@ -39,6 +39,7 @@ $ git pull origin master
 	* [Get to know your professor](./Module0/Lec01-Mon_Jan_09/README.md#get-to-know-your-professor)
 	* [You're hired](./Module0/Lec01-Mon_Jan_09/README.md#youre-hired)
 	* [What CS 1440 is about](./Module0/Lec01-Mon_Jan_09/README.md#what-cs-1440-is-about)
+	* [Problem-Solving Activity: When will you find time to sleep](./Module0/Lec01-Mon_Jan_09/README.md#problem-solving-activity-when-will-you-find-time-to-sleep)
 
 
 

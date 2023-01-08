@@ -1,42 +1,22 @@
 CS1440 - Monday, January 09 - Lecture 01 - Module 0
 
 # Topics:
-* [Announcements](#announcements)
 * [Get to know your professor](#get-to-know-your-professor)
 * [You're hired](#youre-hired)
 * [What CS 1440 is about](#what-cs-1440-is-about)
+* [Problem-Solving Activity: When will you find time to sleep](#problem-solving-activity-when-will-you-find-time-to-sleep)
 * [Action Items](#action-items)
 
 
 ------------------------------------------------------------
-# Announcements
-
-
-# Action Items
-
-*	Call on 2 designated questioners
-
-
-
 # Get to know your professor
 
+Hi, I'm Erik Falor, and I'm your professor this semester.
 
-<details>
-<summary><b>Section 001</b> Hi, I'm Joseph Ditton, and I'm your professor this semester. </summary>
+My family got our first computer for Christmas in 1994, when I was in eighth grade.  I always thought of myself as being "good with computers", but I didn't begin seriously programming until my second year of college when I was 21.  I was originally a Communications major because I debated and worked on the newspaper in High School.  I was not then, nor am I now, mathematically inclined.  Compared to my CS classmates I had a late start getting into programming, and I felt like I had to do a lot of catching up to get even with where they were.
 
-**BIO GOES HERE**
+I earned my Bachelor's in CS and worked as a software engineer for 13 years at Spillman Technologies, Inc. (now Motorola Solutions) and Automated Products Group.  In 2011 I joined the USU Master's program as a part-time remote student, and graduated fall 2016.  I taught a class as an adjunct the following spring semester, and loved it.  I have been teaching full-time since fall 2017.
 
-
-</details>
-
-
-<details>
-<summary><b>Section 002</b> Hi, I'm Erik Falor, and I'm your professor this semester. </summary>
-
-I graduated from USU with a Master's degree in Fall 2016 and have been teaching
-here ever since.  Before that, I worked as a software engineer for 13 years at
-Spillman Technologies, Inc. (now Motorola Solutions) and Automated Products
-Group.
 
 I spent my programming career:
 
@@ -55,46 +35,49 @@ I spent my programming career:
 
 
 <details>
-<summary>Some things I don't like</summary>
+<summary>Things I don't like</summary>
 
-0. Counting from `1`
-1. Microsoft Windows™
-2. Desktop Environments
-3. Office Suites with their pretentious "rich" file formats
-4. Your text editor
-5. Squishy keyboards
-6. QWERTY
-7. Mainstream music
-8. Emoji :confounded: :nauseated_face: :put_litter_in_its_place:
-
+0.  Counting from `1`
+1.  Microsoft Windows™
+2.  Desktop Environments
+3.  Office Suites with their pretentious "rich" file formats
+4.  Your text editor
+5.  Squishy keyboards and touch screens
+6.  QWERTY
+7.  Ball-point pens
+8.  Mainstream music
 
 </details>
 
 
 <details>
-<summary>Some things I do like</summary>
+<summary>Things I do like</summary>
 
-0. Counting from `0`
-1. Linux
-2. Tiling window managers
-3. OG plain-text files, Markdown, and $`\LaTeX`$
-4. Vim
-5. Mechanical keyboards
-6. Colehack - my own custom keyboard layout
-7. Lately I've been listening to a lot of post-hardcore
-8. Emoticons `:-D`
+0.  Counting from `0`
+1.  Linux
+2.  Tiling window managers
+3.  OG plain-text files, Markdown, and $`\LaTeX`$
+4.  Vim
+5.  Mechanical keyboards
+6.  Colehack - my own custom keyboard layout
+7.  Fountain pens
+8.  Lately I've been listening to shoegaze. Some bands I like
+    *   Nothing
+    *   Narrow Head
+    *   Gleemer
+    *   Airiel
+    *   Grivo
+    *   trauma ray
+    *   Pinkshinyultrablast
 
 </details>
 
-</details>
 
+There is no such thing as a "stupid question" in my classroom...
 
+![Ten Thousand - https://xkcd.com/1053/](./10-ten_thousand.png)
 
-There is no such thing as a "stupid question" in my classroom
-
-![Ten Thousand - https://xkcd.com/1053/](./12-ten_thousand.png)
-
-(Though some questions are not relevant to the lecture - you can ask me after class!)
+...though some questions are not germane to the lecture.  I'm always happy to stay after class to answer off-topic questions.
 
 
 
@@ -173,9 +156,34 @@ The purpose of this course is to prepare you to become a competent problem-solve
 
 
 
-##   [What CS 1440 is about](../../What_CS_1440_Is_About.md)
+# [What CS 1440 is about](../../What_CS_1440_Is_About.md)
 
 CS 1440 is **fundamentally different** than CS 1400.  This document helps you set the right expectations.
+
+
+
+# Problem-Solving Activity: When will you find time to sleep?
+
+Getting a college degree is a **lot** of work.  But exactly how much work are you in for?  Can you afford to have a job, a social life, or even to sleep?
+
+After all of this hard work, you should be able to call yourself an expert in your field, right?
+
+Since I am a programmer, my instinct is to write a program to figure this out.  But every time I dive straight in and write code, I get stuck.  A better way is to first *design* the program in my mind before I commit it to [code](./effort.py)
+
+Let's find answers to these questions in particular:
+
+*   How many hours per week I will need to spend on my classes?
+    *   ...
+*   How many hours of my Bachelor's degree actually go towards becoming a programmer?
+    *   ...
+*   How many hours per week I will have to have a job?
+    *   ...
+*   How many hours per week I will have in free time?
+    *   ...
+*   How many hours per week I will have to sleep?
+    *   ...
+*   How far away from being a "Gladwell Expert" will I be at the end of my degree?
+    *   ...
 
 
 
