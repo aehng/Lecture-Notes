@@ -29,17 +29,16 @@ $ git pull origin master
 
 ## Table of Contents
 
+*   Outline of [Topics in CS 1440](./Outline_of_Topics.md)
+*   [What CS 1440 Is About](./What_CS_1440_Is_About.md)
+*   [Required Reading Schedule](./Required_Reading_Schedule.md) for the course
+*   Your Guide to [Using Git](./Using_Git/README.md)
 
 ### Module 0
 01. [Monday, January 09](./Module0/Lec01-Mon_Jan_09/README.md)
 	* [Get to know your professor](./Module0/Lec01-Mon_Jan_09/README.md#get-to-know-your-professor)
 	* [You're hired](./Module0/Lec01-Mon_Jan_09/README.md#youre-hired)
 	* [What CS 1440 is about](./Module0/Lec01-Mon_Jan_09/README.md#what-cs-1440-is-about)
-
-*   Outline of [Topics in CS 1440](./Outline_of_Topics.md)
-*   [What CS 1440 Is About](./What_CS_1440_Is_About.md)
-*   [Required Reading Schedule](./Required_Reading_Schedule.md) for the course
-*   Your Guide to [Using Git](./Using_Git/README.md)
 
 
 
