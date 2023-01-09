@@ -127,6 +127,15 @@ The purpose of this course is to prepare you to become a competent problem-solve
     *   Check the **Syllabus** for their up-to-date office hours and contact info
     *   Jaxton Winder
         *   >
+            > Hello DuckieCorp interns! My name is Jaxton Winder (he/they). I grew up in Hurricane, Utah; 20 minutes from Zion National Park and St. George, Utah. I’m on my 6th year in Logan. 
+            > 
+            > I started at USU in Fall 2017, with intentions to be a graphic design major. Quickly jumped to Mechanical Engineering and then Civil Engineering before realizing I had *no* clue what to do with my life. The following year I decided to be a math tutor (in what is now known as the Aggie Math Learning Center), and found my life calling; helping others and teaching! I ended my first semester tutoring as a mathematics major (with a computational emphasis) with a CS minor, and quickly made that CS minor into a full blown CS major after taking the CS1440 course. I am now a masters student doing research into Computing Education with Dr. John Edwards. 
+            > 
+            > After my time as a math tutor, math TA, and creating course content for various calculus courses, I decided to become a CS Coach and TA for the CS1440 course. I believe this course is one of the most fundamental courses for your education. For any education, not just a computer science education. This is my 7th semester TAing for this course, and I have assisted Erik in creating various course materials. I’m also the manager of the CS Coaches.
+            > 
+            > In my free time I love to play, write, and listen to music. Local music keeps me going, so you might see me at WhySound this semester! I enjoy gaming, the outdoors, and learning new things. I’m involved in a few on campus organizations, including the ACM club, software development workshop, Science Council, and the Government Relations Council. I will be lobbying for student interests at the Utah State Legislature this semester with the GRC. Fun fact: I scuba dove and swam right under a shark this past winter break!
+            > 
+            > Please feel free to reach out for assistance with anything or to just get to know me better. My favorite part of this job is gaining so many wonderful relationships with the students of this course! I’m always in your corner and will do what I can to help you succeed. 
     *   Logan Smith
         *   > I grew up in Riverton, Utah, and I spent a few years living in Chicago, Illinois.
             > 
