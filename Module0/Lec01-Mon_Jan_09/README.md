@@ -38,11 +38,11 @@ I spent my programming career:
 <summary>Things I don't like</summary>
 
 0.  Counting from `1`
-1.  Microsoft Windows™
+1.  Corporate OSes (Microsoft Windows™, Apple OS X)
 2.  Desktop Environments
 3.  Office Suites with their pretentious "rich" file formats
 4.  Your text editor
-5.  Squishy keyboards and touch screens
+5.  Squishy keyboards, touch screens and mice
 6.  QWERTY
 7.  Ball-point pens
 8.  Mainstream music
@@ -88,71 +88,74 @@ Welcome to DuckieCorp, the consultancy firm for programmers who talk to themselv
 The purpose of this course is to prepare you to become a competent problem-solver who understands and uses the best software engineering techniques.
 
 
-## Get to know the course
-
 *   Course structure 
-    *   There are two sections of this course
-        *   **Section 001** taught by Joseph Ditton
-        *   **Section 002** taught by Erik Falor
+    *   [Topics covered in this course](../../Outline_of_Topics.md)
     *   These on-line lecture notes are your textbook
-        -   https://gitlab.cs.usu.edu/erik.falor/fa22-cs1440-lecturenotes
-*   [Topics covered in this course](../../Outline_of_Topics.md)
+        -   https://gitlab.cs.usu.edu/erik.falor/sp23-cs1440-lecturenotes
     *   Content and assignments are organized into Modules on Canvas
-    *   Complete the **Course Contract** ASAP
 *   Assignments (80% of your grade)
     *   Assignments here are large multi-stage projects as compared to the small exercises from CS 1400
     *   You have approximately 2 weeks per assignment
         -   This is *not* an invitation to procrastinate. Make every day count!
-    *   You *may* brainstorm your software design with your study buddies
+        -   A filled-out Software Development Plan is a **required part of each assignment**
+        -   Don't write any code at the beginning - make sure you first understand what the assignment is about
+    *   You *may* design & brainstorm with study buddies
     *   You *must* write your code individually
         *   *Do not* submit code you saw on Chegg, CourseHero, Stack Overflow, YouTube, the CS Discord, etc.
-    *   Submit assignments to GitLab only; nothing will be turned in on Canvas
-    *   Within 72 hours complete the **Assignment Reflection Quiz** for 5 points
+    *   Submit to GitLab only; there nothing to turn in on Canvas
+    *   After you submit your code, complete the **Assignment Reflection Quiz** for 5 points
 * Quizzes (10% of your grade)
-    *   Two kinds - **Practice Quizzes** and **Mastery Quizzes**
-    *   Practice quizzes
-        *   Prime you to learn new things at the beginning of the module
-        *   Help you to prepare for the graded quizzes
-        *   Take as many times as you like
-        *   These **do not** affect your grade
-    *   Mastery quizzes
-        *   Basic Canvas Quizzes
-        *   No Proctorio; please don't be the one who forces me to start using it
-        *   Test your mastery of concepts taught in the module
-        *   Due at the end of the module
-        *   May be taken **only one time**
-* Class participation (10% of your grade)
-    *   Meet your study buddies and form your network of software colleagues
-    *   50 points for in-class participation
-    *   50 points for being the Designated Questioner **one time**
-        *   You *can* get points for on-line discussions on Canvas
-        *   If you have a special circumstance, Designated Questioner can be done on-line as well (ask me)
+* Participation (10% of your grade)
+    *   50 points for being the Designated Questioner **one time only**
+    *   50 points for in-class participation activities, earned 5 points at a time
 *   Course Discord Server
     *   Participation on Discord is **optional**
     *   Get the sign up link by taking the **Discord Rules Quiz** on Canvas
 *   CS Coaching Center
-    *   Location: [Online](https://coach.cs.usu.edu)
+    *   Location: Old Main 304
     *   Hours
-        *   Mon - Fri: 9am to 9pm
-        *   Saturday: 12pm to 8pm
+        *	Mon - Thu: 10am to 8pm
+        *   Fri: 10am to 6pm
+        *	Saturday: 12pm to 6pm
+    *   [Online Queue](https://coach.cs.usu.edu)
     *   The coaches aren't there to write your code for you, they support you in doing the work yourself!
-    *   You must present a completed *Software Development Plan* before they will answer questions about your code.  This document is already *required* in this course, and it is necessary if you want their help.  The TAs and I will also ask for your plan when you come to us for help about assignments.
-    *   Coaches don't help you study for exams.  Do that with your study buddies.
-*   Joseph's Office Hours (Section 001)
-    *   IRL: Old Main room 420
-    *   Virtually:  Click the "Office Hours" link in Canvas
-    *   When: Every Thursday from 1pm to 4pm 
-*   Erik's Office Hours (Section 002)
+    *   When seeking coding help, bring your *Software Development Plan* and explain it to the coach. You don't want to be that person who asks for help with something that is completely unnecessary
+*   My Office Hours
+    *   When: Thursday 9am to 12pm
     *   IRL: Old Main room 418A
-    *   Virtually:  https://usu-edu.zoom.us/my/erik.falor?pwd=ZE4zNXRpNVl4VVhHNkN5Q2wwV3VrUT09
-    *   When: Every Thursday from 9am to 12pm
 *   Teaching Assistants
-    *   Jaxton Winder
-    *   Jenna Cioffi
-    *   Logan Smith
-	*	Santosh Aryal
-    *   Kobra Bohlourihajar
     *   Check the **Syllabus** for their up-to-date office hours and contact info
+    *   Jaxton Winder
+        *   >
+    *   Logan Smith
+        *   > I grew up in Riverton, Utah, and I spent a few years living in Chicago, Illinois.
+            > 
+            > I have been at USU studying CS since spring 2019. I took this class in fall 2019, and I liked is so much I decided to come and be a TA for it. 
+            > 
+            > About me:
+            > - I took 2 years of Japanese classes here.
+            > - I love video games, and also love board and card games.
+            > - I have been married since summer 2020
+            > 
+            > I am also working as the Computer Science department Peer Advisor, so you can reach me during my peer advising hours or during my office hours for this class. I will also try to respond to emails by the end of the work day on weekdays, and will try to be available to answer emails or discord messages outside those hours. Feel free to reach out for any help
+    *   Peter Fowles
+        *   > I am from:
+            > 
+            > - Fort Benton, Montana
+            > - Salem, Utah
+            > - San Jose, California
+            > - All over Texas
+            > 
+            > I have been studying Computer Science since Fall 2019, and I hope to graduate sometime in the next year or two. 
+            > 
+            > About me:
+            > 
+            > - I am a part of the USU Aggie Marching Band/Aggie Pep Band as a Tuba player
+            > - I have been married for just over a year and a half (I met my wife in the marching band during my first semester here in 2019)
+            > 
+            > I worked as a TA in CS1400 and in the coaching center for a year, after which I was employed as a software developer at the Space Dynamics Laboratory (SDL) for a year and a half. I really missed teaching, so I left that job very recently to TA for all of you, as well as work in the coaching center again! I look forward to working with you here. 
+            > 
+            > I believe that this class is the most essential and useful one that the CS department offers, since everything you will learn here will apply to everything you do in Computer Science, regardless of what you end up doing with it.
 
 
 
@@ -172,17 +175,17 @@ Since I am a programmer, my instinct is to write a program to figure this out.  
 
 Let's find answers to these questions in particular:
 
-*   How many hours per week I will need to spend on my classes?
+*   How many hours per week will I need to spend on classes?
     *   ...
-*   How many hours of my Bachelor's degree actually go towards becoming a programmer?
+*   How many hours per week can I sleep?
     *   ...
-*   How many hours per week I will have to have a job?
+*   How many hours per week can go towards a job?
     *   ...
-*   How many hours per week I will have in free time?
+*   How many hours of free time can I afford per week?
     *   ...
-*   How many hours per week I will have to sleep?
+*   How many hours of my Bachelor's degree actually go towards becoming a programmer (or your intended profession)?
     *   ...
-*   How far away from being a "Gladwell Expert" will I be at the end of my degree?
+*   How close to a 10k-hour "Gladwell Expert" will I be upon graduation?
     *   ...
 
 
