@@ -40,6 +40,12 @@ $ git pull origin master
 	* [You're hired](./Module0/Lec01-Mon_Jan_09/README.md#youre-hired)
 	* [What CS 1440 is about](./Module0/Lec01-Mon_Jan_09/README.md#what-cs-1440-is-about)
 	* [Problem-Solving Activity: When will you find time to sleep](./Module0/Lec01-Mon_Jan_09/README.md#problem-solving-activity-when-will-you-find-time-to-sleep)
+02. [Wednesday, January 11](./Module0/Lec02-Wed_Jan_11/README.md)
+	* [Be The Designated Questioner](./Module0/Lec02-Wed_Jan_11/README.md#be-the-designated-questioner)
+	* [Setting up your computer for DuckieCorp](./Module0/Lec02-Wed_Jan_11/README.md#setting-up-your-computer-for-duckiecorp)
+	* [Assignment #0: Shell Tutor](./Module0/Lec02-Wed_Jan_11/README.md#assignment-0-shell-tutor)
+	* [Why are we learning an interface straight out of the 70's](./Module0/Lec02-Wed_Jan_11/README.md#why-are-we-learning-an-interface-straight-out-of-the-70s)
+	* [Unix command line basics](./Module0/Lec02-Wed_Jan_11/README.md#unix-command-line-basics)
 
 
 

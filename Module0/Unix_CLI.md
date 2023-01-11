@@ -55,16 +55,16 @@ After installing Git on your computer, install and run through this tutorial.  Y
 
 ### Which shell should I use?
 
-*   Just use whatever is default on your computer.
-*   Both shells are reasonably similar syntax-wise
-    *   Everything you see me do in class will work identically in both shells
-    *   You won't notice differences until you become a power-user
+*   Use whatever is the default on your computer.
+*   Syntax-wise, both shells are similar.
+    *   Every command you see me run works equally well in both shells.
+    *   You won't notice the differences until you become a CLI power-user.
 *   I personally prefer `zsh`, but I won't try to convert you ;)
 
 
 #### Directory
 
-A.K.A. "folder"; a container for files and other directories
+A.K.A. "folder"; a container for files and other directories.
 
 
 #### Current working directory
@@ -77,13 +77,12 @@ Commands that use files and directories will look in the current directory first
 #### Subdirectory
 
 A directory within another directory; a directory that is a "child" of another
-directory
+directory.
 
 
 #### Parent directory
 
-The directory that contains a subdirectory
-
+The directory that contains a subdirectory.
 
 
 #### Prompt
@@ -110,9 +109,9 @@ A command may be
     `while`, `until`, `case`, `select`, `function`, etc.
 
 Not all of the commands that you run execute programs that are sitting out on
-the hard drive.  Many commands are actually functionality built into the shell
+the hard drive.  Many commands are actually functions built into the shell
 itself.  The distinction between external and built-in commands doesn't usually
-matter, but remembering that it is there will save you some confusion later.
+matter, but remembering that it is there can prevent confusion later.
 
 
 #### Argument
@@ -122,24 +121,49 @@ Extra information given to a command from the command line.
 Arguments may refer to objects on a computer system such as the names of files,
 directories, user names, or host names.
 
-While arguments may appear as integers, floating-point numbers, or other
-structures, they are always passed by the OS to a program as an array of
-strings.  It is the responsibility of the program accepting the arguments to
-convert these strings into other data types as necessary.
+Sometimes arguments look like integers, floats, or other complicated
+structures.  However, they are **always** received by the program as an array
+of strings.  It is the program's job to convert argument strings into other
+data types when needed.
 
 
 #### Option (also: Switch, Flag)
 
-A command-line argument that to modifies a program's behavior.
+A fancy name for an argument that modifies a program's behavior, and that
+**does not** represent a file, directory, user name, etc.
 
-In some programs the mere presence or absence of an option is enough to signal
-a change to the program's behavior.  These are often referred to as "boolean
-options" or "flags", though the former term has long since been abused into
-being a synonym for "option".
+In some programs the mere presence or absence of an option is enough to modify
+the program's behavior.  These are often referred to as "boolean options" or
+"flags", though the former term has long since been abused into being a synonym
+for "option".
 
-Some options must themselves be followed by further arguments in order to be
-meaningful.
+Some options take arguments of their own.
 
+
+### A word on "standard" arguments
+
+*   It is a Unix tradition that options begin with a dash `-` or a double-dash `--`
+    *   This tradition has been carried over to Microsoft PowerShell
+    *   The reason for this is that people *usually* don't give files names starting with `-`
+*   In MS-DOS and `cmd.exe` on Windows options start with a front-slash `/`
+
+Over the years much ink has been spilt debating over the *right* way to write command-line arguments.  Should options be short and easy to type?  Should they be long and descriptive?  Many standards have been proposed.  They are all equally invalid.
+
+![XKCD: Standards](./assets/standards.png)
+
+
+### Common command-line options
+
+Nevertheless, some options mean the same thing to many different programs:
+
+*   `--help` or `-h`
+    Print a help message that explains how to use the program
+*   `--verbose` or `-v`
+    Produce more output than usual
+*   `--version`, `-version`, sometimes `-V`
+    Report the version number of the program and exit
+
+Look before you leap and read the command's documentation before trusting this list.
 
 
 ## The Language of the Command Shell
@@ -148,7 +172,7 @@ The command shell is a simple programming language.  Unlike the other languages
 you are familiar with, this language is designed to be fast and easy to type
 interactively.
 
-*   Instructions tend to be brief
+*   Command names tend to be brief
 *   Very little punctuation is used
 *   There is only one data type: String
 *   Ease-of-use shortcuts such as tab completion are built-in to the interpreter
@@ -159,20 +183,20 @@ Shell commands follow this syntax:
 
 
 Commands, like functions in Python, may take arguments.  The square brackets
-surrounding `argument ...` in the example above indicate an optional portion.
+surrounding `argument ...` in the example above indicate an *optional* portion.
 The ellipsis means that there may be more arguments beyond the first one.  All
 together, this example means "_command_ takes zero or more arguments".
 
 Unlike Python and Java, parentheses do not surround the argument list and
-spaces are used to separate arguments from each other instead of commas.  When
-an argument contains white space it must be surrounded by quote marks (either
-single `'` or double-quotes `"` in a matching pair).
+commas do not separate arguments.  White space separates commands and arguments
+from each other.  If one argument needs to contain white space, surround it in
+quote marks (either single `'` or double-quotes `"`).
 
-Arguments are passed from the shell into the command as a list of strings.
-Each command verifies that the correct arguments were given.  It is up to the
-command to decide how many arguments it needs as well as the meaning of each
-argument.  For example, if an argument should be regarded as an integer, it is
-the responsibility of the command to convert that string into its numeric form.
+Arguments are given by the shell to the command as a list of *strings*.  It is up
+to the command to decide how many arguments it needs as well as the meaning of
+each argument.  For example, if an argument should be regarded as an integer,
+it is the responsibility of the command to convert that string into its numeric
+form.
 
 
 ### Elementary Shell commands
@@ -196,31 +220,8 @@ Make a new directory             |  `mkdir DIR0 [DIR1...]`
 Remove an empty directory        |  `rmdir DIR0 [DIR1...]` (only works on empty dirs)
 
 
-### A word on "standard" command-line arguments
-
-Options can be preceded by zero, one or two hyphens.  Options for commands for
-`cmd.exe` on Windows are even preceded by a front slash `/`.  There are many
-standards governing the *right* way to present command-line arguments.  They
-are all equally invalid.
-
-![XKCD: Standards](./assets/standards.png)
-
-
-### Common command-line options
-
-Nevertheless, there are some options which mean the same thing to many
-different programs.  Check the documentation before trusting this list;
-before you leap
-
-*   `--help` or `-h`
-    Print a usage message
-*   `--verbose` or `-v`
-    Produce more output than usual
-*   `--version`, `-version`, sometimes `-V`
-    Report the version number of the program
-
-
 ## Changing directories
+
 The `cd` command changes your working directory.  In the examples below the '$'
 represents your prompt.  Don't type the '$'; type the text that follows.
 
@@ -243,7 +244,6 @@ Go to a directory under your home named 'workspace':
 You can quickly return to your home by running `cd` with no arguments:
 
     $ cd
-
 
 
 ## Dotfiles
@@ -294,3 +294,6 @@ editor to manage your dotfiles.  For example, you can control which files `git`
 will ignore by editing a dotfile called `.gitignore` using `nano`:
 
     $ nano .gitconfig
+
+
+*Updated Tue Jan 10 23:25:33 MST 2023*
