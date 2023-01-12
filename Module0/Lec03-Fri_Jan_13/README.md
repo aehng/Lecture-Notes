@@ -24,6 +24,20 @@ Dates and topics of the next few meetings:
 *   Feb 16: Practicing in Elixir & Erlang by building distributed, scalable, multiplayer terminal games over SSH
 
 
+## Cache Valley UT Developer Community
+
+*   **What**  Deno - ["The easiest, most secure JavaScript runtime"](https://deno.land)
+*   **When**  7:00pm Thursday, January 19th
+*   **Where** Bridgerland Technical College (1301 N 600 W, Logan)
+    *   Room 840
+
+We are kicking off a new professional group, the Cache Valley UT Developer Community, and wanted to extend an invite. We will meet every third Thursday at Bridgeland Technical College starting in 2023.
+
+Follow or join us on social media:
+
+*   [Discord Community](https://discord.gg/J867CsHJaG)
+*   [Twitter account](https://twitter.com/cache_dev)
+
 
 # Action Items
 
