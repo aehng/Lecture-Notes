@@ -231,7 +231,7 @@ presently in
     $ cd ..
 
 
-_Protip_: The tilde '~' character is shorthand for your home directory.
+_Protip_: The tilde `~` character is shorthand for your home directory.
 
 Return to your home directory regardless of your current location
 
@@ -279,7 +279,94 @@ Git and SSH are two programs you will use this semester whose behavior is
 governed by dotfiles.
 
 
-### Creating a dotfile on Windows
+
+### Which dotfile does my shell use?
+
+*   **Zsh** is configured by the file `~/.zshrc`
+*   **Bash** is configured by the file `~/.bashrc`
+
+_Fun fact_: The **rc** in the filename stands for *run commands*.  It is another tradition carried over from the early days of computing.  From Brian Kernighan and Dennis Ritchie, as told to Vicki Brown:
+
+> There was a facility that would execute a bunch of commands stored in a file; it was called runcom for "run commands", and the file began to be called "a runcom". rc in Unix is a fossil from that usage.
+>
+> https://kb.iu.edu/d/abnd
+
+
+Some people regard **rc** as an abbreviation for "resource", and refer to a program's startup files as *resource files*.
+
+
+
+### Which shell am I using?
+
+*   The path of the shell program you are currently running is stored in a variable called `$SHELL`.
+*   You can what it says with this command:
+    *   ```
+        $ echo $SHELL
+        ```
+*   The important part is the *last word* that you see; it should be either one of `bash` or `zsh`.
+    *   If you see something else, contact the instructor.
+
+
+
+### Warning: Don't lock yourself out of your shell!
+
+Before I tell you how to add things to your shell's configuration file, I need to warn you that it is possible to render your shell inoperable with a poorly-written dotfile.  The dotfile is one of the first things your shell encounters as it starts up.  A syntax error or bad command can cause the shell to crash before you even have a chance to see the error message.
+
+There is an easy way to avoid this from happening - leave a shell running in one terminal window while you edit your configuration file in another.  That shell is your **lifeboat**.  *Do not exit the lifeboat until you have seen a new shell successfully launch and stay running!*
+
+_Fun fact_: you can play a silly prank on your friends by hiding the `exit` command somewhere in their shells' dotfiles!  I accept no responsibility for what happens to you if you actually try this.
+
+
+### What to put in your dotfile
+
+You can include any commands that you would like to run upon opening a new terminal.  Anything that you can do at the command line is fair game inside this file.  The commands are run just the same as when you type them yourself.
+
+Just like Python, comments begin with a pound sign `#`.
+
+You can nerf dangerous commands by defining **aliases** that make the shell automatically run the *safe* version of the command when you attempt to run the dangerous one.  For example, the commands `cp`, `mv` and `rm` can destroy or overwrite files without warning.  Each of these commands takes an `-i` option that prompts you for confirmation before doing something permanent.  These aliases cause the shell to add this option when you run these commands:
+
+    # protect me from myself
+    alias rm='rm -i'
+    alias cp='cp -i'
+    alias mv='mv -i'
+
+
+You'll see me make lots of spelling mistakes at the command line that my computer ignores.  This works with aliases; I *teach* my shell my most common typos so that it knows what I mean:
+
+    # because I don't psell wrods gud...
+    alias cs=cd
+    alias ecoh=echo
+    alias ehco=echo
+    alias gti=git
+    alias pyhton=python
+    alias scd=cd
+    alias sl=ls
+
+
+Your shell can greet you when you log in:
+
+    echo "    .--."
+    echo "   |o_o |   Welcome home, $USER"
+    echo "   |:_/ |   Right now it is"
+    echo "  //   \ \  $(date)"
+    echo " (|     | )"
+    echo "/'|_   _/'\"
+    echo "\___)=(___/"
+
+
+This my Zsh prompt.  When you copy this, don't leave off the double quotes!
+
+    PROMPT="$ZSH_VERSION %(?..%F{white}%K{red}%?%k%f %S)%B%F{green}%n%f@%F{red}%B%M%f%(?..%s) %~ %# "
+
+One nice thing is that the status code of a failed command shows up in red, and the username and hostname are printed in standout mode.  This makes it more obvious when the previous command doesn't work.
+
+This is my Bash prompt.  It is like the Zsh prompt without the failure code trick:
+
+    PS1="\V \[\e[1;32m\]\u\[\e[0m\]@\[\e[1;31m\]\h\[\e[0m\] \w \$ "
+
+
+
+### Creating dotfiles on Windows
 
 Programs following the Unix tradition (e.g. git) still use dotfiles even when
 they are modified to run on Windows.  In the Windows OS the concept of "file
@@ -296,4 +383,4 @@ will ignore by editing a dotfile called `.gitignore` using `nano`:
     $ nano .gitconfig
 
 
-*Updated Tue Jan 10 23:25:33 MST 2023*
+*Updated Wed Jan 11 17:27:11 MST 2023*
