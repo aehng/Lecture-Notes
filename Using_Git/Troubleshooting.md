@@ -6,19 +6,75 @@
 
 ## Table of Contents
 
+* ["The project you were looking for could not be found."](#the-project-you-were-looking-for-could-not-be-found)
 * [Changing a project's URL on GitLab](#changing-a-projects-url-on-gitlab)
 * [Renaming a project in GitLab](#renaming-a-project-in-gitlab)
 * [Deleting a project from GitLab](#deleting-a-project-from-gitlab)
 * [Git asks for my username and password, but freezes when i enter the password](#git-asks-for-my-username-and-password-but-freezes-when-i-enter-the-password)
 * [I've created an ssh key but gitlab still asks for a password](#ive-created-an-ssh-key-but-gitlab-still-asks-for-a-password)
 * [On MacOS git gives an 'xcrun error'](#on-macos-git-gives-an-xcrun-error)
-* ["The project you were looking for could not be found."](#the-project-you-were-looking-for-could-not-be-found)
 * ["Permission denied" when I use 'git init' or 'git clone'](#permission-denied-when-i-use-git-init-or-git-clone)
 * [SSL certificate problem: unable to get local issuer certificate](#ssl-certificate-problem-unable-to-get-local-issuer-certificate)
 * [git fails with an SSH usage message](#git-fails-with-an-ssh-usage-message)
 * [git push says "No such file or directory" and 'Anaconda3' appears in the error message](#git-push-says-no-such-file-or-directory-and-anaconda3-appears-in-the-error-message)
 
 ------------------------------------------------------------
+
+## "The project you were looking for could not be found"
+
+> ... or you don't have permission to view it.
+
+
+This error is often accompanied by this message:
+
+> Please make sure you have the correct access rights and the repository exists
+
+
+While it *could* be the case that you are trying to access a private repository for which you lack access privileges, this error message is also given when you use an incorrect URL with `git`.
+
+The most common cause of this error is not putting your GitLab **USERNAME** into the URL.  The part of the URL following the server's hostname is **not** your firstname *dot* lastname; it is your **username**.   My GitLab username is `erik.falor`, which just happens to be my first and last names.  Your username probably doesn't follow that pattern.
+
+Check that the middle of the URL displayed by `git remote -v` matches the URL of your profile on GitLab.  You can find this URL by clicking your avatar in the upper-right corner of GitLab after logging in.
+
+The `set-url` subcommand of `git remote` lets you change a URL.  
+
+```
+Change this:                       vvvvvvvvvvvvvvvvvv
+             git@gitlab.cs.usu.edu:firstname.lastname/cs1440-lastname-firstname-assn0.git
+             git@gitlab.cs.usu.edu:Clever_Username119/cs1440-lastname-firstname-assn0.git
+  into this:                       ^^^^^^^^^^^^^^^^^
+```
+
+like this:
+
+```bash
+$ git remote set-url origin git@gitlab.cs.usu.edu:Clever_Username119/cs1440-lastname-firstname-assn0.git
+```
+
+### HTTPS in the repository's URL
+
+Alternatively, you may have somehow cloned a repository from an HTTPS address.
+It is straightforward to transform the repo's `https://` URL used by a browser
+into an SSH URL like this:
+
+0. Replace `https://` with `git@`
+1. Replace the 1st `/` after the hostname with `:`
+
+```
+Change this: vvvvvvvv                 v
+             https://gitlab.cs.usu.edu/erik.falor/sp23-cs1440-lecturenotes.git
+                 git@gitlab.cs.usu.edu:erik.falor/sp23-cs1440-lecturenotes.git
+       into: ^^^^^^^^                 ^
+```
+
+It is common to forget to change that first `/` into a `:`.  Make sure the remainder of the URL is spelled correctly.
+
+For example, to change `origin` to point to the SSH URL, run this command:
+
+```bash
+$ git remote set-url origin git@gitlab.cs.usu.edu:erik.falor/sp23-cs1440-lecturenotes.git
+```
+
 
 ## Changing a project's URL on GitLab
 
@@ -103,40 +159,6 @@ $ xcode-select --install
 ```
 
 This will open a window with the new terms and agreements for developer tools.  When you accept it will open up the install/update window and it will download and install/update the command line tools from Xcode.
-
-
-
-## "The project you were looking for could not be found."
-
-This error is often accompanied by this message from the remote server:
-
-```
-Please make sure you have the correct access rights and the repository exists
-```
-
-While it *could* be the case that you are trying to access a private repository for which you lack access privileges, this error message is also given when you access an incorrect URL.
-
-Check that the URL displayed by `git remote -v` matches *exactly* the URL to your repo on GitLab.  You can find this URL by clicking the `Clone` button in your repository's webpage.
-
-Alternatively, it is straightforward to transform the repo's `https://` URL used by a browser into an SSH URL like this:
-
-0. Replace `https://` with `git@`
-1. Replace the 1st `/` after the hostname with `:`
-
-```
-Change this: vvvvvvvv                 v
-             https://gitlab.cs.usu.edu/erik.falor/sp20-cs1440-lecturenotes.git
-                 git@gitlab.cs.usu.edu:erik.falor/sp20-cs1440-lecturenotes.git
-       into: ^^^^^^^^                 ^
-```
-
-Most often people forget to change that first `/` into a `:`.  Make sure the remainder of the URL is spelled correctly.
-
-The `set-url` subcommand of `git remote` changes a URL.  For example, if I want to set `origin` to point to the SSH URL, I run this command:
-
-```
-$ git remote set-url origin git@gitlab.cs.usu.edu:erik.falor/sp20-cs1440-lecturenotes.git
-```
 
 
 
