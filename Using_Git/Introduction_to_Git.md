@@ -60,7 +60,7 @@ Your journey starts with ten fundamental commands.
 |[git push](https://git-scm.com/docs/git-push)      | Send committed changes to a remote repository
 |[git pull](https://git-scm.com/docs/git-pull)      | Download and integrate changes from a remote repository
 
-As you explore git's capabilities [this reference](https://git-scm.com/docs) will be useful.
+As you explore Git's capabilities [this reference](https://git-scm.com/docs) will be useful.
 
 There is an eleventh command that we won't use in this class...
 
@@ -96,12 +96,16 @@ In the next document titled [Repository Setup](./Repository_Setup.md) you'll lea
 
 There are many great resources for learning Git in more depth on the web. This is a selection that previous students have recommended. Please use these to deepen your understanding of this important tool.
 
-
-*   Our GitLab server comes with a bunch of documentation built in.  Check out the
-    [Basics Guides](https://gitlab.cs.usu.edu/help/gitlab-basics/README.md#git-basics)
-*   This is an in-depth, detailed [Git Tutorial](https://git-scm.com/book/en/v1/Getting-Started) from the official Git site.
-*   [Git Documentation and Videos](https://git-scm.com/doc)
-*   [Git Command Cheatsheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
-*   [Git Tutorial on Codecademy](https://www.codecademy.com/learn/learn-git)
-*   [Getting Git Right](https://www.atlassian.com/git)
-*   [Learn Git With Bitbucket Cloud](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+*   Our GitLab server comes with a bunch of documentation:
+    *   [Make your first Git commit](https://gitlab.cs.usu.edu/help/tutorials/make_your_first_git_commit.md)
+    *   [Start using Git on the command line](https://gitlab.cs.usu.edu/help/gitlab-basics/start-using-git.md)
+    *   [Git Cheat Sheet (PDF)](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+*   Documentation from the official Git website:
+    *   A free, in-depth [Git Tutorial](https://git-scm.com/book/en/v2)
+    *   [Documentation and Videos](https://git-scm.com/doc)
+*   The GitHub [Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/)
+    *   The same, as a [PDF](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
+*   Documentation by Atlassian Bitbicket - a competitor to GitLab and GitHub
+    *   [Getting Git Right](https://www.atlassian.com/git)
+    *   [Learn Git With Bitbucket Cloud](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+*   Learn Git on [Codecademy](https://www.codecademy.com/learn/learn-git)
