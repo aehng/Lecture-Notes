@@ -32,17 +32,18 @@ This error is often accompanied by this message:
 
 While it *could* be the case that you are trying to access a private repository for which you lack access privileges, this error message is also given when you use an incorrect URL with `git`.
 
-The most common cause of this error is not putting your GitLab **USERNAME** into the URL.  The part of the URL following the server's hostname is **not** your firstname *dot* lastname; it is your **username**.   My GitLab username is `erik.falor`, which just happens to be my first and last names.  Your username probably doesn't follow that pattern.
+The most common cause of this error is not putting your GitLab **USERNAME** into the URL.  The part of the URL following the server's hostname is **not** your firstname *dot* lastname; it is your **username**.   My GitLab username is `erik.falor`, which just happens to be my first and last names.  Your username probably doesn't follow that pattern, and is probably something like `Clever_Username119`.
 
-Check that the middle of the URL displayed by `git remote -v` matches the URL of your profile on GitLab.  You can find this URL by clicking your avatar in the upper-right corner of GitLab after logging in.
+Check that the username in the middle of the URL shown by `git remote -v` matches your username on GitLab.  You can see your username by clicking on your avatar in the upper-right corner of GitLab while logged in.
 
 The `set-url` subcommand of `git remote` lets you change a URL.  
 
 ```
 Change this:                       vvvvvvvvvvvvvvvvvv
              git@gitlab.cs.usu.edu:firstname.lastname/cs1440-lastname-firstname-assn0.git
+
+into this:                         vvvvvvvvvvvvvvvvvv
              git@gitlab.cs.usu.edu:Clever_Username119/cs1440-lastname-firstname-assn0.git
-  into this:                       ^^^^^^^^^^^^^^^^^
 ```
 
 like this:
