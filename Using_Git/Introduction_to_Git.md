@@ -81,15 +81,20 @@ In CS 1440 I will always provide you with starter code, so you don't need to use
 
 While you could use the web interface to edit files in GitLab, it is more convenient to do your work in a local repository on your computer and use the `git` command to push your work to GitLab.
 
-Before you can do this on your own, you must watch the videos in Canvas that instruct you on installing and setting up Git, and setting up an SSH key for use with GitLab.
+Before you can do this on your own, you must work through the Shell Tutor lesson `5-ssh-key.sh` which helps you set up an SSH key for use with GitLab.  You will also find a video on Canvas that shows the same thing.
 
-In the next document titled [Repository Setup](./Repository_Setup.md) you'll learn how to
+You will need to set up a new SSH key if you change computers or re-install your operating system.
+
+
+The next document, titled [Repository Setup](./Repository_Setup.md), walks through the same concepts as the Shell Tutor lesson `6-git.sh`.  There you'll learn how to:
 
 *   Create a Git repo on your computer
 *   Edit code and commit it to the repository
 *	Create a new repo on my GitLab server to hold your code
 *   Push your changes to the new repo on GitLab
 *   Verify that your submission is correct
+
+Bookmark that file after you finish the Shell Tutor for reference on later assignments.
 
 
 ## Extra Git Tutorials
