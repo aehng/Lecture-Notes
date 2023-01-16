@@ -10,7 +10,24 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 
 This document introduces the most basic features of Markdown.  Much more is possible, but will be left to you to study on your own.
 
+## Table of Contents
+
+*   Headers
+*   Paragraphs
+*   Pre-formatted Code Blocks
+*   Tables
+*   Lists
+*   Checkboxes
+*   Hyperlinks
+*   Images
+*   Markdown Hints
+*   More resources
+
+
+
+
 ## Headers
+
 
 *   Begin a line of text with consecutive `#` to introduce a header.
 *   Markdown defines six (6) levels of header, using from 1 to 6 `#`'s
@@ -209,6 +226,17 @@ def code_blocks(with, programming, language, syntax, highlighting)
     1.  Numbers followed by a period `.`
     2.  Begin numbered sub-lists from `1.`
 ```
+
+## Task Lists
+
+*   [X] A bulleted or numbered list becomes a **task list** when the first item after the list marker is a pair of *square brackets* containing a space ` `, `x` or tilde `~`
+    *   [ ] *Incomplete* tasks are an empty pair of square brackets with a space in between `[ ]`
+    *   [X] *Completed* tasks are a pair of square brackets with an `X` in between `[X]`
+    *   [~] A cancelled or *inapplicable* task is a pair of square brackets surrounding a tilde `[~]`
+*   [ ] Task lists appear in the Software Development Plan to help you keep track of important tasks
+*   [X] These checkboxes are a *special feature* in GitLab
+    *   [ ] Not every Markdown system will recognizes these symbols
+
 
 ## Hyperlinks
 
