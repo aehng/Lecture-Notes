@@ -8,26 +8,27 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 *   HTML is a common markup language, but is hard to read in its raw form
     *   Markdown aims to produce documents that are readable to humans in their raw form, and simple to convert into HTML.
 
-This document introduces the most basic features of Markdown.  Much more is possible, but will be left to you to study on your own.
+This document introduces only the most basic features of Markdown.  More is possible, but is left for you to discover.
+
+You will notice that content is duplicated in the sections that follow.  After a Markdown feature is demonstrated, it is followed by a text block that shows what the Markdown source code looks like.
+
+
 
 ## Table of Contents
-
-*   Headers
-*   Paragraphs
-*   Pre-formatted Code Blocks
-*   Tables
-*   Lists
-*   Checkboxes
-*   Hyperlinks
-*   Images
-*   Markdown Hints
-*   More resources
-
+*   [Headers](#headers)
+*   [Paragraphs](#paragraphs)
+*   [Pre-formatted Code Blocks](#pre-formatted-code-blocks)
+*   [Tables](#tables)
+*   [Lists](#lists)
+*   [Checkboxes](#checkboxes)
+*   [Hyperlinks](#hyperlinks)
+*   [Images](#images)
+*   [Markdown Hints](#markdown-hints)
+*   [More resources](#more-resources)
 
 
 
 ## Headers
-
 
 *   Begin a line of text with consecutive `#` to introduce a header.
 *   Markdown defines six (6) levels of header, using from 1 to 6 `#`'s
@@ -50,14 +51,28 @@ This document introduces the most basic features of Markdown.  Much more is poss
 ```
 
 
+
 ## Paragraphs
 
 Consecutive lines of text are formed into paragraphs.
 Lines of text in paragraphs can be as long
 or as short
-as you want.
+as
+you
+want.
 
-Separate paragraphs with one or more blank lines.
+Indentation
+    is not preserved
+        by paragraphs.
+            The text is automatically 
+                re-flowed
+            to fit
+        the width
+    of the
+window.
+
+Separate paragraphs from one another with blank lines.
+
 Inside paragraphs you can write **bold text** by surrounding words with two asterisks, `**`.
 _Italicized text_ is surrounded by single underlines `_`.
 ~~Struck through text~~ is surrounded by double tildes `~~`.
@@ -68,15 +83,29 @@ A `code span` is created by surrounding text with a back-tick `` ` ``
 Consecutive lines of text are formed into paragraphs.
 Lines of text in paragraphs can be as long
 or as short
-as you want.
+as
+you
+want.
 
-Separate paragraphs with one or more blank lines.
+Indentation
+    is not preserved
+        by paragraphs.
+            The text is automatically 
+                re-flowed
+            to fit
+        the width
+    of the
+window.
+
+Separate paragraphs from one another with blank lines.
+
 Inside paragraphs you can write **bold text** by surrounding words with two asterisks, `**`.
 _Italicized text_ is surrounded by single underlines `_`.
 ~~Struck through text~~ is surrounded by double tildes `~~`.
 A `code span` is created by surrounding text with a back-tick `` ` ``
 (**_Hint_**: back-tick shares the same key as `~`).
 ```
+
 
 
 ## Pre-formatted Code Blocks
@@ -150,6 +179,7 @@ def code_blocks(with, programming, language, syntax, highlighting)
     ```
 
 
+
 ## Tables
 
 | Tables | with     | columns |
@@ -178,6 +208,7 @@ def code_blocks(with, programming, language, syntax, highlighting)
 | header | consists | of      |
 | dashes | .        |         |
 ```
+
 
 
 ## Lists
@@ -235,7 +266,18 @@ def code_blocks(with, programming, language, syntax, highlighting)
     *   [~] A cancelled or *inapplicable* task is a pair of square brackets surrounding a tilde `[~]`
 *   [ ] Task lists appear in the Software Development Plan to help you keep track of important tasks
 *   [X] These checkboxes are a *special feature* in GitLab
-    *   [ ] Not every Markdown system will recognizes these symbols
+    *   [ ] Not every Markdown system recognizes task lists
+
+```
+*   [X] A bulleted or numbered list becomes a **task list** when the first item after the list marker is a pair of *square brackets* containing a space ` `, `x` or tilde `~`
+    *   [ ] *Incomplete* tasks are an empty pair of square brackets with a space in between `[ ]`
+    *   [X] *Completed* tasks are a pair of square brackets with an `X` in between `[X]`
+    *   [~] A cancelled or *inapplicable* task is a pair of square brackets surrounding a tilde `[~]`
+*   [ ] Task lists appear in the Software Development Plan to help you keep track of important tasks
+*   [X] These checkboxes are a *special feature* in GitLab
+    *   [ ] Not every Markdown system recognizes task lists
+```
+
 
 
 ## Hyperlinks
@@ -263,11 +305,16 @@ Images are like Hyperlinks that start with a `!`.
     *   ![Meme: a man nervously deliberating which button to push](./assets/two-buttons.jpg "it's the one on the right...")
 
 
+
 ## Markdown Hints
 
-I **do not** recommend that you write Markdown directly in GitLab's Web IDE.  Although GitLab has a preview feature, it creates problems when syncing your code between the server and your computer.
-
-PyCharm and VS Code can display a live preview of Markdown files.  If you want to see what your Markdown files will look like as you write, this is the best way to go.
+*   **Do not** write Markdown directly in GitLab's Web IDE.
+    *   Although GitLab has a preview feature, it creates problems when syncing your code between the server and your computer.
+    *   PyCharm and VS Code can display a live preview of Markdown files.
+        *   If you want to see what your Markdown files will look like as you write, this is the best way to go.
+        *   Be aware that some of GitLab's special Markdown extensions will not look the same in your IDE's previewer
+*   Paragraphs must be separated from each other with *blank* lines
+    *   If your paragraphs run together, add extra blank lines in between
 
 
 ## More resources
