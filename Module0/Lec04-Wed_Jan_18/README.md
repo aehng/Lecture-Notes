@@ -160,7 +160,7 @@ This assignment is due at midnight on **Friday, January 27th** (a week and a hal
 
 # Software Development Plan and Sprint Signature
 
-*   These two files are required to be a part of your git repositories
+*   These two files are required to be a part of your Git repositories
 *   Template files are supplied in the `doc/` directory of your starter code
     *   You are not graded on the quality of these files per se, but if you do a really sloppy job you'll hear about it
 *   Removing, renaming, or failing to update these files will result in lost points
@@ -186,18 +186,18 @@ This assignment is due at midnight on **Friday, January 27th** (a week and a hal
         *   You can use the timer app on your phone, or one of the bajillions of timer web apps or YouTube videos
 
 
-## The Software Development Plan (SDP)
+## [The Software Development Plan (SDP)](../Software_Development_Plan.md)
 
 In this course a software development plan is a document you are required to write for each assignment.  In it you document your efforts at each stage of the software development process.
 
-Most authors name 5 phases in the software development process:
+Most authors name five phases in the software development process:
 
 ![Waterfall model of software development](./44-Waterfall_model.png)
 
-At DuckieCorp we split the process into these 6 phases:
+At DuckieCorp we split the process into six phases:
 
-| Project Phase                | Proportion of time
-|------------------------------|-------------------
+| Project Phase                | Portion of effort
+|------------------------------|------------------
 |0. Requirements Specification | 20%
 |1. Design                     | 30%
 |2. Implementation             | 15%
@@ -205,9 +205,7 @@ At DuckieCorp we split the process into these 6 phases:
 |4. Deployment                 | 5%
 |5. Maintenance                | ∞
 
-You will need to write a little something about each phase as you work on your projects.  This is explained in more depth [here](../Software_Development_Plan.md)
-
-As you write your plan, think about how you can apply the [Eight General Problem Solving Techniques](../General_Problem_Solving_Techniques.md) to the problem at hand.
+You will write a little something about each phase as you work on projects.
 
 
 
