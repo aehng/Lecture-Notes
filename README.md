@@ -50,9 +50,9 @@ $ git pull origin master
 	* [Using Git at DuckieCorp](./Module0/Lec03-Fri_Jan_13/README.md#using-git-at-duckiecorp)
 04. [Wednesday, January 18](./Module0/Lec04-Wed_Jan_18/README.md)
 	* [When to Submit Your Work](./Module0/Lec04-Wed_Jan_18/README.md#when-to-submit-your-work)
-	* [Assignment #1: TicTacToe](./Module0/Lec04-Wed_Jan_18/README.md#assignment-1-tictactoe)
-	* [The Markdown markup language](./Module0/Lec04-Wed_Jan_18/README.md#the-markdown-markup-language)
+	* [Assignment #1: Tic-Tac-Toe](./Module0/Lec04-Wed_Jan_18/README.md#assignment-1-tic-tac-toe)
 	* [Software Development Plan and Sprint Signature](./Module0/Lec04-Wed_Jan_18/README.md#software-development-plan-and-sprint-signature)
+	* [The Markdown markup language](./Module0/Lec04-Wed_Jan_18/README.md#the-markdown-markup-language)
 
 
 

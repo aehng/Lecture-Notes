@@ -3,9 +3,9 @@ CS1440 - Wednesday, January 18 - Lecture 04 - Module 0
 # Topics:
 * [Announcements](#announcements)
 * [When to Submit Your Work](#when-to-submit-your-work)
-* [Assignment #1: TicTacToe](#assignment-1-tictactoe)
-* [The Markdown markup language](#the-markdown-markup-language)
+* [Assignment #1: Tic-Tac-Toe](#assignment-1-tic-tac-toe)
 * [Software Development Plan and Sprint Signature](#software-development-plan-and-sprint-signature)
+* [The Markdown markup language](#the-markdown-markup-language)
 
 
 ------------------------------------------------------------
@@ -131,35 +131,30 @@ Programmers are notorious for missing deadlines.  I want you to destroy that ste
 
 
 
-# Assignment #1: TicTacToe
+# Assignment #1: Tic-Tac-Toe
 
-Write a program to encode/decode sensitive messages using our proprietary DuckieCrypt encryption algorithm.
+A customer hired DuckieCorp to write an unbeatable Tic-Tac-Toe game.  Two teams worked independently on separate parts of the project.  Everything was smooth sailing until they combined their work into a single program.  When the unbeatable AI stopped winning, the programmers lost their cool.  While they are taking a time-out, you get to untangle their mess and save the project.
 
-This assignment teaches how to process textual data and files in Python.
+There is not much new code that needs to be written in this assignment.  Your work consists of
 
-*   [Starter code repository](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn1)
-*   Due date: midnight on Friday, September 16
-    *   A week and a half from today
-*   This assignment includes **3 required coding lessons** under `lsn/` to help you come up to speed on:
-    1.  ASCII Characters
-    2.  Text Processing in Python
-    3.  File Operations in Python
-*   Suggested schedule: 
-    *   Complete the three lessons this week
-    *   Plan, Design, Implement & Test the DuckieCrypt Decoder next week
-        *   **Monday**: Phases 0 & 1
-        *   **Tuesday**: Phase 2
-        *   **Wednesday**: Phases 2 & 3
-        *   **Thursday**: Phase 4
-        *   **Friday**: Phases 4, 5 & 6
+*   Coming up to speed on what the other teams have done
+*   Organizing the code in a better way
+*   Re-writing a few functions to fix a trivial bug
+
+Begin by cloning the [starter code repository](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn1)
 
 
+## Suggested schedule
 
-# [The Markdown markup language](../Markdown.md)
+This assignment is due at midnight on **Friday, January 27th** (a week and a half from today)
 
-Markdown is a lightweight markup language for creating formatted text using a plain-text editor.  It was created by John Gruber and Aaron Swartz in 2004.  It has become a popular format for writing documentation for code.
-
-The document linked above is a reference for you to follow while you work on your first Markdown documents.
+*   Thursday: Phase 0
+*   Friday: Phases 0 and 1
+*   Monday: Phase 1
+*   Tuesday: Phases 1 and 2
+*   Wednesday: Phases 2 and 3
+*   Thursday: Phase 3
+*   Friday: Phases 3 and 4
 
 
 
@@ -197,23 +192,30 @@ In this course a software development plan is a document you are required to wri
 
 Most authors name 5 phases in the software development process:
 
-![Waterfall model of software development](./34-Waterfall_model.png)
+![Waterfall model of software development](./44-Waterfall_model.png)
 
-At DuckieCorp we split the process into 7 distinct phases:
+At DuckieCorp we split the process into these 6 phases:
 
 | Project Phase                | Proportion of time
 |------------------------------|-------------------
-|0. Requirements Specification | 10%
-|1. System Analysis            | 10%
-|2. Design                     | 30%
-|3. Implementation             | 15%
-|4. Testing & Debugging        | 30%
-|5. Deployment                 | 5%
-|6. Maintenance                | N/A
+|0. Requirements Specification | 20%
+|1. Design                     | 30%
+|2. Implementation             | 15%
+|3. Testing and Debugging      | 30%
+|4. Deployment                 | 5%
+|5. Maintenance                | ∞
 
 You will need to write a little something about each phase as you work on your projects.  This is explained in more depth [here](../Software_Development_Plan.md)
 
 As you write your plan, think about how you can apply the [Eight General Problem Solving Techniques](../General_Problem_Solving_Techniques.md) to the problem at hand.
+
+
+
+# [The Markdown markup language](../Markdown.md)
+
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor.  It was created by John Gruber and Aaron Swartz in 2004.  It has become a popular format for writing documentation for code.
+
+The document linked above is a reference for you to follow while you work on your first Markdown documents.
 
 
 
