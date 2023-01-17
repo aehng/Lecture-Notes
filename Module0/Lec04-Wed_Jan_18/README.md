@@ -38,18 +38,18 @@ We look forward to seeing you all there!
 *   **When**  7:00pm Thursday, January 19th
 *   **Where** Bridgerland Technical College (1301 N 600 W, Logan)
     *   Room 840
-
-We are kicking off a new professional group, the Cache Valley UT Developer Community, and wanted to extend an invite. We will meet every third Thursday at Bridgeland Technical College starting in 2023.
-
-Follow or join us on social media:
-
 *   [Discord Community](https://discord.gg/J867CsHJaG)
 *   [Twitter account](https://twitter.com/cache_dev)
 
 
 # Action Items
 
-*	Call on 2 designated questioners
+## Assigned Reading: "How to Report Bugs Effectively"
+
+*   Read the essay "How to Report Bugs Effectively" from [Simon Tatham's homepage](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) before our next meeting on Friday, January 20th and be prepared to discuss it.
+*   There is a brief Canvas quiz about the essay which is due **right before Friday's lecture**
+
+## Call on 2 designated questioners
 
 
 
