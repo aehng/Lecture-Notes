@@ -26,7 +26,10 @@ This table gives an idea of how you ought to spend your time:
 
 
 
-## Phase 0: Requirements Specification *(20% of your effort)*
+## Phase 0: Requirements Specification
+*(20% of your effort)*
+
+**Important - do not change the code in this phase**
 
 Requirements specification is the process where you come to understand the problem that the software will address, and document what the system needs to do.
 
@@ -56,7 +59,10 @@ Identify any non-trivial algorithms you will need to create to convert the input
 
 
 
-## Phase 1: Design *(30% of your effort)*
+## Phase 1: Design
+*(30% of your effort)*
+
+**Important - do not change the code in this phase**
 
 In this phase you devise a process for obtaining the *output* from the *input*.  Decompose the problem into simple, manageable functions, then design each function individually.
 
@@ -64,6 +70,46 @@ Describe how your functions will process data by sketching them in **pseudocode*
 
 When your pseudocode is suitably detailed, on paper (or a whiteboard) pretend to call your functions to learn what they will do.  Consider both good and bad inputs.  It is not a bad thing for your functions to return a bad result or crash; it is only bad when they do this *unexpectedly*.  Keep notes of these thought experiments so you can revisit them after you write these functions for real.
 
+This is an example of what pseudocode looks like.
+
+```python
+def rotate_lower(c, n)
+    """
+    Input: "c" - a lowercase character
+           "n" - an integer [0..26]
+    Output: "c" rotated by "n" positions.
+
+    This function will return a bad result if "n" is negative or greater than 26.
+    The caller is responsible for avoiding this.
+    """
+    o = c converted to integer
+    if the letter represented by (o + n) comes after 'z'
+        return (o + n - 26) converted to char
+    else (o + n) falls within the alphabet
+        convert (o + n) to char and return
+
+def rotate_upper(c, n)
+    The same as rotate_lower(), but checks against capital 'Z' instead of 'z'
+
+def rotate(c, n)
+    """
+    Input: "c" - a lowercase character
+           "n" - an integer [0..26]
+    Output: When "c" is alphabetic, return it rotated by "n" positions.
+            Otherwise, return "c" unchanged
+
+    Values of "n" that are too large or too small will cause errors.
+    The caller is responsible for avoiding this.
+    """
+    if c is lowercase
+        return rotate_lower(c, n)
+    if c is uppercase
+        return rotate_upper(c, n)
+    if c is a symbol or a digit
+        return c unchanged
+```
+
+Pseudocode is closer to plain English than it is to working Python code, and lacks important pieces of syntax.  Indentation is used to aid readability.  Because I did not spend much effort making it runnable, I can discard it without remorse later and rewrite a better version.
 
 ### Deliverables
 
@@ -75,47 +121,11 @@ When your pseudocode is suitably detailed, on paper (or a whiteboard) pretend to
     *   Pseudocode != source code.  Do not paste your finished source code into this part of the plan.
     *   Explain what happens in the face of good and bad input.
     *   Write a few specific examples that occurred to you.
-*   Pseudocode example:
-    ```
-    def rotate_lower(c, n):
-        """
-        Input: "c" - a lowercase character
-               "n" - an integer [0..26]
-        Output: "c" rotated by "n" positions.
-
-        This function will return a bad result if "n" is negative or greater than 26.
-        The caller is responsible for avoiding this.
-        """
-        o = c converted to integer
-        if o + n is after the letter 'z':
-            return (o + n - 26) converted to char
-        else:
-            return (o + n) converted to char
-
-    def rotate_upper(c, n):
-        The same as rotate_lower(), but checks against capital 'Z' instead of 'z'
-
-    def rotate(c, n):
-        """
-        Input: "c" - a lowercase character
-               "n" - an integer [0..26]
-        Output: When "c" is alphabetic, return it rotated by "n" positions.
-                Otherwise, return "c" unchanged
-
-        Values of "n" that are too large or too small will cause errors.
-        The caller is responsible for avoiding this.
-        """
-        if c is lowercase:
-            return rotate_lower(c, n)
-        if c is uppercase:
-            return rotate_upper(c, n)
-        if c is a symbol or a digit:
-            return c unchanged
-```
 
 
 
-## Phase 2: Implementation *(15% of your effort)*
+## Phase 2: Implementation
+*(15% of your effort)*
 
 Implementation is when you translate your design into a runnable program in a real programming language.
 
@@ -142,7 +152,8 @@ While you are learning a new programming language this phase *will* be slow and 
 
 
 
-## Phase 3: Testing and Debugging *(30% of your effort)*
+## Phase 3: Testing and Debugging
+*(30% of your effort)*
 
 Testing ensures that the source code meets the project's requirements.
 
@@ -168,7 +179,8 @@ Explain the entire process from launching the program, entering inputs, and inte
 
 
 
-## Phase 4: Deployment *(5% of your effort)*
+## Phase 4: Deployment
+*(5% of your effort)*
 
 Deployment makes the software available for use. Depending on the type of the software, it may be installed on each user’s machine or installed on a server accessible on the Internet.
 
@@ -190,13 +202,13 @@ At DuckieCorp **deployment** means submitting your homework.  Don't leave this t
 
 
 ## Phase 5: Maintenance
+*In the real world, the duration of this phase completely dominates the others.  For assignments in this class, spend a few minutes writing thoughtful answers to the questions provided.*
+
+Despite the fact that you don't really get to experience this phase of the process in this course, **maintenance** is the most important (and longest) part of the software life cycle.
 
 Maintenance is concerned with updating and improving the product.  A software product must continue to perform and improve in an ever-evolving environment.  This requires periodic upgrades of the product to fix newly discovered bugs and incorporate changes.
 
-Despite the fact that you don't really experience this phase of the process in this course, **maintenance** is the most important (and longest) part of the software life cycle.
-
 You are invited to think about parts of your program that won't stand the test of time.  You know where these are - they're the bits of code that you aren't 100% sure how or why they work.
-
 
 ### Deliverables
 
