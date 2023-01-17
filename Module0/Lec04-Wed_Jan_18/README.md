@@ -48,6 +48,7 @@ We look forward to seeing you all there!
 
 *   Read the essay "How to Report Bugs Effectively" from [Simon Tatham's homepage](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) before our next meeting on Friday, January 20th and be prepared to discuss it.
 *   There is a brief Canvas quiz about the essay which is due **right before Friday's lecture**
+*   As a reminder, here is the [schedule of required readings](../../Required_Reading_Schedule.md)
 
 ## Call on 2 designated questioners
 
