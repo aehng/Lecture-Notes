@@ -190,7 +190,7 @@ This assignment is due at midnight on **Friday, January 27th** (a week and a hal
 
 In this course a software development plan is a document you are required to write for each assignment.  In it you document your efforts at each stage of the software development process.
 
-Most authors name five phases in the software development process:
+Most authors identify five phases in the software development process:
 
 ![Waterfall model of software development](./44-Waterfall_model.png)
 
