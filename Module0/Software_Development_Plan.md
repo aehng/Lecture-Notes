@@ -117,7 +117,7 @@ Example:
 *   `rotate('A', 2)` returns `C`, because that is two characters after uppercase `A`
 *   `rotate('Z', 2)` returns `B`, because two characters after uppercase `Z` is past the end of the alphabet, so it wraps back around to the beginning
 *   `rotate('0', 2)` returns `0`; this algorithm only rotates letters, not digits
-*   `rotate('A', 36)` is an error; this algorithm only rotates up to 26 positions.  It doesn't matter what is returned in this case because it should not be used in this way.
+*   `rotate('A', 36)` is an error; this algorithm only rotates up to 26 positions.  It doesn't matter what is returned in this case because it should not be used in this way. 
 
 Pseudocode is closer to plain English than it is to working Python code, and lacks important details like syntax.  Indentation is used to aid readability.  Because you did not spend much effort making it runnable, you can discard it without remorse and rewrite a better version.
 
@@ -130,7 +130,7 @@ Pseudocode is closer to plain English than it is to working Python code, and lac
     *   Documentation strings that explain its purpose and types of inputs and outputs.
 *   [ ] Pseudocode that captures how each function works.
     *   Pseudocode != source code.  Do not paste your finished source code into this part of the plan.
-*   Explain what happens in the face of good and bad input.
+*   [ ] Explain what happens in the face of good and bad input.
     *   Write a few specific examples that occur to you, and use them in **Phase 3: Testing and Debugging**
 
 
@@ -240,4 +240,4 @@ You are invited to think about parts of your program that won't stand the test o
 *   [ ] Respond to the **Assignment Reflection Survey** on Canvas.
 
 
-*Updated Wed Jan 18 12:58:46 MST 2023*
+*Updated Wed Jan 18 13:12:05 MST 2023*
