@@ -42,15 +42,31 @@ We look forward to seeing you all there!
 *   [Twitter account](https://twitter.com/cache_dev)
 
 
+
 # Action Items
 
 ## Assigned Reading: "How to Report Bugs Effectively"
 
 *   Read the essay "How to Report Bugs Effectively" from [Simon Tatham's homepage](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) before our next meeting on Friday, January 20th and be prepared to discuss it.
 *   There is a brief Canvas quiz about the essay which is due **right before Friday's lecture**
-*   As a reminder, here is the [schedule of required readings](../../Required_Reading_Schedule.md)
+*   We will have an assigned reading every other week throughout the semester
+    *   As a reminder, here is the [schedule of required readings](../../Required_Reading_Schedule.md)
 
 ## Call on 2 designated questioners
+
+
+## Assignment 0, the Shell Tutor is due tonight at midnight!
+
+*   Do all lessons **in order**
+*   Don't close your terminal at the end of the lesson
+    *   Keep acknowledging all of the prompts until the status bar goes away
+    *   If you close the terminal window too soon, your progress is not recorded and you will have to **re-do the entire lesson**
+*   The very last thing lesson `7-workflow.sh` asks you to do is visit the repository you created on GitLab and make sure that `certificate.txt` is there
+    *   If you don't commit and push this file to that repo, you haven't done the assignment; you will get **no points**
+    *   If you that repository is not in your GitLab account, or if `certificate.txt` is missing, contact me or a TA **before midnight**
+    *   Telling us about it after the due date is the same as turning the assignment in late
+*   After you complete the assignment, don't forget to complete the **0: Shell Tutor Reflection**
+    *   You can re-take the **0: Starter Code Quiz** before the due date if you want to get a higher score 
 
 
 

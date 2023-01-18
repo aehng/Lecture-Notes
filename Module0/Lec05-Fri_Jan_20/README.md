@@ -12,7 +12,7 @@ CS1440 - Friday, January 20 - Lecture 05 - Module 0
 ------------------------------------------------------------
 # Announcements
 
-## Science Unwrapped
+## Science Unwrapped Tonight
 
 *   **What**  Predicting Snowmageddon: Using Data Science to Design Against Disaster
 *   **Who**   Dr. Brennan Bean, USU Department of Mathematics and Statistics

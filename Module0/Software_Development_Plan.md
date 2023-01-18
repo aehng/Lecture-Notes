@@ -64,13 +64,13 @@ Identify any non-trivial algorithms you will need to create to convert the input
 
 **Important - do not change the code in this phase**
 
+This will be the longest part of your plan.
+
 In this phase you devise a process for obtaining the *output* from the *input*.  Decompose the problem into simple, manageable functions, then design each function individually.
 
 Describe how your functions will process data by sketching them in **pseudocode**.  Do not write real code now; you will make many mistakes.  Mistakes are a critical part of your journey; you cannot write a good program without them.  But, it is easier to throw away *pseudocode* than runnable code.  This is why you must resist the urge to write *real* Python code now!  At first the pseudocode will be vague; incrementally refine it until it is nearly as detailed as *real* code.
 
-When your pseudocode is suitably detailed, on paper (or a whiteboard) pretend to call your functions to learn what they will do.  Consider both good and bad inputs.  It is not a bad thing for your functions to return a bad result or crash; it is only bad when they do this *unexpectedly*.  Keep notes of these thought experiments so you can revisit them after you write these functions for real.
-
-This is an example of what pseudocode looks like.
+This is an example of what pseudocode looks like:
 
 ```python
 def rotate_lower(c, n)
@@ -109,29 +109,41 @@ def rotate(c, n)
         return c unchanged
 ```
 
-Pseudocode is closer to plain English than it is to working Python code, and lacks important pieces of syntax.  Indentation is used to aid readability.  Because I did not spend much effort making it runnable, I can discard it without remorse later and rewrite a better version.
+When your pseudocode is suitably detailed, on paper (or a whiteboard) pretend to call your functions to learn what they will do.  Consider both good and bad inputs.  It is not a bad thing for your functions to return a bad result or crash; it is only bad when they do this *unexpectedly*.  Keep notes of these thought experiments so you can revisit them after you write these functions for real.
+
+Example:
+
+*   `rotate('a', 2)` returns `c`, because that is two characters after lowercase `a`
+*   `rotate('A', 2)` returns `C`, because that is two characters after uppercase `A`
+*   `rotate('Z', 2)` returns `B`, because two characters after uppercase `Z` is past the end of the alphabet, so it wraps back around to the beginning
+*   `rotate('0', 2)` returns `0`; this algorithm only rotates letters, not digits
+*   `rotate('A', 36)` is an error; this algorithm only rotates up to 26 positions.  It doesn't matter what is returned in this case because it should not be used in this way.
+
+Pseudocode is closer to plain English than it is to working Python code, and lacks important details like syntax.  Indentation is used to aid readability.  Because you did not spend much effort making it runnable, you can discard it without remorse and rewrite a better version.
+
 
 ### Deliverables
 
 *   [ ] Function signatures that include:
     *   Descriptive names.
     *   Parameter lists.
-    *   Documentation strings that explain the purpose, inputs and outputs.
+    *   Documentation strings that explain its purpose and types of inputs and outputs.
 *   [ ] Pseudocode that captures how each function works.
     *   Pseudocode != source code.  Do not paste your finished source code into this part of the plan.
-    *   Explain what happens in the face of good and bad input.
-    *   Write a few specific examples that occurred to you.
-
+*   Explain what happens in the face of good and bad input.
+    *   Write a few specific examples that occur to you, and use them in **Phase 3: Testing and Debugging**
 
 
 ## Phase 2: Implementation
 *(15% of your effort)*
 
+**Finally, you can write code!**
+
 Implementation is when you translate your design into a runnable program in a real programming language.
 
-This is the only part of the software development process where you are focused on writing in a real programming language.
+This is the only part of the software development process focused on writing real code in a programming language.
 
-You will know you have arrived when your pseudocode is nearly as detailed as a real program, merely lacking details such as syntax.
+You will know you are ready for this when your pseudocode is nearly as detailed as a real program.
 
 0.  Copy pseudocode into your Python files.
 1.  Function signatures are easy to convert into proper Python syntax.
@@ -148,7 +160,7 @@ While you are learning a new programming language this phase *will* be slow and 
 
 *   [ ] More or less working code.
 *   [ ] Note any relevant and interesting events that happened while you wrote the code.
-    *   e.g. things you learned, things that didn't go according to plan
+    *   e.g. things you learned, things that didn't go according to plan, etc.
 
 
 
@@ -166,7 +178,7 @@ Broadly speaking, there are two kinds of tests:
 
 Write *good* and *bad* test cases to catch *false positives* and *false negatives*.  Use the good/bad examples devised in **Phase 1: Design** to prove that each function performs as expected.  It is not a bad thing for a function to crash or give a wrong answer.  It is bad when this happens *unexpectedly*.  You may discover mistakes in your design and/or implementation.  When you fix these bugs, devise new test cases to detect these bugs should they return.
 
-This document should contain step-by-step instructions that a non-technical user could follow to satisfy themselves that your program operates correctly.
+This document should contain step-by-step instructions that a non-technical user could follow to satisfy themselves that your program is correct.
 
 Explain the entire process from launching the program, entering inputs, and interpreting the results.
 
@@ -226,3 +238,6 @@ You are invited to think about parts of your program that won't stand the test o
         *   ...to the next version of Python?
 *   [ ] Make one final commit and push your **completed** Software Development Plan to GitLab.
 *   [ ] Respond to the **Assignment Reflection Survey** on Canvas.
+
+
+*Updated Wed Jan 18 12:58:46 MST 2023*
