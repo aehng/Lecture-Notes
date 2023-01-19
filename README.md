@@ -55,10 +55,9 @@ $ git pull origin master
 	* [The Markdown markup language](./Module0/Lec04-Wed_Jan_18/README.md#the-markdown-markup-language)
 05. [Friday, January 20](./Module0/Lec05-Fri_Jan_20/README.md)
 	* [Stand Up Scrum Meetings](./Module0/Lec05-Fri_Jan_20/README.md#stand-up-scrum-meetings)
+	* [Retrospective: Assignment #0](./Module0/Lec05-Fri_Jan_20/README.md#retrospective-assignment-0)
 	* [How to Report Bugs Effectively](./Module0/Lec05-Fri_Jan_20/README.md#how-to-report-bugs-effectively)
 	* [Using Modules for code organization](./Module0/Lec05-Fri_Jan_20/README.md#using-modules-for-code-organization)
-	* [Organizing Code Into Modules](./Module0/Lec05-Fri_Jan_20/README.md#organizing-code-into-modules)
-	* [Namespace Collision Example](./Module0/Lec05-Fri_Jan_20/README.md#namespace-collision-example)
 
 
 

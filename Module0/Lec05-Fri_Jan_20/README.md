@@ -3,10 +3,9 @@ CS1440 - Friday, January 20 - Lecture 05 - Module 0
 # Topics:
 * [Announcements](#announcements)
 * [Stand Up Scrum Meetings](#stand-up-scrum-meetings)
+* [Retrospective: Assignment #0](#retrospective-assignment-0)
 * [How to Report Bugs Effectively](#how-to-report-bugs-effectively)
 * [Using Modules for code organization](#using-modules-for-code-organization)
-* [Organizing Code Into Modules](#organizing-code-into-modules)
-* [Namespace Collision Example](#namespace-collision-example)
 
 
 ------------------------------------------------------------
@@ -39,6 +38,71 @@ Back in ye olden-times, software projects followed the Waterfall methodology.
 DuckieCorp strives to be the kind of agile software shop that employs only the most trendy software development methodologies.  One such methodology is called **Scrum**, in which teams hold a brief meeting on a daily basis to talk about how their work is progressing.  
 
 We will hold stand ups at the beginning of each class period going forward.
+
+
+
+# Retrospective: Assignment #0
+
+Besides Stand Up meetings, SDPs and Sprint Signatures, there are a few more things we do at DuckieCorp to keep our projects on track.
+
+**Retrospective meetings** are held at the end of each sprint to reflect on and draw lessons from the experience.
+
+
+Statistic                        | Value
+--------------------------------:|:---------------
+Average Hours Spent              | 4.477
+Standard Deviation Hours         | 3.004
+... Medium                       | 47.7%
+... Hard                         | 1.9%
+... Too Hard/Did not complete    | 0.0%
+
+
+
+
+## What went well?
+
+*   157 students successfully completed the tutorial
+*   I found 2 pairs of students who submitted *identical* certificates
+    *   Cheating?
+    *   It turned out to be 2 students who both created two repositories
+    *   Not cheating.  Phew!
+*   8 bug bounties paid out for a project that hasn't changed since last semester
+    *   This means there were still 8 mistakes in the program that **nobody** noticed last fall
+*   **Longest Single Lesson** - one student completed `4-projects.sh` in **4d 19:17:25**
+*   **Shortest Single Lesson** - one student completed `0-basics.sh` in **01:42** (that's one *minute*, not one hour)
+*   The **average lesson** duration was **16:02:02**
+*   The **total amount of time** logged by students using the shell tutor this semester was **104d 21:20:15**
+
+
+
+## What went wrong?
+
+This class experienced a different mix of issues than students last semester.
+
+*   I got a lot of emails from the "The project you were looking for could not be found or you don't have permission to view it." error message
+    *   **fix** Partway through the tutorial I changed some text in `6-git.sh` to better explain this
+    *   **fix** I also sent an announcement in Canvas
+*   New error messages seen by WSL users in lesson 3.1 
+    *   We had a few small problems with that lesson last Fall, but nothing on the scale of what you experienced this time
+    *   **fix** ???
+*   This semester many students got to the end of `7-workflow.sh` and were told that they didn't finish some of the previous lessons
+    *   **If this happened to you, can you tell me about your experience?**
+    *   These students were forced to exit `7-workflow.sh` abruptly to re-do the "missing" lessons
+    *   But `7-workflow.sh` isn't easily re-started; it depends on things that happen in `6-git.sh`, and makes some other permanent changes to the repo
+    *   It was a big mess that I did not anticipate
+    *   **fix** Jaxton prototyped a feature for `7-workflow.sh` that we will roll out next semester
+*   Confusing text for Mac users in `1-commands.sh` regarding certain commands being "shell built-ins" vs. "external commands"
+    *   `which which` and `which cd` comes back with weird responses
+    *   The way that stuff is handled on Mac drives me crazy - it's not worth the trouble!
+    *   **fix?** This has been such a pain point that I'm considering dropping those steps from that lesson
+*   3 Linux users got stuck at `man -k manual` at the end of `1-commands.sh`
+    *   This affected my computer, too!  This wasn't a problem last semester
+    *   The `man` program underwent an update since last fall; I blame them
+    *   **fix** I added some code to that step to detect the problem and suggest a fix
+*   Many Windows users seem to be confused about WSL vs. Git+Bash
+    *   This hasn't been an issue in past semesters
+    *   It surprised us because we haven't changed the instructions on Canvas in quite a while
+    *   **fix** ???
 
 
 
@@ -122,6 +186,12 @@ A picture of plain text is a waste of time and bandwidth.  When reporting a bug 
 
 # Using Modules for code organization
 
+There are 5 Dallins in this class.
+
+If I say "Hey, Dallin!", who will respond?
+
+----
+
 Modular organization is used *everywhere*; pay attention and you'll begin to see it.  For example, this very lecture notes repository is organized modularly.
 
 *   The top level of organization are *modules* that combine topics related to an assignment
@@ -142,32 +212,14 @@ Understanding this organization helps you to independently find answers to your 
 *Demo: clone and search the notes in the shell*
 
 
-## Modules are good for programs, too
+The starter code for Assignment #1 has *thirty-nine* functions jammed into a single file.  Discuss with your study buddies these questions:
 
-The starter code for Assignment #2 has *ten* functions spread over *eight* files.  I could have put everything into one file.  Discuss with your study buddies these questions:
-
-*   Why do you think I organized the Assignment 2 starter code as I did?
-*   What are the advantages of having your functions all together in one file?
-*   What are the advantages of having your functions separated into different files?
-
-As your programs grow in length and complexity it becomes important to separate your code into modules.  This grows out of practicing the problem-solving techniques of ![Dividing the Problem](../../Module0/assets/1.divide_the_problem.png) **Dividing the Problem** and ![Don't get Frustrated](../../Module0/assets/7.dont_get_frustrated.png) **Not Getting Frustrated**.
+*   What are the advantages of putting all of the functions into one file?
+*   What are the disadvantages of doing it?
+*   As programs grow in length and complexity does it become important to separate your code into modules?
 
 
-
-# [Organizing Code Into Modules](../Organizing_Code_Into_Modules.md)
-
-There are 5 Dallins in this class.
-
-If I say "Hey, Dallin!", who will respond?
-
-
-
-# Namespace Collision Example
-
-When importing identifiers into the current namespace, be aware of collisions
-between locally defined identifiers and those from the imported module.
-
-See the code in the directory [../namespace_collision](../namespace_collision)
+## [Organizing Code Into Modules](../Organizing_Code_Into_Modules.md)
 
 
 
