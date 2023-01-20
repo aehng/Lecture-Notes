@@ -84,8 +84,8 @@ Statistic                        | Value
     *   Cheating?
     *   It turned out to be 2 students who each created two *different* repositories
     *   Not cheating.  Phew!
-*   **8** bug bounties paid out for a project that hasn't changed since last semester
-    *   This means there were still 8 mistakes in this program that **nobody** noticed last fall
+*   **9** bug bounties paid out for a project that hasn't changed since last semester
+    *   This means there were still 9 mistakes in this program that **nobody** noticed last fall
 
 
 ## What went wrong?
