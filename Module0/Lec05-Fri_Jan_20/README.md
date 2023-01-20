@@ -5,7 +5,6 @@ CS1440 - Friday, January 20 - Lecture 05 - Module 0
 * [Stand Up Scrum Meetings](#stand-up-scrum-meetings)
 * [Retrospective: Assignment #0](#retrospective-assignment-0)
 * [How to Report Bugs Effectively](#how-to-report-bugs-effectively)
-* [Using Modules for code organization](#using-modules-for-code-organization)
 
 
 ------------------------------------------------------------
@@ -196,45 +195,6 @@ A picture of plain text is a waste of time and bandwidth.  When reporting a bug 
     *   Later, when I search my inbox for `python SyntaxError`, this will come up
     *   This is exactly what I need to diagnose the problem, told in only `238` bytes.  This is orders of magnitude less than `144,031` or `285,944` bytes.
     *   You could scroll up in the terminal and copy more text to provide more context about the problem.  Many screenfuls of text weigh less than one picture.
-
-
-
-# Using Modules for code organization
-
-There are 5 Dallins in this class.
-
-If I say "Hey, Dallin!", who will respond?
-
-----
-
-Modular organization is used *everywhere*; pay attention and you'll begin to see it.  For example, this very lecture notes repository is organized modularly.
-
-*   The top level of organization are *modules* that combine topics related to an assignment
-    *   Modules contain documents with information that you need to succeed with the upcoming assignment
-    *   Modules also hold *lectures*, corresponding to individual lessons
-        *   Inside each lecture are notes and code samples 
-
-Understanding this organization helps you to independently find answers to your own questions.
-
-*   You should *clone* this lecture notes repository onto your own computer so you always have a copy with you.
-    *   `$ git clone https://gitlab.cs.usu.edu/erik.falor/sp23-cs1440-lecturenotes.git`
-*   After it is cloned, use `git pull` to *update* it after every lecture
-    *   `$ git pull`
-    *   This way you can read and run the programs that I write with you in class
-*   You can also make a convenient study guide called `all_notes.md` with the `concatenate.sh` script provided for you
-    *   The `all_notes.md` study guide can be quickly searched with the `grep` tool to find a keyword you are interested in
-
-*Demo: clone and search the notes in the shell*
-
-
-The starter code for Assignment #1 has *thirty-nine* functions jammed into a single file.  Discuss with your study buddies these questions:
-
-*   What are the advantages of putting all of the functions into one file?
-*   What are the disadvantages of doing it?
-*   As programs grow in length and complexity does it become important to separate your code into modules?
-
-
-## How to [Organize Code Into Modules](../Organizing_Code_Into_Modules.md)
 
 
 
