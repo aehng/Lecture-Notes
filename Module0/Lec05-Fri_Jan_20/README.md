@@ -233,7 +233,7 @@ The starter code for Assignment #1 has *thirty-nine* functions jammed into a sin
 *   As programs grow in length and complexity does it become important to separate your code into modules?
 
 
-## [Organizing Code Into Modules](../Organizing_Code_Into_Modules.md)
+## How to [Organize Code Into Modules](../Organizing_Code_Into_Modules.md)
 
 
 
