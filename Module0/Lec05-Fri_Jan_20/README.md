@@ -64,11 +64,12 @@ Today I want to know the answer to this question:
 
 Statistic                        | Value
 --------------------------------:|:---------------
-Average Hours Spent              | 4.477
-Standard Deviation Hours         | 3.004
-... Medium                       | 47.7%
-... Hard                         | 1.9%
-... Too Hard/Did not complete    | 0.0%
+ Average Hours Spent              | 4.477
+ Standard Deviation Hours         | 3.004
+ % students thought this was Easy | 50.3%
+ ... Medium                       | 47.7%
+ ... Hard                         | 1.9%
+ ... Too Hard/Did not complete    | 0.0%
 
 *   **Longest Lesson** - one student completed `4-projects.sh` after *4d 19:17:25*
 *   **Shortest Lesson** - a student completed `0-basics.sh` in only *01:42* (that's one *minute*, not one hour!)
