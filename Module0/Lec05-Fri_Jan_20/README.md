@@ -27,6 +27,8 @@ Refreshments and activities after
 
 # Action Items
 
+*   *Today*: finish **Phase 0: Requirements Specification** of the new assignment, and begin **Phase 1: Design**
+*   Enjoy your weekend!
 *	Call on 2 designated questioners
 
 
@@ -47,6 +49,16 @@ Besides Stand Up meetings, SDPs and Sprint Signatures, there are a few more thin
 
 **Retrospective meetings** are held at the end of each sprint to reflect on and draw lessons from the experience.
 
+Today I want to know the answer to this question:
+
+*How comfortable are you with the command shell?*
+
+0.  Warm, Cozy Blanket
+1.  Favorite Pair of Shoes
+2.  Bowl of Cereal
+3.  Cold Shower
+4.  Walking on Legos
+
 
 Statistic                        | Value
 --------------------------------:|:---------------
@@ -56,53 +68,53 @@ Standard Deviation Hours         | 3.004
 ... Hard                         | 1.9%
 ... Too Hard/Did not complete    | 0.0%
 
-
-
+*   **Longest Lesson** - one student completed `4-projects.sh` in *4d 19:17:25*
+*   **Shortest Lesson** - one student completed `0-basics.sh` in *01:42* (that's one *minute*, not one hour!)
+*   The **total amount of time** spent in the shell tutor this semester was **104d 21:20:15**
+    *   The **average tutoral** duration was **16h 02:02**
+    *   This is quite different from the **4h 28:37** you reported spending on the tutorial
 
 ## What went well?
 
-*   157 students successfully completed the tutorial
-*   I found 2 pairs of students who submitted *identical* certificates
+*   **152** students successfully completed the tutorial
+    *   This is up from **134** students last semester
+*   I found **2** pairs of students who submitted *identical* certificates
     *   Cheating?
-    *   It turned out to be 2 students who both created two repositories
+    *   It turned out to be 2 students who each created two *different* repositories
     *   Not cheating.  Phew!
-*   8 bug bounties paid out for a project that hasn't changed since last semester
-    *   This means there were still 8 mistakes in the program that **nobody** noticed last fall
-*   **Longest Single Lesson** - one student completed `4-projects.sh` in **4d 19:17:25**
-*   **Shortest Single Lesson** - one student completed `0-basics.sh` in **01:42** (that's one *minute*, not one hour)
-*   The **average lesson** duration was **16:02:02**
-*   The **total amount of time** logged by students using the shell tutor this semester was **104d 21:20:15**
-
+*   **8** bug bounties paid out for a project that hasn't changed since last semester
+    *   This means there were still 8 mistakes in this program that **nobody** noticed last fall
 
 
 ## What went wrong?
 
 This class experienced a different mix of issues than students last semester.
 
-*   I got a lot of emails from the "The project you were looking for could not be found or you don't have permission to view it." error message
-    *   **fix** Partway through the tutorial I changed some text in `6-git.sh` to better explain this
-    *   **fix** I also sent an announcement in Canvas
-*   New error messages seen by WSL users in lesson 3.1 
-    *   We had a few small problems with that lesson last Fall, but nothing on the scale of what you experienced this time
-    *   **fix** ???
-*   This semester many students got to the end of `7-workflow.sh` and were told that they didn't finish some of the previous lessons
-    *   **If this happened to you, can you tell me about your experience?**
-    *   These students were forced to exit `7-workflow.sh` abruptly to re-do the "missing" lessons
-    *   But `7-workflow.sh` isn't easily re-started; it depends on things that happen in `6-git.sh`, and makes some other permanent changes to the repo
-    *   It was a big mess that I did not anticipate
-    *   **fix** Jaxton prototyped a feature for `7-workflow.sh` that we will roll out next semester
-*   Confusing text for Mac users in `1-commands.sh` regarding certain commands being "shell built-ins" vs. "external commands"
-    *   `which which` and `which cd` comes back with weird responses
+*   In `1-commands.sh`, Mac users were shown confusing messages about "shell built-in" vs. "external" commands
+    *   Specifically, the steps where you run `which which` and `which cd` 
     *   The way that stuff is handled on Mac drives me crazy - it's not worth the trouble!
     *   **fix?** This has been such a pain point that I'm considering dropping those steps from that lesson
 *   3 Linux users got stuck at `man -k manual` at the end of `1-commands.sh`
     *   This affected my computer, too!  This wasn't a problem last semester
     *   The `man` program underwent an update since last fall; I blame them
     *   **fix** I added some code to that step to detect the problem and suggest a fix
+*   New error messages seen by WSL users in lesson 3.1 
+    *   We had a few small problems with that lesson last Fall, but nothing on the scale of what you experienced this time
+    *   **fix** ???
 *   Many Windows users seem to be confused about WSL vs. Git+Bash
     *   This hasn't been an issue in past semesters
     *   It surprised us because we haven't changed the instructions on Canvas in quite a while
     *   **fix** ???
+*   I got a lot of emails for the "The project you were looking for could not be found or you don't have permission to view it" error message
+    *   **fix** Partway through the tutorial I changed some text in `6-git.sh` to better explain this
+    *   **fix** I also sent an announcement in Canvas
+*   This semester saw many students reaching the end of `7-workflow.sh` and being told that they didn't finish previous lessons
+    *   **If this happened to you, can you tell me about your experience?**
+        *   I have a theory about this one...
+    *   These students were forced to exit `7-workflow.sh` abruptly to re-do the "missing" lessons
+    *   But `7-workflow.sh` isn't easily re-started; it depends on things that happen in `6-git.sh`, and makes some other permanent changes to the repo
+    *   It was a big mess that I did not anticipate
+    *   **fix** Jaxton prototyped a feature for `7-workflow.sh` to roll out next semester which blocks users from starting that lesson when previous lessons are not finished
 
 
 
