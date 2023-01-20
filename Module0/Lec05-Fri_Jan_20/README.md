@@ -53,12 +53,14 @@ Today I want to know the answer to this question:
 
 *How comfortable are you with the command shell?*
 
-0.  Warm, Cozy Blanket
-1.  Favorite Pair of Shoes
-2.  Bowl of Cereal
-3.  Cold Shower
-4.  Walking on Legos
+0.  A Warm, Cozy Blanket
+1.  Your Favorite Pair of Shoes
+2.  A Bowl of Cold Cereal
+3.  Taking a Cold Shower
+4.  Stepping on Legos
 
+
+## Results of the post-assignment reflection survey
 
 Statistic                        | Value
 --------------------------------:|:---------------
@@ -68,11 +70,11 @@ Standard Deviation Hours         | 3.004
 ... Hard                         | 1.9%
 ... Too Hard/Did not complete    | 0.0%
 
-*   **Longest Lesson** - one student completed `4-projects.sh` in *4d 19:17:25*
-*   **Shortest Lesson** - one student completed `0-basics.sh` in *01:42* (that's one *minute*, not one hour!)
+*   **Longest Lesson** - one student completed `4-projects.sh` after *4d 19:17:25*
+*   **Shortest Lesson** - a student completed `0-basics.sh` in only *01:42* (that's one *minute*, not one hour!)
 *   The **total amount of time** spent in the shell tutor this semester was **104d 21:20:15**
-    *   The **average tutoral** duration was **16h 02:02**
-    *   This is quite different from the **4h 28:37** you reported spending on the tutorial
+    *   The **average duration** taken to complete the tutorial was **16h 02:02**
+    *   This is quite different from the **4h 28:37** you reported in the reflection survey
 
 ## What went well?
 
@@ -168,7 +170,7 @@ Whoever said "a picture is worth a thousand words" never tried to debug a syntax
 A picture of plain text is a waste of time and bandwidth.  When reporting a bug that is **textual** in nature, it is best to send just **the text itself**.
 
 0.  Here is a screenshot of my desktop.  There is an error message in my Python program in there... somewhere.
-    *   ![](./52-too-big.png "A screen shot that is too big")
+    *   ![](./54-too-big.png "A screen shot that is too big")
     *   There's a lot going on here!  How long did it take you to zero in on the error message?
     *   This file costs more than a quarter of a megabyte of storage.  The full-sized version was double that.
     *   Screenshots of your desktop can dox you.  (You ever hear the Tragedy of Kurt Eichenwald the Unwise?  No?  I thought not, it's not a story the Normies would tell you...)
@@ -176,7 +178,7 @@ A picture of plain text is a waste of time and bandwidth.  When reporting a bug 
         *   Be careful with sensitive info that just happens to be on your screen; you could violate HIPPA, FERPA, RFPA, PCI compliance, etc.
         *   Hackers have broken into organizations using information gleaned from photographs & screenshots.
 1.  This is a screenshot of *just* the terminal with the Python error
-    *   ![](./52-cropped.png "A screenshot cropped just to the window of interest")
+    *   ![](./54-cropped.png "A screenshot cropped just to the window of interest")
     *   This file still takes up an eighth of a megabyte
     *   If I want to find this error message in my inbox again, how do I search for it?  Search tools don't find text embedded in an image.
     *   What if an important clue scrolled off the top of the window?  This image does not hold any extra context about this error.
