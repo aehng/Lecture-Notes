@@ -17,6 +17,9 @@ def ringo():
 # Any code in the module is run as soon as the module is loaded
 if __name__ == '__main__':
     print("You are running this as a command-line program")
+    print(george())
+    print(john())
+    print(paul())
     print(ringo())
 else:
-    print(f"You have loaded the module named '{__name__}'")
+    print("You have loaded the module named", __name__)

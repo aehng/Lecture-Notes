@@ -84,16 +84,7 @@ The starter code for Assignment #1 has *thirty-nine* functions jammed into a sin
 
 # Namespace Collision Quiz
 
-When importing identifiers into the current namespace, you must be aware of
-collisions between *locally* defined identifiers and those defined in the
-*imported module*.
-
-0.  Clone the lecture notes repository onto your computer
-0.  Open a shell and navigate into the repository
-0.  Open the quiz in Canvas and use your shell to find the answers
-    *   Some questions may be answered by `grep`
-    *   The rest will be answered by running the programs with Python, and editing the files
-0.  When you are done, run `git restore :/` to undo all of your changes and put the repository back to its original state
+When importing identifiers into the current namespace, you must be aware of collisions between *locally* defined identifiers and those defined in the *imported module*.  This quiz teaches you the consequences of carelessly importing things into your programs.
 
 The code for the quiz is in [../namespace_collision](../namespace_collision) 
 

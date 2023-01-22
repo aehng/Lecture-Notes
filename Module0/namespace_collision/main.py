@@ -1,11 +1,30 @@
-from Beatles import paul, george, ringo
+from Beatles import george, john, paul, ringo
 import Presidents
+# Change this line for question #5
 
 
-print(f"The code in main.py is in the namespace {__name__}")
+print("The code in main.py is in the namespace", __name__)
+print()
+
+# Change this line for question #6
+
+print("Presenting the Beatles!")
 print(george())
-print(Presidents.george())
+print(john())
+print(paul())
+print(ringo())
+print()
 
-# This won't work with the import statement 'from Beatles import paul, george, ringo'
-# I'll need to 'import Beatles' to do this
+
+print("Presenting the Presidents of the United States of America!")
+print("  ...no, not the band from the 90's...")
+print(Presidents.george())
+print(Presidents.john())
+print(Presidents.thomas())
+print(Presidents.james())
+print()
+
+
+# This statement doesn't work
+# Add a new import statement that fixes this line of code 
 print(Beatles.george())
