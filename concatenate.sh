@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ -f all_notes.md ]]; then
     echo "Removing old all_notes.md..."
