@@ -1,16 +1,13 @@
 CS1440 - Monday, January 23 - Lecture 06 - Module 0
 
 # Topics:
-* [Announcements](#announcements)
+* [Action Items](#action-items)
 * [How to Use the Lecture Notes](#how-to-use-the-lecture-notes)
 * [Using Modules for code organization](#using-modules-for-code-organization)
 * [Namespace Collision Quiz](#namespace-collision-quiz)
 
 
 ------------------------------------------------------------
-# Announcements
-
-
 # Action Items
 
 *   Take the "Modules and Namespace Collisions" quiz in Canvas **before the next lecture on Wednesday**
@@ -22,7 +19,6 @@ CS1440 - Monday, January 23 - Lecture 06 - Module 0
 # How to Use the Lecture Notes
 
 *   You should *clone* this lecture notes repository onto your own computer so you always have a copy with you.
-    *   `git clone https://gitlab.cs.usu.edu/erik.falor/sp23-cs1440-lecturenotes.git`
 *   After it is cloned, use `git pull` to *update* it after every lecture
     *   This way you can read and run the *demo code* that I write with you in class
 *   You can also make a convenient study guide called `all_notes.md` by running the `concatenate.sh` script found at the root of the repository
@@ -41,13 +37,18 @@ CS1440 - Monday, January 23 - Lecture 06 - Module 0
 
 ## Demo: clone and search the lecture notes in the shell
 
-0.  Show each line of `all_notes.md` containing "Module":
+0.  Clone the lecture notes onto your computer, and take steps to avoid **Gitception**:
+    1.  Run `git status` to see if you're within a repository
+    2.  `cd ..`  to climb up to the parent directory
+    3.  Repeat until you're clear of danger
+    4.  `git clone https://gitlab.cs.usu.edu/erik.falor/sp23-cs1440-lecturenotes.git`
+1.  Show each line of `all_notes.md` containing "Module":
     *   `grep Module all_notes.md`
-1.  Highlight each use of the word "shell" in 3 lines of context:
+2.  Highlight each use of the word "shell" in 3 lines of context:
     *   `grep --color -C 3 shell all_notes.md`
-2.  Highlight each use of the word "Python" with the filename and line number:
+3.  Highlight each use of the word "Python" with the filename and line number:
     *   `grep --color -n -H Python all_notes.md`
-3.  Idem., but ignore case so that both "Python" and "python" are matched:
+4.  Idem., but ignore case so that both "Python" and "python" are matched:
     *   `grep --color -n -H -i Python all_notes.md`
 
 
@@ -86,7 +87,10 @@ The starter code for Assignment #1 has *thirty-nine* functions jammed into a sin
 
 When importing identifiers into the current namespace, you must be aware of collisions between *locally* defined identifiers and those defined in the *imported module*.  This quiz teaches you the consequences of carelessly importing things into your programs.
 
-The code for the quiz is in [../namespace_collision](../namespace_collision) 
+*   The code for the quiz is in the lecture notes repository under **Module 0** in a directory named [../namespace_collision](../namespace_collision) 
+*   **This quiz is due before class on the day we discuss the results.  Once class begins the quiz is locked.**
+    *   You can take this quiz twice.
+    *   It is open book with no time limit, so the 2nd attempt should not be necessary.
 
 
 
