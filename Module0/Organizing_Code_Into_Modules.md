@@ -72,13 +72,49 @@ Modules are *imported* into a running Python program with the `import` keyword. 
 
 You should match the case of the name of the file when importing it as a module, even if your operating system doesn't respect the case of file names.
 
-Suppose I have a file named `CoolCode.py` that I want to import into my program (notice the capitalization).  Don't write this import statement:
+Suppose I have a file named `CoolCode.py` with these contents (note the capitalization of the file's name):
+
+```python
+TEMPERATURE = 32
+
+def srslyCool():
+    print("""\x1b[1;36m\
+               88888888888888     d8b           d8b
+                   888    888     Y8P           Y8P
+                   888    888
+                   888    88888b. 888.d8888b    888.d8888b
+                   888    888 "88b88888K        88888K
+                   888    888  888888"Y8888b.   888"Y8888b.
+                   888    888  888888     X88   888     X88
+                   888    888  888888 88888P'   888 88888P'
+
+                              d8b                        888
+                              Y8P                        888
+                                                         888
+       .d8888b  .d88b. 888d888888 .d88b. 888  888.d8888b 888888  888
+       88K     d8P  Y8b888P"  888d88""88b888  88888K     888888  888
+       "Y8888b.88888888888    888888  888888  888"Y8888b.888888  888
+            X88Y8b.    888    888Y88..88PY88b 888     X88888Y88b 888
+        88888P' "Y8888 888    888 "Y88P"  "Y88888 88888P'888 "Y88888
+                                                                 888
+                                              888888        Y8b d88P
+                                              888888         "Y88P"
+                                              888888
+                       .d8888b .d88b.  .d88b. 888888
+                      d88P"   d88""88bd88""88b888888
+                      888     888  888888  888888Y8P
+                      Y88b.   Y88..88PY88..88P888 "
+                       "Y8888P "Y88P"  "Y88P" 888888\x1b[0m""")
+```
+
+
+When I want to import this file into my program, I cannot write this import statement:
 
 ```python
 import coolcode
 ```
 
-Although that import statement works on Windows, that program will crash on Linux and Mac.  To write programs that work equally well on *all* computers, write this instead:
+Although this import statement will work on Windows, it is only by accident.  A program using that import statement will crash on Linux and Mac.  To write programs that work equally well on *all* computers, **always** match the case of the file's name when importing:
 
 ```python
 import CoolCode
@@ -115,7 +151,7 @@ This can be quite confusing at first, especially when you just want to get your 
 
 When a module is imported, all global identifiers (i.e. names of variables and functions which are not contained within functions) defined therein become accessible in your program.  To access them you first write the name of the module used in the import statement followed by another `.`, followed by the identifier.
 
-As an example, suppose that the file `CoolModules/CoolCode.py` defines a function named `srslyCool()` and a variable named `temperature`.  You may use them in your program like so:
+As an example, suppose that the file `CoolModules/CoolCode.py` defines a function named `srslyCool()` and a variable named `TEMPERATURE`.  You may use them in your program like so:
 
 ```python
 import CoolModules.CoolCode
@@ -124,10 +160,10 @@ import CoolModules.CoolCode
 CoolModules.CoolCode.srslyCool()
 
 print("The temperature was")
-print(CoolModules.CoolCode.temperature)
-CoolModules.CoolCode.temperature += 1
+print(CoolModules.CoolCode.TEMPERATURE)
+CoolModules.CoolCode.TEMPERATURE += 1
 print("Now the temperature is")
-print(CoolModules.CoolCode.temperature)
+print(CoolModules.CoolCode.TEMPERATURE)
 ```
 
 In this context, the part of the identifier which names the module is known as a **namespace**.
@@ -171,10 +207,10 @@ from MODULE import IDENTIFIER_0, IDENTIFIER_1 ...
 For example:
 
 ```python
-from CoolModules.CoolCode import srslyCool, temperature
+from CoolModules.CoolCode import srslyCool, TEMPERATURE
 ```
 
-From this point on in the file, the function `CoolModules.CoolCode.srslyCool()` may be referred to simply as `srslyCool()`, and the variable `CoolModules.CoolCode.temperature` can be accessed just as `temperature`.
+From this point on in the file, the function `CoolModules.CoolCode.srslyCool()` may be referred to simply as `srslyCool()`, and the variable `CoolModules.CoolCode.TEMPERATURE` can be accessed just as `TEMPERATURE`.
 
 If you want to import a long list of identifiers from a module, instead of awkwardly listing them all out you can import `*`:
 
