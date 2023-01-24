@@ -63,11 +63,12 @@ Today I want to know the answer to this question:
 
 Statistic                        | Value
 --------------------------------:|:---------------
-Average Hours Spent              | 4.477
-Standard Deviation Hours         | 3.004
-... Medium                       | 47.7%
-... Hard                         | 1.9%
-... Too Hard/Did not complete    | 0.0%
+ Average Hours Spent              | 4.477
+ Standard Deviation Hours         | 3.004
+ % students thought this was Easy | 50.3%
+ ... Medium                       | 47.7%
+ ... Hard                         | 1.9%
+ ... Too Hard/Did not complete    | 0.0%
 
 *   **Longest Lesson** - one student completed `4-projects.sh` after *4d 19:17:25*
 *   **Shortest Lesson** - a student completed `0-basics.sh` in only *01:42* (that's one *minute*, not one hour!)
@@ -83,8 +84,8 @@ Standard Deviation Hours         | 3.004
     *   Cheating?
     *   It turned out to be 2 students who each created two *different* repositories
     *   Not cheating.  Phew!
-*   **8** bug bounties paid out for a project that hasn't changed since last semester
-    *   This means there were still 8 mistakes in this program that **nobody** noticed last fall
+*   **9** bug bounties paid out for a project that hasn't changed since last semester
+    *   This means there were still 9 mistakes in this program that **nobody** noticed last fall
 
 
 ## What went wrong?
@@ -143,7 +144,7 @@ In addition to Simon's advice, keep these guidelines in mind at DuckieCorp:
     *   Patience and respect should be shown by **both sides** in **all** interactions
 *   Double-check that you have been following the instructions **EXACTLY**
     *   If you haven't noticed by now, computers are **VERY** particular about what their input looks like
-    *   Pay close attention to *wh ite  sp ace*, *spellign* and *CapPitALiZatIon*
+    *   Pay close attention to *wh ite  sp ace*, *spellign* and *CaPitALiZatIon*
 *   Avoid screenshots when possible (see below)
     *   Screenshots should be resorted to only when there is **no other way** to capture details of the problem.  For example, when:
         *   A graphical user interface is broken
