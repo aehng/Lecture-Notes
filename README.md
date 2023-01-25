@@ -34,7 +34,9 @@ $ git pull origin master
 *   [Required Reading Schedule](./Required_Reading_Schedule.md) for the course
 *   Your Guide to [Using Git](./Using_Git/README.md)
 
-### Module 0
+<details>
+<summary><h3>Module 0</h3></summary>
+
 01. [Monday, January 09](./Module0/Lec01-Mon_Jan_09/README.md)
 	* [Get to know your professor](./Module0/Lec01-Mon_Jan_09/README.md#get-to-know-your-professor)
 	* [You're hired](./Module0/Lec01-Mon_Jan_09/README.md#youre-hired)
@@ -61,6 +63,15 @@ $ git pull origin master
 	* [How to Use the Lecture Notes](./Module0/Lec06-Mon_Jan_23/README.md#how-to-use-the-lecture-notes)
 	* [Using Modules for code organization](./Module0/Lec06-Mon_Jan_23/README.md#using-modules-for-code-organization)
 	* [Namespace Collision Quiz](./Module0/Lec06-Mon_Jan_23/README.md#namespace-collision-quiz)
+
+</details>
+
+
+### Module 1
+07. [Wednesday, January 25](./Module1/Lec07-Wed_Jan_25/README.md)
+	* [The Read, Eval, Print, Loop (REPL)](./Module1/Lec07-Wed_Jan_25/README.md#the-read-eval-print-loop-repl)
+	* [What is an IDE?](./Module1/Lec07-Wed_Jan_25/README.md#what-is-an-ide)
+	* [Coding by context menu (and other IDE pitfalls)](./Module1/Lec07-Wed_Jan_25/README.md#coding-by-context-menu-and-other-ide-pitfalls)
 
 
 
