@@ -1,0 +1,2 @@
+# Always check out concatenate.sh with Unix-style line-endings
+concatenate.sh  text eol=lf

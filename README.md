@@ -106,12 +106,10 @@ concatenate.sh: line 2: $'\r': command not found
 concatenate.sh: line 9: syntax error near unexpected token `$'do\r''
 ```
 
-it is because that script has MS-DOS line endings.  To fix it, try running this
-command:
+it is because that script has MS-DOS line endings.  To fix it, try running this command **exactly** as written here:
 
 ```bash
-$ dos2unix concatenate.sh
-dos2unix: converting file concatenate.sh to Unix format...
+$ sed -i -e 's/\r//' concatenate.sh
 ```
 
 then re-run the concatenate script.
