@@ -9,7 +9,7 @@ The REPL is an interactive environment where you can play with the language and 
 The idea of the REPL was born in the LISP language (as so many good ideas were), and all self-respecting "modern" languages have this feature nowadays.
 
 
-[Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)
+[The Python Tutorial: Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)
 
 
 Enter the REPL simply by running `python` with no arguments.

@@ -32,7 +32,7 @@ Build a software or hardware project to compete against other teams. All college
 
 # [The Read, Eval, Print, Loop (REPL)](../REPL.md)
 
-The command shell and Python's REPL share a lot in common.  Tricks you learn in one (i.e. shortcut keys, tab completion) work win the other.
+The command shell and Python's REPL share a lot in common.  Tricks you learn in one (i.e. shortcut keys, tab completion) work in the other.
 
 ## TL;DR
 
@@ -41,10 +41,6 @@ whenever you need a hint:
 
 *   `help()`
 *   `dir()`
-
-**Hint**: the `/` you may see in the parameter list of some functions signifies the end of the *positional* parameters.
-
-https://docs.python.org/3/faq/programming.html#what-does-the-slash-in-the-parameter-list-of-a-function-mean
 
 
 
