@@ -8,9 +8,16 @@ The REPL is an interactive environment where you can play with the language and 
 
 The idea of the REPL was born in the LISP language (as so many good ideas were), and all self-respecting "modern" languages have this feature nowadays.
 
+## Table of Contents
 
-[The Python Tutorial: Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)
+*   [Launching the REPL](#launching-the-repl)
+*   [Two important functions: `help()` and `dir()`](#two-important-functions-help-and-dir)
+*   [Fast code reload](#fast-code-reload)
+*   [Special instructions for Windows users](#special-instructions-for-windows-users)
+*   [The Python Tutorial: Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)
 
+
+## Launching the REPL
 
 Enter the REPL simply by running `python` with no arguments.
 
@@ -134,6 +141,23 @@ You can see a more compact list of possibilities with the `dir()` function.  Thi
 	sort
 
 
+## Fast code reload
+
+REPLs in some other languages have a convenient command to load/reload a file that you're working on.  Python's REPL doesn't have such a command, but it is easy to fake it with a `while` loop in the shell:
+
+```bash
+$ while python -i test.py; do echo Reloading...; sleep .4; done
+```
+
+As long as `python -i` exits **normally** this loop continues to restart the REPL.
+
+*   Press `Ctrl-D` or run `exit()` to restart the REPL
+    *   This will destroy any new variables or functions that you defined in the REPL.
+*   Run `exit(1)` to quit the loop and return to the shell
+
+The REPL in PyCharm (sorry, the *Python Console*) gives you a **Rerun** button (and the hot-key `Ctrl+F5`).
+
+
 ## Special instructions for Windows users
 
 Windows users who have installed "Git for Windows" recently should not encounter any trouble with the Python REPL.  Those who installed "Git for Windows" more than a year ago may find that running Python interactively freezes their console.  You can resolve this by re-installing or re-configuring "Git for Windows" on your computer, paying special care to **enable experimental support for pseudo consoles**.
@@ -155,3 +179,6 @@ After saving this file close and re-open your Bash console to activate this comm
 You can use the `-i` argument described above with this command.
 
     $ repl -i scriptname.py
+
+
+*Updated Thu Jan 26 17:03:48 MST 2023*

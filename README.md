@@ -72,6 +72,17 @@ $ git pull origin master
 	* [The Read, Eval, Print, Loop (REPL)](./Module1/Lec07-Wed_Jan_25/README.md#the-read-eval-print-loop-repl)
 	* [What is an IDE?](./Module1/Lec07-Wed_Jan_25/README.md#what-is-an-ide)
 	* [Coding by context menu (and other IDE pitfalls)](./Module1/Lec07-Wed_Jan_25/README.md#coding-by-context-menu-and-other-ide-pitfalls)
+08. [Friday, January 27](./Module1/Lec08-Fri_Jan_27/README.md)
+	* [The REPL is your code lab](./Module1/Lec08-Fri_Jan_27/README.md#the-repl-is-your-code-lab)
+	* [How to Run Programs](./Module1/Lec08-Fri_Jan_27/README.md#how-to-run-programs)
+	* [What does PyCharm's green "Run" button *really* do?](./Module1/Lec08-Fri_Jan_27/README.md#what-does-pycharms-green-run-button-really-do)
+	* [The Current Working Directory and your code](./Module1/Lec08-Fri_Jan_27/README.md#the-current-working-directory-and-your-code)
+	* [Python String Operations](./Module1/Lec08-Fri_Jan_27/README.md#python-string-operations)
+	* [Reading files in Python](./Module1/Lec08-Fri_Jan_27/README.md#reading-files-in-python)
+09. [Monday, January 30](./Module1/Lec09-Mon_Jan_30/README.md)
+	* [Retrospective: Assignment #1](./Module1/Lec09-Mon_Jan_30/README.md#retrospective-assignment-1)
+	* [Assignment #2 - Text Tools](./Module1/Lec09-Mon_Jan_30/README.md#assignment-2-text-tools)
+	* [Assignment #1 Code ~~Review~~ Roast](./Module1/Lec09-Mon_Jan_30/README.md#assignment-1-code-review-roast)
 
 
 
