@@ -84,8 +84,10 @@ The REPL in PyCharm (sorry, the *Python Console*) gives you a **Rerun** button (
 
 
 ## What does this workflow look like?
- 
+
 I am interested in what makes Tic-Tac-Toe's `winner*` functions tick.  Let's bring them into our code lab and see how many extra parts we have at the end.
+
+**Write your name and A-Number on your mudcard.  Write any questions or comments about the REPL that occur to you.**
 
 
 
