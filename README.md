@@ -79,6 +79,13 @@ $ git pull origin master
 	* [Retrospective: Assignment #1](./Module1/Lec09-Mon_Jan_30/README.md#retrospective-assignment-1)
 	* [Assignment #2 - Text Tools](./Module1/Lec09-Mon_Jan_30/README.md#assignment-2-text-tools)
 	* [Assignment #1 Code ~~Review~~ Roast](./Module1/Lec09-Mon_Jan_30/README.md#assignment-1-code-review-roast)
+10. [Wednesday, February 01](./Module1/Lec10-Wed_Feb_01/README.md)
+	* [Debugging](./Module1/Lec10-Wed_Feb_01/README.md#debugging)
+	* [Ten Cool Debugging Tricks That Will Impress Your Friends](./Module1/Lec10-Wed_Feb_01/README.md#ten-cool-debugging-tricks-that-will-impress-your-friends)
+	* [How to Debug Anything in Four Easy Steps](./Module1/Lec10-Wed_Feb_01/README.md#how-to-debug-anything-in-four-easy-steps)
+	* [Rubber Duck Debugging](./Module1/Lec10-Wed_Feb_01/README.md#rubber-duck-debugging)
+	* [The "Wolf Fence" Algorithm for Finding Bugs](./Module1/Lec10-Wed_Feb_01/README.md#the-wolf-fence-algorithm-for-finding-bugs)
+	* [How to Read a Stack Trace](./Module1/Lec10-Wed_Feb_01/README.md#how-to-read-a-stack-trace)
 
 
 
