@@ -201,9 +201,9 @@ In the big scheme of things, this really isn't that big of a problem.  I use thi
 
 (At least) one student converted the entire `MODEL` from 1D to 2D.  It looks like this was a *lot* of work, and took a few attempts to get right.  I don't mean to pick on this student, but their journey provided a lot of fodder for this lecture.
 
-The original `MODEL` in the starter code was 4540 lines of code long.  This student's final version is 9354 lines long; more than double.  This student created an auxiliary program to re-write `ai.py` for them.  They needed NumPy to pull this off.  This took them *way* above and beyond what was called for in an assignment in a 1000-level CS class.
+The original `MODEL` in the starter code was 4,540 lines of code long.  This student's final version is 9,354 lines long; more than twice the length of the original data.  This student created an auxiliary program to re-write `ai.py` for them.  They needed NumPy to pull this off.  This took them *way* above and beyond what was called for in an assignment in a 1000-level CS class.
 
-They started work last Thursday.  I am positive if they started early they would have realized this is was a hare-brained way to go about it.  As they say, desperate times call for desperate measures.
+As near as I can tell, they started work last Thursday afternoon.  I am positive that had they started earlier, they would have realized this is was a hare-brained way to go about it.  As they say, desperate times call for desperate measures.
 
 **Protip:** I said this before, but I'll say it again.  You *never* need NumPy to solve *any* homework problem in this class.
 
@@ -236,12 +236,12 @@ For some reason, around 22% of the way through the file it starts to look like t
 ,('O','8','9')),(('X','2','O')
 ```
 
-The end product *does* appear to work.
+The end product *does* appear to work; I think this student will get a decent score for the program's behavior.  But that's only 15 out of 70 points.  There are 20 points allocated to code *quality*.
 
 
 ## I didn't know it was incorrect
 
-I came across a *helper* function in `ai.py` to convert a 2D game board to the correct form.  I know the original 2D board was wrong because this function is named `convertToCorrect2D()`:
+I came across a *helper* function in `ai.py` that converts a 2D game board to the "correct" form.  I know the original 2D board was wrong because this function is named `convertToCorrect2D()`:
 
 ```python
  1	def convertToCorrect2D(b):
@@ -279,9 +279,9 @@ I came across a *helper* function in `ai.py` to convert a 2D game board to the c
 33	    return tuple([tuple(newB[0]), tuple(newB[1]), tuple(newB[2])])
 ```
 
-Pre-declaring `i` and `j` at the top and manually incrementing them at the bottom of the loops is a lot of extra work, and is a great way to get mixed up.  I doubt this was written correctly the first time, and required a fair bit of trial-and-error to make work.
+Pre-declaring `i` and `j` at the top and manually incrementing them at the bottom of the loops is a lot of extra work, and is a great way to get mixed up.  I doubt this function was written correctly the first time, and required a fair bit of trial-and-error to make work.
 
-The conditions and bodies of all of the `elif`s are very repetitive.  When you catch yourself writing code like this, stop and look for a way to say the same thing without repeating yourself.  The bodies that convert integers into strings could have been replaced by a single expression:
+The conditions and bodies of all of the `elif`s are repetitive.  This is a big red flag.  When you catch yourself writing code like this, **stop** and find a way to say the same thing *without* repeating yourself.  The bodies that convert integers into strings could have been replaced by a single assignment:
 
 ```python
 newB[i][j] = str(p)
@@ -289,11 +289,11 @@ newB[i][j] = str(p)
 
 That one line of code works *no matter* what `p` is.
 
-For that matter, the last two `elif`s that handle `'X'` and `'O'` are equally well served by that same expression.  Sure, it is a waste of time to convert a string into a string, but is worth it to save 4 lines of redundant code.
+For that matter, the last two `elif`s that handle `'X'` and `'O'` are equally well served by that same assignment.  Sure, it is a waste of time to convert a string into a string, but is worth it to save 4 lines of redundant code.
 
-I know it's not likely to happen in a normal game, but think about what this function would return if a board **did not** contain one of the digits or letters.  There would be a Zero at that position.  What would the rest of the program make of that?
+I know it's not likely to happen in a normal game, but think about what this function would return if a board **did not** contain one of the digits or letters.  There would be a Zero at that position.  What would the rest of the program make of that?  It might crash, or worse, silently do the wrong thing.
 
-The only reason this function was written was to cope with the fact that NumPy changed the numbers in the 1D `MODEL` into strings when it created the 2D version.
+The only reason for this function to exist is to cope with the fact that NumPy changed the numbers into strings when it converted the 1D `MODEL` into 2D.
 
 
 <details>
@@ -302,21 +302,23 @@ The only reason this function was written was to cope with the fact that NumPy c
 Here is what the function looks like without the extra `i`, `j` and repetitive `if`/`elif`:
 
 ```python
- 1	def convertToCorrect2D(b):
- 2	    newB = []
- 3	    for row in b:
- 4	        newR = []
- 5	        for e in row:
- 6	            newR.append(str(e))
- 7	        newB.append(tuple(newR))
- 8	    return tuple(newB)
+1	def convertToCorrect2D(b):
+2	    newB = []
+3	    for row in b:
+4	        newR = []
+5	        for e in row:
+6	            newR.append(str(e))
+7	        newB.append(tuple(newR))
+8	    return tuple(newB)
 ```
 
-This isn't even remotely the shortest or most Pythonic way to write such a function.  It can be said in one line of code with a *list comprehension*:
+I avoided `i` and `j` by building up the list with `list.append()` instead of overwriting elements.
+
+This isn't even remotely the shortest or most Pythonic way to write this function.  The same can be said in one line with a *list comprehension*:
 
 ```python
- 1	def convertToCorrect2D(b):
- 2	    return tuple([tuple([str(p) for p in row]) for row in b])
+1	def convertToCorrect2D(b):
+2	    return tuple([tuple([str(p) for p in row]) for row in b])
 ```
 
 </details>
@@ -324,7 +326,7 @@ This isn't even remotely the shortest or most Pythonic way to write such a funct
 
 ## "You keep using that word.  I do not think it means what you think it means."
 
-This example illustrates the importance of exercising failure cases while testing.
+When testing software, programmers tend to focus on making the software succeed.  This example illustrates the importance of testing failure cases, too.
 
 I like to call code like this *Vizzini Code*.  Take a look at it and tell me what this `if` statement tests:
 
@@ -332,13 +334,12 @@ I like to call code like this *Vizzini Code*.  Take a look at it and tell me wha
 if p == '1' or '2' or '3' or '4' or '5' or '6' or '7' or '8' or '9':
 ```
 
-![](./24-inigo.gif "You keep using that logic construct.  I do not think it means what you think it means.")
-
-
 <details>
 <summary>We asked 10 programmers about this bug. This is what they said.</summary>
 
-It always succeeds!  Therefore, the test is completely useless.
+This `if` test always succeeds!  Therefore, the test is completely useless.
+
+![](./24-inigo.gif "You keep using that logic construct.  I do not think it means what you think it means.")
 
 Think about how `or` works.  Something `or` something `or` something... each "something" is tested, from left to right, until one of them evaluates to `True`.  This makes the value of the entire expression `True`, and the remaining "somethings" are ignored.  Only when all of the "somethings" but the last are `False` is the final one in the line even considered.
 
@@ -355,39 +356,37 @@ if p == any_one_of('1', '2', '3', '4', '5', '6', '7', '8', '9'):
 You can actually write this in Python.  It looks like this:
 
 ```python
-if p in ('1', '2', '3', '4', '5', '6', '7', '8', '9')
+if p in ('1', '2', '3', '4', '5', '6', '7', '8', '9'):
 ```
 
 However, none of this is necessary because `p` is **never** used again!
 
 ```python
- 1	for i in range(len(MODEL)):
- 2	    for row in b:
- 3	        for p in row:
- 4	            if p == '1' or '2' or '3' or '4' or '5' or '6' or '7' or '8' or '9':
- 5	                for j in range(len(MODEL[i])):
- 6	                    if b == MODEL[i][j]:
- 7	                        return i + 1
- 8	print("If you see this message, the Oracle does not recognize the current board")
- 9	return False
+1	for i in range(len(MODEL)):
+2	    for row in b:
+3	        for p in row:
+4	            if p == '1' or '2' or '3' or '4' or '5' or '6' or '7' or '8' or '9':
+5	                for j in range(len(MODEL[i])):
+6	                    if b == MODEL[i][j]:
+7	                        return i + 1
+8	print("If you see this message, the Oracle does not recognize the current board")
+9	return False
 ```
 
-If this student wasn't working so close to the deadline, I am positive they would have realized that this extra was entirely unnecessary.
-
-Deleting lines 2-4 makes a function that does precisely the same thing:
+If this student wasn't working so close to the deadline, I am positive they would have realized the extra code was entirely unnecessary.  After deleting lines 2-4, the function does precisely the same thing:
 
 ```python
- 1	for i in range(len(MODEL)):
- 5	    for j in range(len(MODEL[i])):
- 6	        if b == MODEL[i][j]:
- 7	            return i + 1
- 8	print("If you see this message, the Oracle does not recognize the current board")
- 9 	return False
+1	for i in range(len(MODEL)):
+5	    for j in range(len(MODEL[i])):
+6	        if b == MODEL[i][j]:
+7	            return i + 1
+8	print("If you see this message, the Oracle does not recognize the current board")
+9 	return False
 ```
 
-Their removal demonstrates this code was only *accidentally* correct.  
+That this function still works after removing those lines demonstrates this it was only *accidentally* correct.
 
-The only effect the extra `for` loops had was to slow the program down a little.  More importantly, the extra variables and indentation makes this code harder to understand.  A future programmer will believe it is all there for good reason and introduce a harmful bug in their confusion.
+he only effect the extra `for` loops had was to slow the program down a little.  More importantly, the extra variables and indentation make this code harder to understand.  A future programmer will believe it is all there for a good reason, and may introduce a harmful bug because of their confusion.
 
 Simplify!
 
