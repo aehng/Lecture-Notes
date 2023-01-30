@@ -29,6 +29,9 @@ https://usu.joinhandshake.com/stu/career_fairs/36881
 
 *   Read the essay "The Tar Pit" (Chapter 1) of the book "The Mythical Man-Month" before our meeting on **Friday, February 3rd** and be prepared to discuss it.
     *   Instructions for accessing the electronic version of this book are [here](../../Required_Reading_Schedule.md#accessing-ebooks-for-free-through-the-usu-library)
+    *   Take the Canvas quiz **The Tar Pit** *before* the beginning of Friday's lecture
+        *   You can take this quiz twice.  It is open book with no time limit, so the 2nd attempt should not be necessary.
+        *   It is due before class on the day we discuss this essay.
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
 
@@ -41,7 +44,7 @@ https://usu.joinhandshake.com/stu/career_fairs/36881
 Come get two sticky notes, one of each color.  On each note write down your A# and
 
 *   **On a `#FF00FF` pink sticky note** a moment that made you say 'A Ha!'
-*   **On a `#FFFF00` yellow sticky note** a moment that made you say 'Oh no!'
+*   **On a `#7fff00` chartreuse sticky note** a moment that made you say 'Oh no!'
 
 Post them on the whiteboard along the timeline of Assignment #1 (Jan 18 - Jan 26) indicating when that event occurred to you.
 
