@@ -40,8 +40,8 @@ https://usu.joinhandshake.com/stu/career_fairs/36881
 
 Come get two sticky notes, one of each color.  On each note write down your A# and
 
-*   **On a `#FF00FF` pink sticky note** a moment that made you say 'A Ha!'
-*   **On a `#FFFF00` yellow sticky note** a moment that made you say 'Oh no!'
+*   **On a `#FFFF00` yellow sticky note** a moment that made you say 'A Ha!'
+*   **On a `#FF00FF` pink sticky note** a moment that made you say 'Oh no!'
 
 Post them on the whiteboard along the timeline of Assignment #1 (Jan 18 - Jan 26) indicating when that event occurred to you.
 
