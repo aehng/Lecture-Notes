@@ -386,7 +386,7 @@ If this student wasn't working so close to the deadline, I am positive they woul
 
 That this function still works after removing those lines demonstrates this it was only *accidentally* correct.
 
-he only effect the extra `for` loops had was to slow the program down a little.  More importantly, the extra variables and indentation make this code harder to understand.  A future programmer will believe it is all there for a good reason, and may introduce a harmful bug because of their confusion.
+The only effect the extra `for` loops had was to slow the program down a little.  More importantly, the extra variables and indentation make this code harder to understand.  A future programmer will believe it is all there for a good reason, and may introduce a harmful bug because of their confusion.
 
 Simplify!
 
