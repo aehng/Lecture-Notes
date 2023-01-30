@@ -151,7 +151,7 @@ If *paragraph comments* were truly a thing, then both of these expressions would
 
 (The `ast` module helps Python applications to process trees of the Python abstract syntax grammar. The abstract syntax itself might change with each Python release; this module helps to find out programmatically what the current grammar looks like.)
 
-<details>
+</details>
 
 
 ## I'm not saying that you need to live in a hut in the woods...
