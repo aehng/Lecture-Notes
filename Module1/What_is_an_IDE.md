@@ -72,7 +72,7 @@ Most IDEs combine these tools into one program:
     *   Run integration tests
     *   Navigable test results - jump straight to broken code
 5.  Build-system 
-    *   Compile a large a project
+    *   Compile a large project
     *   Recompile only changed files
     *   Bundle the built project into archive files, installers
     *   Code signing
@@ -110,7 +110,7 @@ IDEs may include other features that make sense for that environment.
 ## Advantages of Text Editors:
 
 *   **Programming language-agnostic**: works equally well between different
-    programming languages, especially new and less-popular languages which do
+    programming languages, especially new and less popular languages which do
     not have a dedicated IDE.
 *   **Flexibility**: gives you control/responsibility over configuration
     choices.
@@ -136,7 +136,7 @@ remains one of the longest running
 ### Seriously, just ignore the hype and choose for yourself
 
 Most of you will enjoy PyCharm and some of you will hate it; that's okay.  So
-long as your code works, nobody who's opinion matters will judge you for how
+long as your code works, nobody whose opinion matters will judge you for how
 you write code.  I think you should try lots of tools for an extended period of
 time to discover what works best for you.
 
@@ -160,3 +160,5 @@ More information that will give background to your understanding of this common 
 *   [PyCharm IDE Essentials](https://www.jetbrains.com/help/pycharm/general-guidelines.html)
 *   [Mastering PyCharm keyboard shortcuts](https://www.jetbrains.com/help/pycharm/mastering-keyboard-shortcuts.html)
 *   [Does Visual Studio Rot the Mind?](https://web.archive.org/web/20191005080226/http://www.charlespetzold.com/etc/doesvisualstudiorotthemind.html)
+
+*Updated Mon Jan 30 21:02:03 MST 2023*
