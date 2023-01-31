@@ -29,6 +29,9 @@ https://usu.joinhandshake.com/stu/career_fairs/36881
 
 *   Read the essay "The Tar Pit" (Chapter 1) of the book "The Mythical Man-Month" before our meeting on **Friday, February 3rd** and be prepared to discuss it.
     *   Instructions for accessing the electronic version of this book are [here](../../Required_Reading_Schedule.md#accessing-ebooks-for-free-through-the-usu-library)
+    *   Take the Canvas quiz **The Tar Pit** *before* the beginning of Friday's lecture
+        *   You can take this quiz twice.  It is open book with no time limit, so the 2nd attempt should not be necessary.
+        *   It is due before class on the day we discuss this essay.
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
 
@@ -40,22 +43,12 @@ https://usu.joinhandshake.com/stu/career_fairs/36881
 
 Come get two sticky notes, one of each color.  On each note write down your A# and
 
-*   **On a `#FFFF00` yellow sticky note** a moment that made you say 'A Ha!'
+*   **On a `#7fff00` chartreuse sticky note** a moment that made you say 'A Ha!'
 *   **On a `#FF00FF` pink sticky note** a moment that made you say 'Oh no!'
 
-Post them on the whiteboard along the timeline of Assignment #1 (Jan 18 - Jan 26) indicating when that event occurred to you.
+Post them on the whiteboard along the timeline of Assignment #1 (Jan 18 - Jan 27) indicating when that event occurred to you.
 
-
-
-*   What was the single biggest problem for the class?
-    *   **Procrastination**, judging by the distribution of sticky notes
-*   What was the most beneficial thing that happened to the class?
-    *   Reading the starter code - saves time b/c some of the assignment is already written for us
-    *   Carefully designing pseudocode in Phase 2 shortens amount of work needed in Phase 3
-*   What is one thing that you will **begin doing** for Assignment 2?
-    *   Read everything, including the starter code!
-*   What is one thing that you will **stop doing** for Assignment 2?
-    *   Procrastinating!
+![20-retrospective.jpg](./20-retrospective.jpg "Retrospective #1: A Ha! and Oh no! moments")
 
 
 
@@ -86,6 +79,37 @@ In this assignment you will create your own implementations of classic Unix text
 # Assignment #1 Code ~~Review~~ Roast
 
 *If your code is featured, please take it in the spirit of constructive criticism*
+
+
+## After you test your code, TEST IT AGAIN
+
+Some poor sucker pushed code that looked like this.  Do you see the mistake?
+
+```python
+ 1	def strategy_oracle(b):
+ 2	    if "X" not in b:
+ 3	        return random.choice(open_cells(b))
+ 4	    for i in range(len(MODEL)):
+ 5	        for p in board:
+ 6	            if type(p) is int:
+ 7	                for j in range(len(MODEL[i])):
+ 8	                    if b == MODEL[i][j]:
+ 9	                        return i
+10	    print("If you see this message, the Oracle does not recognize the current board")
+11	    return False
+```
+
+<detail>
+<summary>Only people with an IQ of 141 or higher can spot the error</summary>
+
+On line 5 the variable `b` is called `board`.
+
+This error sneaked past because line 5 isn't executed by the starter code due to the *other* bug.  This is why I say "every line of code is a liability".  Bugs live by the saying "snitches get stitches".  One bug will cover for another!
+
+This would have been **less likely** to get out in a Java program because the compiler would have spotted the mistake.  But that requires one to... you know... compile their code again after making what looks like a trivial change.  I can't tell you how many of these bugs I've found because folks (including me) didn't compile their code again.
+
+</detail>
+
 
 
 ## Triple quoted string literals are NOT comments
@@ -142,11 +166,11 @@ If *paragraph comments* were truly a thing, then both of these expressions would
 ```python
 >>> import ast
 
->>> ast.unparse(ast.parse("# This file holds the functions related to game-flow")
+>>> ast.unparse(ast.parse("# This file holds the functions related to game-flow"))
 ''
 
 >>> ast.unparse(ast.parse('"""This file holds the functions related to game-flow"""'))
-'"""this is a comment"""'
+'"""This file holds the functions related to game-flow"""'
 ```
 
 (The `ast` module helps Python applications to process trees of the Python abstract syntax grammar. The abstract syntax itself might change with each Python release; this module helps to find out programmatically what the current grammar looks like.)
@@ -180,10 +204,10 @@ For some reason this code made me think of a quote:
 
 `tuple()` converts an *ordered collection* into a tuple.  Examples of ordered collections include lists, strings, ranges and tuples.
 
-*   *lists* are written with `[]` brackets
-*   *strings* are written with `"` and `'` quotes
-*   *ranges* are made with the `range()` function
-*   *tuples* are made with `()` parentheses
+*   *list* values are written with `[]` brackets
+*   *string* values are written with `"` and `'` quotes
+*   *range* values are made with the `range()` function
+*   *tuple* values are made with `()` parentheses
 
 If what you want is a tuple, just make it a tuple in the first place:
 
