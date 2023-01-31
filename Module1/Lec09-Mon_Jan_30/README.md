@@ -48,7 +48,12 @@ Come get two sticky notes, one of each color.  On each note write down your A# a
 
 Post them on the whiteboard along the timeline of Assignment #1 (Jan 18 - Jan 27) indicating when that event occurred to you.
 
-![20-retrospective.jpg](./20-retrospective.jpg "Retrospective #1: A Ha! and Oh no! moments")
+#### Section 001
+![./20-retrospective-001.jpg](./20-retrospective-001.jpg "Retrospective #1: A Ha! and Oh no! moments in Section 001")
+
+#### Section 002
+![./20-retrospective-002.jpg](./20-retrospective-002.jpg "Retrospective #1: A Ha! and Oh no! moments in Section 002")
+ 
 
 
 
