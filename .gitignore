@@ -1,16 +1,16 @@
 # Lecture Notes Repository Gitignore
+.notes
 all_notes.md
 cheatsheet*
 *.cheatsheet
+*.hook
+idea*.md
 *.ig
 ig.*
-*.ig.*
-*.pic.*
-*.pre.*
-*.post.*
-answers.*
-idea*.md
-.notes
+*[-.]ig.*
+*[-.]pic.*
+*[-.]pre.*
+*[-.]post.*
 
 # LibreOffice lockfiles
 .~lock.*.od?#
@@ -18,7 +18,7 @@ idea*.md
 .~lock.*.xlsx#
 .~lock.*.pptx#
 
-# C/C++ build detritus
+# C/C++ cruft
 main
 tags
 cscope.*
@@ -30,9 +30,9 @@ cscope.*
 build
 *.jar
 
-# Python cruft
+# Python paraphernalia
 *.pyc
 __pycache__
 
-# Crufty cruft
+# Crash trash
 *.core
