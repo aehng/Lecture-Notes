@@ -42,6 +42,8 @@ http://slack.dc435.org/
 
 # Action Items
 
+*   Read the essay "The Tar Pit" (Chapter 1) of the book "The Mythical Man-Month" before our meeting on **Friday, September 23rd** and be prepared to discuss it.
+    *   Instructions for accessing the electronic version of this book are [here](../../Required_Reading_Schedule.md#accessing-ebooks-for-free-through-the-usu-library)
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
 

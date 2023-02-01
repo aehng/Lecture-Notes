@@ -80,9 +80,6 @@ $ git pull origin master
 	* [Assignment #2 - Text Tools](./Module1/Lec09-Mon_Jan_30/README.md#assignment-2-text-tools)
 	* [Assignment #1 Code ~~Review~~ Roast](./Module1/Lec09-Mon_Jan_30/README.md#assignment-1-code-review-roast)
 	* [What does PyCharm's green "Run" button *really* do?](./Module1/Lec09-Mon_Jan_30/README.md#what-does-pycharms-green-run-button-really-do)
-	* [The Current Working Directory and your code](./Module1/Lec09-Mon_Jan_30/README.md#the-current-working-directory-and-your-code)
-	* [Python String Operations](./Module1/Lec09-Mon_Jan_30/README.md#python-string-operations)
-	* [Reading files in Python](./Module1/Lec09-Mon_Jan_30/README.md#reading-files-in-python)
 10. [Wednesday, February 01](./Module1/Lec10-Wed_Feb_01/README.md)
 	* [Debugging](./Module1/Lec10-Wed_Feb_01/README.md#debugging)
 	* [Ten Cool Debugging Tricks That Will Impress Your Friends](./Module1/Lec10-Wed_Feb_01/README.md#ten-cool-debugging-tricks-that-will-impress-your-friends)
@@ -90,6 +87,14 @@ $ git pull origin master
 	* [Rubber Duck Debugging](./Module1/Lec10-Wed_Feb_01/README.md#rubber-duck-debugging)
 	* [The "Wolf Fence" Algorithm for Finding Bugs](./Module1/Lec10-Wed_Feb_01/README.md#the-wolf-fence-algorithm-for-finding-bugs)
 	* [How to Read a Stack Trace](./Module1/Lec10-Wed_Feb_01/README.md#how-to-read-a-stack-trace)
+11. [Friday, February 03](./Module1/Lec11-Fri_Feb_03/README.md)
+	* [Fred Brooks Jr.'s "The Tar Pit"](./Module1/Lec11-Fri_Feb_03/README.md#fred-brooks-jrs-the-tar-pit)
+	* [Reading files in Python](./Module1/Lec11-Fri_Feb_03/README.md#reading-files-in-python)
+	* [How to write the `cat` text tool](./Module1/Lec11-Fri_Feb_03/README.md#how-to-write-the-cat-text-tool)
+	* [IDE Debugger Tools](./Module1/Lec11-Fri_Feb_03/README.md#ide-debugger-tools)
+	* [Direct Debugging in the IDE](./Module1/Lec11-Fri_Feb_03/README.md#direct-debugging-in-the-ide)
+	* [The call stack](./Module1/Lec11-Fri_Feb_03/README.md#the-call-stack)
+	* [Another cool tool: the expression evaluator](./Module1/Lec11-Fri_Feb_03/README.md#another-cool-tool-the-expression-evaluator)
 
 
 
