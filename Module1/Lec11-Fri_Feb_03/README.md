@@ -1,6 +1,7 @@
 CS1440 - Friday, February 03 - Lecture 11 - Module 1
 
 # Topics:
+* [Announcements](#announcements)
 * [Fred Brooks Jr.'s "The Tar Pit"](#fred-brooks-jrs-the-tar-pit)
 * [Reading files in Python](#reading-files-in-python)
 * [How to write the `cat` text tool](#how-to-write-the-cat-text-tool)
@@ -11,6 +12,36 @@ CS1440 - Friday, February 03 - Lecture 11 - Module 1
 
 
 ------------------------------------------------------------
+# Announcements
+
+## I told ya so
+
+Remember how I told you about cybersecurity vulnerabilities in PNG image parsers in our last lecture?
+
+*   [ImageMagick: The hidden vulnerability behind your online images](https://www.metabaseq.com/imagemagick-zero-days/)
+*   [Researchers Uncover New Bugs in Popular ImageMagick Image Processing Utility](https://thehackernews.com/2023/02/researchers-uncover-new-bugs-in-popular.html?m=1)
+
+This is an example of **responsible disclosure**
+
+0.  The cybersecurity firm Metabase Q discovered a pair of vulnerabilities last year, in October
+1.  ImageMagick fixed the bugs on October 22nd and released a new version
+2.  Users of ImageMagick have had several months to obtain this updated version
+3.  Metabase Q publicized their find in a blog post authored on February 1st, 2023
+
+As soon as Metabase Q published their blog a race began between bad actors and lazy system administrators who haven't patched their systems in 3 months.  **This is why it is so important to regularly update your systems!!!**
+
+In truth, the race began the day that ImageMagick published the broken code in the first place; the above paragraph is true iff *(if and only if)* Metabase Q were the first security researchers to discover this flaw.  It is entirely likely that some shady "security researchers" already knew about this flaw and kept it to themselves.  **This is why it is so important to regularly update your systems!!!**
+
+
+# Action Items
+
+*   *Today* you should finish phase **1. Design** of the assignment
+    *   Be ready to move on to phase **2. Implementation** *early next week*
+*	Call on 2 designated questioners
+*	Hold a 3-minute stand-up scrum meeting with your team
+
+
+
 # Fred Brooks Jr.'s "The Tar Pit"
 
 [The La Brea Tar Pits in California](https://tarpits.org/)
