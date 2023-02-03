@@ -14,14 +14,15 @@ CS1440 - Friday, February 03 - Lecture 11 - Module 1
 ------------------------------------------------------------
 # Announcements
 
-## I told ya so
+## I told ya so!
 
 Remember how I told you about cybersecurity vulnerabilities in PNG image parsers in our last lecture?
 
-*   [ImageMagick: The hidden vulnerability behind your online images](https://www.metabaseq.com/imagemagick-zero-days/)
-*   [Researchers Uncover New Bugs in Popular ImageMagick Image Processing Utility](https://thehackernews.com/2023/02/researchers-uncover-new-bugs-in-popular.html?m=1)
+*   The OG blog post [ImageMagick: The hidden vulnerability behind your online images](https://www.metabaseq.com/imagemagick-zero-days/)
+    *   There is a short video at the bottom of this write-up
+*   An AI-generated summary on a news aggregator [Researchers Uncover New Bugs in Popular ImageMagick Image Processing Utility](https://thehackernews.com/2023/02/researchers-uncover-new-bugs-in-popular.html?m=1)
 
-This is an example of **responsible disclosure**
+This is a good example of **responsible disclosure**:
 
 0.  The cybersecurity firm Metabase Q discovered a pair of vulnerabilities last year, in October
 1.  ImageMagick fixed the bugs on October 22nd and released a new version
