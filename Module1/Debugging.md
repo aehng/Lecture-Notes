@@ -423,17 +423,30 @@ Live by the motto
 
 There is a difference between *running* your program and *debugging* it in PyCharm.  It's not enough to only set breakpoints!
 
-The article [Debugging with PyCharm](https://www.jetbrains.com/help/pycharm/part-1-debugging-python-code.html) takes you on a high-level tour of the key features.  You will be at a good level of expertise when you know how to use each of the following debugger features:
+The article [Debugging with PyCharm](https://www.jetbrains.com/help/pycharm/part-1-debugging-python-code.html) takes you on a high-level tour of the key features.  You will be at a good level of expertise when you know how to use each of the following debugger features.  These are what the controls look like in PyCharm.  Your debugger should have the same features, though the icons may vary:
 
-*   Breakpoints
-*   Inline debugging
-*   Expressions and modifying values
+*   Starting and stopping
+    *   Edit run configurations ![](./assets/debugger/edit-run-configurations.png)
+    *   Run in debug mode ![](./assets/debugger/run-in-debug-mode.png)
+    *   Breakpoints ![](./assets/debugger/breakpoint.png)
+    *   Continue ![](./assets/debugger/continue.png)
+    *   Pause ![](./assets/debugger/pause.png)
+    *   Stop ![](./assets/debugger/stop.png)
+    *   Restart ![](./assets/debugger/restart.png)
+    *   Mute all breakpoints ![](./assets/debugger/mute-breakpoints.png)
+    *   Manage breakpoints ![](./assets/debugger/manage-breakpoints.png)
 *   Stepping
-    *   Stepping over function calls
-    *   Stepping into function calls
-    *   Stepping into function calls that *I* wrote
-    *   Stepping out of function calls
-    *   Run to cursor
-*   Frames (the call stack)
-*   Watches
-*   REPL (a.k.a. the Python Console)
+    *   Stepping over function calls ![](./assets/debugger/step-over.png)
+    *   Stepping into function calls ![](./assets/debugger/step-into.png)
+    *   Stepping into function calls that *I* wrote ![](./assets/debugger/step-into-my-code.png)
+    *   Stepping out of function calls ![](./assets/debugger/step-out.png)
+    *   Run to cursor ![](./assets/debugger/run-to-cursor.png)
+    *   Show execution point ![](./assets/debugger/show-execution-point.png)
+*   Watch points (stop when a variable changes value) ![](./assets/debugger/watch-point.png)
+*   Examine Program State
+    *   Frames (a.k.a. the call stack) ![](./assets/debugger/call-stack.png)
+    *   Inline debugging information ![](./assets/debugger/inline-debugging.png)
+    *   Expressions and modifying values ![](./assets/debugger/evaluate-expression.png)
+    *   View variables and expressions ![](./assets/debugger/variables-and-expressions.png)
+*   REPL (a.k.a. the Python Console) ![](./assets/debugger/python-console.png)
+*   Command Shell Terminal ![](./assets/debugger/terminal.png)
