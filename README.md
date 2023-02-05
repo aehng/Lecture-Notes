@@ -97,6 +97,15 @@ $ git pull origin master
 	* [Another cool tool: the expression evaluator](./Module1/Lec11-Fri_Feb_03/README.md#another-cool-tool-the-expression-evaluator)
 
 
+### Module 2
+12. [Monday, February 06](./Module2/Lec12-Mon_Feb_06/README.md)
+	* [What kinds of programming languages are there?](./Module2/Lec12-Mon_Feb_06/README.md#what-kinds-of-programming-languages-are-there)
+13. [Wednesday, February 08](./Module2/Lec13-Wed_Feb_08/README.md)
+	* [Python's Built-in Data Structures](./Module2/Lec13-Wed_Feb_08/README.md#pythons-built-in-data-structures)
+	* [Which data structure will give me the best performance](./Module2/Lec13-Wed_Feb_08/README.md#which-data-structure-will-give-me-the-best-performance)
+	* [When should I use an *unordered* collection](./Module2/Lec13-Wed_Feb_08/README.md#when-should-i-use-an-unordered-collection)
+
+
 
 ## Creating a comprehensive study guide from individual lecture notes files
 
