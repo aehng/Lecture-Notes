@@ -60,10 +60,12 @@ def __start():
     label .fizz
     movr(rcx, rbx)
     modi(rcx, 0x3)
-    if zeroflg():
-        loadi(rdx, 0x1)
-        loadstr('f')
-        printstr()
+    if zeroflg(): goto .incrfizz
+    goto .fizzR
+    label .incrfizz
+    loadi(rdx, 0x1)
+    loadstr('f')
+    printstr()
     goto .fizzR
 
     # The BUZZ subroutine
@@ -72,10 +74,12 @@ def __start():
     label .buzz
     movr(rcx, rbx)
     modi(rcx, 0x5)
-    if zeroflg():
-        loadi(rdx, 0x1)
-        loadstr('b')
-        printstr()
+    if zeroflg(): goto .incrbuzz
+    goto .buzzR
+    label .incrbuzz
+    loadi(rdx, 0x1)
+    loadstr('b')
+    printstr()
     goto .buzzR
 
     # Loop from 1 to 100, printing the FizzBuzz sequence line-by-line
@@ -95,23 +99,25 @@ def __start():
 
     # If N is neither Fizz nor Buzz, print it
     cmpi(rdx, 0x0)
-    if zeroflg():
-        movr(rax, rbx)
-        printi()
+    if zeroflg(): goto .printn
+    goto .printnl
+
+    label .printn
+    movr(rax, rbx)
+    printi()
 
     # Print a newline (ASCII char #10)
+    label .printnl
     loadi(rax, 0x0a)
     printc()
 
     # When N == 100 quit
     movr(rcx, rbx)
     subi(rcx, 0x64)
-    if zeroflg():
-        goto .end
-    else:
-        # Increment N
-        addi(rbx, 0x1)
-        goto .fizzBuzzLoop
+    if zeroflg(): goto .end
+    # Increment N
+    addi(rbx, 0x1)
+    goto .fizzBuzzLoop
 
     label .end
 
