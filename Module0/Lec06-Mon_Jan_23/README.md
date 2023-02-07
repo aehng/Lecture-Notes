@@ -19,11 +19,22 @@ CS1440 - Monday, January 23 - Lecture 06 - Module 0
 # How to Use the Lecture Notes
 
 *   You should *clone* this lecture notes repository onto your own computer so you always have a copy with you.
-*   After it is cloned, use `git pull` to *update* it after every lecture
-    *   This way you can read and run the *demo code* that I write with you in class
+*   Once it is cloned, `cd` into the repo and run this command to *update* it after each lecture:
+    *   ```bash
+        $ git pull origin master
+        ```
+    *   This way you can read and run the *demo code* that I write for you in class
 *   You can also make a convenient study guide called `all_notes.md` by running the `concatenate.sh` script found at the root of the repository
+    *   ```bash
+        $ ./concatenate.sh
+        Removing old all_notes.md...
+        Processing ./Module0/Lec01-Mon_Jan_09/README.md
+        Processing ./Module0/Lec02-Wed_Jan_11/README.md
+        Processing ./Module0/Lec03-Fri_Jan_13/README.md
+        Created all_notes.md
+        ```
     *   This file is the concatenation of all daily `README.md` files
-    *   It does **not** contain other Markdown files from the repository
+    *   It does **not** contain other Markdown files in the repository
 *   `all_notes.md` can be quickly searched with the `grep` tool to find a keyword you are interested in
     *   The syntax of this command is `grep [options] SEARCH_TERM FILE...`
         *   `[options]` includes:
