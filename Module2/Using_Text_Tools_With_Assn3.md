@@ -1,4 +1,4 @@
-# Using the Text Tools with Assignment #2
+# Using the Text Tools with Assignment #3
 
 You have created your own text processing tools, which increases your power as a programmer in three ways:
 

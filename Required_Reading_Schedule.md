@@ -9,7 +9,7 @@
 |          | Module 1 | Week 3  |  1/23 -  1/27 |
 | 1        | Module 1 | Week 4  |  1/30 -  2/03 | TMMM Ch. 1: The Tar Pit 
 |          | Module 2 | Week 5  |  2/06 -  2/10 | 
-| 2        | Module 2 | Week 6  |  2/13 -  2/17 | [How to Read Documentation](./Module1/How_to_Read_Documentation.md)
+| 2        | Module 2 | Week 6  |  2/13 -  2/17 | [How to Read Documentation](./Module2/How_to_Read_Documentation.md)
 |          | Module 3 | Week 7  |  2/20 -  2/24 | 
 | 3        | Module 3 | Week 8  |  2/27 -  3/03 | TMMM Ch. 6: Passing the Word
 |          | Module 4 | Week 9  |  3/06 -  3/10 | **Spring Break**
