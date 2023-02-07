@@ -1,29 +1,31 @@
-# How to install your Text Tools
+# How to Install Your Text Tools
 
-While you are working on Assignment #1 you can either run `tt.py` from within
-the `src/` directory like this:
+While you worked on Assignment #2 you ran `tt.py` from the `src/` directory like this:
 
-```
+```bash
 $ python tt.py cat ../data/let3
 ```
 
-or "install" it so that you can run it from *anywhere* on your system without
-the need to type the word `python` before it.  In this example I'm able to run
-the text tool from within the `data/` directory:
+This works well enough when the files you want to manipulate are nearby.  But if you want to use your own `head` tool to extract the header line from a CSV file, you might find yourself typing out a long command like this: 
 
+```bash
+$ python ../../../cs1440-assn2/src/tt.py head -n 1 ../USA_full/2021.annual.singlefile.csv > header.csv
 ```
-$ tt.py cat let3
-```
+
+You need to spell out the entire path to `tt.py` because your shell doesn't regard `tt.py` as a first-class citizen.  You don't need to do this for the programs `ls`, `cp`, `mv`, etc. because your shell already knows where to find them.  You will be able to run `tt.py` just like one of those commands if you tell your shell where to find it.
+
 
 ### Add `tt.py` to $PATH in a live shell session
 
 As you learned in Lesson #2 of the Shell Tutor (`2-commands.sh`), `$PATH` is
-the environment variable in which the shell keeps a list of directories to
-search for programs.  Adding the path containing your copy of `tt.py` enables
-your shell to use it just like any other command on your system.
+the environment variable containing a list of directories to search for
+programs.  Adding the path containing your copy of `tt.py` enables
+your shell to run it just like any other command on your system.
 
-0.  Open your shell
-1.  Change into your project's `src/` directory containing `tt.py`
+This procedure *temporarily* puts `tt.py` on the search path:
+
+0.  Open the shell.
+1.  Change into Assignment #2's `src/` directory, where `tt.py` is located.
 2.  Enter this command into the shell *exactly as written here* after the dollar sign `$` (the dollar sign represents your prompt)
 
 ```
@@ -32,11 +34,24 @@ $ PATH="$PWD:$PATH"
 
 **Important!**
 
-*   Note that there is *no* space surrounding the equals sign `=`.
-*   Note that **double quotes** `"` are used instead of single quotes `'`.  These two quotes are identical in Python, but they behave differently from each other in the Shell.
-    *   The double-quotes make the command runnable when its path contains spaces.
+*   There should be *no* space around the equals sign `=`.
+*   **Double quotes** `"` are used instead of single quotes `'`.  Both kinds of quotes are identical in Python, but they mean different things in the shell.
+    *   The double-quotes are needed in case the variable `$PWD` contains spaces.
 
-Until you close the terminal you will be able to run `tt.py` just like any program on your computer.
+Until this shell session ends, `tt.py` works just like any program on your computer:
+
+```
+$ tt.py
+Error: Too few arguments
+
+Python Text Tools Usage:
+========================
+tt.py cat|tac FILENAME...
+    Concatenate and print files in order or in reverse
+...
+```
+
+If you get an error message, see the troubleshooting tips at the bottom of this document.
 
 
 ### Update $PATH in your shell's startup file
@@ -83,7 +98,7 @@ correctly specified in your `PATH`, or the `tt.py` script is not executable.
 *   Double-check the spelling of the path to `tt.py` within your startup file.
     *   The path to `tt.py` should end in `src`.
     *   If the path to `tt.py` on your system contains spaces, make sure it is surrounded by **double-quotes** `"`.
-*   You may try entering the `src/` directory of your Assignment 1 project and run this command to mark the file `tt.py` as executable:
+*   You may try entering the `src/` directory of your Assignment 2 project and run this command to mark the file `tt.py` as executable:
     *   ```
         $ chmod +x tt.py
         ```
@@ -99,7 +114,7 @@ Errors messages containing these words look like the following:
 ```
 
 ```
-bash: /c/Users/user/Desktop/cs1440-falor-erik-assn1/src/tt.py: /usr/bin/env: bad interpreter: No such file or directory
+bash: /c/Users/user/Desktop/cs1440-falor-erik-assn2/src/tt.py: /usr/bin/env: bad interpreter: No such file or directory
 ```
 
 The remedy is to update the shebang line in `tt.py`.  The first line of `tt.py`
