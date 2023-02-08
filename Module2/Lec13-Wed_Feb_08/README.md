@@ -46,7 +46,7 @@ This Thursday, join us for our "Introduction to Using Linux" presentation. Switc
 
 In Assignment #3 you'll need the right data structure for the job.  Let's see what Python has to offer.
 
-## Mud cards in Erik's section
+## Mud cards
 
 *   Write your name and A number at the top of your mud card
 *   As we discuss this topic, please jot down any thoughts & questions that come to your mind
