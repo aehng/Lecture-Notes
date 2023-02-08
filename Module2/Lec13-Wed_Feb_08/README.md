@@ -10,6 +10,28 @@ CS1440 - Wednesday, February 08 - Lecture 13 - Module 2
 ------------------------------------------------------------
 # Announcements
 
+## The CS Coaching Center has not changed this semester
+
+It is still located in Old Main 304 and online at [coach.cs.usu.edu](http://coach.cs.usu.edu).
+
+*   Whether you're in person or online, you need to go to the same website to sign in and wait for a coach.
+    *   The Math Learning Center recently started using a new version of the queueing software.
+    *   We will be transitioning soon, but we have not yet.
+    *   We have heard that some students are trying to use that for Computer Science, but it is not live so there are no coaches there.
+    *   We will make an announcement when it happens (soon!)
+*   Also, we have received reports of students just searching on Google for our site and ending up at sites with paid services.
+    *   Those sites are not our sites.
+    *   Unless you want to pay some 3rd party for help (I would highly recommend against it), just go to [coach.cs.usu.edu](http://coach.cs.usu.edu).
+
+
+## Free Software and Linux Club
+
+*   **What**  Introduction to Linux
+*   **When**  6:30pm Thursday, February 9th
+*   **Where** ESLC 053, [FSLC Discord server](https://discord.gg/GKWhbVDN38)
+
+This Thursday, join us for our "Introduction to Using Linux" presentation. Switching to Linux is hard, but worthwhile, and learning new things always comes with some rough patches. Join Kyler as he talks about desktop environments and how it may differ from the ones you know, and Richard as he talks about using the shell, perhaps the most famous quirk of using Linux.
+
 
 # Action Items
 
