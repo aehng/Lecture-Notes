@@ -9,9 +9,21 @@ CS1440 - Friday, February 10 - Lecture 14 - Module 2
 ------------------------------------------------------------
 # Announcements
 
+## Science Unwrapped: Computing with Honeybees
+
+*   **What**  USU computer scientist Vladimir Kulyukin presents "Music, Traffic, Solar Harvests: Computing with Honeybees"
+*   **When**  7:00pm Friday, February 10th
+*   **Where** ESLC 130
+
+Computation can unlock mysteries of honeybee behavior, how the bees' environment affects how they live, along with the "music" of bees' buzzing. Learn now artificial intelligence can transform hives into robots to monitor the health of these important pollinators.
+
+Dr. Kulyukin will speak for about half an hour and then invite questions from the audience. Afterwards, enjoy refreshments and hands-on STEM learning activities provided by student and community groups in the ESLC atrium.
+
 
 # Action Items
 
+*   Complete phases **4. Deployment** and **5. Maintenance** *today* 
+    *   Make your final push to GitLab early so you have plenty of time to **verify** your submission
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
 
