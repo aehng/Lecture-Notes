@@ -20,6 +20,18 @@ Computation can unlock mysteries of honeybee behavior, how the bees' environment
 Dr. Kulyukin will speak for about half an hour and then invite questions from the audience. Afterwards, enjoy refreshments and hands-on STEM learning activities provided by student and community groups in the ESLC atrium.
 
 
+## Build yourself a website and Git a job
+
+*   **When**  5 - 7pm Monday, February 13th
+*   **Where** Old Main 407 (the CS Lounge)
+*   **What**  ACM Club online portfolio tutorial night
+    *   Learn how to host an online portfolio website, on your own domain, that shows off your work
+    *   A hiring manager from Lucid will tell you how to make your digital portfolio stand out from the rest
+    *   Free pizza!
+
+![](./02-Git_a_jobACTUAL-1.png)
+
+
 # Action Items
 
 *   Complete phases **4. Deployment** and **5. Maintenance** *today* 
