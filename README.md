@@ -104,6 +104,9 @@ $ git pull origin master
 	* [Python's Built-in Data Structures](./Module2/Lec13-Wed_Feb_08/README.md#pythons-built-in-data-structures)
 	* [Which data structure will give me the best performance](./Module2/Lec13-Wed_Feb_08/README.md#which-data-structure-will-give-me-the-best-performance)
 	* [When should I use an *unordered* collection](./Module2/Lec13-Wed_Feb_08/README.md#when-should-i-use-an-unordered-collection)
+14. [Friday, February 10](./Module2/Lec14-Fri_Feb_10/README.md)
+	* [Demo: Making a dictionary out of favorite_colors.dat](./Module2/Lec14-Fri_Feb_10/README.md#demo-making-a-dictionary-out-of-favorite_colorsdat)
+	* [`eval()` is evil](./Module2/Lec14-Fri_Feb_10/README.md#eval-is-evil)
 
 
 
