@@ -29,8 +29,6 @@ Dr. Kulyukin will speak for about half an hour and then invite questions from th
     *   A hiring manager from Lucid will tell you how to make your digital portfolio stand out from the rest
     *   Free pizza!
 
-![](./02-Git_a_jobACTUAL-1.png)
-
 
 # Action Items
 
