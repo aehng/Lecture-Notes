@@ -330,15 +330,15 @@ Git doesn't have a dedicated *move tag* command.  Changing which commit a tag ap
     2.  `git push REMOTE TAGNAME` to tell the remote repository where the tag now belongs
 
 
-#### Example: Move the pushed tag `A5.0-designed` from commit `9ba1ac3` to `3f94dab`
+#### Example: Move the pushed tag `designed` from commit `9ba1ac3` to `3f94dab`
 
 ```
-$ git tag -d A5.0-designed
-Deleted tag 'A5.0-designed' (was 9ba1ac3)
+$ git tag -d designed
+Deleted tag 'designed' (was 9ba1ac3)
 
-$ git tag A5.0-designed 3f94dab
+$ git tag designed 3f94dab
 
-$ git push --delete origin A5.0-designed
+$ git push --delete origin designed
 remote: ***********************************************************************
 remote: *           __  ________  __  _____                ____    _          *
 remote: *          / / / / __/ / / / / ___/__  __ _  ___  / __/___(_)         *
@@ -356,9 +356,9 @@ remote: *      `---`                                                          *
 remote: *                                                                     *
 remote: ***********************************************************************
 To gitlab.cs.usu.edu:erik.falor/cs1440-falor-erik-assn5.git
- - [deleted]         A5.0-designed
+ - [deleted]         designed
 
-$ git push origin A5.0-designed
+$ git push origin designed
 remote: ***********************************************************************
 remote: *           __  ________  __  _____                ____    _          *
 remote: *          / / / / __/ / / / / ___/__  __ _  ___  / __/___(_)         *
@@ -376,7 +376,7 @@ remote: *      `---`                                                          *
 remote: *                                                                     *
 remote: ***********************************************************************
 To gitlab.cs.usu.edu:erik.falor/cs1440-falor-erik-assn5.git
- * [new tag]         A5.0-designed -> A5.0-designed
+ * [new tag]         designed -> designed
 ```
 
 ## Visit older points of history in the Git timeline
@@ -408,3 +408,6 @@ HEAD* simply means that you are not currently on a branch.  Remember, `HEAD` is
 the name of the currently checked-out commit.  Usually this is located at the
 "tip" of the branch named `master`.  You'll learn about branches later on, but
 for now you can just follow the on-screen instructions to get back.
+
+
+*Updated Sat Feb 11 17:47:03 MST 2023*

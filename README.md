@@ -112,6 +112,8 @@ $ git pull origin master
 	* [A solution to `paste`](./Module2/Lec15-Mon_Feb_13/README.md#a-solution-to-paste)
 	* [Introduce Assignment #3: Big Data Processing](./Module2/Lec15-Mon_Feb_13/README.md#introduce-assignment-3-big-data-processing)
 	* [Assignment #2 Code ~~Review~~ Roast](./Module2/Lec15-Mon_Feb_13/README.md#assignment-2-code-review-roast)
+16. [Wednesday, February 15](./Module2/Lec16-Wed_Feb_15/README.md)
+	* [Intermediate Git](./Module2/Lec16-Wed_Feb_15/README.md#intermediate-git)
 
 
 
