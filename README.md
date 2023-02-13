@@ -67,7 +67,9 @@ $ git pull origin master
 </details>
 
 
-### Module 1
+<details>
+<summary><h3>Module 1</h3></summary>
+
 07. [Wednesday, January 25](./Module1/Lec07-Wed_Jan_25/README.md)
 	* [The Read, Eval, Print, Loop (REPL)](./Module1/Lec07-Wed_Jan_25/README.md#the-read-eval-print-loop-repl)
 	* [What is an IDE?](./Module1/Lec07-Wed_Jan_25/README.md#what-is-an-ide)
@@ -95,6 +97,8 @@ $ git pull origin master
 	* [Direct Debugging in the IDE](./Module1/Lec11-Fri_Feb_03/README.md#direct-debugging-in-the-ide)
 	* [The call stack](./Module1/Lec11-Fri_Feb_03/README.md#the-call-stack)
 	* [Another cool tool: the expression evaluator](./Module1/Lec11-Fri_Feb_03/README.md#another-cool-tool-the-expression-evaluator)
+
+</details>
 
 
 ### Module 2

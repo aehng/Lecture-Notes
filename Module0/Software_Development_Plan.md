@@ -12,7 +12,7 @@ This table gives an idea of how you ought to spend your time:
 
 | Project Phase                | Portion of effort
 |------------------------------|------------------
-|0. Requirements Specification | 20%
+|0. Requirements Analysis      | 20%
 |1. Design                     | 30%
 |2. Implementation             | 15%
 |3. Testing and Debugging      | 30%
@@ -26,12 +26,12 @@ This table gives an idea of how you ought to spend your time:
 
 
 
-## Phase 0: Requirements Specification
+## Phase 0: Requirements Analysis
 *(20% of your effort)*
 
 **Important - do not change the code in this phase**
 
-Requirements specification is the process where you come to understand the problem that the software will address, and document what the system needs to do.
+Requirements analysis is the process where you come to understand the problem that the software will address, and document what the system needs to do.
 
 Rewrite the requirements *in your own words*.  Define what a good solution will look like so you know when you are done.  Make a list of things that you already know how to do, and a list of what you *don't* yet know how to do.  This highlights your "known knowns" and "unknown unknowns".
 
