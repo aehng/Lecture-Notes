@@ -28,7 +28,6 @@ CS1440 - Monday, February 13 - Lecture 15 - Module 2
 *   Work on phase **0. Requirements Specification** of the new assignment *today*
     *   Wrap it up *tomorrow*
 *	Call on 2 designated questioners
-*	Hold a 3-minute stand-up scrum meeting with your team
 
 
 ## Assigned Reading: "How to Read Documentation"
