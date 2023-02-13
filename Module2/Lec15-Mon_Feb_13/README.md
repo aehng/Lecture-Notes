@@ -43,27 +43,19 @@ CS1440 - Monday, February 13 - Lecture 15 - Module 2
 *   Was it helpful to start from the `cat` tool?
     *   If so, **why**?
 *   Which text tool was the hardest to write?
-	*	**Why** was that one particularly difficult?
+    *   **Why** was that one particularly difficult?
     *   How hard was the `paste` tool to implement compared to the others?
 *   Are there any other lessons that you drew from this experience?
 
 
 ## Profoundness and value of insights
 
-For this retrospective I want you to consider the **value** of insights you gained
-while working on this assignment, and the **cost you paid** to have them.
-
-Think of an insight you gained, the first thing that comes to your mind.
-
-*   Is it a *profound* or a small insight?  How big of a *"click"* was it?
-    *   Is it something that you're surprised that you (or your ducky) came up with?  
-*   Now, think about how *valuable* of an idea it is.
-    *   Did it make a big impact on how you did your work?
-
-Post it to the whiteboard according to these axes:
-
-*   *Profoundness* - how big or important this insight was to you
-*   *Value* - the cost of not realizing it; how useful it was once obtained
+0.  Get a sticky note and write down your A#
+1.  Think of an insight you gained, the first thing that comes to your mind.
+    *   How big of a **"click"** was it?
+    *   Did it surprise you that you (or your ducky) came up with it?
+    *   Did it make a large impact on your project?
+2.  Post it on along the **Profoundness** axis from *enlightened* to *cliché*
 
 
 
@@ -239,22 +231,23 @@ This person's plan was not very detailed; nevertheless, this implementation does
  4      all_lines = []
  5      result = ""
  6      for file in args[1:]:
- 7          file = open(file)  # Erik guesses that this line shoud go here
+ 7          file = open(file)  # This line was not here in the original; Erik is guessing how to fix it
  8          for i in file.readlines():
  9              all_lines.append(i)
-10          file.close()  # Erik's guessing that this would have been here
+10          file.close()  # This line was missing in the original; Erik is guessing how to fix it
 11      all_lines.reverse()
 12      for line in all_lines:
 13          result += line
 14      print(result)
 ```
 
-This implementation is close, but fails because it carelessly combines **ALL** files together into a single list, which is reversed.
+The idea behind this implementation is close to the right track, but fails because it carelessly combines **ALL** files together into a single list, which is reversed.
 
 A few moments spent testing this implementation alongside the example output would have revealed the mistake: `tac` is supposed to reverse the lines of each file *separately*.
 
 An SDP was not written for this submission.
 
+This code also fails because the call to `open()` was in the wrong place and the file object was not closed.
 
 
 ## Uses `reversed()` (good!), but only works for up to 2 files (*so* close!)
@@ -313,7 +306,7 @@ At 21 SLoC this is both the longest and least-capable example of the bunch.  In 
 
 ## Solutions to `tail`
 
-`head` and `tail` are interesting tools to consider because they both require
+`head` and `tail` are interesting tools because they both require
 
 *   Handling an optional argument which itself takes an argument
     *   The argument following `-n` is required *and* must be an integer
@@ -587,7 +580,7 @@ True
 
 ### Over-complicated argument handling Considered Harmful
 
-My complaint with this implementation is the way `-n` is searched for and handled.  This code assumes that the `-n N` may appear anywhere in the command line.  The command-line syntax shown in the documentation make clear that this optional argument may only appear at the beginning of the command line, right after the tool's name.  Unfortunately, this misunderstanding creates an unnecessary and confusing `for` loop in the middle of otherwise elegant code.
+My complaint with this implementation is the way `-n` is searched for and handled.  This code assumes that the `-n N` may appear anywhere in the command line.  The command-line syntax shown in the documentation make it clear that this optional argument *only* appears at the beginning, right after the tool's name.  Unfortunately, this misunderstanding creates an unnecessary and confusing `for` loop in the middle of otherwise elegant code.
 
 ```python
  1  def tail(args):
