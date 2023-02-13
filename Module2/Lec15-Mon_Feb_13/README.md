@@ -122,11 +122,12 @@ Take it from somebody who was once in your shoes:
 
 ## Why can't I just use XYZ program to find the answer?
 
-The full [data set](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn3/uploads/25c7f05127d7730c0e9d6a14d6b977f1/2021_annual_singlefile.zip)
+The full [data set](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn3/uploads/cc7bba707d9a07dd6e8a5c81c178b99e/2021_annual_singlefile.zip)
 is 514429368 bytes (491 megabytes) in size.  Let's see what happens when we attempt to open this file in some common editors:
 
 *   LibreOffice Calc (Spreadsheet)
 *   PyCharm
+*   VS Code
 *   Emacs
 *   Vim
 
