@@ -2,9 +2,9 @@ CS1440 - Monday, February 13 - Lecture 15 - Module 2
 
 # Topics:
 * [Announcements](#announcements)
+* [Introduce Assignment #3: Big Data Processing](#introduce-assignment-3-big-data-processing)
 * [Assignment #2 Retrospective](#assignment-2-retrospective)
 * [A solution to `paste`](#a-solution-to-paste)
-* [Introduce Assignment #3: Big Data Processing](#introduce-assignment-3-big-data-processing)
 * [Assignment #2 Code ~~Review~~ Roast](#assignment-2-code-review-roast)
 
 
@@ -34,41 +34,6 @@ CS1440 - Monday, February 13 - Lecture 15 - Module 2
 
 *   Read the essay "How to Read Documentation" before our meeting on Friday, February 17th and be prepared to discuss it.
 *   The article is right here, [in the lecture notes repo](../How_to_Read_Documentation.md)
-
-
-
-# Assignment #2 Retrospective
-
-*   Was it helpful to start from the `cat` tool?
-    *   If so, **why**?
-*   Which text tool was the hardest to write?
-    *   **Why** was that one particularly difficult?
-    *   How hard was the `paste` tool to implement compared to the others?
-*   Are there any other lessons that you drew from this experience?
-
-
-## Profoundness and value of insights
-
-0.  Get a sticky note and write down your A#
-1.  Think of an insight you gained, the first thing that comes to your mind.
-    *   How big of a **"click"** was it?
-    *   Did it surprise you that you (or your ducky) came up with it?
-    *   Did it make a large impact on your project?
-2.  Post it on along the **Profoundness** axis from *enlightened* to *cliché*
-
-
-
-# A solution to `paste`
-
-In the past students have reported that `paste` was the hardest to write because it bears the least resemblance to `cat`.
-
-I will now show one way to implement [`paste`](./Partial.py).
-
-*Demo* 
-
-```
-$ python Partial.py data/*
-```
 
 
 
@@ -121,6 +86,41 @@ is 514429368 bytes (491 megabytes) in size.  Let's see what happens when we atte
 *   VS Code
 *   Emacs
 *   Vim
+
+
+
+# Assignment #2 Retrospective
+
+*   Was it helpful to start from the `cat` tool?
+    *   If so, **why**?
+*   Which text tool was the hardest to write?
+    *   **Why** was that one particularly difficult?
+    *   How hard was the `paste` tool to implement compared to the others?
+*   Are there any other lessons that you drew from this experience?
+
+
+## Profoundness and value of insights
+
+0.  Get a sticky note and write down your A#
+1.  Think of an insight you gained, the first thing that comes to your mind.
+    *   How big of a **"click"** was it?
+    *   Did it surprise you that you (or your ducky) came up with it?
+    *   Did it make a large impact on your project?
+2.  Post it on along the **Profoundness** axis from *enlightened* to *cliché*
+
+
+
+# A solution to `paste`
+
+In the past students have reported that `paste` was the hardest to write because it bears the least resemblance to `cat`.
+
+I will now show one way to implement [`paste`](./Partial.py).
+
+*Demo* 
+
+```
+$ python Partial.py data/*
+```
 
 
 
