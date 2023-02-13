@@ -25,7 +25,7 @@ CS1440 - Monday, February 13 - Lecture 15 - Module 2
 
 # Action Items
 
-*   Work on phase **0. Requirements Specification** of the new assignment *today*
+*   Work on phase **0. Requirements Analysis** of the new assignment *today*
     *   Wrap it up *tomorrow*
 *	Call on 2 designated questioners
 
