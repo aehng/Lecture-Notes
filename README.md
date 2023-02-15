@@ -118,6 +118,12 @@ $ git pull origin master
 	* [Assignment #2 Code ~~Review~~ Roast](./Module2/Lec15-Mon_Feb_13/README.md#assignment-2-code-review-roast)
 16. [Wednesday, February 15](./Module2/Lec16-Wed_Feb_15/README.md)
 	* [Intermediate Git](./Module2/Lec16-Wed_Feb_15/README.md#intermediate-git)
+17. [Friday, February 17](./Module2/Lec17-Fri_Feb_17/README.md)
+	* [How to Read Documentation](./Module2/Lec17-Fri_Feb_17/README.md#how-to-read-documentation)
+	* [Applying Text Tools to Assignment #3](./Module2/Lec17-Fri_Feb_17/README.md#applying-text-tools-to-assignment-3)
+	* [Write the `startgrep` text tool](./Module2/Lec17-Fri_Feb_17/README.md#write-the-startgrep-text-tool)
+	* [Redirect a program's output with the shell](./Module2/Lec17-Fri_Feb_17/README.md#redirect-a-programs-output-with-the-shell)
+	* [Visit older points of history in the Git timeline](./Module2/Lec17-Fri_Feb_17/README.md#visit-older-points-of-history-in-the-git-timeline)
 
 
 
