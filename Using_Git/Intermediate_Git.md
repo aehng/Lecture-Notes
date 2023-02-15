@@ -5,10 +5,10 @@ information about the state and structure of your repository, and the ability
 to time-travel to older points in history.
 
 * [Important Git jargon](#important-git-jargon)
+* [Reading Git's log](#reading-gits-log)
 * [See what's changed with `git diff`](#see-whats-changed-with-git-diff)
 * [Discarding uncommitted changes](#discarding-uncommitted-changes)
 * [Temporarily stashing uncommitted changes](#temporarily-stashing-uncommitted-changes)
-* [Reading Git's log](#reading-gits-log)
 * [Tagging commits](#tagging-commits)
 * [Visit older points of history in the Git timeline](#visit-older-points-of-history-in-the-git-timeline)
 
@@ -87,6 +87,43 @@ commits.  A file or directory is *never* an `OBJECT`.
 
 
 
+## Reading Git's log
+
+The `git log` command displays the commit history from the current commit back
+to the genesis of the repository.  What you see at the top of the listing is
+the latest commit.  Scrolling down takes you back in time.
+
+**Important**: press `q` to quit the log viewer.
+
+#### Protip
+
+If you don't see the extra branch/commit name information in the
+output of `git log` as well as an abbreviated Git commit ID enable it by
+running these commands:
+
+```
+$ git config --global log.decorate true
+$ git config --global log.abbrevCommit true
+```
+
+### `git log --stat`
+Displays a brief summary of affected files and their changes
+
+### `git log --patch`
+Displays a diff describing that commit
+
+### `git log --stat --patch`
+Show both the stat and the patch at once
+
+### `git log OBJECT`
+
+*   This form of `git log` displays the commit history beginning from the commit denoted by `OBJECT` back to the genesis of the repository.
+*   Any commits which were added *after* `OBJECT` are not listed in this output.
+    *   `OBJECT`s stored in Git's database are *singly-linked* to a "parent" object
+        *   Thus, an object can always find its parent, but they cannot easily track down their children
+        *   This is by design!  Once an object has been created, its SHA-1 ID cannot be changed.  To update it so it can point to a newly created child would require that a new SHA-1 ID be generated.  Then *its* parent would need a new SHA-1 ID, and so on.
+
+
 ## See what's changed with `git diff`
 
 `git status` tells you which files have been changed since the last commit, but
@@ -126,11 +163,11 @@ Show the changes between `OBJECT` and `HEAD`.
 ### `git diff OBJECT -- FILE ...` 
 Show the changes that occurred between `OBJECT` and `HEAD` only for the listed files.
 
-For example, to see how your user's manual changed between the latest commit
-and the tag `designed`, you would run this command:
+For example, to see how your Software Development Plan changed between the
+latest commit and the tag `designed`, you would run this command:
 
 ```
-$ git diff designed -- doc/Manual.md
+$ git diff designed -- doc/Plan.md
 ```
 
 
@@ -151,14 +188,21 @@ changes to your `README.md` since the last commit:
 $ git restore README.md
 ```
 
-To throw away all changes to all files under the current directory since the
+To throw away all changes to all files **under the current directory** since the
 last commit:
 
 ```
 $ git restore .
 ```
 
-`git restore` is a new command to Git.  In case you are ever stranded on a
+This command restores all files in the **entire repository** to their state
+as of the latest commit:
+
+```
+$ git restore :/
+```
+
+`git restore` is a new-ish command in Git.  In case you are ever stranded on a
 system with an old version of Git you should know how to do this the
 "old-fashioned way".  That was to use the `git checkout` command with the `--`
 argument followed by filename(s):
@@ -170,7 +214,14 @@ $ git checkout -- README.md
 The "old-fashioned way" still works in modern Git.
 
 
-### Discarding changes in the staging area
+### Discarding changes in the staging area (A.K.A. the index)
+
+When you run `git add FILENAME...`, the changes to the affected files are said
+to be "staged" or *put into the staging area*, or *added to the index*.  The
+*index* isn't another place on your computer that you can go into, like a
+directory; the files you have changed are still right here.  The index is
+better thought of as a temporary *pre commit* that isn't yet part of the Git
+Log.  
 
 If you ran `git add FILENAME...` but have decided that you do not want to go
 through with it, you can "unstage" those changes by running `git restore` with
@@ -224,44 +275,6 @@ Like `git stash pop`, but do not remove this stash from the stack.
 ### `git stash drop`
 Discard the top-most stash.
 
-
-
-## Reading Git's log
-
-
-The `git log` command displays the commit history from the current commit back
-to the genesis of the repository.  What you see at the top of the listing is
-the latest commit.  Scrolling down takes you back in time.
-
-**Important**: press `q` to quit the log viewer.
-
-#### Protip
-
-If you don't see the extra branch/commit name information in the
-output of `git log` as well as an abbreviated Git commit ID enable it by
-running these commands:
-
-```
-$ git config --global log.decorate true
-$ git config --global log.abbrevCommit true
-```
-
-### `git log --stat`
-Displays a brief summary of affected files and their changes
-
-### `git log --patch`
-Displays a diff describing that commit
-
-### `git log --stat --patch`
-Show both the stat and the patch at once
-
-### `git log OBJECT`
-
-*   This form of `git log` displays the commit history beginning from the commit denoted by `OBJECT` back to the genesis of the repository.
-*   Any commits which were added *after* `OBJECT` are not listed in this output.
-    *   `OBJECT`s stored in Git's database are *singly-linked* to a "parent" object
-        *   Thus, an object can always find its parent, but they cannot easily track down their children
-        *   This is by design!  Once an object has been created, its SHA-1 ID cannot be changed.  To update it so it can point to a newly created child would require that a new SHA-1 ID be generated.  Then *its* parent would need a new SHA-1 ID, and so on.
 
 
 ## Tagging commits
@@ -410,4 +423,4 @@ the name of the currently checked-out commit.  Usually this is located at the
 for now you can just follow the on-screen instructions to get back.
 
 
-*Updated Sat Feb 11 17:47:03 MST 2023*
+*Updated Wed Feb 15 13:10:24 MST 2023*
