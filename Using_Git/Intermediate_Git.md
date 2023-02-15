@@ -93,7 +93,14 @@ The `git log` command displays the commit history from the current commit back
 to the genesis of the repository.  What you see at the top of the listing is
 the latest commit.  Scrolling down takes you back in time.
 
-**Important**: press `q` to quit the log viewer.
+### Navigating the log viewer
+
+*   <kbd>k</kbd> or <kbd>Up Arrow</kbd> to scroll up
+*   <kbd>j</kbd> or <kbd>Down Arrow</kbd> to scroll down
+*   Press <kbd>/</kbd> followed by a search term and <kbd>Enter</kbd> to search
+*   <kbd>q</kbd> or <kbd>:q</kbd> to quit
+*   <kbd>h</kbd> to open the help page; press <kbd>q</kbd> to go back to the log
+
 
 #### Protip
 
