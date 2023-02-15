@@ -95,10 +95,19 @@ the latest commit.  Scrolling down takes you back in time.
 
 ### Navigating the log viewer
 
-*   <kbd>k</kbd> or <kbd>Up Arrow</kbd> to scroll up
-*   <kbd>j</kbd> or <kbd>Down Arrow</kbd> to scroll down
-*   Press <kbd>/</kbd> followed by a search term and <kbd>Enter</kbd> to search
-*   <kbd>q</kbd> or <kbd>:q</kbd> to quit
+On most computers the Git log is displayed using the `less` program, the same
+that is used to display manual pages.  Use these keyboard commands to move
+about the log:
+
+*   <kbd>k</kbd> or <kbd>Up Arrow</kbd> to scroll up one line
+*   <kbd>j</kbd> or <kbd>Down Arrow</kbd> to scroll down one line
+*   <kbd>Space</kbd> scrolls down one screenful
+*   <kbd>g</kbd> returns to the top of the log
+*   <kbd>G</kbd> jumps to the bottom of the log, showing the oldest commit (sometimes you must press <kbd>G</kbd> twice)
+*   Press <kbd>/</kbd> followed by a search term and <kbd>Enter</kbd> to find and highlight matches
+    *   <kbd>n</kbd> jumps to the next match
+    *   <kbd>N</kbd> jumps to the previous match
+*   <kbd>q</kbd> or <kbd>:</kbd><kbd>q</kbd> to quit
 *   <kbd>h</kbd> to open the help page; press <kbd>q</kbd> to go back to the log
 
 
@@ -430,4 +439,4 @@ the name of the currently checked-out commit.  Usually this is located at the
 for now you can just follow the on-screen instructions to get back.
 
 
-*Updated Wed Feb 15 13:10:24 MST 2023*
+*Updated Wed Feb 15 16:47:05 MST 2023*
