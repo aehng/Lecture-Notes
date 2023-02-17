@@ -1,5 +1,5 @@
 # How to Read Documentation
-**version 1.5**
+**version 1.5.1**
 
 *Three hours of experimentation in the REPL can save you 15 minutes of reading documentation.*
 
@@ -14,7 +14,7 @@ The organization and tone of technical documents demands different reading skill
 
 
 
-## Why should I read documentation?
+## Why Should I Read Documentation?
 
 The obvious answer is "because I have a question", and often this is exactly what motivates you.
 
@@ -71,7 +71,7 @@ When this is your motivation to read you want to meet these goals:
 
 
 
-## How (good) documentation is organized
+## How (Good) Documentation Is Organized
 
 I put the word "good" in brackets because some documentation is just awful.  As you read more of it you'll come to recognize which is which.  Remember what good organization looks like so the documentation you write doesn't cause grief for others!
 
@@ -115,7 +115,7 @@ When you read for your own edification you can afford to go a bit slower and rea
 
 
 
-## Why not turn to Stack Overflow for all of my questions?
+## Why Not Turn to Stack Overflow for All of My Questions?
 
 While Stack Overflow (SO) has succeeded at becoming the go-to resource for most programmers (and is far better than any site that has come before), the overall quality of answers is still lower than what can be had from the official documentation.
 
@@ -144,7 +144,7 @@ In this section I will describe features of two specific types of documentation 
 Part of Python's amazing success lies in its excellent documentation.  You will not encounter many other programming languages with documentation that is as approachable and comprehensive as Python's.
 
 
-#### How is Python Documentation organized?
+#### How Is Python Documentation Organized?
 
 Python has two great libraries; one in the interactive Python REPL and one on python.org.  They are slightly different, and each have their place.
 
@@ -190,7 +190,7 @@ Beautifully-formatted, searchable and easy-to-navigate documentation exists onli
         *   Why is it called Python?
 
 
-#### How do I read Python Documentation?
+#### How Do I Read Python Documentation?
 
 ##### REPL
 
@@ -212,7 +212,7 @@ Beautifully-formatted, searchable and easy-to-navigate documentation exists onli
     *   Check that you're reading the right version of documentation!
 
 
-#### Python documentation for an "itchy" reader
+#### Python Documentation for an "Itchy" Reader
 
 *   The REPL is your friend.
 *   Learn to use `help()` to look up the docs for modules, classes, methods, built-in functions
@@ -221,7 +221,7 @@ Beautifully-formatted, searchable and easy-to-navigate documentation exists onli
     you did!
 
 
-#### Python documentation for a "curious" reader
+#### Python Documentation for a "Curious" Reader
 
 *   The built-in `help()` documentation is a good way to begin your exploration
 *   Follow up by studying the same topic in the online documentation to complete your understanding
@@ -260,7 +260,7 @@ Some shortcomings can be addressed by reformatting manual pages as HTML, though 
 Once again, it cannot be overstated how cautiously you must regard documentation on the Web.  By Murphy's Law it will not match the software installed on your system.  This is more true when you are in a hurry.
 
 
-#### How are Man Pages organized?
+#### How Are Man Pages Organized?
 
 The first level of organization are chapters into which related man pages are collected.  On Linux systems the chapters are 1-9:
 
@@ -294,7 +294,7 @@ A manual page consists of several sections.  Conventional section names include:
 *N.B. not every manual page contains every section.*
 
 
-#### How do I read a Man Page?
+#### How Do I Read a Man Page?
 
 Run `man` followed by the name of a command or function.  The chapters are scanned in order from 1-9, and first page found is opened in a terminal reader.  This poses a problem when more than one section contains a page with the same name.
 
@@ -309,7 +309,28 @@ $ man -a chmod
 ```
 
 
-#### Searching man pages
+#### Navigating the Pager
+
+On most computers the manual is displayed using the `less(1)` program, the same
+that is used to display the Git log.  `less(1)` is a "pager", which is a type of
+program that lets your read a long text file in the terminal page by page
+(unlike, say, `cat(1)`).
+
+Use these keyboard commands to navigate in the pager:
+
+*   <kbd>k</kbd> or <kbd>Up Arrow</kbd> to scroll up one line
+*   <kbd>j</kbd> or <kbd>Down Arrow</kbd> to scroll down one line
+*   <kbd>Space</kbd> scrolls down one screenful
+*   <kbd>g</kbd> returns to the top of the log
+*   <kbd>G</kbd> jumps to the bottom of the log, showing the oldest commit (sometimes you must press <kbd>G</kbd> twice)
+*   Press <kbd>/</kbd> followed by a search term and <kbd>Enter</kbd> to find and highlight matches
+    *   <kbd>n</kbd> jumps to the next match
+    *   <kbd>N</kbd> jumps to the previous match
+*   <kbd>q</kbd> or <kbd>:</kbd><kbd>q</kbd> to quit
+*   <kbd>h</kbd> to open the help page; press <kbd>q</kbd> to go back to the log
+
+
+#### Searching Man Pages
 
 Man pages work well when you already know the name of what you're looking for ahead of time.  But what about when you're unsure what you're even looking for?  You're probably thinking "Google it"!  That *can* work, but you must be cautious, lest you find outdated or misleading information.  You can rest assured that the search problem was figured out before internet search engines were a part of every day life.  In fact, the Unix manual comes with its own search engine.  Give the `man` command the `-k` (*keyword*) option followed by a search term:
 
@@ -324,7 +345,7 @@ $ apropos SEARCH_TERM
 ```
 
 
-#### Man pages for an "itchy" reader
+#### Man Pages for an "Itchy" Reader
 
 0.  When you need info in a hurry, make a beeline for the `SYNOPSIS` section.  From this you should be able to tell whether you are in the right place.  It may even contain a brief example of how to use the program/function.
 1.  Skim over the `OPTIONS`, looking for anything that resembles your solution.
@@ -332,7 +353,8 @@ $ apropos SEARCH_TERM
 3.  If this doesn't look like the right manual page, you might be close.  Go to the very bottom and read the `SEE ALSO` section.  It will list other pages in `manpage(section)` format (e.g. `ls(1)`, `sleep(3)`, etc.).
 
 
-#### Man pages for a "curious" reader
+
+#### Man Pages for a "Curious" Reader
 
 When reading for exploration's sake you can spend more time on the page in total, though it is wise to break this up into multiple passes.  Remember that a man page isn't a story that should be read from front-to-back in one pass.  You can only absorb so much information at a time.  Read the document in up to three passes, and only read as much as is useful or interesting to you.
 
@@ -348,3 +370,5 @@ When reading for exploration's sake you can spend more time on the page in total
     *   `ENVIRONMENT` lists variables that influence the operation of this function/command.
     *   `BUGS` indicates weaknesses or shortcomings to be avoided.
     *   `AUTHORS` are who to contact when *you* find a bug.
+
+*Updated Fri Feb 17 12:38:41 MST 2023*
