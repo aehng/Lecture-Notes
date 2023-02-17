@@ -123,7 +123,6 @@ $ git pull origin master
 	* [Applying Text Tools to Assignment #3](./Module2/Lec17-Fri_Feb_17/README.md#applying-text-tools-to-assignment-3)
 	* [Write the `startgrep` text tool](./Module2/Lec17-Fri_Feb_17/README.md#write-the-startgrep-text-tool)
 	* [Redirect a program's output with the shell](./Module2/Lec17-Fri_Feb_17/README.md#redirect-a-programs-output-with-the-shell)
-	* [Visit older points of history in the Git timeline](./Module2/Lec17-Fri_Feb_17/README.md#visit-older-points-of-history-in-the-git-timeline)
 
 
 

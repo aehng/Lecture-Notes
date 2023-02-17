@@ -6,7 +6,6 @@ CS1440 - Friday, February 17 - Lecture 17 - Module 2
 * [Applying Text Tools to Assignment #3](#applying-text-tools-to-assignment-3)
 * [Write the `startgrep` text tool](#write-the-startgrep-text-tool)
 * [Redirect a program's output with the shell](#redirect-a-programs-output-with-the-shell)
-* [Visit older points of history in the Git timeline](#visit-older-points-of-history-in-the-git-timeline)
 
 
 ------------------------------------------------------------
@@ -131,13 +130,7 @@ A common question asked about the text tools is "why don't they create output fi
 
 The reason that our text tools can't create output files is that they don't need to.  The shell can already do this for you!
 
-Shell redirection is a technique that you can use now and later on Assignment #2.  You are gradually building skills that enable you to solve bigger and bigger problems!
-
-
-
-# [Visit older points of history in the Git timeline](../../Using_Git/Intermediate_Git.md#visit-older-points-of-history-in-the-git-timeline)
-
-The `git checkout` command is used to move `HEAD` to another commit in the history.  This command causes git to make the working tree become identical to the state captured by `OBJECT`.  This is how you travel back in time with Git.
+Shell redirection is a technique that you can use now and later on Assignment #3.  You are gradually building skills that enable you to solve bigger and bigger problems!
 
 
 
