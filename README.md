@@ -125,6 +125,12 @@ $ git pull origin master
 	* [Redirect a program's output with the shell](./Module2/Lec17-Fri_Feb_17/README.md#redirect-a-programs-output-with-the-shell)
 
 
+### Module 3
+18. [Wednesday, February 22](./Module3/Lec18-Wed_Feb_22/README.md)
+	* [Protip: colored diff output and what to do if diff says EVERY line is different](./Module3/Lec18-Wed_Feb_22/README.md#protip-colored-diff-output-and-what-to-do-if-diff-says-every-line-is-different)
+	* [Objects and Classes](./Module3/Lec18-Wed_Feb_22/README.md#objects-and-classes)
+
+
 
 ## Creating a comprehensive study guide from individual lecture notes files
 
