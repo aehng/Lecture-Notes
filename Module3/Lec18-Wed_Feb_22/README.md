@@ -62,14 +62,14 @@ Hope to see you there!
 $ diff [-u|-Z|--color=always] FILE0 FILE1
 ```
 
-*   `diff` describes how the input files differ from one another
-    *   If `diff FILE0 FILE1` results in *NO* output, that means the two files are **identical**
+*   `diff` shows how to change `FILE0` into `FILE1`
+    *   If `diff FILE0 FILE1` results in *NO* output, that means the two files are **identical** (i.e. no changes are needed to make one file into the other)
 *   The `-u` flag is optional, but recommended.  It causes `diff` to display its output in the so-called *unified format*, which is the same format used by `git diff`
     *   `diff` is capable of producing output in many different formats
     *   The *unified format* is the easiest to understand
 
 
-Suppose my Big Data program produced a report with *mostly* correct values.  `diff -u output.txt data/USA_full/output.txt` produces this output:
+Suppose my Big Data program produced a report with *mostly* correct values.  `diff -u --color=always output.txt data/USA_full/output.txt` produces this output:
 
 ```diff
 --- output.txt	2023-02-21 17:27:08.383713318 -0700
@@ -102,7 +102,7 @@ Suppose my Big Data program produced a report with *mostly* correct values.  `di
  Maximum reported employment level    74,792
 ```
 
-`diff` tells me how to make `output.txt` become the same as `data/USA_full/output.txt`.  By deleting lines that begin with `-` and adding lines beginning with `+`, then the files will become the same.
+This is telling me how to change `output.txt` to become the same as `data/USA_full/output.txt`.  By deleting lines that begin with `-` and adding lines beginning with `+`, the two files will become the same.
 
 
 ## How to read a unified diff
@@ -119,7 +119,7 @@ A unified diff is the format displayed by the `git diff` command.
     *   Lines with a `-` in the first column are **deleted** from the first file
     *   Lines with a `+` in the first column are **added** to the first file
 
-Adding the option `--color=always` to the command makes `diff`'s output match Git's (tested on Mac and Linux).
+Adding the option `--color=always` to the command makes `diff`'s output appear like Git's (tested on Mac and Linux).
 
 
 ## Windows users: diff says *every* line is different
