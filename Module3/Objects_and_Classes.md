@@ -177,6 +177,8 @@ As an example from the digital world, a **Minecraft chicken** *(Notch, please do
 
 One might define a Chicken in code like this *(pretend for a moment that Minecraft is written in Python instead of Java)*:
 
+#### class Chicken
+
 ```python
 class Chicken():
     def __init__(self, name, x=0.0, y=65.0, z=0.0):
@@ -404,3 +406,5 @@ There are two approaches you can take:
     *   If they don’t already belong to a class, consider whether they could represent a new class of objects whose responsibility it is to perform those operations
 
 Finding and designing good classes is a critical, but challenging skill to learn.  It just takes time and practice!
+
+*Updated Wed Feb 22 13:24:37 MST 2023*

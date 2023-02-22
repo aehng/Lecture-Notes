@@ -58,7 +58,7 @@ UML defines many types of diagrams.  In this course we use only one kind: **Clas
         *   *Parameters* to methods are written as variables between parentheses `( )`, in the format `name : type`
         *   The data type returned by a method follows the parameter list, separated by a colon `:`
 
-This is what the Chicken class looks like in UML:
+This is what the [Chicken class](./Objects_and_Classes.md#class-chicken) looks like in UML:
 
 ```mermaid
 classDiagram
@@ -86,32 +86,101 @@ class Chicken {
 
 Here are some other classes that exist in this Minecraft mod:
 
+#### class Egg
+
+```python
+class Egg:
+    def __init__(self, id):
+        self.id = id
+```
+
 ```mermaid
 classDiagram
 direction LR
 class Egg {
     -id : Int
 }
+```
 
+```python
+class Coop:
+    def __init__(self, id):
+        self.__id = id
+        self.__pos = 0
+        self.__chickens = []
+
+    def add(self, chicken):
+        self.__chickens.append(chicken)
+
+    def remove(self, chicken_id):
+        return self.__chickens.pop(chicken_id)
+
+    def get_chicken(self, chicken_id:
+        return self.__chickens[chicken_id])
+
+    def reset_iteration(self):
+        self.__pos = 0
+
+    def next(self):
+        if self.__pos >= len(self.__chickens):
+            return None
+        else:
+            c = self.__chickens[self.__pos]
+            self.__pos += 1
+            return c
+```
+
+```mermaid
 class Coop {
     -id : Int
+    -pos : Int
     -chickens : Chicken[]
     +add(chicken : Chicken) None
-    +remove(chicken_id : Int) None
+    +remove(chicken_id : Int) Chicken
     +get_chicken(chicken_id : Int) Chicken
     +reset_iteration() None
     +next() Chicken
 }
+```
 
+```python
+class Farmer:
+    def __init__(self, name):
+        self.__name == name
+        self.__pos = 0
+        self.__coops = []
+
+    def add(self, coop):
+        self.__coops.append(coop)
+
+    def remove(self, coop_id):
+        return self.__coops.pop(coop_id)
+
+    def reset_iteration(self):
+        self.__pos = 0
+
+    def next(self):
+        if self.__pos >= len(self.__coops):
+            return None
+        else:
+            c = self.__coops[self.__pos]
+            self.__pos += 1
+            return c
+```
+
+```mermaid
 class Farmer {
     -name : String
+    -pos : Int
     -coops : Coop[]
     +add(coop : Coop) None
-    +remove(coop_id : Int) None
+    +remove(coop_id : Int) Coop
     +reset_iteration() None
     +next() Coop
 }
 ```
+
+
 
 ## How do I draw a UML class diagram?
 
@@ -732,3 +801,5 @@ direction TB
     *   `Donkey` *is a* kind of `Horse`, which *is a* kind of `Animal`
     *   `Mule` *is a* kind of `Horse`, which *is a* kind of `Animal`
 
+
+*Updated Wed Feb 22 13:24:37 MST 2023*
