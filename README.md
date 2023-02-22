@@ -101,7 +101,9 @@ $ git pull origin master
 </details>
 
 
-### Module 2
+<details>
+<summary><h3>Module 2</h3></summary>
+
 12. [Monday, February 06](./Module2/Lec12-Mon_Feb_06/README.md)
 	* [What kinds of programming languages are there?](./Module2/Lec12-Mon_Feb_06/README.md#what-kinds-of-programming-languages-are-there)
 13. [Wednesday, February 08](./Module2/Lec13-Wed_Feb_08/README.md)
@@ -124,11 +126,32 @@ $ git pull origin master
 	* [Write the `startgrep` text tool](./Module2/Lec17-Fri_Feb_17/README.md#write-the-startgrep-text-tool)
 	* [Redirect a program's output with the shell](./Module2/Lec17-Fri_Feb_17/README.md#redirect-a-programs-output-with-the-shell)
 
+</details>
+
 
 ### Module 3
 18. [Wednesday, February 22](./Module3/Lec18-Wed_Feb_22/README.md)
 	* [Protip: colored diff output and what to do if diff says EVERY line is different](./Module3/Lec18-Wed_Feb_22/README.md#protip-colored-diff-output-and-what-to-do-if-diff-says-every-line-is-different)
 	* [Objects and Classes](./Module3/Lec18-Wed_Feb_22/README.md#objects-and-classes)
+	* [UML Class Diagrams](./Module3/Lec18-Wed_Feb_22/README.md#uml-class-diagrams)
+19. [Friday, February 24](./Module3/Lec19-Fri_Feb_24/README.md)
+	* [What is the point of a UML Class Diagram?](./Module3/Lec19-Fri_Feb_24/README.md#what-is-the-point-of-a-uml-class-diagram)
+	* [UML: Multiplicity Constraints](./Module3/Lec19-Fri_Feb_24/README.md#uml-multiplicity-constraints)
+	* [Real-world UML class diagrams](./Module3/Lec19-Fri_Feb_24/README.md#real-world-uml-class-diagrams)
+20. [Monday, February 27](./Module3/Lec20-Mon_Feb_27/README.md)
+	* [Introduce Assignment #4: Bingo! UML Design](./Module3/Lec20-Mon_Feb_27/README.md#introduce-assignment-4-bingo-uml-design)
+	* [Retrospective: Assignment #3](./Module3/Lec20-Mon_Feb_27/README.md#retrospective-assignment-3)
+	* [What you need to gain from assignments](./Module3/Lec20-Mon_Feb_27/README.md#what-you-need-to-gain-from-assignments)
+	* [A solution to Assignment #3](./Module3/Lec20-Mon_Feb_27/README.md#a-solution-to-assignment-3)
+21. [Wednesday, March 01](./Module3/Lec21-Wed_Mar_01/README.md)
+	* [Top comments from Monday's retrospective](./Module3/Lec21-Wed_Mar_01/README.md#top-comments-from-mondays-retrospective)
+	* [Introduction to Software Testing](./Module3/Lec21-Wed_Mar_01/README.md#introduction-to-software-testing)
+22. [Friday, March 03](./Module3/Lec22-Fri_Mar_03/README.md)
+	* [Discuss Brooks' "Passing the Word"](./Module3/Lec22-Fri_Mar_03/README.md#discuss-brooks-passing-the-word)
+	* [Software Testing Jargon Activity](./Module3/Lec22-Fri_Mar_03/README.md#software-testing-jargon-activity)
+	* [Validation vs. Verification](./Module3/Lec22-Fri_Mar_03/README.md#validation-vs-verification)
+	* [Writing and Running Unit Tests in Python](./Module3/Lec22-Fri_Mar_03/README.md#writing-and-running-unit-tests-in-python)
+	* [Ad-Hoc Testing vs. Unit Tests](./Module3/Lec22-Fri_Mar_03/README.md#ad-hoc-testing-vs-unit-tests)
 
 
 
