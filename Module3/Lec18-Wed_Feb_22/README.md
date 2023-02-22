@@ -110,10 +110,10 @@ Suppose my Big Data program produced a report with *mostly* correct values.  `di
 A unified diff is the format displayed by the `git diff` command.
 
 *   The first two lines are the *header*, which names the two files being compared.
-        *   The first file's name is preceded with `---`
-        *   The second file's name is preceded with `+++`
+    *   The first file's name is preceded with `---`
+    *   The second file's name is preceded with `+++`
 *   Lines that begin and end with `@@` mark "hunks" (that's really the technical term)
-        *   The numbers in between the at-signs locate that hunk within each file
+    *   The numbers in between the at-signs locate that hunk within each file
 *   Lines with a ` ` in the first column are **identical** in both files, and are presented for context.
 *   Remaining output describes how to change the first file to become the same as the second:
     *   Lines with a `-` in the first column are **deleted** from the first file
