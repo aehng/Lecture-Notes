@@ -2,6 +2,7 @@ CS1440 - Friday, February 24 - Lecture 19 - Module 3
 
 # Topics:
 * [Action Items](#action-items)
+* [UML Class Diagrams](#uml-class-diagrams)
 * [What is the point of a UML Class Diagram?](#what-is-the-point-of-a-uml-class-diagram)
 * [UML: Multiplicity Constraints](#uml-multiplicity-constraints)
 * [Real-world UML class diagrams](#real-world-uml-class-diagrams)
@@ -14,6 +15,15 @@ CS1440 - Friday, February 24 - Lecture 19 - Module 3
     *   Make your final push to GitLab early so you have plenty of time to **verify** your submission
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
+
+
+
+# [UML Class Diagrams](../UML.md)
+
+The Unified Modeling Language is an important design-phase tool that helps you
+capture the essence of an object-oriented system.  Creating a UML class diagram
+early on will support your work in the later phases of the project, especially
+the Implementation phase.
 
 
 

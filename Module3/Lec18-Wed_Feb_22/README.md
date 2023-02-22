@@ -4,7 +4,6 @@ CS1440 - Wednesday, February 22 - Lecture 18 - Module 3
 * [Announcements](#announcements)
 * [Protip: colored diff output and what to do if diff says EVERY line is different](#protip-colored-diff-output-and-what-to-do-if-diff-says-every-line-is-different)
 * [Objects and Classes](#objects-and-classes)
-* [UML Class Diagrams](#uml-class-diagrams)
 
 
 ------------------------------------------------------------
@@ -144,15 +143,6 @@ $ diff --color=always -uZ output.txt data/USA_full/output.txt
 Getting the design of a system right is the focus of this class.  Time spent upfront in the design phase saves much time later on in the testing and debugging phase.
 
 Understanding what Classes and Objects are and their role in your software system is the key to a good design.
-
-
-
-# [UML Class Diagrams](../UML.md)
-
-The Unified Modeling Language is an important design-phase tool that helps you
-capture the essence of an object-oriented system.  Creating a UML class diagram
-early on will support your work in the later phases of the project, especially
-the Implementation phase.
 
 
 
