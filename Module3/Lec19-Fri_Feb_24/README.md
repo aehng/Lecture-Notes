@@ -4,7 +4,6 @@ CS1440 - Friday, February 24 - Lecture 19 - Module 3
 * [Action Items](#action-items)
 * [UML Class Diagrams](#uml-class-diagrams)
 * [What is the point of a UML Class Diagram?](#what-is-the-point-of-a-uml-class-diagram)
-* [UML: Multiplicity Constraints](#uml-multiplicity-constraints)
 * [Real-world UML class diagrams](#real-world-uml-class-diagrams)
 
 
@@ -44,14 +43,6 @@ What do I expect you to accomplish with UML?
     *   Show me any new classes that you created
 
 The goal of Assignment #4 is to ensure that, for at least once in your career, you have the experience of designing an object-oriented system *before* you sit down to code it, as opposed to documenting it after the fact.
-
-
-
-# [UML: Multiplicity Constraints](../UML.md#multiplicity-constraints)
-
-In some systems it is important to document the number of objects that participate in relationships.
-
-A multiplicity constraint indicates how many times an object from one class can be associated with objects of another class
 
 
 

@@ -29,9 +29,9 @@ UML defines many types of diagrams.  In this course we use only one kind: **Clas
 
 ### What is a UML class diagram?
 
-*   A graphical representation of Object-Oriented classes including their attributes and methods
 *   A way to describe the structure of a program that is programming language agnostic
-*   A description of relationships between classes/objects in an Object-Oriented program
+*   A graphical representation of Object-Oriented classes including their attributes and methods
+    *   A description of relationships between classes/objects in such a program
 
 
 ## Classes in UML
@@ -55,7 +55,7 @@ UML defines many types of diagrams.  In this course we use only one kind: **Clas
         *   Methods are written as `visibility name(parameters) : return_type`
         *   As with attributes, method visibility is either *private* `-` or *public* `+`
         *   *Name* should be a verb or verb phrase that describes the effect of calling the method
-        *   *Parameters* to methods are written as variables between parentheses `( )`, in the format `name : type`
+        *   *Parameters* are a comma-separated list of variables between parentheses `( )`, in the format `name : type`
         *   The data type returned by a method follows the parameter list, separated by a colon `:`
 
 This is what the [Chicken class](./Objects_and_Classes.md#class-chicken) looks like in UML:
@@ -102,6 +102,8 @@ class Egg {
 }
 ```
 
+#### class Coop
+
 ```python
 class Coop:
     def __init__(self, id):
@@ -131,6 +133,8 @@ class Coop:
 ```
 
 ```mermaid
+classDiagram
+direction LR
 class Coop {
     -id : Int
     -pos : Int
@@ -169,6 +173,8 @@ class Farmer:
 ```
 
 ```mermaid
+classDiagram
+direction LR
 class Farmer {
     -name : String
     -pos : Int
@@ -277,7 +283,7 @@ classDiagram
 direction LR
 Chicken ..> Coop : uses
 Egg <.. Farmer : uses
-Farmer ..>  Coop : uses
+Farmer ..>  Coop : deletes
 Chicken ..>  Egg : creates
 
 class Egg {
@@ -324,6 +330,17 @@ class Chicken {
     +wander(): None
 }
 ```
+*You'll have to forgive Mermaid UML; it doesn't let you use the `<< >>` syntax on edges*
+
+
+```mermaid
+%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'master'}} }%%
+      gitGraph
+      commit
+      commit
+      commit
+```
+
 
 
 ## (Sidebar) Programming Language Identifier Naming Conventions
@@ -793,7 +810,9 @@ direction TB
     Horse <|-- Mule
 ```
 
-(I apologize if these arrow heads appear dark in your browser; they are supposed to be light.)  This diagram states the following facts:
+*I apologize that the inheritance arrow heads appear dark; they are supposed to be light*
+
+This diagram states the following facts:
 
 *   `Chicken` *is a* kind of `Animal`
 *   `Sheep` *is a* kind of `Animal`
@@ -802,4 +821,4 @@ direction TB
     *   `Mule` *is a* kind of `Horse`, which *is a* kind of `Animal`
 
 
-*Updated Wed Feb 22 13:24:37 MST 2023*
+*Updated Fri Feb 24 13:15:06 MST 2023*

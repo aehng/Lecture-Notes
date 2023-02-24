@@ -136,7 +136,6 @@ $ git pull origin master
 19. [Friday, February 24](./Module3/Lec19-Fri_Feb_24/README.md)
 	* [UML Class Diagrams](./Module3/Lec19-Fri_Feb_24/README.md#uml-class-diagrams)
 	* [What is the point of a UML Class Diagram?](./Module3/Lec19-Fri_Feb_24/README.md#what-is-the-point-of-a-uml-class-diagram)
-	* [UML: Multiplicity Constraints](./Module3/Lec19-Fri_Feb_24/README.md#uml-multiplicity-constraints)
 	* [Real-world UML class diagrams](./Module3/Lec19-Fri_Feb_24/README.md#real-world-uml-class-diagrams)
 20. [Monday, February 27](./Module3/Lec20-Mon_Feb_27/README.md)
 	* [Introduce Assignment #4: Bingo! UML Design](./Module3/Lec20-Mon_Feb_27/README.md#introduce-assignment-4-bingo-uml-design)
