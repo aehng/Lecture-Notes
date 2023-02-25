@@ -6,13 +6,9 @@
 *   [Finding and Designing Good Classes](#finding-and-designing-good-classes)
 
 
-
 ## Real-world objects
 
 In the real world, what do you consider an object?
-
-*   ...
-*   ...
 
 <details>
 <summary><h3>Spoiler Alert!</h3></summary>
@@ -64,10 +60,6 @@ As an example from the real world, **Lucy the chicken**
 
 In a software system, what is an object?
 
-*   ...
-*   ...
-
-
 <details>
 <summary><h3>Spoiler Alert!</h3></summary>
 
@@ -103,38 +95,23 @@ In a software system, what is an object?
 
 How many objects do you think there can be in a software system?
 
-*   ...
-*   ...
-
 What limits the number of objects that can exist?
-
-*   ...
-*   ...
 
 Consider a system for managing your favorite songs
 
 *   What would be some meaningful objects?
-    *   ...
 *   How many objects would the typical user have?
-    *   ...
 *   How do the objects come and go in this system?
-    *   ...
 
 
 Consider a relaxing crafting game with chickens
 
 *   What would a chicken object look like here?
-    *   ...
 *   How many chickens would the game need to keep track of?
-    *   ...
 *   What would these chickens be capable of doing?
-    *   ...
 *   Besides poultry, what other objects might exist?
-    *   ...
 *   How would these other objects *differ* from chicken objects?
-    *   ...
 *   In what ways would they be *the same*?
-    *   ...
 
 
 How do programmers manage the complexity caused by having lots of software objects?  *This is the central question of object-oriented design.*
@@ -181,90 +158,80 @@ One might define a Chicken in code like this *(pretend for a moment that Minecra
 
 ```python
 class Chicken():
+    MAX_HEALTH = 100
     def __init__(self, name, x=0.0, y=65.0, z=0.0):
-        self.name = name
-        self.eggs_laid = 0
-        self.max_health = 100
-        self.health = self.max_health
-        self.has_eaten = False
-        self.location = [x, y, z]
+        self.__name = name
+        self.__eggs_laid = 0
+        self.__health = self.MAX_HEALTH
+        self.__has_eaten = False
+        self.__location = [x, y, z]
+
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, name):
+        if len(name) < 20:
+            self.__name = name
 
     def cluck(self):
         if self.isalive():
-            print(f"{self.name} says 'cluck cluck cluck.'")
+            print(f"{self.__name} says 'cluck cluck cluck.'")
         else:
-            print(f"{self.name} is very quiet.")
+            print(f"{self.__name} is very quiet.")
 
     def eat(self):
         if self.isalive():
-            print(f"{self.name} pecks at the food.")
+            print(f"{self.__name} pecks at the food.")
             self.heal(25)
-            self.has_eaten = True
+            self.__has_eaten = True
         else:
-            print(f"I don't think that {self.name} is hungry anymore...")
-
-    def get_location(self):
-        return self.location
-
-    def get_name(self):
-        return self.name
-
-    def heal(self, hp):
-        if self.isalive(): # there are no Zombie Chickens in this mod
-            self.health += hp
-            if self.health > self.max_health:
-                self.health = self.max_health
+            print(f"I don't think that {self.__name} is hungry anymore...")
 
     def isalive(self):
-        return self.health > 0
+        return self.__health > 0
 
     def lay_an_egg(self):
         if not self.isalive():
             return
-        self.eggs_laid += 1
-        if self.eggs_laid == 1:
-            print(f"{self.name} just laid her first egg. Congratulations!")
-        elif self.eggs_laid == 3:
-            print(f"You can make an omelete with this many eggs (maybe don't tell {self.name})")
-        elif self.eggs_laid == 12:
-            print(f"That's a dozen eggs!  Good work, {self.name}!")
-        elif self.eggs_laid == 13:
+        self.__eggs_laid += 1
+        if self.__eggs_laid == 1:
+            print(f"{self.__name} just laid her first egg. Congratulations!")
+        elif self.__eggs_laid == 12:
+            print(f"That's a dozen eggs!  Good work, {self.__name}!")
+        elif self.__eggs_laid == 13:
             print(f"A baker's dozen!")
-        elif self.eggs_laid == 18:
-            print(f"{self.name}, we're gonna need a bigger carton.")
-        elif self.eggs_laid == 60:
-            print(f"Five dozen eggs! Somebody get {self.name} a blue ribbon!")
-        elif self.eggs_laid == 72:
-            print(f"That'll do for now, {self.name}.")
-        elif self.eggs_laid == 108:
-            print(f"Seriously, knock it off, {self.name}.")
+        elif self.__eggs_laid == 18:
+            print(f"{self.__name}, we're gonna need a bigger carton.")
+        elif self.__eggs_laid == 60:
+            print(f"That'll do for now, {self.__name}.")
+        elif self.__eggs_laid == 72:
+            print(f"Seriously, knock it off, {self.__name}.")
         else:
-            print(f"{self.name} just laid another egg.")
-        return self.eggs_laid  # for now, an Egg is simply an integer
+            print(f"{self.__name} just laid another egg.")
+        return Egg(self.__eggs_laid)
 
     def lay_some_eggs(self, eggCount):
-        if eggCount <= 0: return
-        eggs = []
-        for _ in range(eggCount):
-            eggs.append(self.lay_an_egg())
-        return eggs
+        if eggCount <= 0:
+            return
+        return [self.lay_an_egg() for _ in range(eggCount) ]
 
     def poop(self):
-        if self.isalive() and self.has_eaten:
-            print(f"{self.name} just practiced Python Object Oriented Programming!")
-            print(f"You probably need to clean up after {self.name}.") 
-            self.has_eaten = False
+        if self.isalive() and self.__has_eaten:
+            print(f"{self.__name} just practiced Python Object Oriented Programming!")
+            self.__has_eaten = False
 
     def take_damage(self, hp):
         if self.isalive():
-            self.health -= hp
+            self.__health -= hp
             self.cluck()
+        else:
+            print("It's dead, Jim")
 
     def wander(self):
         if self.isalive():
-            print(f"{self.name} just wandered a bit.")
+            print(f"{self.__name} just wandered a bit.")
         else:
-            print(f"{self.name} isn't going anywhere.")
+            print(f"{self.__name} isn't going anywhere.")
 ```
 
 
@@ -273,24 +240,25 @@ In another module you can use the `Chicken` class to create a `Chicken` object:
 ```python
 from Chicken import Chicken
 
-# create a Chicken with the name Lucy
+# Introducing... Lucy the chicken
 lucy = Chicken('Lucy')
-
-# Ask Lucy to perform the behaviors defined for her
 lucy.get_name()
 lucy.get_location()
 lucy.cluck()
 lucy.isalive()
-lucy.lay_some_eggs(18)
 lucy.eat()
+
+# Everything is fine until she tries to lay some eggs
+lucy.lay_some_eggs(18)  # NameError: name 'Egg' is not defined
+
+# That's when things took a dark turn for Lucy...
 lucy.take_damage(100)
 lucy.eat()
 ```
 
-Try this in the REPL and see what happens!
+Try this in the REPL and see for yourself.
 
-This Minecraft chicken, like a real chicken, can cluck, wander, poop, and lay an egg (amongst other things).  It also has a quantity of hit points, a location, an age, and a name.
-
+Lucy the Minecraft chicken, like her real-world counterpart, can cluck, wander, poop, and can *almost* lay an egg (just wait until I write an `Egg` class).  She also has a quantity of hit points, a location, an age, and a name.
 
 
 ## Classification

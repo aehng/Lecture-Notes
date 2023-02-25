@@ -58,134 +58,247 @@ UML defines many types of diagrams.  In this course we use only one kind: **Clas
         *   *Parameters* are a comma-separated list of variables between parentheses `( )`, in the format `name : type`
         *   The data type returned by a method follows the parameter list, separated by a colon `:`
 
-This is what the [Chicken class](./Objects_and_Classes.md#class-chicken) looks like in UML:
+This is what the Chicken class from [Objects_and_Classes.md](./Objects_and_Classes.md#class-chicken) looks like in UML:
 
 ```mermaid
 classDiagram
 class Chicken {
-    +name : String
-    +eggs_laid : Int
-    +max_health : Int
-    +health : Int
-    +has_eaten : Boolean
-    +location : Int[]
-    +cluck(): None
-    +eat(): None
-    +get_location(): Int[]
-    +get_name(): String
-    +heal(hp: Int): None
+    +MAX_HEALTH : String
+    -name : String
+    -eggs_laid : Int
+    -health : Int
+    -has_eaten : Boolean
+    -location : Float[]
+    +Chicken(name : String, x : Float, y : Float, z : Float)
+    +get_name() String
+    +set_name(name : String) String|None
+    +cluck() None
+    +eat() None
     +isalive() Boolean
-    +lay_an_egg(): Int
-    +lay_some_eggs(eggCount: Int): Int[]
-    +poop(): None
-    +take_damage(hp: Int): None
-    +wander(): None
+    +lay_an_egg() Egg|None
+    +lay_some_eggs(eggCount: Int) Egg[]|None[]
+    +poop() None
+    +take_damage(hp: Int) None
+    +wander() None
 }
 ```
 
 
-Here are some other classes that exist in this Minecraft mod:
+<details>
+<summary>Python code for comparison</summary>
+
+```python
+class Chicken():
+    MAX_HEALTH = 100
+    def __init__(self, name, x=0.0, y=65.0, z=0.0):
+        self.__name = name
+        self.__eggs_laid = 0
+        self.__health = self.MAX_HEALTH
+        self.__has_eaten = False
+        self.__location = [x, y, z]
+
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, name):
+        if len(name) < 20:
+            self.__name = name
+
+    def cluck(self):
+        if self.isalive():
+            print(f"{self.__name} says 'cluck cluck cluck.'")
+        else:
+            print(f"{self.__name} is very quiet.")
+
+    def eat(self):
+        if self.isalive():
+            print(f"{self.__name} pecks at the food.")
+            self.heal(25)
+            self.__has_eaten = True
+        else:
+            print(f"I don't think that {self.__name} is hungry anymore...")
+
+    def isalive(self):
+        return self.__health > 0
+
+    def lay_an_egg(self):
+        if not self.isalive():
+            return
+        self.__eggs_laid += 1
+        if self.__eggs_laid == 1:
+            print(f"{self.__name} just laid her first egg. Congratulations!")
+        elif self.__eggs_laid == 12:
+            print(f"That's a dozen eggs!  Good work, {self.__name}!")
+        elif self.__eggs_laid == 13:
+            print(f"A baker's dozen!")
+        elif self.__eggs_laid == 18:
+            print(f"{self.__name}, we're gonna need a bigger carton.")
+        elif self.__eggs_laid == 60:
+            print(f"That'll do for now, {self.__name}.")
+        elif self.__eggs_laid == 72:
+            print(f"Seriously, knock it off, {self.__name}.")
+        else:
+            print(f"{self.__name} just laid another egg.")
+        return Egg(self.__eggs_laid)
+
+    def lay_some_eggs(self, eggCount):
+        if eggCount <= 0:
+            return
+        return [self.lay_an_egg() for _ in range(eggCount) ]
+
+    def poop(self):
+        if self.isalive() and self.__has_eaten:
+            print(f"{self.__name} just practiced Python Object Oriented Programming!")
+            self.__has_eaten = False
+
+    def take_damage(self, hp):
+        if self.isalive():
+            self.__health -= hp
+            self.cluck()
+        else:
+            print("It's dead, Jim")
+
+    def wander(self):
+        if self.isalive():
+            print(f"{self.__name} just wandered a bit.")
+        else:
+            print(f"{self.__name} isn't going anywhere.")
+```
+
+</details>
+
+
+Here are some other classes that exist in this Minecraft mod.  Compare the Python code to the UML diagram.  Notice that I do not include the parameter `self` in the UML class diagrams.  That is a Python-centric feature of code that doesn't need to be included in UML diagrams.
 
 #### class Egg
 
-```python
-class Egg:
-    def __init__(self, id):
-        self.id = id
-```
-
 ```mermaid
 classDiagram
-direction LR
 class Egg {
+    +Egg(id : Int)
     -id : Int
 }
 ```
 
+<details>
+<summary>Python code for comparison</summary>
+
+```python
+class Egg:
+    def __init__(self, id):
+        self.__id = id
+```
+
+</details>
+
+
 #### class Coop
+
+The `Coop` class uses two Python-specific dunders `__iter__` and `__next__` to enable its use in a `for` loop.  Because that's a Python-specific implementation detail, I've chosen to leave it off my UML diagram.
+
+```mermaid
+classDiagram
+class Coop {
+    -id : Int
+    -idx : Int
+    -chickens : Chicken[]
+    +Coop(id : Int)
+    +get_id() Int
+    +add_chicken(chicken : Chicken) None
+    +remove_chicken(chicken_id : Int) Chicken
+    +get_chicken(chicken_id : Int) Chicken
+}
+```
+
+<details>
+<summary>Python code for comparison</summary>
 
 ```python
 class Coop:
     def __init__(self, id):
         self.__id = id
-        self.__pos = 0
+        self.__idx = 0
         self.__chickens = []
 
-    def add(self, chicken):
+    def get_id(self):
+        return self.__id
+
+    def add_chicken(self, chicken):
         self.__chickens.append(chicken)
 
-    def remove(self, chicken_id):
+    def remove_chicken(self, chicken_id):
         return self.__chickens.pop(chicken_id)
 
-    def get_chicken(self, chicken_id:
-        return self.__chickens[chicken_id])
+    def get_chicken(self, chicken_id):
+        return self.__chickens[chicken_id]
 
-    def reset_iteration(self):
-        self.__pos = 0
+    # These two dunders enable Coops to work in `for` loops, like this:
+    #   for chicken in coop:
+    def __iter__(self):
+        self.__idx = 0
+        return self
 
-    def next(self):
-        if self.__pos >= len(self.__chickens):
-            return None
-        else:
-            c = self.__chickens[self.__pos]
-            self.__pos += 1
-            return c
+    def __next__(self):
+        if self.__idx >= len(self.__chickens):
+            raise StopIteration
+        c = self.__chickens[self.__idx]
+        self.__idx += 1
+        return c
 ```
+
+</details>
+
+
+#### class Farmer
 
 ```mermaid
 classDiagram
-direction LR
-class Coop {
-    -id : Int
-    -pos : Int
-    -chickens : Chicken[]
-    +add(chicken : Chicken) None
-    +remove(chicken_id : Int) Chicken
-    +get_chicken(chicken_id : Int) Chicken
-    +reset_iteration() None
-    +next() Chicken
+class Farmer {
+    +name : String
+    -coops : Coop[]
+    -eggs : Egg[]
+    +add_coop(coop : Coop) None
+    +remove_coop(coop_id : Int) Coop
+    +harvest_eggs() None
+    +sell_eggs() None
 }
 ```
+
+<details>
+<summary>Python code for comparison</summary>
 
 ```python
 class Farmer:
     def __init__(self, name):
-        self.__name == name
-        self.__pos = 0
+        self.name = name
         self.__coops = []
+        self.__eggs = []
 
-    def add(self, coop):
+    def add_coop(self, coop):
         self.__coops.append(coop)
 
-    def remove(self, coop_id):
+    def remove_coop(self, coop_id):
         return self.__coops.pop(coop_id)
 
-    def reset_iteration(self):
-        self.__pos = 0
-
-    def next(self):
-        if self.__pos >= len(self.__coops):
-            return None
-        else:
-            c = self.__coops[self.__pos]
-            self.__pos += 1
-            return c
+    def harvest_eggs(self):
+        batch = []
+        for coop in self.__coops:
+            for chicken in coop:
+                egg = chicken.lay_an_egg()
+                if egg is not None:
+                    batch.append(egg)
+        print(f"Farmer {self.name} harvested {len(batch)} more eggs")
+        self.__eggs.extend(batch)
+        print(f"That makes {len(self.__eggs)} eggs all together!")
+        
+    def sell_eggs(self):
+        print(f"Farmer {self.name} sold {len(self.__eggs)} eggs at the market")
+        self.__eggs.clear()
 ```
 
-```mermaid
-classDiagram
-direction LR
-class Farmer {
-    -name : String
-    -pos : Int
-    -coops : Coop[]
-    +add(coop : Coop) None
-    +remove(coop_id : Int) Coop
-    +reset_iteration() None
-    +next() Coop
-}
-```
+</details>
 
+These classes are defined in the file [Chicken.py](./Chicken.py) in this directory.  You can test them in the REPL by running `$ python -i Chicken.py`.
 
 
 ## How do I draw a UML class diagram?
@@ -219,7 +332,7 @@ You can draw your class diagrams by hand, but if you do that they need to look *
     *   Don't use one of the pre-defined UML templates, as they start with a bunch of placeholder junk that you'll just end up deleting
 3.  Find the UML section in the accordion list on the left-hand side of the screen
     *   There are multiple shapes available with names like `Class`, `Class 2`, `Class 5`, etc.
-    *   Make sure that the classes appearing on your diagram have 3 sections as described in our lectures:
+    *   Make sure that your classes have 3 sections as described in our lectures:
     *   ```mermaid
         classDiagram
         direction LR
@@ -230,9 +343,9 @@ You can draw your class diagrams by hand, but if you do that they need to look *
             +method1() type1
         }
         ```
-4.  Download your diagram as a PDF by clicking **File** -> **Export**.
+4.  Download your diagram as a PDF or PNG by clicking **File** -> **Export**.
     *   **Do not select _Transparent Background_**
-5.  Click **Download** to create the PDF.  Depending on your browser, you may be redirected to a new tab from which you will need to save the file.
+5.  Click **Download** to create the file.  You may be redirected to a new tab where you will need to save the file.
 
 
 ## What are we trying to accomplish with a UML Class Diagram?
@@ -281,66 +394,63 @@ If it's hard to capture in a UML class diagram, it's likely an "Accidental" qual
 ```mermaid
 classDiagram
 direction LR
-Chicken ..> Coop : uses
-Egg <.. Farmer : uses
-Farmer ..>  Coop : deletes
 Chicken ..>  Egg : creates
+Coop ..> Chicken : uses
+Farmer ..> Egg : uses
+Farmer ..>  Coop : uses
+
+
+class Chicken {
+    +MAX_HEALTH : String
+    -name : String
+    -eggs_laid : Int
+    -health : Int
+    -has_eaten : Boolean
+    -location : Float[]
+    +Chicken(name : String, x : Float, y : Float, z : Float)
+    +get_name() String
+    +set_name(name : String) String|None
+    +cluck() None
+    +eat() None
+    +isalive() Boolean
+    +lay_an_egg() Egg|None
+    +lay_some_eggs(eggCount: Int) Egg[]|None[]
+    +poop() None
+    +take_damage(hp: Int) None
+    +wander() None
+}
+
 
 class Egg {
+    +Egg(id : Int)
     -id : Int
 }
 
-class Farmer {
-    -name : String
-    -coops : Coop[]
-    -eggs : Egg[]
-    +add(coop : Coop) None
-    +remove(coop_id : Int) None
-    +reset_iteration() None
-    +next() Coop
-}
 
 class Coop {
     -id : Int
+    -idx : Int
     -chickens : Chicken[]
-    +add(chicken : Chicken) None
-    +remove(chicken_id : Int) None
+    +Coop(id : Int)
+    +get_id() Int
+    +add_chicken(chicken : Chicken) None
+    +remove_chicken(chicken_id : Int) Chicken
     +get_chicken(chicken_id : Int) Chicken
-    +reset_iteration() None
-    +next() Chicken
 }
 
-class Chicken {
+
+class Farmer {
     +name : String
-    +eggs_laid : Int
-    +max_health : Int
-    +health : Int
-    +has_eaten : Boolean
-    +location : Int[]
-    +cluck(): None
-    +eat(): None
-    +get_location(): Int[]
-    +get_name(): String
-    +heal(hp: Int): None
-    +isalive() Boolean
-    +lay_an_egg(): Int
-    +lay_some_eggs(eggCount: Int): Int[]
-    +poop(): None
-    +take_damage(hp: Int): None
-    +wander(): None
+    -coops : Coop[]
+    -eggs : Egg[]
+    +add_coop(coop : Coop) None
+    +remove_coop(coop_id : Int) Coop
+    +harvest_eggs() None
+    +sell_eggs() None
 }
 ```
-*You'll have to forgive Mermaid UML; it doesn't let you use the `<< >>` syntax on edges*
 
-
-```mermaid
-%%{init: { 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'master'}} }%%
-      gitGraph
-      commit
-      commit
-      commit
-```
-
+*You'll have to forgive my diagram - this UML tool doesn't allow double angle bracketed annotations on dependency lines*
 
 
 ## (Sidebar) Programming Language Identifier Naming Conventions
@@ -388,7 +498,10 @@ Like so many things in programming culture, this has become a [religious issue](
     *   Spaces replaced by underscores `_`
         *   Example: `ABSTRACT_VALIDATING_LAMBDA_METAFACTORY`
         *   Example: `LAST_COMMAND_EXIT_VALUE`
-    *   PEP8 recommends this for constants in Python
+    *   <details>
+        <summary>PEP8 recommends this for constants in Python</summary>
+        ![CAN_YOU_HEAR_ME_NOW?](./assets/THE_CASE_OF_THE_SCREAMING_SNAKE.png "CAN_YOU_HEAR_ME_NOW?")
+        </details>
 4.  `Pascal_Snake_Case_Naming_Convention`
     *   Example: `Abstract_Validating_Lambda_Metafactory`
     *   Example: `Last_Command_Exit_Value`
@@ -441,6 +554,8 @@ Like so many things in programming culture, this has become a [religious issue](
 
 
 ## Links Between Objects
+
+*For this section, the metaphors switch gears from the barnyard to the used car lot*
 
 *   A software object can include, reference, or point to an object.
 *   For example,
@@ -497,8 +612,8 @@ direction LR
 class Vehicle
 class Manufacturer 
 class Owner 
-Vehicle --  Manufacturer : ➡ built by
-Owner --  Vehicle : ➡ currently owns
+Vehicle -- Manufacturer : ➡ built by
+Owner -- Vehicle : ➡ currently owns
 ```
 
 
@@ -513,11 +628,11 @@ class Owner
 class Address 
 class Employer 
 class MPGRating 
-Vehicle --  Manufacturer: ➡ built by
-Owner --  Vehicle : ➡ currently owns
-Owner --  Address : ➡ lives at
-Owner --  Employer : ➡ works for
-Vehicle --  MPGRating : ➡ has
+Vehicle -- Manufacturer: ➡ built by
+Owner -- Vehicle : ➡ currently owns
+Owner -- Address : ➡ lives at
+Owner -- Employer : ➡ works for
+Vehicle -- MPGRating : ➡ has
 ```
 
 
@@ -645,53 +760,59 @@ The system or its users *do* care about which Farmer owns which Coop.  _Use an a
 ```mermaid
 classDiagram
 direction LR
-Chicken --> Coop : ➡ lives in
+Chicken <-- Coop : ➡ lives in
 Egg <-- Farmer : ⬅ collects
 Farmer --> Coop : ➡ owns
 Chicken ..> Egg : ➡ creates
 
+
+class Chicken {
+    +MAX_HEALTH : String
+    -name : String
+    -eggs_laid : Int
+    -health : Int
+    -has_eaten : Boolean
+    -location : Float[]
+    +Chicken(name : String, x : Float, y : Float, z : Float)
+    +get_name() String
+    +set_name(name : String) String|None
+    +cluck() None
+    +eat() None
+    +isalive() Boolean
+    +lay_an_egg() Egg|None
+    +lay_some_eggs(eggCount: Int) Egg[]|None[]
+    +poop() None
+    +take_damage(hp: Int) None
+    +wander() None
+}
+
+
 class Egg {
+    +Egg(id : Int)
     -id : Int
 }
 
-class Farmer {
-    -name : String
-    -coops : Coop[]
-    -eggs : Egg[]
-    +add(coop : Coop) None
-    +remove(coop_id : Int) None
-    +reset_iteration() None
-    +next() Coop
-}
 
 class Coop {
     -id : Int
+    -idx : Int
     -chickens : Chicken[]
-    +add(chicken : Chicken) None
-    +remove(chicken_id : Int) None
+    +Coop(id : Int)
+    +get_id() Int
+    +add_chicken(chicken : Chicken) None
+    +remove_chicken(chicken_id : Int) Chicken
     +get_chicken(chicken_id : Int) Chicken
-    +reset_iteration() None
-    +next() Chicken
 }
 
-class Chicken {
+
+class Farmer {
     +name : String
-    +eggs_laid : Int
-    +max_health : Int
-    +health : Int
-    +has_eaten : Boolean
-    +location : Int[]
-    +cluck(): None
-    +eat(): None
-    +get_location(): Int[]
-    +get_name(): String
-    +heal(hp: Int): None
-    +isalive() Boolean
-    +lay_an_egg(): Int
-    +lay_some_eggs(eggCount: Int): Int[]
-    +poop(): None
-    +take_damage(hp: Int): None
-    +wander(): None
+    -coops : Coop[]
+    -eggs : Egg[]
+    +add_coop(coop : Coop) None
+    +remove_coop(coop_id : Int) Coop
+    +harvest_eggs() None
+    +sell_eggs() None
 }
 ```
 
