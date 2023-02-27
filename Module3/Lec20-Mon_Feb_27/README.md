@@ -41,7 +41,7 @@ I don't really mind which drawing program you use to create your UML class diagr
 0. are legible
 1. represent correct UML, at least as far as was discussed in class
 
-One tool that's free and easy to get started with is https://lucid.app/.  Detailed instructions are found in the starter code repo as well as in UML.md under the heading [How do I draw a UML class diagram?](../UML.md#how-do-i-draw-a-uml-class-diagram)
+One tool that's free and easy to get started with is https://diagrams.net/.  Detailed instructions are found in the starter code repo as well as in UML.md under the heading [How do I draw a UML class diagram?](../UML.md#how-do-i-draw-a-uml-class-diagram)
 
 
 
