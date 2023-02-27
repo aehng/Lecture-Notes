@@ -6,9 +6,6 @@ CS1440 - Monday, February 27 - Lecture 20 - Module 3
 * [Retrospective: Assignment #3](#retrospective-assignment-3)
 * [What you need to gain from assignments](#what-you-need-to-gain-from-assignments)
 * [A solution to Assignment #3](#a-solution-to-assignment-3)
-* [UML: Multiplicity Constraints](#uml-multiplicity-constraints)
-* [UML: Inheritance ("is a" relationships)](#uml-inheritance-is-a-relationships)
-* [Real-world UML class diagrams](#real-world-uml-class-diagrams)
 
 
 ------------------------------------------------------------
@@ -119,66 +116,7 @@ particular way of doing it.  Are you ready to be that committed to your
 "solution"?  Are you sure that you haven't glossed over some important detail
 that will save you from writing paragraphs of convoluted code?
 
-
-
-
-# [UML: Multiplicity Constraints](../UML.md#multiplicity-constraints)
-
-In some systems it is important to document the number of objects that participate in relationships.
-
-A multiplicity constraint indicates how many times an object from one class can be associated with objects of another class
-
-
-
-# [UML: Inheritance ("is a" relationships)](../UML.md#inheritance-is-a-relationships)
-
-The Inheritance relationship enables your code to capture the idea that two objects aren't exactly the same, but are similar enough to share common elements and methods.
-
-We'll cover this idea in much more depth in a future module.
-
-For now it is enough to understand that inheritance expresses the idea that one kind of class is a kind of another class.
-
-
-
-# [Real-world UML class diagrams](https://www.uml-diagrams.org/class-diagrams-examples.html)
-
-I show these examples of UML class diagrams to give you an idea of what a UML class diagram that describes part of a real-world program looks like.  Your diagrams do not need to be this complex or detailed!  Our Bingo Card Generator is far more simple than these systems.
-
-It takes *many* UML class diagrams to fully describe a real-world system.  
-
-The Unified Modeling Language defines other kinds of diagrams besides class diagrams.  A class diagram describes only one aspect of a system.  Other diagrams are used to explain how various parts of the system interact with each other while the program is running, and some are used to describe all of the ways a user might use a system, etc.
-
-
-## Diagrams of interest:
-
-*   Illustration of dependencies, public/private access modifiers, data types
-    *   [Sentinel HASP Classes of Aladdin Package](https://www.uml-diagrams.org/software-licensing-class-diagram-example.html)
-*   Illustration of associations, multiplicity constraints
-    *   [Online Shopping](https://www.uml-diagrams.org/examples/online-shopping-domain-uml-diagram-example.html)
-        *   This diagram uses the *composition* symbol for some of its associations; we won't be that strict in Bingo!
-*   Illustration of associations, multiplicity constraints, relationship descriptions
-    *   [DICOM Model of the Real World](https://www.uml-diagrams.org/dicom-real-world-uml-class-diagram-example.html)
-
-
-### Symbology Glossary
-
-*   `+` indicates *public* accessibility
-*   `-` indicates *private* accessibility
-*   `#` indicates *protected* accessibility
-*   `^` denotes an *inherited* member
-    *   This data member belongs to this class because it inherits from an ancestor class
-*   `/` denotes a *derived* member
-    *   This member's value is computed from other members
-*   Open (white) diamond indicates an "Aggregation" association
-    *   The diamond is attached to the "parent" class
-    *   Instances of the child class may exist independently of its parent, and may be attached to other parents/aggregates
-        *   For example Cars & Wheels
-        *   Wheels can be removed from one car and attached to another, or may be kept in the garage until the weather improves
-*   Closed (black) diamond indicates an "Composition" association
-    *   The diamond is attached to the "parent" class
-    *   Instances of the child class may **not** exist independently of its parent 
-        *   For example, you and your brain
-        *   You cannot live without your brain, and vice-versa
+*   [Erik's solution](./assn3-sln.py)
 
 
 
