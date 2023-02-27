@@ -142,7 +142,6 @@ $ git pull origin master
 	* [What you need to gain from assignments](./Module3/Lec20-Mon_Feb_27/README.md#what-you-need-to-gain-from-assignments)
 	* [A solution to Assignment #3](./Module3/Lec20-Mon_Feb_27/README.md#a-solution-to-assignment-3)
 21. [Wednesday, March 01](./Module3/Lec21-Wed_Mar_01/README.md)
-	* [Top comments from Monday's retrospective](./Module3/Lec21-Wed_Mar_01/README.md#top-comments-from-mondays-retrospective)
 	* [UML: Multiplicity Constraints](./Module3/Lec21-Wed_Mar_01/README.md#uml-multiplicity-constraints)
 	* [UML: Inheritance ("is a" relationships)](./Module3/Lec21-Wed_Mar_01/README.md#uml-inheritance-is-a-relationships)
 	* [Real-world UML class diagrams](./Module3/Lec21-Wed_Mar_01/README.md#real-world-uml-class-diagrams)

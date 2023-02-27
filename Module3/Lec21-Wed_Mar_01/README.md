@@ -2,7 +2,6 @@ CS1440 - Wednesday, March 01 - Lecture 21 - Module 3
 
 # Topics:
 * [Announcements](#announcements)
-* [Top comments from Monday's retrospective](#top-comments-from-mondays-retrospective)
 * [UML: Multiplicity Constraints](#uml-multiplicity-constraints)
 * [UML: Inheritance ("is a" relationships)](#uml-inheritance-is-a-relationships)
 * [Real-world UML class diagrams](#real-world-uml-class-diagrams)
@@ -45,21 +44,6 @@ CS1440 - Wednesday, March 01 - Lecture 21 - Module 3
     *   Continue your design work through *the end of the week*
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
-
-
-
-# Top comments from Monday's retrospective
-
-![09-traffic-jams.png](./09-traffic-jams.png "A traffic signal")
-
-## __Red__: Things that **stopped** your progress
-
-
-## __Yellow__: Times you realized you were going **slow**
-
-
-## __Green__: Full speed ahead! ideas or techniques that helped you **go**
-
 
 
 
