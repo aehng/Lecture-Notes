@@ -333,16 +333,20 @@ you must push them.
 * This command does not modify or delete the commit
 
 
-### `git push REMOTE TAGNAME`
+### `git push REMOTE TAGNAME ...`
 
-* Send the name of a tag along with the commit to which it points to `REMOTE`
-  repository
-* Tags **are not** pushed unless you **explicitly** instruct Git to push them.
+* Send the name of one or more tags along with the commits they point to over to the `REMOTE` repository
+* Tags **are not** pushed unless you **explicitly** instruct Git to push them
 
 
-### `git push --delete REMOTE TAGNAME`
+### `git push REMOTE --tags`
 
-* Remove the tag `TAGNAME` from `REMOTE` repository
+* Like the above command, but send **all defined tags** to `REMOTE`
+
+
+### `git push --delete REMOTE TAGNAME ...`
+
+* Remove the named tags from the `REMOTE` repository
 * Use this if you tagged the wrong commit and want to push the same tag name on a different commit
 
 
@@ -439,4 +443,4 @@ the name of the currently checked-out commit.  Usually this is located at the
 for now you can just follow the on-screen instructions to get back.
 
 
-*Updated Wed Feb 15 16:47:05 MST 2023*
+*Updated Tue Feb 28 13:01:39 MST 2023*
