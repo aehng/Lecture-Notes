@@ -9,13 +9,72 @@ For more information about the standard `unittest` library please consult the
 [unittest official documentation](https://docs.python.org/3/library/unittest.html)
 
 
+* [Unit Test Assertions](#unit-test-assertions)
 * [Don't Write Trivial Unit Tests](#dont-write-trivial-unit-tests)
 * [How to run an individual unit test from the command line](#how-to-run-an-individual-unit-test-from-the-command-line)
 * [How to run a test suite from the command line](#how-to-run-a-test-suite-from-the-command-line)
 * [How to run all test suites from the command line](#how-to-run-all-test-suites-from-the-command-line)
 * [How to run the Bingo! Unit Tests in PyCharm](#how-to-run-the-bingo-unit-tests-in-pycharm)
 * [How to run embedded Unit Tests in PyCharm](#how-to-run-embedded-unit-tests-in-pycharm)
-* [Unit Test Assertions](#unit-test-assertions)
+
+
+## Unit Test Assertions
+
+#### Assertion
+
+An *assertion* is a code statement that *may* cause your program to crash.
+Usually we fear our program crashing, but crashing on an assertion is regarded
+as a *Good Thing*.
+
+In many languages an assertion appears as a function which performs a test that
+is expected to pass 100% of the time.  When the test fails it is accepted that
+there is no point in the program proceeding.  The most sensible thing to do is
+to crash right then and there instead of carrying on in an unexpected state.
+
+The assertion will display a helpful error message that tells the developer
+exactly what went wrong and where it happened.  Thus, crashing in the face of a
+failed assertion is a useful debugging tool.
+
+Python's `unittest` library offers a variety of convenient assertions that let
+you write expressive unit tests.
+
+Here is a summary pulled from the [unittest documentation](https://docs.python.org/3/library/unittest.html?highlight=unittest#test-cases):
+
+| Method                       | Checks that
+|------------------------------|-----------------------
+| `assertEqual(a, b)`          | `a == b`
+| `assertNotEqual(a, b)`       | `a != b`
+| `assertTrue(x)`              | `bool(x) is True`
+| `assertFalse(x)`             | `bool(x) is False`
+| `assertIs(a, b)`             | `a is b`
+| `assertIsNot(a, b)`          | `a is not b`
+| `assertIsNone(x)`            | `x is None`
+| `assertIsNotNone(x)`         | `x is not None`
+| `assertIn(a, b)`             | `a in b`
+| `assertNotIn(a, b)`          | `a not in b`
+| `assertIsInstance(a, b)`     | `isinstance(a, b)`
+| `assertNotIsInstance(a, b)`  | `not isinstance(a, b)`
+| `assertAlmostEqual(a, b)`    | `round(a-b, 7) == 0`
+| `assertNotAlmostEqual(a, b)` | `round(a-b, 7) != 0`
+| `assertGreater(a, b)`        | `a > b`
+| `assertGreaterEqual(a, b)`   | `a >= b`
+| `assertLess(a, b)`           | `a < b`
+| `assertLessEqual(a, b)`      | `a <= b`
+| `assertRegex(s, r)`          | `r.search(s)`
+| `assertNotRegex(s, r)`       | `not r.search(s)`
+| `assertCountEqual(a, b)`     | `a` and `b` have the same elements in the same number, regardless of their order.
+
+See the program [Assertions.py](./Assertions.py) to see how many of these
+assertions may be used in a working example.
+
+
+## Write Testable Functions
+
+The *units* that are tested with Unit Tests are functions and methods.  Some functions/methods are easier to test than others:
+
+0.  Functions/methods which return a value are the easiest to test because the output is directly given back
+1.  Methods which *mutate* or change the state of an object are reasonably easy to test, especially when there are *public* accessors that reveal the outcome of the change.
+2.  Functions/methods which *print* their output to the console, or *write* to a file or database are the most challenging ones to test because extraordinary means must be used to inspect the result.
 
 
 ## Don't Write Trivial Unit Tests
@@ -122,55 +181,4 @@ Follow this procedure to run Unit Tests that are embedded in a script (like `rot
 *   Press OK to save the configuration
 
 
-
-## Unit Test Assertions
-
-#### Assertion
-
-An *assertion* is a code statement that *may* cause your program to crash.
-Usually we fear our program crashing, but crashing on an assertion is regarded
-as a *Good Thing*.
-
-In many languages an assertion appears as a function which performs a test that
-is expected to pass 100% of the time.  When the test fails it is accepted that
-there is no point in the program proceeding.  The most sensible thing to do is
-to crash right then and there instead of carrying on in an unexpected state.
-
-The assertion will display a helpful error message that tells the developer
-exactly what went wrong and where it happened.  Thus, crashing in the face of a
-failed assertion is a useful debugging tool.
-
-Python's `unittest` library offers a variety of convenient assertions that let
-you write expressive unit tests.
-
-Here is a summary pulled from the [unittest documentation](https://docs.python.org/3/library/unittest.html?highlight=unittest#test-cases):
-
-| Method                       | Checks that
-|------------------------------|-----------------------
-| `assertEqual(a, b)`          | `a == b`
-| `assertNotEqual(a, b)`       | `a != b`
-| `assertTrue(x)`              | `bool(x) is True`
-| `assertFalse(x)`             | `bool(x) is False`
-| `assertIs(a, b)`             | `a is b`
-| `assertIsNot(a, b)`          | `a is not b`
-| `assertIsNone(x)`            | `x is None`
-| `assertIsNotNone(x)`         | `x is not None`
-| `assertIn(a, b)`             | `a in b`
-| `assertNotIn(a, b)`          | `a not in b`
-| `assertIsInstance(a, b)`     | `isinstance(a, b)`
-| `assertNotIsInstance(a, b)`  | `not isinstance(a, b)`
-| `assertAlmostEqual(a, b)`    | `round(a-b, 7) == 0`
-| `assertNotAlmostEqual(a, b)` | `round(a-b, 7) != 0`
-| `assertGreater(a, b)`        | `a > b`
-| `assertGreaterEqual(a, b)`   | `a >= b`
-| `assertLess(a, b)`           | `a < b`
-| `assertLessEqual(a, b)`      | `a <= b`
-| `assertRegex(s, r)`          | `r.search(s)`
-| `assertNotRegex(s, r)`       | `not r.search(s)`
-| `assertCountEqual(a, b)`     | `a` and `b` have the same elements in the same number, regardless of their order.
-
-See the program [Assertions.py](./Assertions.py) to see how many of these
-assertions may be used in a working example.
-
-
-*Updated Tue Feb 28 22:23:41 MST 2023*
+*Updated Wed Mar  1 13:20:10 MST 2023*
