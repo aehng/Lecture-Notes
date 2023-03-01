@@ -4,8 +4,9 @@ CS1440 - Wednesday, March 01 - Lecture 21 - Module 3
 * [Announcements](#announcements)
 * [UML: Multiplicity Constraints](#uml-multiplicity-constraints)
 * [UML: Inheritance ("is a" relationships)](#uml-inheritance-is-a-relationships)
-* [Real-world UML class diagrams](#real-world-uml-class-diagrams)
 * [Introduction to Software Testing](#introduction-to-software-testing)
+* [Writing and Running Unit Tests in Python](#writing-and-running-unit-tests-in-python)
+* [Ad-Hoc Testing vs. Unit Testing](#ad-hoc-testing-vs-unit-testing)
 
 
 ------------------------------------------------------------
@@ -65,48 +66,6 @@ For now it is enough to understand that inheritance expresses the idea that one 
 
 
 
-# [Real-world UML class diagrams](https://www.uml-diagrams.org/class-diagrams-examples.html)
-
-I show these examples of UML class diagrams to give you an idea of what a UML class diagram that describes part of a real-world program looks like.  Your diagrams do not need to be this complex or detailed!  Our Bingo Card Generator is far more simple than these systems.
-
-It takes *many* UML class diagrams to fully describe a real-world system.  
-
-The Unified Modeling Language defines other kinds of diagrams besides class diagrams.  A class diagram describes only one aspect of a system.  Other diagrams are used to explain how various parts of the system interact with each other while the program is running, and some are used to describe all of the ways a user might use a system, etc.
-
-
-## Diagrams of interest:
-
-*   Illustration of dependencies, public/private access modifiers, data types
-    *   [Sentinel HASP Classes of Aladdin Package](https://www.uml-diagrams.org/software-licensing-class-diagram-example.html)
-*   Illustration of associations, multiplicity constraints
-    *   [Online Shopping](https://www.uml-diagrams.org/examples/online-shopping-domain-uml-diagram-example.html)
-        *   This diagram uses the *composition* symbol for some of its associations; we won't be that strict in Bingo!
-*   Illustration of associations, multiplicity constraints, relationship descriptions
-    *   [DICOM Model of the Real World](https://www.uml-diagrams.org/dicom-real-world-uml-class-diagram-example.html)
-
-
-### Symbology Glossary
-
-*   `+` indicates *public* accessibility
-*   `-` indicates *private* accessibility
-*   `#` indicates *protected* accessibility
-*   `^` denotes an *inherited* member
-    *   This data member belongs to this class because it inherits from an ancestor class
-*   `/` denotes a *derived* member
-    *   This member's value is computed from other members
-*   Open (white) diamond indicates an "Aggregation" association
-    *   The diamond is attached to the "parent" class
-    *   Instances of the child class may exist independently of its parent, and may be attached to other parents/aggregates
-        *   For example Cars & Wheels
-        *   Wheels can be removed from one car and attached to another, or may be kept in the garage until the weather improves
-*   Closed (black) diamond indicates an "Composition" association
-    *   The diamond is attached to the "parent" class
-    *   Instances of the child class may **not** exist independently of its parent 
-        *   For example, you and your brain
-        *   You cannot live without your brain, and vice-versa
-
-
-
 # Introduction to Software Testing
 
 We want to make software better, but where should we begin?  We can't debug
@@ -114,7 +73,7 @@ bugs we don't know about.  Therefore, the first thing to do is to *test* our
 programs so we know what we're getting into.
 
 
-## Writing tests for [rotate.py](./rotate.py)
+## Writing naïve tests for [rotate.py](./rotate.py)
 
 Small and simple programs are easy enough to run and manually check the
 outcome.  However, you will quickly reach the point where that just isn't a
@@ -122,13 +81,62 @@ good use of your time.  You should do the usual lazy programmer thing and write
 a program to test your program; testing software is one of those things that
 greatly benefits from automation.
 
-`rotate.py` contains a bit of code that should be familiar to you.  I *think*
-it doesn't quite work right, but it's hard to say for sure.  Let's add some
-code to test it out and see what problems we can find along the way.
+`rotate.py` implements a rotation cipher (a.k.a. Caesar cipher) where letters
+in a message are "rotated" by one or more positions to yield an encrypted
+message:
 
-*   How do tests improve the dependability of this code?
-*   What is the difference between a useful test and one that is not helpful?
-*   How might we re-write these ad-hoc tests using the `unittest` Python library?
+![Caesar Cipher image from Wikipedia](./40-caesar_substition_cipher.png "Caesar Cipher image from Wikipedia")
+
+This file contains two functions:
+
+0.  `rotate(c, n)` rotates a single character `c` by `n` positions
+1.  `rotateLine(line, n)` rotates each character in a string by `n` positions
+
+I *think* this version has some bugs, but it's hard to say for sure.  Let's add
+some code that exercises the functions and see what problems are revealed.
+
+*   What made those two functions hard to test?
+*   How easy is the test code to understand?
+*   Are the tests themselves bug-free?
+
+
+
+# [Writing and Running Unit Tests in Python](../UnitTests.md)
+
+Ideally all of our code is able to be tested automatically, beginning from functions and building up to complete integration tests.
+
+While we should strive to write code that is easily testable, it is easier to achieve when code is designed with testing in mind.  If we do it the other way around, after the application code is produced some effort is necessary to put it into a testable state.  By that point you've probably already blown your deadline; this is how the testing phase falls by the wayside in so many projects.
+
+
+
+# Ad-Hoc Testing vs. Unit Testing
+
+By adding tests to [rotate.py](./rotate.py), I located and fixed a few bugs.
+
+However, the code I wrote to do the testing itself had some bugs, and it took some work to make them right.  Now, I'm not too confident about my test code.
+
+*   What's the solution, then?  To write more tests to test my tests?
+*   Where does it end?
+
+The correct answer to this is to impose some order and discipline on the process.  The code I wrote to test `rotate.py` was not very disciplined, nor well-organized.  It's almost like I just made it up as I went along...
+
+
+#### Ad-hoc Testing
+
+Informal, undocumented or unplanned software testing.
+
+Instead of writing lines upon lines of my own janky code to test my other janky code, I might incorporate a well-designed and thought-out library into my project to help me get my tests on track.
+
+A **unit testing** framework provides tools and structure that helps manage complexity.  There are lots of great unit testing libraries to choose from in nearly every programming language that you'll encounter.  In Python there are at least 4 quality libraries.  I'll use the one that comes from the Python Standard Library, `unittest`.
+
+`import unittest` into `rotate.py` and see how it improves the situation.
+
+
+## [Unit Test assertions](../UnitTests.md#unit-test-assertions)
+
+When considering how to probe the boundaries of your functions it is helpful to know what sorts of tests are available.  I have compiled a brief list of assertion methods made available by the `unittest.TestCase` class for you in this module's documentation.
+
+I have also written an example program that shows yow how the assertion methods are used: [assertions.py](../Assertions.py)
 
 
 

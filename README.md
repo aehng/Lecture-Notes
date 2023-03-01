@@ -144,14 +144,15 @@ $ git pull origin master
 21. [Wednesday, March 01](./Module3/Lec21-Wed_Mar_01/README.md)
 	* [UML: Multiplicity Constraints](./Module3/Lec21-Wed_Mar_01/README.md#uml-multiplicity-constraints)
 	* [UML: Inheritance ("is a" relationships)](./Module3/Lec21-Wed_Mar_01/README.md#uml-inheritance-is-a-relationships)
-	* [Real-world UML class diagrams](./Module3/Lec21-Wed_Mar_01/README.md#real-world-uml-class-diagrams)
 	* [Introduction to Software Testing](./Module3/Lec21-Wed_Mar_01/README.md#introduction-to-software-testing)
+	* [Writing and Running Unit Tests in Python](./Module3/Lec21-Wed_Mar_01/README.md#writing-and-running-unit-tests-in-python)
+	* [Ad-Hoc Testing vs. Unit Testing](./Module3/Lec21-Wed_Mar_01/README.md#ad-hoc-testing-vs-unit-testing)
 22. [Friday, March 03](./Module3/Lec22-Fri_Mar_03/README.md)
 	* [Discuss Brooks' "Passing the Word"](./Module3/Lec22-Fri_Mar_03/README.md#discuss-brooks-passing-the-word)
 	* [Software Testing Jargon Activity](./Module3/Lec22-Fri_Mar_03/README.md#software-testing-jargon-activity)
 	* [Validation vs. Verification](./Module3/Lec22-Fri_Mar_03/README.md#validation-vs-verification)
-	* [Writing and Running Unit Tests in Python](./Module3/Lec22-Fri_Mar_03/README.md#writing-and-running-unit-tests-in-python)
-	* [Ad-Hoc Testing vs. Unit Tests](./Module3/Lec22-Fri_Mar_03/README.md#ad-hoc-testing-vs-unit-tests)
+	* [Types of Software Tests](./Module3/Lec22-Fri_Mar_03/README.md#types-of-software-tests)
+	* [How Gamers Killed Ultima Online's Virtual Ecology (~8 mins)](./Module3/Lec22-Fri_Mar_03/README.md#how-gamers-killed-ultima-onlines-virtual-ecology-8-mins)
 
 
 

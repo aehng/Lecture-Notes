@@ -5,8 +5,8 @@ CS1440 - Friday, March 03 - Lecture 22 - Module 3
 * [Discuss Brooks' "Passing the Word"](#discuss-brooks-passing-the-word)
 * [Software Testing Jargon Activity](#software-testing-jargon-activity)
 * [Validation vs. Verification](#validation-vs-verification)
-* [Writing and Running Unit Tests in Python](#writing-and-running-unit-tests-in-python)
-* [Ad-Hoc Testing vs. Unit Tests](#ad-hoc-testing-vs-unit-tests)
+* [Types of Software Tests](#types-of-software-tests)
+* [How Gamers Killed Ultima Online's Virtual Ecology (~8 mins)](#how-gamers-killed-ultima-onlines-virtual-ecology-8-mins)
 
 
 ------------------------------------------------------------
@@ -76,7 +76,6 @@ CS1440 - Friday, March 03 - Lecture 22 - Module 3
         programs.
 
 </details>
-
 
 
 
@@ -209,64 +208,41 @@ and Fault-Tolerant Systems, vol 5. Springer, Vienna
 
 # [Validation vs. Verification](../Testing_Software.md#software-testing)
 
-When testing our software we are on the lookout for failures.
-Code failures can be detected with unit tests, but are not the
-only ways a system can fail us.  We face deeper problems when the
-very design of the system is incorrect.
+When testing our software we are on the lookout for failures.  Code failures can be detected with unit tests, but are not the only ways a system can fail us.  We face deeper problems when the very design of the system is incorrect.
 
-The terms "Validation" and "Verification" help us distinguish between design
-flaws and coding errors.
+The terms "Validation" and "Verification" help us distinguish between design flaws and coding errors.
 
-While debugging is an important part of the process, it can't be applied until
-a failure has been noticed.  A coding error, once identified, is often easily
-fixed.  A design error, on the other hand, may send you back to the drawing
-board.
+While debugging is an important part of the process, it can't be applied until a failure has been noticed.  A coding error, once identified, is often easily fixed.  A design error, on the other hand, may send you back to the drawing board.
 
 
 
-# [Writing and Running Unit Tests in Python](../UnitTests.md)
+# [Types of Software Tests](../Testing_Software.md#types-of-software-tests)
 
-Ideally all of our code is able to be tested automatically, beginning from functions and building up to complete integration tests.
-
-While we should strive to write code that is easily testable, it is easier to achieve when code is designed with testing in mind.  If we do it the other way around, after the application code is produced some effort is necessary to put it into a testable state.  By that point you've probably already blown your deadline; this is how the testing phase falls by the wayside in so many projects.
+There is a lot of jargon surrounding this topic.  This is a glossary of the most important terms you need to know.
 
 
 
-# Ad-Hoc Testing vs. Unit Tests 
+# How Gamers Killed Ultima Online's Virtual Ecology (~8 mins)
 
-Recall the tests I wrote for [rotate.py](../Lec22-Fri_Oct_21/rotate.py) back on Friday.
+When creating Ultima Online, Richard Garriott had grand dreams. Richard and Starr Long planned on implementing a virtual ecology into their massively multiplayer online role-playing game. It was an ambitious system, one that would have cows that graze and predators that eat herbivores.
 
-*   Because I wrote testing code to exercise its functions and prove my assumptions I was able to locate and fix a few bugs.
-*   However, the code I wrote to do the testing itself had some bugs, and it took some work to make it right.
-    *   Even now, I'm not quite sure I trust my test code.
-    *   What's the solution, then?  To write more tests to test my tests?
-        *   Where does it end?
-
-The correct answer to this is to impose some order and discipline on the process.  The code I wrote to test `rotate.py` was not very disciplined, nor well-organized.  It's almost like I just made it up at the last moment...
+[How Gamers Killed Ultima Online's Virtual Ecology | War Stories | Ars Technica](https://www.youtube.com/watch?v=KFNxJVTJleE)
 
 
-#### Ad-hoc Testing
+<details>
+<summary><h2>The moral of the story</h2></summary> 
 
-Informal, undocumented or unplanned software testing.
+Testing is good but you may still be woefully unprepared for the realities of the production environment.  Due to the sheer scale of the user base combined with their unique perspectives, your in-house tests will not address the issues they will discover.
 
-Instead of writing lines upon lines of my own janky code to test my other janky code, I might incorporate a well-designed and thought-out library into my project to help me get my tests on track.
+Despite your best efforts, there are problems with your system that you'll just never discover until it becomes heavily used.
 
-A *unit testing* library provides tools and structure that helps manage complexity.  There are lots of great unit testing libraries to choose from in nearly every programming language that you'll encounter.  In Python there are at least 4 quality libraries.  I'll use the one that comes from the Python Standard Library, `unittest`.
+*   Scale of data; number of files, records as well as the sheer volume of data
+*   Scale of network I/O
+*   Scale of concurrent users
+*   Your users will do things with your system that neither you nor your testers imagined possible
+*   Beta-tests involving a sizable subset of your user base is one way to grapple with this problem.
 
-Let's `import unittest` into `rotate.py` and see how it can improve things.
-
-
-## [Unit Test assertions](../UnitTests.md#unit-test-assertions)
-
-When considering how to probe the boundaries of your functions it is helpful to
-know what sorts of tests are available.  I have compiled a brief list of
-assertion methods made available by the `unittest.TestCase` class for you in
-this module's documentation.
-
-I have also written an example program that shows yow how the assertion methods
-are used: [assertions.py](../Assertions.py)
-
-Today's version of [rotate.py](./rotate.py) 
+</details>
 
 
 

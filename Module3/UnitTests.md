@@ -13,7 +13,8 @@ For more information about the standard `unittest` library please consult the
 * [How to run an individual unit test from the command line](#how-to-run-an-individual-unit-test-from-the-command-line)
 * [How to run a test suite from the command line](#how-to-run-a-test-suite-from-the-command-line)
 * [How to run all test suites from the command line](#how-to-run-all-test-suites-from-the-command-line)
-* [How to run Unit Tests in PyCharm](#how-to-run-unit-tests-in-pycharm)
+* [How to run the Bingo! Unit Tests in PyCharm](#how-to-run-the-bingo-unit-tests-in-pycharm)
+* [How to run embedded Unit Tests in PyCharm](#how-to-run-embedded-unit-tests-in-pycharm)
 * [Unit Test Assertions](#unit-test-assertions)
 
 
@@ -78,13 +79,18 @@ From a command prompt in the `src/` directory run
 
 
 
-## How to run Unit Tests in PyCharm
+## How to run the Bingo! Unit Tests in PyCharm
 
-In the project explorer, right click the 'Testing' folder -> Run Unittests in 'Testing'
+In the project explorer, right click the 'Testing' folder -> Run Python tests in 'Testing'
 
-This *may* work for you, in which case you're done!
+Look in PyCharm's debugging pane at the bottom of the window.  It will either list the tests in the projects, or tell you **No tests were found**.
 
-If you're unlucky, you'll need to clean up the run configuration that PyCharm created for you:
+*   If you see the list of unit tests, you're done!
+*   If you're unlucky, you'll need to clean up the run configuration that PyCharm created for you.
+
+Depending on your version of PyCharm, there are two ways this can go down:
+
+### Option #0: PyCharm auto-detected Unittests tests
 
 *   Click the run configurations drop down -> **Edit configurations**
 *   Find the Unittests configuration that PyCharm created
@@ -92,6 +98,28 @@ If you're unlucky, you'll need to clean up the run configuration that PyCharm cr
 *   Set **working directory** to your project's `src/` folder, and *not* the path ending in `Testing`
 *   Ensure the **interpreter** is set to your copy of Python 3
 *   All other text boxes should be empty
+*   Press OK to save the configuration
+
+
+### Option #1: PyCharm auto-detected Python tests
+
+*   Click the run configurations drop down -> **Edit configurations**
+*   Delete the **Python tests** configuration that PyCharm created for you
+*   Press the **+** button in the upper-left corner of the **Run/Debug Configurations** dialog
+*   Find **Unittests** in the tree of options
+*   Choose **Module name** as the target, and enter 'Testing' (just that one word)
+*   Press OK to save the configuration
+
+
+## How to run embedded Unit Tests in PyCharm
+
+Follow this procedure to run Unit Tests that are embedded in a script (like `rotate.py`):
+
+*   Click the run configurations drop down -> **Edit configurations**
+*   Press the **+** button in the upper-left corner of the **Run/Debug Configurations** dialog
+*   Find **Unittests** in the tree of options
+*   Choose **Module name** as the target, and enter the name of the Python file *without* the `.py` extension
+*   Press OK to save the configuration
 
 
 
@@ -143,3 +171,6 @@ Here is a summary pulled from the [unittest documentation](https://docs.python.o
 
 See the program [Assertions.py](./Assertions.py) to see how many of these
 assertions may be used in a working example.
+
+
+*Updated Tue Feb 28 22:23:41 MST 2023*
