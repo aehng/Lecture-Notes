@@ -167,9 +167,6 @@ Validation aims to answer the question "is my program solving the right problem?
 
 Another way to ask this question is "is my program doing the **right** *thing*?"
 
-Verification: thing right
-Validation: right thing
-
 
 > [Validation is] the process of evaluating a system or component during
 > or at the end of the development process to determine whether it satisfies
@@ -182,6 +179,8 @@ and specifications.
 
 
 ### I'm confused - what's the difference?
+
+Verification: _thing **right**_ vs.  Validation: _**right** thing_
 
 Don't feel bad; you're in good company.  Back when I did exams, students
 *always* mixed these two concepts up.  Validation and verification are subtly
@@ -197,17 +196,17 @@ def area(radius):
     return 2.0 * PI * radius
 ```
 
-#### Is this function valid?
+**Is this function valid?**
 
 No.  This function is not valid because it returns the *circumference* instead of the *area*.  
 
-#### Is this function correct?
+**Is this function correct?**
 
 Yes.  We can *verify* that there are no errors in the code.  It returns the *circumference* without crashing.
 
 But the fact that it correctly computes the circumference is immaterial because it isn't doing the right thing to begin with.  We wanted a circle's area.
 
-This is an *invalid* solution to the problem at hand.
+This is an *invalid* solution to the problem at hand.  This failure should be noticed during the process of *software validation*.
 
 
 Now consider this function:
@@ -218,13 +217,13 @@ def circumference(radius):
     return 2.0 * PI * radius
 ```
 
-#### Is this function valid?
+**Is this function valid?**
 
-It is "valid" because it approximately computes the circumference of a circle.
+Yes (but barely).  It is "valid" because it approximately computes the circumference of a circle.
 
-#### Is this function correct?
+**Is this function correct?**
 
-No, the results it gives are inaccurate.  This failure should be noticed during the process of verification.
+No, its results are inaccurate.  This failure should be noticed during the process of *software verification*.
 
 
 
@@ -329,4 +328,4 @@ Some sources make a distinction between these two types of testing, but for our
 purposes we'll just consider these to be simple, informal tests.
 
 
-*Updated: Fri Mar  3 12:50:50 MST 2023*
+*Updated: Fri Mar  3 13:13:43 MST 2023*
