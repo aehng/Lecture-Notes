@@ -140,11 +140,8 @@ and Fault-Tolerant Systems, vol 5. Springer, Vienna
 
 0.  What does **available** mean to you?
     *   Usable in multiple ways
-        *   If I can't use it, it's not available to me
-        *   Undocumented code may be unavailable
-        *   JS code isn't available to a Python user (you'd have to translate it first)
-    *   downloaded & installed
-    *   If the amazon cloud is down, that cloud app is **not** available
+    *   Downloaded & installed
+    *   If the Amazon cloud is down, certain cloud apps **are not** available
 1.  Give an example of software that needs to be **available**
     *   Canvas
     *   Your OS
@@ -227,7 +224,7 @@ and Fault-Tolerant Systems, vol 5. Springer, Vienna
 
 
 
-# [Validation vs. Verification](../Testing_Software.md#software-testing)
+# [Validation vs. Verification](../Testing_Software.md#how-to-test-software)
 
 When testing our software we are on the lookout for failures.  Code failures can be detected with unit tests, but are not the only ways a system can fail us.  We face deeper problems when the very design of the system is incorrect.
 

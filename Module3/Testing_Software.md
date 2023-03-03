@@ -12,10 +12,10 @@ Trustworthiness of a computer system such that reliance can justifiably be
 placed on the service it delivers.  Dependability can be measured in different
 ways:
 
-* Is the software *available*?
-* Is the software *reliable*?
-* Is the software *safe*?
-* Is the software *secure*?
+0.  Is the software *available*?
+1.  Is the software *reliable*?
+2.  Is the software *safe*?
+3.  Is the software *secure*?
 
 
 #### Available
@@ -56,30 +56,26 @@ different meanings:
 
 
 #### Software failure
-
 Runtime behavior that is not expected.  A failure is the unacceptable departure
 of a program operation from program requirements.
 
 
-
 #### Software fault
-
 A software defect that causes a failure to occur.
 
 
-
 #### Software error
-
 A specific problem in the code, the design, or requirements that lead to the
 unexpected behavior.  A bug.  An error is usually a programmer action or
 omission that results in a fault.
 
-Not all errors cause a program to misbehave or fail to meet their user's
-expectations.  In other words, code can be incorrect in ways that don't cause
-noticeable problems to users.
-
 * A software error == bug
 * A software error != software failure
+
+Not all errors cause a program to misbehave or fail to meet their user's
+expectations.  In other words, code can be incorrect in ways that don't give
+rise to problems that users would notice.  Errors can lurk in programs for many
+years before they are discovered.
 
 
 
@@ -87,19 +83,22 @@ noticeable problems to users.
 
 Consider this function `double()`, which ostensibly doubles its input value:
 
-    # pre: n is a number
-    # post: return the product of n multiplied by 2.
-    def double(n):
-        result = n * n
-        return result
+```python
+1	# pre condition: `n` is a number
+2	# post condition: return the product of `n` multiplied by 2.
+3	def double(n):
+4	    result = n * n
+5	    return result
+```
 
+`double(2)` returns the expected result.  So far, so good!
 
 Upon running `double(3)` we find that it actually returns 9, but the post
-condition says it should return 6.  Our expectation was not met, therefore this
-software failed.
+condition suggests that it should have returned 6.  Our expectation was not
+met, therefore this software failed.
 
 * The result `9` represents a *failure*.
-* The failure is due to the *fault* at line 2 of `double` where `*` was used instead of `+`.
+* The failure is due to the *fault* at line 4; `*` was used instead of `+`.
 * The *error* is a typo (Erik typed `*` instead of `+` by mistake).
 
 
@@ -107,17 +106,12 @@ software failed.
 
 To communicate how precisely you know what the problem is.
 
-*   *Failure* means you can tell something is wrong but you don't know the
-    cause.
-    +   "Users are complaining that program gives results that are *way* too
-        large!"
-*   *Fault* means you know what is causing the failure, but don't yet know why
-    it's wrong.
-    +   "I've narrowed the problem down to the `double()` function.  It is
-        returning a value that is a lot larger than expected"
+*   *Failure* means you can tell something is wrong but you don't know the cause.
+    +   "Users are complaining that program gives results that are *way* too large!"
+*   *Fault* means you know what is causing the failure, but don't yet know why it's wrong.
+    +   "I've narrowed the problem down to the `double()` function.  It is returning a value that is a lot larger than expected"
 *   *Error* means you know why the fault occurred.
-    +   "I found the bug!  Erik squared the input parameter instead of adding
-        it with itself.  Maybe he was distracted by a passing firetruck?"
+    +   "I found the bug!  Erik squared the input parameter instead of adding it with itself.  Maybe he was distracted by a passing firetruck?"
 
 You could ask "But why did Erik make that typo?", but that gets into human
 factors and is out of the scope of the present discussion.
@@ -150,30 +144,36 @@ are complete and correct, the products of each development phase fulfill the
 requirements or conditions imposed by the previous phase, and the final system
 or component complies with specified requirements.
 
-*Companies that hire from USU have been known to quiz applicants on these two
-concepts!*
+*Companies that hire from USU have been known to quiz applicants on these two concepts!*
 
 
 #### Verification
 
-This process aims to answer the question "is my program doing the thing right?"
+This process aims to answer the question "is my program doing the *thing* **right**?"
 
-> The process of evaluating a system or component to determine whether the
-> products of a given development phase satisfy the conditions imposed at the
-> start of that phase.
+> [Verification is] the process of evaluating a system or component to
+> determine whether the products of a given development phase satisfy the
+> conditions imposed at the start of that phase.
 >
 > IEEE Standard Computer Dictionary
 
-A verified program performs its functions correctly and without error.
+A verified program performs its functions correctly and without error.  Whether
+those functions are the right thing to do is another question entirely.
 
 
 #### Validation
 
-This process aims to answer the question "is my program solving the right
-problem?"
+Validation aims to answer the question "is my program solving the right problem?"
 
-> The process of evaluating a system or component during or at the end of the
-> development process to determine whether it satisfies specified requirements.
+Another way to ask this question is "is my program doing the **right** *thing*?"
+
+Verification: thing right
+Validation: right thing
+
+
+> [Validation is] the process of evaluating a system or component during
+> or at the end of the development process to determine whether it satisfies
+> specified requirements.
 >
 > IEEE Standard Computer Dictionary
 
@@ -181,11 +181,15 @@ A valid program meets the customer's needs as described by their requirements
 and specifications.
 
 
-Validation and verification are subtly different.  It is possible for an
-program to be verifiable even if it isn't a valid solution to the customer's
-problem.
+### I'm confused - what's the difference?
 
-Suppose I set out to write a function to find the area of a circle:
+Don't feel bad; you're in good company.  Back when I did exams, students
+*always* mixed these two concepts up.  Validation and verification are subtly
+different.  It is possible to *verify* that all of the code in a program is
+correct even if it isn't a valid solution to the customer's problem.
+
+Suppose I set out to write a function to find the area of a circle.  I might
+start with this definition:
 
 ```python
 def area(radius):
@@ -193,13 +197,18 @@ def area(radius):
     return 2.0 * PI * radius
 ```
 
-Validation asks "is my code doing the right thing?"
+#### Is this function valid?
 
-This function is not valid because it returns the circumference instead of the
-area.  It does compute the circumference correctly and we can *verify* that
-there is no error in the code.  But the fact that it computes the circumference
-correctly is immaterial because it isn't doing the right thing to begin with;
-it is an *invalid* solution to the problem at hand.
+No.  This function is not valid because it returns the *circumference* instead of the *area*.  
+
+#### Is this function correct?
+
+Yes.  We can *verify* that there are no errors in the code.  It returns the *circumference* without crashing.
+
+But the fact that it correctly computes the circumference is immaterial because it isn't doing the right thing to begin with.  We wanted a circle's area.
+
+This is an *invalid* solution to the problem at hand.
+
 
 Now consider this function:
 
@@ -209,16 +218,19 @@ def circumference(radius):
     return 2.0 * PI * radius
 ```
 
-It is "valid" because it at least purports to compute the circumference.  But
-it fails to do it right.  This failure should be noticed during the process of
-verification.
+#### Is this function valid?
+
+It is "valid" because it approximately computes the circumference of a circle.
+
+#### Is this function correct?
+
+No, the results it gives are inaccurate.  This failure should be noticed during the process of verification.
 
 
 
 ### Where does debugging fit in to this scheme?
 
-The process of finding the causes of software failures and then correcting
-those errors.
+The process of finding the causes of software failures and then correcting those errors.
 
 -   **Testing**: what is wrong?
 -   **Debugging**: why is it wrong, and how may I fix it?
@@ -315,3 +327,6 @@ fix work or make things seriously worse, etc.)
 
 Some sources make a distinction between these two types of testing, but for our
 purposes we'll just consider these to be simple, informal tests.
+
+
+*Updated: Fri Mar  3 12:50:50 MST 2023*
