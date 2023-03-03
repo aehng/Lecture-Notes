@@ -1,7 +1,7 @@
 CS1440 - Friday, March 03 - Lecture 22 - Module 3
 
 # Topics:
-* [Action Items](#action-items)
+* [Announcements](#announcements)
 * [Discuss Brooks' "Passing the Word"](#discuss-brooks-passing-the-word)
 * [Software Testing Jargon Activity](#software-testing-jargon-activity)
 * [Validation vs. Verification](#validation-vs-verification)
@@ -10,10 +10,31 @@ CS1440 - Friday, March 03 - Lecture 22 - Module 3
 
 
 ------------------------------------------------------------
+# Announcements
+
+## Spring break is next week
+
+Enjoy your time off!
+
+
+## BSidesSLC Student Scholarship
+
+As a way to get more people excited about cybersecurity, we will be awarding *complimentary registration* (non-electronic badges) to a limited number of student applicants. Be sure to submit your application between February 18 and March 18 at 11:59 PM MT!
+
+*   **Due**   Saturday, March 18
+*   **Where** [Google Docs Form](https://docs.google.com/forms/d/e/1FAIpQLScGA4stAQJASrG63AU-Ejh3Dl3T9GVuQvWp1LvpccDegsVTuw/viewform?mc_cid=f5a09fe30c&mc_eid=9b0796ddc7)
+*   **Terms**
+    - Failure to follow instructions will result in disqualification.
+    - All submissions must be in English. Sorry we can not support other languages at this time.
+    - Students do not need to provide proof of enrollment unless contacted by BSidesSLC for potential award. 
+    - Passes awarded as part of this Scholarship program are non-transferable and may not be sold, exchanged or redeemed for any cash value.
+    - All Scholarship recipients are responsible for their own travel, food, and lodging.
+
+
 # Action Items
 
 *   *Today* you should finish phase **1. Design** of the assignment
-    *   Be ready to move on to phase **2. Implementation** *early the week after Spring Break*
+    *   Be ready to move on to phase **2. Implementation** *early in the week after Spring Break*
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
 
