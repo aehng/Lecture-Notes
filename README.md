@@ -129,7 +129,9 @@ $ git pull origin master
 </details>
 
 
-### Module 3
+<details>
+<summary><h3>Module 3</h3></summary>
+
 18. [Wednesday, February 22](./Module3/Lec18-Wed_Feb_22/README.md)
 	* [Protip: colored diff output and what to do if diff says EVERY line is different](./Module3/Lec18-Wed_Feb_22/README.md#protip-colored-diff-output-and-what-to-do-if-diff-says-every-line-is-different)
 	* [Objects and Classes](./Module3/Lec18-Wed_Feb_22/README.md#objects-and-classes)
@@ -153,6 +155,25 @@ $ git pull origin master
 	* [Validation vs. Verification](./Module3/Lec22-Fri_Mar_03/README.md#validation-vs-verification)
 	* [Types of Software Tests](./Module3/Lec22-Fri_Mar_03/README.md#types-of-software-tests)
 	* [How Gamers Killed Ultima Online's Virtual Ecology (~8 mins)](./Module3/Lec22-Fri_Mar_03/README.md#how-gamers-killed-ultima-onlines-virtual-ecology-8-mins)
+
+</details>
+
+
+### Module 4
+23. [Monday, March 13](./Module4/Lec23-Mon_Mar_13/README.md)
+	* [Advanced Git](./Module4/Lec23-Mon_Mar_13/README.md#advanced-git)
+	* [A review of Git basics](./Module4/Lec23-Mon_Mar_13/README.md#a-review-of-git-basics)
+	* [Experimentation with branches](./Module4/Lec23-Mon_Mar_13/README.md#experimentation-with-branches)
+	* [Resolving merge conflicts](./Module4/Lec23-Mon_Mar_13/README.md#resolving-merge-conflicts)
+	* [Throwing away bad work: a word of warning](./Module4/Lec23-Mon_Mar_13/README.md#throwing-away-bad-work-a-word-of-warning)
+	* [Which idiot is to blame for this awful code?](./Module4/Lec23-Mon_Mar_13/README.md#which-idiot-is-to-blame-for-this-awful-code)
+	* [Using `git bisect` to track down a bug](./Module4/Lec23-Mon_Mar_13/README.md#using-git-bisect-to-track-down-a-bug)
+24. [Wednesday, March 15](./Module4/Lec24-Wed_Mar_15/README.md)
+	* [Refactoring a Messy Program](./Module4/Lec24-Wed_Mar_15/README.md#refactoring-a-messy-program)
+25. [Friday, March 17](./Module4/Lec25-Fri_Mar_17/README.md)
+	* [Discuss Brooks' Essay "The Other Face", Ch15 of TMMM](./Module4/Lec25-Fri_Mar_17/README.md#discuss-brooks-essay-the-other-face-ch15-of-tmmm)
+	* [What Is Refactoring?](./Module4/Lec25-Fri_Mar_17/README.md#what-is-refactoring)
+	* [Non-functional Attributes](./Module4/Lec25-Fri_Mar_17/README.md#non-functional-attributes)
 
 
 
