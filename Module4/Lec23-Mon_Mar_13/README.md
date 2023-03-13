@@ -1,7 +1,7 @@
 CS1440 - Monday, March 13 - Lecture 23 - Module 4
 
 # Topics:
-* [Announcements](#announcements)
+* [Action Items](#action-items)
 * [Advanced Git](#advanced-git)
 * [A review of Git basics](#a-review-of-git-basics)
 * [Experimentation with branches](#experimentation-with-branches)
@@ -12,15 +12,13 @@ CS1440 - Monday, March 13 - Lecture 23 - Module 4
 
 
 ------------------------------------------------------------
-# Announcements
+# Action Items
 
 ## This Week's Assigned Reading: "The Other Face"
 
 *   Read the essay "The Other Face" (Chapter 15) of the book "The Mythical Man-Month" before our meeting on **Friday, March 17th** and be prepared to discuss it.
 *   Instructions for accessing the electronic version of this book are [here](../../Required_Reading_Schedule.md#accessing-the-mythical-man-month-for-free-through-the-usu-library)
 
-
-# Action Items
 
 *   Work on phase **2. Implementation** of this assignment *today* with the goal to complete it *tomorrow*
     *   Begin phase **3. Testing and Debugging** ASAP so you can identify and fix any problems with your assignment
