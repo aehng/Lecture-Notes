@@ -343,7 +343,7 @@ of the tree.  But there are caveats.
 1.  The reflog isn't backed up anywhere.  Notably, running `git push` does **not** sync it to the remote server.
 2.  Reflog entries have an expiration date.  Exactly when they will expire is hard to say; it could be weeks or months into the future.
     *   You can manually clean the reflog by running `git gc` (garbage collect) or `git reflog expire`.
-    *   In any event, reflog entries cannot be before you cloned the repo.  
+    *   In any event, there can not be any reflog entries for events before the repo was cloned.
 
 
 ## Get rid of *uncommitted* changes with `git checkout` or `git restore`
@@ -363,9 +363,9 @@ Git, this is not a big deal.
 *   The nuclear option.  Discard *all* changes in the working directory,
     permanently undoing any changes which have not been committed.
 *   The only way I know of to reverse the effect of this command is this unreliable procedure:
-    0.  *If* your editor was running and had the affected file(s) open
-    1.  *And* your editor doesn't _automagically_ re-read files from the disk when Git updates them
-    2.  *Then* re-save the file from the editor's memory back to disk
+    1.  *If* your editor was running and had the affected file(s) open
+    2.  *And* your editor doesn't _automagically_ re-read files from the disk when Git updates them
+    3.  *Then* re-save the file from the editor's memory back to disk
 
 
 ### `git restore :/`
@@ -567,8 +567,10 @@ and broken code and telling Git to run that.  Based on the result of running
 the script, Git can mark each commit as 'good' or 'bad' on its own, and proceed
 to the end.
 
-Assuming I have a script called `indent_bug_test.sh` which can detect the
-presence of the bug, the next command will do *all of the work* for me:
+Assuming I have a program called
+[`indent_bug_test.sh`](./assets/indent_bug_test.sh) which can rebuild the
+program from source and detect the bug, the next command will do *all of the
+work* for me:
 
     $ git bisect run ./indent_bug_test.sh
 
@@ -613,4 +615,4 @@ will it take you to evaluate 120 lines of code instead of 12 lines of code?
 It is my advice that you make many small commits instead of a few big ones.
 
 
-*updated Fri Nov  4 14:11:20 MDT 2022*
+*Updated Mon Mar 13 15:55:17 MDT 2023*

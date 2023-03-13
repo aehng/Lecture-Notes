@@ -3,6 +3,8 @@ CS1440 - Wednesday, March 15 - Lecture 24 - Module 4
 # Topics:
 * [Announcements](#announcements)
 * [Refactoring a Messy Program](#refactoring-a-messy-program)
+* [Throwing away bad work: a word of warning](#throwing-away-bad-work-a-word-of-warning)
+* [Which idiot is to blame for this awful code?](#which-idiot-is-to-blame-for-this-awful-code)
 
 
 ------------------------------------------------------------
@@ -59,6 +61,41 @@ Take a few minutes with your study buddies to read it and make notes about what 
 ...to improve its *non-functional attributes* (this is a nice way of saying "make it easier to read")
 
 
+
+
+
+# [Throwing away bad work: a word of warning](../../Using_Git/Advanced_Git.md#throwing-away-bad-work-a-word-of-warning)
+
+The dangers of time-travel are many: you might create a paradox that precludes
+your own existence or your mom may develop a crush on you.  While the latter is
+not possible in git (probably), there is a possibility of creating a paradox in
+the timeline.
+
+![Gotta go back to the future](./64-Back-to-the-Future.jpg "Gotta go back to the future")
+
+These powerful commands let you go back and correct problems that happened in
+the past.  Which one you use depends on when and how you made your mistake.
+When using these commands be deliberate, go slow, and you'll be fine.
+
+
+* [Get rid of *uncommitted* changes with `git checkout`](../../Using_Git/Advanced_Git.md#get-rid-of-uncommitted-changes-with-git-checkout)
+* [Get rid of *committed but un-pushed* changes with `git reset --hard`](../../Using_Git/Advanced_Git.md#get-rid-of-committed-but-un-pushed-changes-with-git-reset-hard)
+* [Get rid of *committed* and *pushed* changes with `git revert`](../../Using_Git/Advanced_Git.md#get-rid-of-committed-and-pushed-changes-with-git-revert)
+
+
+
+# [Which idiot is to blame for this awful code?](../../Using_Git/Advanced_Git.md#which-idiot-is-to-blame-for-this-awful-code)
+
+You can try this for yourself!
+
+Clone the Chicken Scheme [core repository](http://code.call-cc.org/#chicken-core-development-repository)
+and find out who added a Cthulhu reference to the file `runtime.c`:
+
+```bash
+$ git clone https://code.call-cc.org/git/chicken-core.git
+$ cd chicken-core
+$ git blame runtime.c
+```
 
 
 
