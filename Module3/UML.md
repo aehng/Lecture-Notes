@@ -63,7 +63,7 @@ This is what the Chicken class from [Objects_and_Classes.md](./Objects_and_Class
 ```mermaid
 classDiagram
 class Chicken {
-    +MAX_HEALTH : String
+    +MAX_HEALTH : Int
     -name : String
     -eggs_laid : Int
     -health : Int
@@ -401,7 +401,7 @@ Farmer ..>  Coop : uses
 
 
 class Chicken {
-    +MAX_HEALTH : String
+    +MAX_HEALTH : Int
     -name : String
     -eggs_laid : Int
     -health : Int
@@ -767,7 +767,7 @@ Chicken ..> Egg : ➡ creates
 
 
 class Chicken {
-    +MAX_HEALTH : String
+    +MAX_HEALTH : Int
     -name : String
     -eggs_laid : Int
     -health : Int
