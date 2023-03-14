@@ -23,7 +23,7 @@ At its heart refactoring is to improve the *non-functional* aspects of the code 
 
 ### What's the point of making big changes to code *without* changing its externally-observable behavior?
 
-For one thing, readability makes a difference.  I once worked on a program that contained a serious bug that *should* have been obvious.  The code computed the volume of liquid in a tank using a straightforward formula from a high-school math class.  The bad line of code was right before our eyes, and had been there for years.  
+For one thing, readability makes a difference.  I once worked on a program that contained a serious bug that *should* have been obvious.  The code computed the volume of liquid in a tank using a straightforward formula from a high-school math class.  The bad line of code was right before our eyes, and had been there for years.
 
 When we finally got a customer report about a discrepancy in the program's behavior (i.e. a **failure**), our first-line technical support expert was able to trace it down to a **fault**, but couldn't see the **error** (he correctly located the function responsible for the bad output, but couldn't explain what it was doing wrong).
 
@@ -86,50 +86,80 @@ The following lists are derived from [A catalogue of Code Smells](https://source
 In your study of the Assignment #5.0 starter code have you come across these odors?
 
 0.  **Magic** numbers
-    *   Numeric literals in critical places without any context or meaning
-    *   "Does `256` over here have anything to do with the `256` over there?"
+    *   These are literal values used in critical places without any context or meaning
+    *   "Does the `256` right here have anything to do with the `256` over there?"
 1.  **Global** variables
     *   Used to avoid passing a parameter into a function
     *   Used to return an extra value from a function
-2.  **Poorly-named** variables
-    *   Short names make code hard to understand
-    *   Short names are easy to mix up
-    *   Variables with really, really long names make code hard to read
-    *   Variables that override or "shadow" other identifiers block access to important functions
+    *   There are better ways to meet both of these needs!
+    *   *Note, this does not apply to global `CONSTANTS`!*
+2.  **Poorly-named** identifiers
+    *   Variable names should strike a good balance between brevity and descriptiveness
+    *   Short variable names are okay in some situations:
+        *   `i` or `j` as a counter in a brief `for` loop
+        *   Variables from well-known math formulae should match the textbook (i.e. `a`, `b` and `c` are familiar in a quadratic or Pythagorean formula)
+        *   Otherwise, short names should be avoided
+    *   Variables with really, really long names make code harder to read
+    *   Variables that override or "shadow" other identifiers
         *   Builtin Python functions such as `input`, `len`, `list`, `max`, `min` and `sum` are especially susceptible to this
-3.  Comments that share **too much information**
-    *   When almost every line of code is has an explanatory comment, it is likely true that variable and function names were poorly chosen
-4.  Comments that **lie**
-    *   An out-of-date remark that longer accurately describes the code
-    *   Bad advice left by a developer without a clue
-5.  Too many **arguments**
+3.  **Bad** Comments
+    *   Comments are condiments for code; a small amount can enhance a meal, but too much ruins it
+    *   Strive to write clear, self-documenting code that speaks for itself; when a line needs an explanatory comment to be understood, it indicates that identifier names were poorly chosen
+    *   Delete obsolete remarks that no longer accurately describe the situation
+    *   The same goes for blocks of commented-out code that serve no purpose and clutter up the file
+    *   Programmers sometimes vent their frustration with snarky or vulgar comments; these add no value, are unprofessional and embarrassing, and only serve to demoralize maintainers
+4.  **Too many** arguments
     *   Seen when more than a handful of parameters are passed to a function/method
-    *   Parameters that are passed in but left unused
-6.  Function/Method that is **too long**
+    *   Parameters that are passed in but never used
+5.  Function/Method that is **too long**
     *   Too many lines of code typically happens because the function/method has too many different responsibilities
-7.  **Complex** decision trees
-    *   Too long or deeply nested trees of `if/elif/else`
-    *   Are all of the branches truly necessary?
-    *   Are all of the branches possible to reach?
-    *   Has every branch been tested?
-8.  **Spaghetti** code
-    *   Heaps of meandering code without a clear goal
-    *   Functions/objects used in inconsistent ways
-    *   Many variables are used to keep track of 
-    *   Conditional statements with long, confusing Boolean expressions
-    *   Boolean expressions expressing double negatives; ex. `if not undone: ...`
-    *   Code that makes you say "It would be easier to rewrite this than to understand it"
-9.  **Redundant** code
+    *   Generally, a method longer than a dozen lines should make you ask yourself "can I split this into smaller, more focused pieces?"
+6.  Redundant code
     *   A repeated statement which doesn't have an effect the second time
-    *   ```
+    *   Ask yourself whether it makes any difference to be run more than once.
+    *   ```python
         i = 7
         print(i)
         i = 7
         ```
-    *   Ask yourself whether it makes any difference to be run more than once
-10. **Dead** code
-    *   A piece of code that is not used (usually because it is obsolete)
-    *   Blocks of commented-out code that serve no purpose and clutter up the file
+7.  **Complex** decision trees
+    *   Too long or deeply nested trees of `if/elif/else`
+    *   Are all of the branches truly necessary?
+    *   Can all of the branches be reached?
+    *   Has every branch been tested?
+8.  **Spaghetti** code
+    *   Heaps of meandering code without a clear goal
+    *   Functions/objects used in inconsistent ways
+    *   Many variables are used to keep track of
+    *   Conditional statements with long, confusing Boolean expressions
+    *   Boolean expressions expressing double negatives; ex. `if not undone: ...`
+    *   Code that makes you say "It would be easier to rewrite this than to understand it"
+9.  **Dead** code
+    *   Modules that are imported but never used
+    *   Lines that are *never* run because they are placed in an impossible-to-reach location
+        *   Code that appears after a `return` statement
+            *   ```python
+                return value
+                value += 1
+                ```
+        *   Blocks of code guarded by an impossible-to-satisfy logical test
+            *   ```python
+                two_bee = True
+                if two_bee and not two_bee:
+                    print("If can you see this message, it is time to get a new CPU")
+                ```
+            *   ```python
+                counter = 100
+                while counter < 0:
+                    print(f"T minus {counter}...")
+                    counter -= 1
+                ```
+    *   Functions that are defined but never called *may* or *may not* be dead code
+        *   In **Code Libraries** it is normal to define functions that are not meant to be used in the library itself
+            *   It is okay to keep these functions
+        *   As an **Application** evolves, calls to some of its functions may be removed until only the function's definition remains
+            *   Some programmers may keep these functions "just in case" they are needed again
+            *   We don't do this at DuckieCorp because we have Git; if we ever need to recover that function, we can find it in the repo's history
 
 
 <details>
@@ -137,63 +167,56 @@ In your study of the Assignment #5.0 starter code have you come across these odo
 <summary><h3>What can you do about these smells?</h3></summary>
 
 0.  **Magic** Numbers
-    *   Replace literals with named constants
+    *   Replace literals with CONSTANTS that have descriptive names
     *   Consult the documentation (if you're lucky) to learn what `256` means in its context
     *   Give the same number used in different contexts *different* names; the
         important thing is what `256` represents, not its actual value.
 1.  **Global** Variables
-    *   Passing parameters enables us to understand the flow of data into a
-        function
-    *   Returning values enables us to understand the flow of data out from a
-        function
-    *   When a global is used to enable a function to return more than one
-        value (a necessary concession in some languages), make sure this is
-        thoroughly documented.
-2.  **Poorly-named** variables
-    *   Variable names should strike a good balance between brevity and descriptiveness
-    *   Short variable names are okay in some contexts:
-        *   `i` or `j` as a counter in a brief `for` loop
-        *   Variables from well-known math formulae should match the textbook (i.e. `a`, `b` and `c` are familiar in a quadratic or Pythagorean formula)
-        *   Otherwise, short names should be avoided
+    *   Passing parameters enables us to understand the flow of data into a function
+    *   Returning values enables us to understand the flow of data out from a function
+    *   When a global is used to enable a function to return more than one value (a necessary concession in some languages), make sure this is thoroughly documented.
+2.  **Poorly-named** identifiers
+    *   Identifier names should strike a good balance between brevity and descriptiveness
     *   Consider a new name that is
         *   More accurate
-        *   Brief
         *   More descriptive
-3.  Comments that share **too much information**
+        *   Brief
+    *   Rename identifiers that clash with language built-ins
+3.  **Bad** Comments
     *   Write code that speaks for itself
     *   Retain comments that explain *why* something is done in a particular
         way when they are still relevant; comments explaining *how* the code
         works are probably not necessary
-4.  Comments that **lie**
-    *   Delete blocks of commented-out code that the last guy didn't dare to
-        throw away.  This is why we use version control now.
-    *   Rewrite or remove comments that are incorrect.
+    *   Delete blocks of commented-out code that the last guy didn't dare to throw away; this is why we use version control now
+    *   Rewrite or remove comments that are incorrect or serve no useful purpose
     *   Rename variables and/or functions so the code becomes self-documenting
-5.  Too many **arguments**
+        *   When the author of a cringe rant doesn't sign their screed, look them up with `git blame`
+4.  **Too many** arguments
     *   Remove unused parameters; look for cases where placeholder values such as `0`, `None` or `False` are passed in
     *   Use default values for common cases
-    *   Combine many parameters into a single dictionary or array
-6.  Function/Method that is **too long**
+    *   Accumulate many parameters into one dictionary or object
+5.  Function/Method that is **too long**
     *   Generally, a method longer than a dozen lines should make you ask yourself "can I split this into smaller, more focused pieces?"
     *   Does the method embody many disparate ideas?  Split into more focused pieces (divide the problem)
     *   When one method deals both with little nitty-gritty details *and* big-picture concepts, move the big-picture stuff up to the caller
+6.  **Redundant** code
+    *   Remove extra lines of code that have no effect on the outcome
 7.  **Complex** decision trees
     *   Are all of the cases really necessary?  Combine common cases into one branch.
     *   Handle the most likely cases earlier; in some languages this is actually faster but, more importantly, it is easier to read because what the developer is likely looking for comes first.
     * Use Boolean algebra to simplify complicated conditions into an equivalent
       but simpler form
-8.  Spaghetti Code
+8.  **Spaghetti** Code
     *   Learn what the code is trying to achieve
     *   Rewrite it with the end goal in mind
-9.  **Redundant** code
-    *   Remove extra lines of code that have no effect on the outcome
-10. **Dead** Code
+9. **Dead** Code
+    *   Delete import statements that bring in modules that are never used in the program
     *   IDE's sometimes underline or highlight unused variables to draw your attention
     *   Use the editor's search feature to see if the only hits you find are in comments
-    *   Delete statements occurring *after* a return statement
+    *   Delete statements that appear *after* a return statement (some languages treat this as a compile-time error)
     *   Delete statements occurring in an impossible-to-reach branch of an `if` statement
     *   Remove unreachable loops (i.e. `while i > 0` when `i` is always negative)
-    *   Delete functions which are defined but never called
+    *   Delete functions which are defined but never called (except when in a code library)
 
 </details>
 
@@ -268,7 +291,9 @@ Math analogy: You can only solve for one variable at a time.
 
 *   Doing more things at once increases the likelihood that something goes
     wrong, and prevents you from conclusively indentifying the source of the
-    problem.  
+    problem.
     *   This is assuming that the problem has but *one* cause.  It could have
         arisen from *any* combination of the changes you made.
 *   The increased complexity makes it harder to undo your mistake.
+
+*Updated Mon Mar 13 22:25:54 MDT 2023*
