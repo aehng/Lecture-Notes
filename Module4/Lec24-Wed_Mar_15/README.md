@@ -79,7 +79,7 @@ the past.  Which one you use depends on when and how you made your mistake.
 When using these commands be deliberate, go slow, and you'll be fine.
 
 
-* [Get rid of *uncommitted* changes with `git checkout`](../../Using_Git/Advanced_Git.md#get-rid-of-uncommitted-changes-with-git-checkout)
+* [Get rid of *uncommitted* changes with `git checkout` or `git restore`](../../Using_Git/Advanced_Git.md#get-rid-of-uncommitted-changes-with-git-checkout-or-git-restore)
 * [Get rid of *committed but un-pushed* changes with `git reset --hard`](../../Using_Git/Advanced_Git.md#get-rid-of-committed-but-un-pushed-changes-with-git-reset-hard)
 * [Get rid of *committed* and *pushed* changes with `git revert`](../../Using_Git/Advanced_Git.md#get-rid-of-committed-and-pushed-changes-with-git-revert)
 
