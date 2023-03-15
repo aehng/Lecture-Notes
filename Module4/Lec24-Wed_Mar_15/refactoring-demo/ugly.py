@@ -121,4 +121,3 @@ for p in range(1024 + 1):  # for i in pixels...
     w.update()
 mainloop()
 
-# vim: set popt=number\:y,left\:3pc,right\:3pc,header\:1 bg=light:

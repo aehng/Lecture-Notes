@@ -20,6 +20,7 @@ CS1440 - Wednesday, March 15 - Lecture 24 - Module 4
     *   General Admission + Electronic Badge $119 + taxes & fees
     *   [Tickets](https://www.eventbrite.com/e/bsidesslc-2023-tickets-527264701917)
 *   If you attend the conference I will replace your lowest assignment/exam score with **full credit**
+    *   Either find me at the conference or send me a selfie your conference badge
     *   It is good enough if you can only make it one of the days, either Friday or Saturday
 
 ![](./02-bsides-logo.png)
@@ -40,7 +41,7 @@ CS1440 - Wednesday, March 15 - Lecture 24 - Module 4
 
 # Refactoring a Messy Program
 
-I have a sample of [ugly Python code](./16-refactoring-demo/ugly.py).
+I have a sample of [ugly Python code](./refactoring-demo/ugly.py).
 
 This program is correct in the sense that it performs the task it is meant to do.  There are no (known) failures, faults or errors preventing it from producing good output.  However, the source code leaves much to be desired.
 
