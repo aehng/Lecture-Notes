@@ -1,11 +1,19 @@
 #!/usr/bin/python3
 
-from math import sin, cos
-from tkinter import Tk, Canvas, PhotoImage, mainloop
+import numbers
+from math import sin, ceil, cos, floor, gamma, remainder
+from datetime import datetime
+from tkinter import Tk, PhotoImage
+# import numpy
+import os
+# from asyncio.windows_events import NULL
+import sys
+from tkinter import Canvas, PhotoImage, mainloop
+from sys import argv
+import turtle
 
 
 colors=['#ffffff','#ff0000','#00ff00','#0000ff','#ffff00','#ff00ff','#00ffff']
-
 xax = (-5.0, 5.0)  # x axis
 w = Tk()  # create a Tk Window object, save it into w
 pixels = 1024 / 2  # the number of pixels
@@ -17,7 +25,7 @@ i = PhotoImage(width=1024, height=1024)  # create a PhotoImage object
 c.create_image((1024/2, 1024/2), image=i, state="normal")
 c.pack()  # pack the Canvas into the window
 
-print(f"Plotting the identity function...")
+print(f"Plotting identity(x)...")
 c = colors[0:1][0] # get the next color
 del colors[0]
 for p in range(1024 + 1):  # for i in pixels...
@@ -62,6 +70,8 @@ for p in range(1025):  # for i in pixels...
     i.put(c,(p,y))
     w.update()
 
+
+
 print(f"Plotting absolute_value(x)...")
 c = colors[0:1][0] # get the next color
 del colors[0]
@@ -93,6 +103,20 @@ for p in range(285, 741):  # for i in pixels...
     i.put(c,(p,y))
     w.update()
 
+# This one doesn't work for some reason
+# print(f"Plotting gamma(x)...")
+# c = colors[0]  # get the next color
+# colors.remove(c)
+# for p in range(1024+1):  # for i in pixels...
+#     v=xax[0]+(p*((xax[1]-xax[0])/1024.0))
+#
+#     val=gamma(v)
+#     # convert this value back to a Y pixel
+#     y=int((1024/2-(val/((xax[1]-xax[0])/1024.0))))
+#
+#     i.put(c,(p,y))
+#     w.update()
+
 print(f"Plotting cube(x)...")
 # c = colors[0]  # get the next color
 # colors.remove(c)
@@ -121,3 +145,4 @@ for p in range(1024 + 1):  # for i in pixels...
     w.update()
 mainloop()
 
+# vim: set popt=number\:y,left\:3pc,right\:3pc,header\:1 pheader= :

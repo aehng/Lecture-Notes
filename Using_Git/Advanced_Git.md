@@ -384,11 +384,12 @@ Vegas.
 
 
 ### `git reset --hard REVISION`
-*   Move `HEAD` and the current branch to the commit specified by REVISION.
-*   If you want to undo the most recent commit, run `git reset --hard HEAD~1` where `HEAD~1` refers to the *parent* of `HEAD`.
+*   Move `HEAD` and the current branch to the commit specified by `REVISION`.
+*   To undo the most recent commit, run `git reset --hard HEAD~1`
+    *   `HEAD~1` refers to the *parent* of `HEAD`.
 *   You can advance both `HEAD` and the current branch forward in time, too;
-    you'll just need a way to refer to that commit, perhaps by consulting `git
-    reflog` or `git log`.
+    you'll just need a way to refer to that commit, perhaps by looking up it's
+    SHA-1 hash name in  `git reflog` or `git log`.
 
 
 ## Get rid of *committed* and *pushed* changes with `git revert`
@@ -615,4 +616,4 @@ will it take you to evaluate 120 lines of code instead of 12 lines of code?
 It is my advice that you make many small commits instead of a few big ones.
 
 
-*Updated Mon Mar 13 15:55:17 MDT 2023*
+*Updated Wed Mar 15 13:12:05 MDT 2023*
