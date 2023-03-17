@@ -136,6 +136,7 @@ In your study of the Assignment #5.0 starter code have you come across these odo
     *   Code that makes you say "It would be easier to rewrite this than to understand it"
 9.  **Dead** code
     *   Modules that are imported but never used
+    *   Variables that are declared but never used
     *   Lines that are *never* run because they are placed in an impossible-to-reach location
         *   Code that appears after a `return` statement
             *   ```python
@@ -296,4 +297,4 @@ Math analogy: You can only solve for one variable at a time.
         arisen from *any* combination of the changes you made.
 *   The increased complexity makes it harder to undo your mistake.
 
-*Updated Mon Mar 13 22:25:54 MDT 2023*
+*Updated Mon Mar 13 22:59:50 MDT 2023*
