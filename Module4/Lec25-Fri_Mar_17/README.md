@@ -35,10 +35,7 @@ CS1440 - Friday, March 17 - Lecture 25 - Module 4
 
 # Discuss Brooks' Essay "The Other Face", Ch15 of TMMM
 
-**What is the big idea that Brooks got across to you?**
-
-*   ...
-*   ...
+Take a few moments to write on your mud card what you felt the **big idea** of this essay was.
 
 
 
