@@ -32,6 +32,18 @@ CS1440 - Friday, March 17 - Lecture 25 - Module 4
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
 
+## Questions about the assignment:
+
+How do I write a unit test to check if the is not a 300th card in a Deck of 30?
+
+```python
+def setUp(self):
+    self.d = Deck(30)
+
+def test_draw_any_card(self):
+    self.assertRaises(IndexError, self.d.__getitem__, 300)
+```
+
 
 
 # Discuss Brooks' Essay "The Other Face", Ch15 of TMMM
