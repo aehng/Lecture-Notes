@@ -172,6 +172,7 @@ $ git pull origin master
 	* [Which idiot is to blame for this awful code?](./Module4/Lec24-Wed_Mar_15/README.md#which-idiot-is-to-blame-for-this-awful-code)
 25. [Friday, March 17](./Module4/Lec25-Fri_Mar_17/README.md)
 	* [Discuss Brooks' Essay "The Other Face", Ch15 of TMMM](./Module4/Lec25-Fri_Mar_17/README.md#discuss-brooks-essay-the-other-face-ch15-of-tmmm)
+	* [How & when to comment](./Module4/Lec25-Fri_Mar_17/README.md#how-when-to-comment)
 	* [What Is Refactoring?](./Module4/Lec25-Fri_Mar_17/README.md#what-is-refactoring)
 	* [Non-functional Attributes](./Module4/Lec25-Fri_Mar_17/README.md#non-functional-attributes)
 

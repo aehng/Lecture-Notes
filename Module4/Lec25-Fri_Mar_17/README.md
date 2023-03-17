@@ -3,6 +3,7 @@ CS1440 - Friday, March 17 - Lecture 25 - Module 4
 # Topics:
 * [Announcements](#announcements)
 * [Discuss Brooks' Essay "The Other Face", Ch15 of TMMM](#discuss-brooks-essay-the-other-face-ch15-of-tmmm)
+* [How & when to comment](#how-when-to-comment)
 * [What Is Refactoring?](#what-is-refactoring)
 * [Non-functional Attributes](#non-functional-attributes)
 
@@ -36,6 +37,12 @@ CS1440 - Friday, March 17 - Lecture 25 - Module 4
 # Discuss Brooks' Essay "The Other Face", Ch15 of TMMM
 
 Take a few moments to write on your mud card what you felt the **big idea** of this essay was.
+
+
+
+# [How & when to comment](../How_and_When_to_Comment.md)
+
+Comments can be a controversial subject.  Strongly-held opinions run the gamut from "always comment everything" to "comments are a code smell".  Here I offer some advice to help you decide what comments belong in your source code.
 
 
 
