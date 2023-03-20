@@ -218,7 +218,7 @@ class Card():
 
 This strikes me as having been written before being designed.  I don't believe that your duckie would come up with an algorithm like this.
 
-What grabs my attention is the `if/else` within a triple `for` loop.  That test is going to be executed **a lot**, so you should ask yourself if there is a way to "pull" it out of the loops so that it runs either before or after the loops.  If it cannot be extracted, see if you can at least pull it out of the innermost loop: that's the difference between doing something $`N`$ times versus $`N^{3}`$.
+What grabs my attention is the `if/else` within a triple `for` loop.  That test is going to be executed **a lot**, so you should ask yourself if there is a way to "pull" it out of the loops so that it runs either before or after the loops.  If it cannot be extracted, see if you can at least pull it out of the innermost loop: that's the difference between doing something $`N^{2}`$ times versus $`N^{3}`$.
 
 *   Every single time the program fills out a square, it has to stop and check whether *this* time it is in the middle square.
 *   Even after it's already placed the `"FREE"` square in the middle, the program still dutifully checks to see if it's in the middle
@@ -415,7 +415,7 @@ class Deck():
         print(Card.card[c])
 ```
 
-*Hint: why does `Deck.card()` refer to a static attribute of the `Card` class?*
+*Hint: why does `Deck.card()` refer to the static attribute `card` of the `Card` class (e.g. in `print(Card.card[c])`)?*
 
 
 
