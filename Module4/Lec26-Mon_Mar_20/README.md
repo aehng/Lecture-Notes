@@ -23,7 +23,6 @@ CS1440 - Monday, March 20 - Lecture 26 - Module 4
 *   Work on phase **0. Requirements Analysis** of the new assignment *today*
     *   Wrap it up *tomorrow*
 *	Call on 2 designated questioners
-*	Hold a 3-minute stand-up scrum meeting with your team
 
 
 
