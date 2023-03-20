@@ -175,6 +175,19 @@ $ git pull origin master
 	* [How & when to comment](./Module4/Lec25-Fri_Mar_17/README.md#how-when-to-comment)
 	* [What Is Refactoring?](./Module4/Lec25-Fri_Mar_17/README.md#what-is-refactoring)
 	* [Non-functional Attributes](./Module4/Lec25-Fri_Mar_17/README.md#non-functional-attributes)
+26. [Monday, March 20](./Module4/Lec26-Mon_Mar_20/README.md)
+	* [Retrospective: Assignment #4](./Module4/Lec26-Mon_Mar_20/README.md#retrospective-assignment-4)
+	* [Assignment #4 Code ~~Review~~ Roast](./Module4/Lec26-Mon_Mar_20/README.md#assignment-4-code-review-roast)
+	* [Assn 5.0: Fractal Visualizer - Refactoring](./Module4/Lec26-Mon_Mar_20/README.md#assn-50-fractal-visualizer-refactoring)
+	* [Using complex numbers in Python](./Module4/Lec26-Mon_Mar_20/README.md#using-complex-numbers-in-python)
+27. [Wednesday, March 22](./Module4/Lec27-Wed_Mar_22/README.md)
+	* [Code Smells](./Module4/Lec27-Wed_Mar_22/README.md#code-smells)
+	* [Reading Code](./Module4/Lec27-Wed_Mar_22/README.md#reading-code)
+	* [The `tkinter` big picture](./Module4/Lec27-Wed_Mar_22/README.md#the-tkinter-big-picture)
+28. [Friday, March 24](./Module4/Lec28-Fri_Mar_24/README.md)
+	* [How will I know when to refactor?](./Module4/Lec28-Fri_Mar_24/README.md#how-will-i-know-when-to-refactor)
+	* [Should I refactor *and* add functionality at the same time?](./Module4/Lec28-Fri_Mar_24/README.md#should-i-refactor-and-add-functionality-at-the-same-time)
+	* [Python Code Disasters](./Module4/Lec28-Fri_Mar_24/README.md#python-code-disasters)
 
 
 
