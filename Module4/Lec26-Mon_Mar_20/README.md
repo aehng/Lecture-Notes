@@ -38,7 +38,7 @@ Pick up 3 sticky notes and write your answer each of these three questions:
 
 Post them on the white board in the appropriate location.
 
-There were 12 days from *Monday, Oct. 17* to *Friday, Oct. 28*
+There were 18 days from *Monday, Feb. 27* to *Friday, Mar 17*
 
 
 
