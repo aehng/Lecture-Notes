@@ -10,6 +10,19 @@ CS1440 - Wednesday, March 22 - Lecture 27 - Module 4
 ------------------------------------------------------------
 # Announcements
 
+## Free Software and Linux Club
+
+*   **What**  Rust: The Most Loved Programming Language Since 2016
+*   **When**  6:30pm Thursday, March 23rd
+*   **Where** ESLC 053, [FSLC Discord server](https://discord.gg/GKWhbVDN38)
+
+For years the world of systems programming has been dominated by C and C++. If you wanted to write performant software that works tightly with the operating system, these languages were your only real options.
+
+Both languages, however, are deeply flawed. Manual memory management quickly becomes a massive burden and C's refusal to check a single boundary can lead to critical, billion-dollar security issues. C++ has a lot of seemingly nice features but it inherits many ugly problems from C.
+
+That's where Rust comes in: a new(er) systems programming language that promises memory safety without the use of a garbage collector, as well as being a remarkably elegant language that's fun to work with.
+
+
 ## [HackUSU](https://www.hackusu.com/) - Utah's Premiere Collegiate Hackathon
 
 *   **What**  Build a software or hardware project to compete against other teams. All college students and high school seniors are invited!
