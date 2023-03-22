@@ -15,7 +15,7 @@ Software Engineering education gives students the wrong expectation about the im
 
 Compared to how you study natural languages, the way we teach you to write programs is backward.  As Trisha Gee points out
 
-> What is the first thing you do when you learn a programming language?  You write a "Hello, World!" application.  **You write it down!** You would never do that if you were learning a foreign language.  You don't write down "Buenos dias!".  It's not the first thing you do when you're learning Spanish.  We're always talking about *writing* code; we don't value the skill of *reading* code.
+> What is the first thing you do when you learn a programming language?  You write a "Hello, World!" application.  **You write it down!**  You would never do that if you were learning a foreign language.  You don't write down "Buenos dias!".  It's not the first thing you do when you're learning Spanish.  We're always talking about *writing* code; we don't value the skill of *reading* code.
 >
 > [Trisha Gee: Reading Code Is Harder Than Writing It - SCL Conf 2019](https://youtu.be/zV079g7Irks?t=112)
 
@@ -73,8 +73,8 @@ These are a few of the challenges that you face when studying a body of code muc
         *   Variables (their scope, their values at each point in time)
         *   Modules, classes, functions defined in the project and how they rely upon each other
 2.  The program may be written in a programming language that you are not familiar with, presenting you with two large tasks at once:
-    0.  Learning an unfamiliar system
-    1.  Learning a new programming language
+    1.  Learning an unfamiliar system
+    2.  Learning a new programming language
 3.  The coding style may hinder your understanding
     *   Every programmer develops their own personal style, and it is highly unlikely that you'll like their style
     *   The authors employ idioms that you have not encountered before
@@ -139,6 +139,12 @@ Over the years I've learned some tricks that have helped me counter the difficul
 9.  Explain that the program does to your rubber ducky
     *   Use your notes and diagrams to make your case
     *   Make predictions about what should happen in certain situations, then test it!
+10. Ask an AI Chatbot what the code does
+    *   This works best with short passages of code - presently, a Chatbot won't be able to understand an entire program (or even an entire file)
+    *   Paste the code into the prompt and ask questions like
+        *   "explain this program to me in simple terms"
+        *   "translate this program into pseudocode"
+        *   "what is the purpose of variable 'X'?"
 
 
 ## What is the best order to read source code?
@@ -163,7 +169,7 @@ As such, there are many ways you can read code.  Here are two methods that are o
 
 0. Find a file or a class that seems interesting to you at the moment.  Quickly read over it until you have a big-picture understanding of what it is meant to accomplish.
 1. Scan through each function/method in the file or class looking for "leaf nodes", functions that which call no other functions or which do not call other functions in the project
-2. Once you have a reasonable understanding of the fine details of the system, back up and look for higher-level functions which call the lower-level functions
+2. After you have a reasonable understanding of the fine details of the system, back up and look for higher-level functions which call the lower-level functions
 3. Proceed until your understanding of the fine details meets up with the big-picture understanding you got in the 1st step
 
 
@@ -175,3 +181,6 @@ As such, there are many ways you can read code.  Here are two methods that are o
 * https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/
 * https://blogs.msdn.microsoft.com/alfredth/2012/08/16/how-to-read-code/
 * https://github.com/aredridel/how-to-read-code/blob/master/how-to-read-code.md
+
+
+*Updated Wed Mar 22 13:05:49 MDT 2023*

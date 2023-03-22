@@ -91,8 +91,7 @@ In your study of the Assignment #5.0 starter code have you come across these odo
 1.  **Global** variables
     *   Used to avoid passing a parameter into a function
     *   Used to return an extra value from a function
-    *   There are better ways to meet both of these needs!
-    *   *Note, this does not apply to global `CONSTANTS`!*
+        *   There are better ways to meet both of these needs! (this does not apply to global `CONSTANTS`)
 2.  **Poorly-named** identifiers
     *   Variable names should strike a good balance between brevity and descriptiveness
     *   Short variable names are okay in some situations:
@@ -103,14 +102,11 @@ In your study of the Assignment #5.0 starter code have you come across these odo
     *   Variables that override or "shadow" other identifiers
         *   Builtin Python functions such as `input`, `len`, `list`, `max`, `min` and `sum` are especially susceptible to this
 3.  **Bad** Comments
-    *   Comments are condiments for code; a small amount can enhance a meal, but too much ruins it
+    *   Comments are the *condiments* of code; a small amount can enhance your meal, but too much ruins it
     *   Strive to write clear, self-documenting code that speaks for itself; when a line needs an explanatory comment to be understood, it indicates that identifier names were poorly chosen
-    *   Delete obsolete remarks that no longer accurately describe the situation
-    *   The same goes for blocks of commented-out code that serve no purpose and clutter up the file
-    *   Programmers sometimes vent their frustration with snarky or vulgar comments; these add no value, are unprofessional and embarrassing, and only serve to demoralize maintainers
 4.  **Too many** arguments
     *   Seen when more than a handful of parameters are passed to a function/method
-    *   Parameters that are passed in but never used
+    *   Parameters are passed in but never used
 5.  Function/Method that is **too long**
     *   Too many lines of code typically happens because the function/method has too many different responsibilities
     *   Generally, a method longer than a dozen lines should make you ask yourself "can I split this into smaller, more focused pieces?"
@@ -185,15 +181,18 @@ In your study of the Assignment #5.0 starter code have you come across these odo
     *   Rename identifiers that clash with language built-ins
 3.  **Bad** Comments
     *   Write code that speaks for itself
-    *   Retain comments that explain *why* something is done in a particular
-        way when they are still relevant; comments explaining *how* the code
-        works are probably not necessary
-    *   Delete blocks of commented-out code that the last guy didn't dare to throw away; this is why we use version control now
+        *   Rename variables and/or functions so the code becomes self-documenting
     *   Rewrite or remove comments that are incorrect or serve no useful purpose
-    *   Rename variables and/or functions so the code becomes self-documenting
-        *   When the author of a cringe rant doesn't sign their screed, look them up with `git blame`
+    *   Delete obsolete remarks that no longer accurately describe the situation
+    *   Delete blocks of commented-out code that the last guy didn't dare to throw away
+        *   Big blocks of commented-out code clutters up the file and makes it hard to find what is important now
+        *   This is why we use version control now
+    *   Retain comments that explain *why* something is done in a particular way when they are still relevant
+        *   Comments explaining *how* the code works are probably not necessary
+    *   Programmers sometimes vent their frustration with snarky or vulgar comments; these add no value, are unprofessional and embarrassing, and only serve to demoralize maintainers
+        *   When the author of a cringey rant didn't sign their screed, you can look them up with `git blame`
 4.  **Too many** arguments
-    *   Remove unused parameters; look for cases where placeholder values such as `0`, `None` or `False` are passed in
+    *   Remove unused parameters; look for cases where placeholder values such as `False`, `None`, `NULL` or `0` are passed in
     *   Use default values for common cases
     *   Accumulate many parameters into one dictionary or object
 5.  Function/Method that is **too long**
@@ -205,10 +204,10 @@ In your study of the Assignment #5.0 starter code have you come across these odo
 7.  **Complex** decision trees
     *   Are all of the cases really necessary?  Combine common cases into one branch.
     *   Handle the most likely cases earlier; in some languages this is actually faster but, more importantly, it is easier to read because what the developer is likely looking for comes first.
-    * Use Boolean algebra to simplify complicated conditions into an equivalent
-      but simpler form
+    * Use Boolean algebra to simplify complicated conditions into an equivalent but simpler form
 8.  **Spaghetti** Code
     *   Learn what the code is trying to achieve
+        *   Write Pseudocode with your Rubber Ducky
     *   Rewrite it with the end goal in mind
 9. **Dead** Code
     *   Delete import statements that bring in modules that are never used in the program
@@ -220,6 +219,8 @@ In your study of the Assignment #5.0 starter code have you come across these odo
     *   Delete functions which are defined but never called (except when in a code library)
 
 </details>
+
+**Always test the code after cleaning it up to make sure that your changes actually make it better!**
 
 
 ## How will I know when to refactor?
@@ -280,7 +281,7 @@ cannot result in expensive and time-consuming setbacks.
 
 ## Should I refactor *and* add functionality at the same time?
 
-(For example, within the same git commit?)
+(For example, within the same Git commit?)
 
 **No!**
 
@@ -297,4 +298,5 @@ Math analogy: You can only solve for one variable at a time.
         arisen from *any* combination of the changes you made.
 *   The increased complexity makes it harder to undo your mistake.
 
-*Updated Mon Mar 13 22:59:50 MDT 2023*
+
+*Updated Wed Mar 22 13:03:32 MDT 2023*
