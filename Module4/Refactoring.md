@@ -85,14 +85,14 @@ The following lists are derived from [A catalogue of Code Smells](https://source
 
 In your study of the Assignment #5.0 starter code have you come across these odors?
 
-0.  **Magic** numbers
+0.  **Magic Numbers**
     *   These are literal values used in critical places without any context or meaning
     *   "Does the `256` right here have anything to do with the `256` over there?"
-1.  **Global** variables
+1.  **Global Variables**
     *   Used to avoid passing a parameter into a function
     *   Used to return an extra value from a function
         *   There are better ways to meet both of these needs! (this does not apply to global `CONSTANTS`)
-2.  **Poorly-named** identifiers
+2.  **Poorly-named** Identifiers
     *   Variable names should strike a good balance between brevity and descriptiveness
     *   Short variable names are okay in some situations:
         *   `i` or `j` as a counter in a brief `for` loop
@@ -104,13 +104,13 @@ In your study of the Assignment #5.0 starter code have you come across these odo
 3.  **Bad** Comments
     *   Comments are the *condiments* of code; a small amount can enhance your meal, but too much ruins it
     *   Strive to write clear, self-documenting code that speaks for itself; when a line needs an explanatory comment to be understood, it indicates that identifier names were poorly chosen
-4.  **Too many** arguments
+4.  **Too many** Arguments
     *   Seen when more than a handful of parameters are passed to a function/method
     *   Parameters are passed in but never used
-5.  Function/Method that is **too long**
+5.  Function/Method that is **Too Long**
     *   Too many lines of code typically happens because the function/method has too many different responsibilities
     *   Generally, a method longer than a dozen lines should make you ask yourself "can I split this into smaller, more focused pieces?"
-6.  Redundant code
+6.  **Redundant Code**
     *   A repeated statement which doesn't have an effect the second time
     *   Ask yourself whether it makes any difference to be run more than once.
     *   ```python
@@ -118,23 +118,23 @@ In your study of the Assignment #5.0 starter code have you come across these odo
         print(i)
         i = 7
         ```
-7.  **Complex** decision trees
+7.  **Complex** Decision Trees
     *   Too long or deeply nested trees of `if/elif/else`
     *   Are all of the branches truly necessary?
     *   Can all of the branches be reached?
     *   Has every branch been tested?
-8.  **Spaghetti** code
+8.  **Spaghetti Code**
     *   Heaps of meandering code without a clear goal
     *   Functions/objects used in inconsistent ways
     *   Many variables are used to keep track of
     *   Conditional statements with long, confusing Boolean expressions
     *   Boolean expressions expressing double negatives; ex. `if not undone: ...`
     *   Code that makes you say "It would be easier to rewrite this than to understand it"
-9.  **Dead** code
+9.  **Dead Code**
     *   Modules that are imported but never used
     *   Variables that are declared but never used
     *   Lines that are *never* run because they are placed in an impossible-to-reach location
-        *   Code that appears after a `return` statement
+        *   Code that follows a `return` statement
             *   ```python
                 return value
                 value += 1
@@ -163,23 +163,23 @@ In your study of the Assignment #5.0 starter code have you come across these odo
 
 <summary><h3>What can you do about these smells?</h3></summary>
 
-0.  **Magic** Numbers
+0.  **Magic Numbers**
     *   Replace literals with CONSTANTS that have descriptive names
     *   Consult the documentation (if you're lucky) to learn what `256` means in its context
     *   Give the same number used in different contexts *different* names; the
         important thing is what `256` represents, not its actual value.
-1.  **Global** Variables
+1.  **Global Variables**
     *   Passing parameters enables us to understand the flow of data into a function
     *   Returning values enables us to understand the flow of data out from a function
     *   When a global is used to enable a function to return more than one value (a necessary concession in some languages), make sure this is thoroughly documented.
-2.  **Poorly-named** identifiers
+2.  **Poorly-named** Identifiers
     *   Identifier names should strike a good balance between brevity and descriptiveness
     *   Consider a new name that is
         *   More accurate
         *   More descriptive
         *   Brief
     *   Rename identifiers that clash with language built-ins
-3.  **Bad** Comments
+3.  **Bad Comments**
     *   Write code that speaks for itself
         *   Rename variables and/or functions so the code becomes self-documenting
     *   Rewrite or remove comments that are incorrect or serve no useful purpose
@@ -195,21 +195,21 @@ In your study of the Assignment #5.0 starter code have you come across these odo
     *   Remove unused parameters; look for cases where placeholder values such as `False`, `None`, `NULL` or `0` are passed in
     *   Use default values for common cases
     *   Accumulate many parameters into one dictionary or object
-5.  Function/Method that is **too long**
+5.  Function/Method that is **Too Long**
     *   Generally, a method longer than a dozen lines should make you ask yourself "can I split this into smaller, more focused pieces?"
     *   Does the method embody many disparate ideas?  Split into more focused pieces (divide the problem)
     *   When one method deals both with little nitty-gritty details *and* big-picture concepts, move the big-picture stuff up to the caller
-6.  **Redundant** code
+6.  **Redundant Code**
     *   Remove extra lines of code that have no effect on the outcome
-7.  **Complex** decision trees
+7.  **Complex** Decision Trees
     *   Are all of the cases really necessary?  Combine common cases into one branch.
     *   Handle the most likely cases earlier; in some languages this is actually faster but, more importantly, it is easier to read because what the developer is likely looking for comes first.
     * Use Boolean algebra to simplify complicated conditions into an equivalent but simpler form
-8.  **Spaghetti** Code
+8.  **Spaghetti Code**
     *   Learn what the code is trying to achieve
         *   Write Pseudocode with your Rubber Ducky
     *   Rewrite it with the end goal in mind
-9. **Dead** Code
+9. **Dead Code**
     *   Delete import statements that bring in modules that are never used in the program
     *   IDE's sometimes underline or highlight unused variables to draw your attention
     *   Use the editor's search feature to see if the only hits you find are in comments
