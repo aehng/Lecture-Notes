@@ -18,6 +18,15 @@ CS1440 - Friday, March 24 - Lecture 28 - Module 4
 Good luck to everyone!
 
 
+## CyberSentinels CTF Workshop
+
+*   **What**  Practice CTF skills for the National Cyber League competition
+*   **When**  7:00pm Tuesday, March 28th
+*   **Where** Huntsman Hall 322
+
+This meeting will be to practice cyber capture-the-flag skills in preparation for the National Cyber League competition. Come learn essential tools and tricks that will greatly improve your cybersecurity CTF prowess!
+
+
 # Action Items
 
 *   *Today* you should finish phase **1. Design** of the assignment

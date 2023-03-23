@@ -190,6 +190,14 @@ $ git pull origin master
 	* [Python Code Disasters](./Module4/Lec28-Fri_Mar_24/README.md#python-code-disasters)
 
 
+### Module 5
+29. [Monday, March 27](./Module5/Lec29-Mon_Mar_27/README.md)
+	* [What is Object-Oriented Programming?](./Module5/Lec29-Mon_Mar_27/README.md#what-is-object-oriented-programming)
+	* [Classification](./Module5/Lec29-Mon_Mar_27/README.md#classification)
+	* [The Four Principles of Object-Oriented Design](./Module5/Lec29-Mon_Mar_27/README.md#the-four-principles-of-object-oriented-design)
+	* [0. Encapsulation applied](./Module5/Lec29-Mon_Mar_27/README.md#0-encapsulation-applied)
+
+
 
 ## Creating a comprehensive study guide from individual lecture notes files
 
