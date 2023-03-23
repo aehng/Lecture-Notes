@@ -2,14 +2,14 @@
 
 Software Engineering education gives students the wrong expectation about the importance of writing code.  I don't mean to say that writing code *isn't* important; rather, there are other activities that will consume far more of your time that aren't taught in school.
 
-*   [Why would I want to read code?](#why-would-i-want-to-read-code)
-*   [What makes reading code so hard?](#what-makes-reading-code-so-hard)
-*   [Tips for reading source code](#tips-for-reading-source-code)
-*   [What is the best order to read source code?](#what-is-the-best-order-to-read-source-code)
-*   [Related Reading](#related-reading)
+*   [Why Would I Want To Read Code?](#why-would-i-want-to-read-code)
+*   [Why Is Reading Code So Hard?](#why-is-reading-code-so-hard)
+*   [Tips For Reading Source Code](#tips-for-reading-source-code)
+*   [What Is The Best Order To Read Source Code?](#what-is-the-best-order-to-read-source-code)
+*   [Further Reading](#further-reading)
 
 
-## Why would I want to read code?
+## Why Would I Want To Read Code?
 
 ### Reading code written by others will super-charge your education
 
@@ -59,9 +59,114 @@ As a professional programmer you will spend more time **reading** code than **wr
 My own experience agrees with this ratio.  However, my experience also informs me that many programmers don't follow his advice, and pay the price by writing awful code that gets thrown out, over and over again.
 
 
-## What makes reading code so hard?
+## Why Is Reading Code So Hard?
 
-These are a few of the challenges that you face when studying a body of code much bigger than "Hello, World".  This is not an exhaustive list.
+Your first clue is the fact that we call a program's text **code**, as though our goal in programming is to encrypt a secret.
+
+This is the Quick Sort algorithm described in pseudocode:
+
+```python
+function quicksort(array):
+    less, equal, greater = three empty arrays
+    if length(array) > 1
+        pivot := select any element of array
+        for each x in array
+            if x < pivot then add x to less
+            if x = pivot then add x to equal
+            if x > pivot then add x to greater
+        quicksort(less)
+        quicksort(greater)
+        array := concatenate(less, equal, greater)
+    return array
+```
+
+This is what (a part of) Quick Sort looks like in ARM assembly language (ARM is the type of CPU your phone or tablet has):
+
+```nasm
+quicksort:
+    push {r2-r5,lr}                                   @ save registers
+    sub r2,#1                                         @ last item index
+    cmp r1,r2                                         @ first > last ?
+    bge 100f                                          @ yes -> end
+    mov r4,r0                                         @ save r0
+    mov r5,r2                                         @ save r2
+    bl partition1                                     @ cutting into 2 parts
+    mov r2,r0                                         @ index partition
+    mov r0,r4                                         @ table address
+    bl quicksort                                      @ sort lower part
+    add r1,r2,#1                                      @ index begin = index partition + 1
+    add r2,r5,#1                                      @ number of elements
+    bl quicksort                                      @ sort higter part
+
+ 100:                                                 @ end function
+    pop {r2-r5,lr}                                    @ restaur  registers
+    bx lr                                             @ return
+
+partition1:
+    push {r1-r7,lr}                                    @ save registers
+    ldr r3,[r0,r2,lsl #2]                              @ load value last index
+    mov r4,r1                                          @ init with first index
+    mov r5,r1                                          @ init with first index
+1:                                                     @ begin loop
+    ldr r6,[r0,r5,lsl #2]                              @ load value
+    cmp r6,r3                                          @ compare value
+    ldrlt r7,[r0,r4,lsl #2]                            @ if < swap value table
+    strlt r6,[r0,r4,lsl #2]
+    strlt r7,[r0,r5,lsl #2]
+    addlt r4,#1                                        @ and increment index 1
+    add    r5,#1                                       @ increment index 2
+    cmp r5,r2                                          @ end ?
+    blt 1b                                             @ no loop
+    ldr r7,[r0,r4,lsl #2]                              @ swap value
+    str r3,[r0,r4,lsl #2]
+    str r7,[r0,r2,lsl #2]
+    mov r0,r4                                          @ return index partition
+100:
+    pop {r1-r7,lr}
+    bx lr
+```
+
+Makes perfect sense, right?  Back in the day when everybody wrote programs in assembly language, calling your job "coding" was accurate.  This is what Quick Sort looks like in Python:
+
+```python
+def quicksort(array):
+    less, equal, greater = [], [], []
+    if len(array) > 1:
+        pivot = array[0]
+        for x in array:
+            if x < pivot:
+                less.append(x)
+            elif x == pivot:
+                equal.append(x)
+            else:
+                greater.append(x)
+        less = quicksort(less)
+        greater = quicksort(greater)
+        array = less + equal + greater
+    return array
+```
+
+<details>
+<summary>Click to see the pseudocode again</summary>
+
+```python
+function quicksort(array):
+    less, equal, greater = three empty arrays
+    if length(array) > 1
+        pivot := select any element of array
+        for each x in array
+            if x < pivot then add x to less
+            if x = pivot then add x to equal
+            if x > pivot then add x to greater
+        quicksort(less)
+        quicksort(greater)
+        array := concatenate(less, equal, greater)
+    return array
+```
+
+</details>
+
+Although modern programming languages have come a long way since the "good old days", it's not all sunshine and roses.  These are a few of the challenges that you face when studying a body of code much bigger than "Hello, World".  This is not an exhaustive list.
 
 0.  Code is often written without any regard for a human who may have the misfortune of looking at it again in the future.
     *   Thoughtlessly written code is downright hostile to the reader
@@ -96,7 +201,7 @@ These are a few of the challenges that you face when studying a body of code muc
 In short, reading unfamiliar code is a lot of hard work!  The good news is that reading code is a skill that gets stronger with time and experience.
 
 
-## Tips for reading source code
+## Tips For Reading Source Code
 
 Over the years I've learned some tricks that have helped me counter the difficulties mentioned above.  If you employ these habits now, you will soon be at home in a big project.
 
@@ -147,7 +252,7 @@ Over the years I've learned some tricks that have helped me counter the difficul
         *   "what is the purpose of variable 'X'?"
 
 
-## What is the best order to read source code?
+## What Is The Best Order To Read Source Code?
 
 Source code is not linear like a book that has a first page and a last page.  Its organization is like a hypertext document that, from its a beginning, can go off in any direction and turn back onto itself, and have many different endings.
 
@@ -174,7 +279,7 @@ As such, there are many ways you can read code.  Here are two methods that are o
 
 
 
-## Related Reading
+## Further Reading
 
 * http://wiki.c2.com/?TipsForReadingCode
 * http://wiki.c2.com/?ReadGreatPrograms
@@ -183,4 +288,4 @@ As such, there are many ways you can read code.  Here are two methods that are o
 * https://github.com/aredridel/how-to-read-code/blob/master/how-to-read-code.md
 
 
-*Updated Wed Mar 22 13:05:49 MDT 2023*
+*Updated Thu Mar 23 12:09:36 MDT 2023*
