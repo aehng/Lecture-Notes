@@ -115,7 +115,7 @@ Get the code:
 git clone https://github.com/sobolevn/python-code-disasters
 ```
 
-With your neighbors discuss what you find to be problematic with these examples and why:
+Along with your neighbors discuss which [Code Smells](../Refactoring.md#code-smells) you can find in these examples:
 
 *   `python-code-disasters/python/my_first_calculator.py`
 *   `python-code-disasters/python/genpassword.py`
