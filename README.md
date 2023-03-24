@@ -183,10 +183,10 @@ $ git pull origin master
 27. [Wednesday, March 22](./Module4/Lec27-Wed_Mar_22/README.md)
 	* [Code Smells](./Module4/Lec27-Wed_Mar_22/README.md#code-smells)
 	* [Reading Code](./Module4/Lec27-Wed_Mar_22/README.md#reading-code)
-	* [The `tkinter` big picture](./Module4/Lec27-Wed_Mar_22/README.md#the-tkinter-big-picture)
+	* [How will I know when to refactor?](./Module4/Lec27-Wed_Mar_22/README.md#how-will-i-know-when-to-refactor)
+	* [Should I refactor *and* add functionality at the same time?](./Module4/Lec27-Wed_Mar_22/README.md#should-i-refactor-and-add-functionality-at-the-same-time)
 28. [Friday, March 24](./Module4/Lec28-Fri_Mar_24/README.md)
-	* [How will I know when to refactor?](./Module4/Lec28-Fri_Mar_24/README.md#how-will-i-know-when-to-refactor)
-	* [Should I refactor *and* add functionality at the same time?](./Module4/Lec28-Fri_Mar_24/README.md#should-i-refactor-and-add-functionality-at-the-same-time)
+	* [The `tkinter` big picture](./Module4/Lec28-Fri_Mar_24/README.md#the-tkinter-big-picture)
 	* [Python Code Disasters](./Module4/Lec28-Fri_Mar_24/README.md#python-code-disasters)
 
 
