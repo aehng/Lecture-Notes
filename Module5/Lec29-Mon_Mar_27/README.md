@@ -26,7 +26,7 @@ CS1440 - Monday, March 27 - Lecture 29 - Module 5
 This meeting will be to practice cyber capture-the-flag skills in preparation for the National Cyber League competition. Come learn essential tools and tricks that will greatly improve your cybersecurity CTF prowess!
 
 
-## DC435 Meeting This Week
+## DC435 Meeting Next Week
 
 *   **What**  T-Pot Honeypot by Allen Hill
 *   **When**  7:00pm Thursday, April 6th
