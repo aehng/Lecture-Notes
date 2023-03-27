@@ -11,6 +11,12 @@ CS1440 - Monday, March 27 - Lecture 29 - Module 5
 ------------------------------------------------------------
 # Announcements
 
+## Assigned Reading: "No Silver Bullet"
+
+*   Read the essay "No Silver Bullet", chapter 16 of the book "The Mythical Man-Month" before our meeting on Friday, March 31st and be prepared to discuss it.
+*   Instructions for accessing the electronic version of this book are [here](../../Required_Reading_Schedule.md#accessing-the-mythical-man-month-for-free-through-the-usu-library)
+
+
 ## CyberSentinels CTF Workshop
 
 *   **What**  Practice CTF skills for the National Cyber League competition
