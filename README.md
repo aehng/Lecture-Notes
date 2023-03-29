@@ -159,7 +159,9 @@ $ git pull origin master
 </details>
 
 
-### Module 4
+<details>
+<summary><h3>Module 4</h3></summary>
+
 23. [Monday, March 13](./Module4/Lec23-Mon_Mar_13/README.md)
 	* [Advanced Git](./Module4/Lec23-Mon_Mar_13/README.md#advanced-git)
 	* [A review of Git basics](./Module4/Lec23-Mon_Mar_13/README.md#a-review-of-git-basics)
@@ -189,6 +191,8 @@ $ git pull origin master
 	* [The `tkinter` big picture](./Module4/Lec28-Fri_Mar_24/README.md#the-tkinter-big-picture)
 	* [Python Code Disasters](./Module4/Lec28-Fri_Mar_24/README.md#python-code-disasters)
 
+</details>
+
 
 ### Module 5
 29. [Monday, March 27](./Module5/Lec29-Mon_Mar_27/README.md)
@@ -196,6 +200,18 @@ $ git pull origin master
 	* [Classification](./Module5/Lec29-Mon_Mar_27/README.md#classification)
 	* [The Four Principles of Object-Oriented Design](./Module5/Lec29-Mon_Mar_27/README.md#the-four-principles-of-object-oriented-design)
 	* [0. Encapsulation applied](./Module5/Lec29-Mon_Mar_27/README.md#0-encapsulation-applied)
+30. [Wednesday, March 29](./Module5/Lec30-Wed_Mar_29/README.md)
+	* [Recapitulation: Encapsulation](./Module5/Lec30-Wed_Mar_29/README.md#recapitulation-encapsulation)
+	* [1. Abstraction applied](./Module5/Lec30-Wed_Mar_29/README.md#1-abstraction-applied)
+	* [Prematurely enhancing the Sequences program](./Module5/Lec30-Wed_Mar_29/README.md#prematurely-enhancing-the-sequences-program)
+	* [2. Inheritance Applied](./Module5/Lec30-Wed_Mar_29/README.md#2-inheritance-applied)
+31. [Friday, March 31](./Module5/Lec31-Fri_Mar_31/README.md)
+	* [3. Polymorphism Applied](./Module5/Lec31-Fri_Mar_31/README.md#3-polymorphism-applied)
+	* [Inheritance in more depth](./Module5/Lec31-Fri_Mar_31/README.md#inheritance-in-more-depth)
+	* [Discussion: "No Silver Bullet" by Fred Brooks, Jr](./Module5/Lec31-Fri_Mar_31/README.md#discussion-no-silver-bullet-by-fred-brooks-jr)
+	* [Design Patterns](./Module5/Lec31-Fri_Mar_31/README.md#design-patterns)
+	* [Factory Method Pattern](./Module5/Lec31-Fri_Mar_31/README.md#factory-method-pattern)
+	* [The Strategy Pattern](./Module5/Lec31-Fri_Mar_31/README.md#the-strategy-pattern)
 
 
 
