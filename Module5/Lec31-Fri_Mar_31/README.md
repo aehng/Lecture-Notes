@@ -1,63 +1,22 @@
 CS1440 - Friday, March 31 - Lecture 31 - Module 5
 
 # Topics:
-* [Announcements](#announcements)
+* [Action Items](#action-items)
+* [Discussion: "No Silver Bullet" by Fred Brooks, Jr](#discussion-no-silver-bullet-by-fred-brooks-jr)
 * [3. Polymorphism Applied](#3-polymorphism-applied)
 * [Inheritance in more depth](#inheritance-in-more-depth)
-* [Discussion: "No Silver Bullet" by Fred Brooks, Jr](#discussion-no-silver-bullet-by-fred-brooks-jr)
 * [Design Patterns](#design-patterns)
 * [Factory Method Pattern](#factory-method-pattern)
 * [The Strategy Pattern](#the-strategy-pattern)
 
 
 ------------------------------------------------------------
-# Announcements
-
-
 # Action Items
 
 *   Complete phases **4. Deployment** and **5. Maintenance** *today* 
     *   Make your final push to GitLab early so you have plenty of time to **verify** your submission
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
-
-
-
-# [3. Polymorphism Applied](../Four_Principles_of_OO_Design.md#3-polymorphism)
-
-Python achieves polymorphism via so-called "Duck Typing":
-
-> If it walks like a duck and it quacks like a duck, then it must be a duck
-
-If there's one thing I am a fan of, it's more ducks!
-
-        _
-    .__(.)<  - Quack!
-     \___)
-
-['Sequences' Made Polymorphic](./Sequences/)
-
-
-
-# Inheritance in more depth
-
-Inheritance avoids code duplication by reusing common behaviors and properties among related classes, and adding unique aspects to those classes which differ.
-
-
-## [Denoting Inheritance in UML](../Four_Principles_of_OO_Design.md#denoting-inheritance-in-uml)
-
-The Inheritance relationship is expressed in UML by a white (open) arrow pointing from the specialized object to the generic object.
-
-See the [Shapes](../Shapes_demo/) demo code that accompanies this diagram.
-
-
-## [Inheritance and Abstract Classes](../Four_Principles_of_OO_Design.md#inheritance-and-abstract-classes)
-
-An *abstract* class cannot be instantiated into an object (in other words, you can't construct an object from an abstract class).
-
-In the [Sequences](./Sequences) demo, the `Sequence` class is supposed to be abstract, yet there is nothing stopping a careless programmer from instantiating it into an object.
-
-Python does not have a formal concept of *abstract class* built into the language, but it is easy to approximate it ourselves by making the constructor crash when it is called upon to make a `Sequence`. Similarly, we will write a version of the `value()` method in `Sequence` that crashes when called; this will force the programmer to *override* it in their subclass.
 
 
 
@@ -255,6 +214,44 @@ to this.  Indeed, much of the purpose of this course is learning about the
 advances which Brooks predicted.  These advances have come to pass and are,
 broadly speaking, considered to be perfectly ordinary tools and techniques in
 `$CURRENT_YEAR`.
+
+
+
+# [3. Polymorphism Applied](../Four_Principles_of_OO_Design.md#3-polymorphism)
+
+Python achieves polymorphism via so-called "Duck Typing":
+
+> If it walks like a duck and it quacks like a duck, then it must be a duck
+
+If there's one thing I am a fan of, it's more ducks!
+
+        _
+    .__(.)<  - Quack!
+     \___)
+
+['Sequences' Made Polymorphic](./Sequences/)
+
+
+
+# Inheritance in more depth
+
+Inheritance avoids code duplication by reusing common behaviors and properties among related classes, and adding unique aspects to those classes which differ.
+
+
+## [Denoting Inheritance in UML](../Four_Principles_of_OO_Design.md#denoting-inheritance-in-uml)
+
+The Inheritance relationship is expressed in UML by a white (open) arrow pointing from the specialized object to the generic object.
+
+See the [Shapes](../Shapes_demo/) demo code that accompanies this diagram.
+
+
+## [Inheritance and Abstract Classes](../Four_Principles_of_OO_Design.md#inheritance-and-abstract-classes)
+
+An *abstract* class cannot be instantiated into an object (in other words, you can't construct an object from an abstract class).
+
+In the [Sequences](./Sequences) demo, the `Sequence` class is supposed to be abstract, yet there is nothing stopping a careless programmer from instantiating it into an object.
+
+Python does not have a formal concept of *abstract class* built into the language, but it is easy to approximate it ourselves by making the constructor crash when it is called upon to make a `Sequence`. Similarly, we will write a version of the `value()` method in `Sequence` that crashes when called; this will force the programmer to *override* it in their subclass.
 
 
 
