@@ -6,6 +6,7 @@ CS1440 - Wednesday, March 29 - Lecture 30 - Module 5
 * [1. Abstraction applied](#1-abstraction-applied)
 * [Prematurely enhancing the Sequences program](#prematurely-enhancing-the-sequences-program)
 * [2. Inheritance Applied](#2-inheritance-applied)
+* [Inheritance in more depth](#inheritance-in-more-depth)
 
 
 ------------------------------------------------------------
@@ -180,6 +181,28 @@ the programming language do the copying & pasting for us.
 This is good - copying & pasting code is icky because it's tedious and
 error-prone.  Computers are really good at doing tedious things accurately.
 Therefore, it is better to leave this up to the computer.
+
+
+
+# Inheritance in more depth
+
+Inheritance avoids code duplication by reusing common behaviors and properties among related classes, and adding unique aspects to those classes which differ.
+
+
+## [Denoting Inheritance in UML](../Four_Principles_of_OO_Design.md#denoting-inheritance-in-uml)
+
+The Inheritance relationship is expressed in UML by a white (open) arrow pointing from the specialized object to the generic object.
+
+See the [Shapes](../Shapes_demo/) demo code that accompanies this diagram.
+
+
+## [Inheritance and Abstract Classes](../Four_Principles_of_OO_Design.md#inheritance-and-abstract-classes)
+
+An *abstract* class cannot be instantiated into an object (in other words, you can't construct an object from an abstract class).
+
+In the [Sequences](./Sequences) demo, the `Sequence` class is supposed to be abstract, yet there is nothing stopping a careless programmer from instantiating it into an object.
+
+Python does not have a formal concept of *abstract class* built into the language, but it is easy to approximate it ourselves by making the constructor crash when it is called upon to make a `Sequence`. Similarly, we will write a version of the `value()` method in `Sequence` that crashes when called; this will force the programmer to *override* it in their subclass.
 
 
 
