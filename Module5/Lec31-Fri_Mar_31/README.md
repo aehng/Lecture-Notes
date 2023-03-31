@@ -1,7 +1,7 @@
 CS1440 - Friday, March 31 - Lecture 31 - Module 5
 
 # Topics:
-* [Action Items](#action-items)
+* [Announcements](#announcements)
 * [Discussion: "No Silver Bullet" by Fred Brooks, Jr](#discussion-no-silver-bullet-by-fred-brooks-jr)
 * [3. Polymorphism Applied](#3-polymorphism-applied)
 * [Inheritance in more depth](#inheritance-in-more-depth)
@@ -11,6 +11,23 @@ CS1440 - Friday, March 31 - Lecture 31 - Module 5
 
 
 ------------------------------------------------------------
+# Announcements
+
+## BSidesSLC Sessions and Workshops Posted
+
+*   **When**
+    *   Friday, April 14th: Professional Growth Day
+        *   Sessions from Industry Experts, CTF, workshops, lock picking, soldering circuits, and more.
+    *   Saturday, April 15th: Core Skills Day
+        *   Level up your skills with workshops, trainings, and networking events.
+*   BSidesSLC attendance replaces your lowest assignment/exam score
+    *   If you attend the conference I will replace your lowest assignment/exam score with **full credit**
+        *   It is good enough if you can only make it one of the days, either Friday or Saturday
+    *   Either find me at the conference or send me a selfie your conference badge
+    *   *Note:* if you are enrolled in both of my classes this semester, you may replace a low score in only **one** class
+*   [**BSidesSLC Discord**](https://discord.com/invite/hBcnv9gb73).
+
+
 # Action Items
 
 *   Complete phases **4. Deployment** and **5. Maintenance** *today* 
