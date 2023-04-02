@@ -212,6 +212,17 @@ $ git pull origin master
 	* [Design Patterns](./Module5/Lec31-Fri_Mar_31/README.md#design-patterns)
 	* [Factory Method Pattern](./Module5/Lec31-Fri_Mar_31/README.md#factory-method-pattern)
 	* [The Strategy Pattern](./Module5/Lec31-Fri_Mar_31/README.md#the-strategy-pattern)
+32. [Monday, April 03](./Module5/Lec32-Mon_Apr_03/README.md)
+	* [Assignment #5.0 Retrospective: Pay it forward](./Module5/Lec32-Mon_Apr_03/README.md#assignment-50-retrospective-pay-it-forward)
+	* [Assignment #5.0 Code ~~Review~~ Roast](./Module5/Lec32-Mon_Apr_03/README.md#assignment-50-code-review-roast)
+	* [Introduce Assignment #5.1 - Design Patterns](./Module5/Lec32-Mon_Apr_03/README.md#introduce-assignment-51-design-patterns)
+	* [What if my Assignment 5.0 code doesn't work](./Module5/Lec32-Mon_Apr_03/README.md#what-if-my-assignment-50-code-doesnt-work)
+33. [Wednesday, April 05](./Module5/Lec33-Wed_Apr_05/README.md)
+	* [Generating color palettes with `colour.Color`](./Module5/Lec33-Wed_Apr_05/README.md#generating-color-palettes-with-colourcolor)
+	* [Use `pathlib.Path` to find the "stem" of a path](./Module5/Lec33-Wed_Apr_05/README.md#use-pathlibpath-to-find-the-stem-of-a-path)
+	* [Refactoring reduces complexity of the Fractal Viewer](./Module5/Lec33-Wed_Apr_05/README.md#refactoring-reduces-complexity-of-the-fractal-viewer)
+	* [Factory Method Pattern](./Module5/Lec33-Wed_Apr_05/README.md#factory-method-pattern)
+	* [The Strategy Pattern](./Module5/Lec33-Wed_Apr_05/README.md#the-strategy-pattern)
 
 
 
