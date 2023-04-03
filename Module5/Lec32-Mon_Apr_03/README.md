@@ -11,6 +11,18 @@ CS1440 - Monday, April 03 - Lecture 32 - Module 5
 ------------------------------------------------------------
 # Announcements
 
+## Utah State University Physics Colloquium
+
+*   **What**  Computers, Brains, and the Physics of the Universe
+*   **Who** Dr. Jeffrey Shainline
+*   **When**  3:00pm Tuesday, April 4th
+*   **Where** SER 244
+
+Digital computers struggle to perform certain functions that are trivial for humans, such as identifying an emotion from a facial expression or isolating a feature of interest in a busy visual scene. To enable computers to perform functions like the brain, it helps if we build properties of the brain into the computers. These "neuromorphic" computers presently do not perform anywhere near as well as biological brains.
+
+My research team is attempting to realize new computational hardware that builds on silicon transistors, adding light for communication and superconducting circuitry to realize synapses, dendrites, and neurons. With this new approach to neuromorphic hardware, it may be possible to get very close to the fundamental physical limits of cognition.
+
+
 ## DC435 Meeting This Week
 
 *   **What**  T-Pot Honeypot by Allen Hill
@@ -25,7 +37,6 @@ CS1440 - Monday, April 03 - Lecture 32 - Module 5
 *   Work on phase **0. Requirements Analysis** of the new assignment *today*
     *   Wrap it up *tomorrow*
 *	Call on 2 designated questioners
-*	Hold a 3-minute stand-up scrum meeting with your team
 
 
 
@@ -107,6 +118,9 @@ class Palette:
 
 In Java-speak you'd say this is a "class static variable".  There is only one `__contents` list shared by *all* `Palette` objects in this program.
 
+Because of how classes in Python work, line 5 of the program finds the existing `Palette.__contents` instead of creating a list in the context of the newly created object.  It extends this list by the colors passed to the initializer, making the class's static list longer and longer each time the programmer tries to make a new `Palette` object.
+
+
 For `__contents` to become an *instance* attribute (a.k.a. *instance variable* or *data member*) it must be declared in `__init__()`, like this:
 
 ```python
@@ -115,9 +129,10 @@ class Palette:
         self.__contents = colors
 ```
 
-Because of how classes in Python work, line 5 of the program finds the existing `Palette.__contents` instead of creating a list in the context of the newly created object.  It extends this list by the colors passed to the initializer, making the class's static list longer and longer each time the programmer tries to make a new `Palette` object.
+Only then will appending to `self.__contents` not affect *all* objects constructed from this class.
 
 </details>
+
 
 When you design a new class, be careful that you don't re-invent existing data structures that your language gives you for free.  `Palette` is just a list with fewer features.  Look at the methods and dunders that `Palette` defines; what makes a `Palette` different from Python's built-in list (besides the fact that Python's list works...)?  
 
@@ -134,13 +149,13 @@ When you design a new class, be careful that you don't re-invent existing data s
 # Palette.py #
 ##############
 
- 1  MANDELBROT = [ '#89ff00', '#a4f817', '#baf12e',
- 2                  ... 35 lines elided ...            
- 3                  '#e052da', '#e33e97', '#e8283f']
+ 1  MANDELBROT = [ 
+ 2                 ... 111 colors elided ...
+ 3               ]
        
- 4  PHOENIX = [ '#FFE4B5', '#FFE5B2', '#FFE6AF', '#FFE8AC', '#FFE9A9', '#FFEBA7',
- 5              ... 16 lines elided ...
- 6              '#002B7D', '#00267A', '#002277']
+ 4  PHOENIX = [
+ 5              ... 102 colors elided ...
+ 6            ]
 ```
 
 </details>
@@ -233,7 +248,7 @@ Here are the relevant bits of code.  Look for something that is duplicated:
 
 The `image "pyimage1" doesn't exist` error message happens when `Tk()` is called too many times.
 
-The programmer was confused by the flow of their program jumping from `Mandelbrot.py` to `ImagePainter.py`, the back out to `Mandelbrot.py` only to turn back into `ImagePainter.py`, and missed that `ImagePainter.makeWindow()` is called twice - once in `Mandelbrot.mbrot_main()` and a second time in `ImagePainter.canvas()`.
+The programmer was confused by the flow of their program jumping from `Mandelbrot.py` to `ImagePainter.py`, the back out to `Mandelbrot.py` only to turn back into `ImagePainter.py`, and missed that `ImagePainter.makeWindow()` is called twice - once in `Mandelbrot.mbrot_main()` (line 2) and a second time in `ImagePainter.canvas()` (line 9).
 
 When I slowed the program down by running it in the debugger, sure enough, I saw both windows appear.  
 
@@ -250,30 +265,30 @@ I believe this student arrived at this design because the assignment required th
 # Mandelbrot.py #
 #################
 
- 1	def mbrot_main(arg):
- 2	    fractal = getImages()[arg]
- 3	    ImagePainter.paint(fractal)
+ 1 def mbrot_main(arg):
+ 2     fractal = getImages()[arg]
+ 3     ImagePainter.paint(fractal)
 
 
 ###################
 # ImagePainter.py #
 ###################
 
- 1	SIZE = 512
- 2	BG = '#000000'
+ 1 SIZE = 512
+ 2 BG = '#000000'
    
- 3	def paint(fractal):
- 4	    # Display the image on the screen
- 5	    window = Tk()
- 6	    photo = PhotoImage(width=SIZE, height=SIZE)
- 7	    canvas = Canvas(window, width=SIZE, height=SIZE, bg=BG)
- 8	    canvas.create_image((SIZE / 2, SIZE / 2), image=photo, state="normal")
- 9	    canvas.pack()
-10	    ...
-11	    
-12	    for row in range(512, 0, -1):
-13	        ...
-14	        window.update()  # display a row of pixels
+ 3 def paint(fractal):
+ 4     # Display the image on the screen
+ 5     window = Tk()
+ 6     photo = PhotoImage(width=SIZE, height=SIZE)
+ 7     canvas = Canvas(window, width=SIZE, height=SIZE, bg=BG)
+ 8     canvas.create_image((SIZE / 2, SIZE / 2), image=photo, state="normal")
+ 9     canvas.pack()
+10     ...
+11     
+12     for row in range(512, 0, -1):
+13         ...
+14         window.update()  # display a row of pixels
 ```
 
 </details>
@@ -282,11 +297,11 @@ I believe this student arrived at this design because the assignment required th
 
 *   **Minimize** the number of levels of redirection, as they make the flow of the program hard to follow
     *   Carefully design the flow of your program so that control doesn't jump back and forth more than necessary
-    *   Even within the confines of structured programming it is possible to end up with a tangled mess of **spaghetti code**!
+    *   Even within the confines of structured programming it is possible to end up with a tangled mess of **spaghetti code!**
 *   Don't create functions just for the sake of creating functions
     *   Functions should **add value** to the program
     *   Don't make functions to **get around** design constraints!
-    *   When I ask you to do (or **not** do) something, there is a good reason - usually to force you into a simpler solution
+    *   When I ask you to do (or **not** do) something, it is for a good reason: to direct you toward a more simple solution
 
 
 
