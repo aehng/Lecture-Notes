@@ -218,6 +218,7 @@ $ git pull origin master
 	* [Introduce Assignment #5.1 - Design Patterns](./Module5/Lec32-Mon_Apr_03/README.md#introduce-assignment-51-design-patterns)
 	* [What if my Assignment 5.0 code doesn't work](./Module5/Lec32-Mon_Apr_03/README.md#what-if-my-assignment-50-code-doesnt-work)
 33. [Wednesday, April 05](./Module5/Lec33-Wed_Apr_05/README.md)
+	* [Advice from Monday's Retrospective](./Module5/Lec33-Wed_Apr_05/README.md#advice-from-mondays-retrospective)
 	* [Generating color palettes with `colour.Color`](./Module5/Lec33-Wed_Apr_05/README.md#generating-color-palettes-with-colourcolor)
 	* [Use `pathlib.Path` to find the "stem" of a path](./Module5/Lec33-Wed_Apr_05/README.md#use-pathlibpath-to-find-the-stem-of-a-path)
 	* [Refactoring reduces complexity of the Fractal Viewer](./Module5/Lec33-Wed_Apr_05/README.md#refactoring-reduces-complexity-of-the-fractal-viewer)

@@ -2,6 +2,7 @@ CS1440 - Wednesday, April 05 - Lecture 33 - Module 5
 
 # Topics:
 * [Announcements](#announcements)
+* [Advice from Monday's Retrospective](#advice-from-mondays-retrospective)
 * [Generating color palettes with `colour.Color`](#generating-color-palettes-with-colourcolor)
 * [Use `pathlib.Path` to find the "stem" of a path](#use-pathlibpath-to-find-the-stem-of-a-path)
 * [Refactoring reduces complexity of the Fractal Viewer](#refactoring-reduces-complexity-of-the-fractal-viewer)
@@ -35,6 +36,20 @@ CS1440 - Wednesday, April 05 - Lecture 33 - Module 5
     *   Continue your design work through *the end of the week*
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
+
+
+
+# Advice from Monday's Retrospective 
+
+Some good advice I came across while reading your sticky notes:
+
+*   Get help early
+*   Documentation is your friend, use it to your advantage
+*   The code looks intimidating at first, but it *does make sense* as you clean and study it
+*   Take time the week prior to get done up to the pseudocode, so the assignment is more evenly distributed
+*   ChatGPT can help you understand the code, but it's not great for writing it
+*   Keep it simple. Make small changes, then test and keep going until you finish.
+*   Start phases 0 and 1 early.  I know you're busy, but if you at least look at the code, and kind of let it stew in the back of your mind, phases 2 and 3 become a lot easier
 
 
 
