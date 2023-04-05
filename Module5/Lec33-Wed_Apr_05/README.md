@@ -6,8 +6,6 @@ CS1440 - Wednesday, April 05 - Lecture 33 - Module 5
 * [Generating color palettes with `colour.Color`](#generating-color-palettes-with-colourcolor)
 * [Use `pathlib.Path` to find the "stem" of a path](#use-pathlibpath-to-find-the-stem-of-a-path)
 * [Refactoring reduces complexity of the Fractal Viewer](#refactoring-reduces-complexity-of-the-fractal-viewer)
-* [Factory Method Pattern](#factory-method-pattern)
-* [The Strategy Pattern](#the-strategy-pattern)
 
 
 ------------------------------------------------------------
@@ -184,21 +182,6 @@ By identifying and removing relationships that aren't essential to the solution 
 ![UML Class diagram of finished Assn5.0 program](./42-A5.0-finished.png "UML Class diagram of finished Assn5.0 program")
 
 This is the power of modularization and encapsulation.
-
-
-
-# The [Factory Method Pattern](../Design_Patterns.md#the-factory-method-pattern)
-
-The idea of the Factory Method design pattern is to separate the *location of creation* from the choice of *what* to create.
-
-See the completed [Sequences](./Sequences) demo for an example of this pattern
-
-
-
-# [The Strategy Pattern](../Design_Patterns.md#the-strategy-pattern)
-
-This design pattern allows your users to select an algorithm or behavior at runtime.
-
 
 
 
