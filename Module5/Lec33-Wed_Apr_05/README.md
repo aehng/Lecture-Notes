@@ -45,10 +45,10 @@ Some good advice I came across while reading your sticky notes:
 
 *   Get help early
 *   Documentation is your friend, use it to your advantage
-*   The code looks intimidating at first, but it *does make sense* as you clean and study it
-*   Take time the week prior to get done up to the pseudocode, so the assignment is more evenly distributed
-*   ChatGPT can help you understand the code, but it's not great for writing it
 *   Keep it simple. Make small changes, then test and keep going until you finish.
+*   The code looks intimidating at first, but it *does make sense* as you clean and study it
+*   ChatGPT can help you understand the code, but it's not great for writing it
+*   Take time the week prior to get done up to the pseudocode, so the assignment is more evenly distributed
 *   Start phases 0 and 1 early.  I know you're busy, but if you at least look at the code, and kind of let it stew in the back of your mind, phases 2 and 3 become a lot easier
 
 
