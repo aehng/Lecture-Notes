@@ -144,7 +144,7 @@ file = file[:file.rfind('.')]
 
 ## But, there's a catch
 
-What if the path doesn't use `/` as its **directory separator** character?  Windows uses backslash `\`, so our algorithm would need to take that into account, too.  It is difficult to ensure the algorithm works on everywhere when you don't have easy access to multiple operating systems.
+What if the path doesn't use `/` as its **directory separator** character?  Windows uses backslash `\`, so our algorithm would need to take that into account, too.  It is difficult to ensure the algorithm works everywhere when you don't have easy access to multiple operating systems.
 
 This has created headaches for us when grading this assignment in the past.  To save our time and spare you from a penalty, I'll share a library with you that solves this problem portably.
 
