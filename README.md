@@ -221,7 +221,7 @@ $ git pull origin master
 	* [Advice from Monday's Retrospective](./Module5/Lec33-Wed_Apr_05/README.md#advice-from-mondays-retrospective)
 	* [Generating color palettes with `colour.Color`](./Module5/Lec33-Wed_Apr_05/README.md#generating-color-palettes-with-colourcolor)
 	* [Use `pathlib.Path` to find the "stem" of a path](./Module5/Lec33-Wed_Apr_05/README.md#use-pathlibpath-to-find-the-stem-of-a-path)
-	* [Refactoring reduces complexity of the Fractal Viewer](./Module5/Lec33-Wed_Apr_05/README.md#refactoring-reduces-complexity-of-the-fractal-viewer)
+	* [Refactoring reduces the complexity of the Fractal Viewer](./Module5/Lec33-Wed_Apr_05/README.md#refactoring-reduces-the-complexity-of-the-fractal-viewer)
 34. [Friday, April 07](./Module5/Lec34-Fri_Apr_07/README.md)
 	* [Factory Method Pattern](./Module5/Lec34-Fri_Apr_07/README.md#factory-method-pattern)
 	* [The Strategy Pattern](./Module5/Lec34-Fri_Apr_07/README.md#the-strategy-pattern)

@@ -5,7 +5,7 @@ CS1440 - Wednesday, April 05 - Lecture 33 - Module 5
 * [Advice from Monday's Retrospective](#advice-from-mondays-retrospective)
 * [Generating color palettes with `colour.Color`](#generating-color-palettes-with-colourcolor)
 * [Use `pathlib.Path` to find the "stem" of a path](#use-pathlibpath-to-find-the-stem-of-a-path)
-* [Refactoring reduces complexity of the Fractal Viewer](#refactoring-reduces-complexity-of-the-fractal-viewer)
+* [Refactoring reduces the complexity of the Fractal Viewer](#refactoring-reduces-the-complexity-of-the-fractal-viewer)
 
 
 ------------------------------------------------------------
@@ -158,7 +158,7 @@ Path('../data/8-points.frac').stem
 
 
 
-# Refactoring reduces complexity of the Fractal Viewer
+# Refactoring reduces the complexity of the Fractal Viewer
 
 I hope you can appreciate how much nicer the source code of the refactored fractal program is over the original starter code.  But the benefits of refactoring go deeper than the code itself.  Refactoring changed the structure of the program itself.
 
