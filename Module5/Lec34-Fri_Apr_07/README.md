@@ -2,8 +2,9 @@ CS1440 - Friday, April 07 - Lecture 34 - Module 5
 
 # Topics:
 * [Announcements](#announcements)
+* [Code Reuse](#code-reuse)
 * [Factory Method Pattern](#factory-method-pattern)
-* [The Strategy Pattern](#the-strategy-pattern)
+* [Strategy Pattern](#strategy-pattern)
 
 
 ------------------------------------------------------------
@@ -15,10 +16,10 @@ You should have received a notification about the IDEA Student Rating of Instruc
 
 Your feedback is very important to me, and I really want you to take this survey.  Each semester I take many useful suggestions and incorporate them into my future courses.  If I'm doing anything right, it is due to suggestions given by previous students.
 
-The more input I get from you the better I am able to improve as an instructor.  My goal is to reach 80% participation.  To that end I am offering 25 points of sweet, sweet *extra credit* for your response.  This is the *only* extra credit I give.  Your responses remain anonymous, and I will not even see them until after finals week.
+The more input I get from you the better I am able to improve as an instructor.  My goal is to reach 80% participation.  To that end, I am offering 25 points of sweet, sweet *extra credit* for your response.  This is the *only* extra credit I give.  Your responses remain anonymous, and I will not even see them until after finals week.
 
 *   The extra points will be automatically applied to your grade on Canvas by the University **at the end of Finals Week**
-    *   There is nothing that I can do to speed this up, or verify that your submission was accepted - **it's anonymous!**
+    *   There is nothing that I can do to speed this up or verify that your submission was accepted - **it's anonymous!**
     *   Your points will come through; trust the system
 *   The survey closes Wednesday, April 26th at 11:59 PM
 
@@ -49,11 +50,11 @@ The more input I get from you the better I am able to improve as an instructor. 
     *   Increased the # of unit tests you get to write (still not enough, but increasing year-over-year)
     *   Dropped file-handling requirements from Assignment #1 (Tic-Tac-Toe) and introduce this concept later
     *   Reformed the Fractal assignments & adjusted their difficulty
-    *   Improved the Bingo! assignment (I was going to dump this, but lots of students reported getting a lot from it)
-    *   Changed they way I teach UML (idem.)
+    *   Improved the Bingo! assignment (I was going to dump this, but many students reported getting a lot out of it)
+    *   Changed the way I teach UML (idem.)
     *   Designated Questioner (idem.)
-    *   Post-assignment reflections
-    *   Display student performance metrics from past semesters; student advice
+    *   Post-assignment reflection quizzes
+    *   Display student performance metrics from past semesters
     *   Class Discord server
 
 
@@ -74,6 +75,16 @@ The more input I get from you the better I am able to improve as an instructor. 
 
 
 
+# 5 types of [Code Reuse](../Design_Patterns.md#code-reuse)
+
+0.  Cutting & Pasting
+1.  Abstract Data Types (ADT)
+2.  Libraries
+3.  Algorithms
+4.  Design Patterns
+
+
+
 # The [Factory Method Pattern](../Design_Patterns.md#the-factory-method-pattern)
 
 The idea of the Factory Method design pattern is to separate the *location of creation* from the choice of *what* to create.
@@ -82,7 +93,7 @@ See the completed [Sequences](./Sequences) demo for an example of this pattern
 
 
 
-# [The Strategy Pattern](../Design_Patterns.md#the-strategy-pattern)
+# The [Strategy Pattern](../Design_Patterns.md#the-strategy-pattern)
 
 This design pattern allows your users to select an algorithm or behavior at runtime.
 
