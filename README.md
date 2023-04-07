@@ -223,6 +223,7 @@ $ git pull origin master
 	* [Use `pathlib.Path` to find the "stem" of a path](./Module5/Lec33-Wed_Apr_05/README.md#use-pathlibpath-to-find-the-stem-of-a-path)
 	* [Refactoring reduces the complexity of the Fractal Viewer](./Module5/Lec33-Wed_Apr_05/README.md#refactoring-reduces-the-complexity-of-the-fractal-viewer)
 34. [Friday, April 07](./Module5/Lec34-Fri_Apr_07/README.md)
+	* [Review the Sequences Demo](./Module5/Lec34-Fri_Apr_07/README.md#review-the-sequences-demo)
 	* [Code Reuse](./Module5/Lec34-Fri_Apr_07/README.md#code-reuse)
 	* [Factory Method Pattern](./Module5/Lec34-Fri_Apr_07/README.md#factory-method-pattern)
 	* [Strategy Pattern](./Module5/Lec34-Fri_Apr_07/README.md#strategy-pattern)

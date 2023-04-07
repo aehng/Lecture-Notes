@@ -2,6 +2,7 @@ CS1440 - Friday, April 07 - Lecture 34 - Module 5
 
 # Topics:
 * [Announcements](#announcements)
+* [Review the Sequences Demo](#review-the-sequences-demo)
 * [Code Reuse](#code-reuse)
 * [Factory Method Pattern](#factory-method-pattern)
 * [Strategy Pattern](#strategy-pattern)
@@ -9,6 +10,9 @@ CS1440 - Friday, April 07 - Lecture 34 - Module 5
 
 ------------------------------------------------------------
 # Announcements
+
+## The [BSidesSLC Schedule](https://www.bsidesslc.org/schedule) is up!
+
 
 ## IDEA Surveys - Rare Extra Credit Opportunity
 
@@ -42,7 +46,7 @@ The more input I get from you the better I am able to improve as an instructor. 
     *   These objectives are **important** to this course (weigh half as much as essentials)
         *   1. Gaining a basic understanding of the subject (e.g., factual knowledge, methods, principles, generalizations, theories)
         *   9. Learning how to find, evaluate, and use resources to explore a topic in depth
-*   What things have you done in this class as a result of IDEA feedback?
+*   What changes to this course have come as a result of IDEA feedback?
     *   Introduced the Shell Tutor
     *   Slowed the pace of the first lectures about Bash and Git
     *   The whole DuckieCorp shtick; giving out rubber duckies, scrum + retrospectives
@@ -54,7 +58,7 @@ The more input I get from you the better I am able to improve as an instructor. 
     *   Changed the way I teach UML (idem.)
     *   Designated Questioner (idem.)
     *   Post-assignment reflection quizzes
-    *   Display student performance metrics from past semesters
+    *   Show students' previous semester performance on assignments
     *   Class Discord server
 
 
@@ -72,6 +76,21 @@ The more input I get from you the better I am able to improve as an instructor. 
     *   Be ready to move on to phase **2. Implementation** *early next week*
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
+
+
+
+# Review the Sequences Demo
+
+Let's review the code from the Sequences Demo that we worked on last week:
+
+*   An *abstract* class `Sequence` defines the overall "shape" for each concrete subclass
+    *   Because it is *abstract*, it should be impossible to create a `Sequence` object
+    *   Presently this isn't the case, but if I do make a `Sequence` object, it will crash when I call its `.run()` method
+    *   [ ] Change the code to prevent a `Sequence` object from existing
+*   The concrete class `NonSquare` does not inherit from `Sequence`
+    *   The fact that my program can use a `NonSquare` object is an example of *Duck-Typing*
+    *   If `NonSquare` was just a little different, my program could crash when I used it
+    *   [ ] Change the definition of `NonSquare` so that it inherits from `Sequence`, thus guaranteeing that the minimum set of required methods will exist
 
 
 
