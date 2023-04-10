@@ -20,6 +20,16 @@ CS1440 - Monday, April 10 - Lecture 35 - Module 6
 ![./03-acmw-poster.png](./03-acmw-poster.png)
 
 
+## Free Software and Linux Club
+
+*   **What**  Ruling the Modern  Web With Free and Open Source Software
+*   **When**  6:30pm Thursday, April 13th
+*   **Where** ESLC 053, [FSLC Discord server](https://discord.gg/GKWhbVDN38)
+*   **Streaming** https://linux.usu.edu/streams
+
+The presentation will be by Simponic on the current state of the modern web - from the perspective of the general user in addition to that of us developers (including those looking to get started). We'll discover how Free Software can be used to mitigate a lot of the webs' problems, and its role in increasing user choice, privacy, and security. I will also be showing a simple application as it would have been developed through the ages of the internet, to get a good understanding of how we got here. Maybe a little bit of NGINX RTMP stuff if there's time, since I've picked up there's some interest in that and how it's setup for the club.
+
+
 ## BSidesSLC Is This Week
 
 *   Last chance to sign up!
@@ -31,7 +41,7 @@ CS1440 - Monday, April 10 - Lecture 35 - Module 6
 
 ## Take the IDEA Survey
 
-*   So far we're at a 20% response rate!
+*   So far we're at a 22% response rate!
     *   My goal for the class is 80%
 *   It's worth 25 points of extra credit
 *   The survey closes 04/26/2023 at 11:59 PM
@@ -40,12 +50,14 @@ CS1440 - Monday, April 10 - Lecture 35 - Module 6
 # Action Items
 
 *   This Week's Assigned Reading: "The Mythical Man-Month"
-    *   Read the essay "The Mythical Man-Month" (Chapter 2) of the book "The Mythical Man-Month" before our next meeting on **Wednesday, April 12th** and be prepared to discuss it.
+*   Read the essay "The Mythical Man-Month" (Chapter 2) of the book "The Mythical Man-Month" before our meeting on **Monday, April 17th** and be prepared to discuss it.
     *   Instructions for accessing the electronic version of this book are [here](../../Required_Reading_Schedule.md#accessing-the-mythical-man-month-for-free-through-the-usu-library)
 *   Work on phase **2. Implementation** of this assignment *today* with the goal to complete it *tomorrow*
     *   Begin phase **3. Testing and Debugging** ASAP so you can identify and fix any problems with your assignment
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
+
+
 
 
 
