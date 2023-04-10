@@ -1,6 +1,6 @@
 /*
 ** echoc.c -- the echo client for echos.c; demonstrates unix sockets
- * http://beej.us/guide/bgipc/html/multi/unixsock.html
+ * https://beej.us/guide/bgipc/html/split/unixsock.html
  */
 
 #include <stdio.h>

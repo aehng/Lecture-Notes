@@ -17,41 +17,18 @@ responsible programmers must be prepared for any unfortunate event.
 
 Broadly speaking, there are two approaches to handling problems that arise as a program runs:
 
-0.  **Easier to Ask Forgiveness than Permission** (EAFP): Accept that things
-    can and will go wrong, but that they are actually infrequent occurrences.
-    Instead of dealing with problems as they come, group the cleanup code
-    together in one, out-of-the-way location.  The main flow of the productive
-    code is clear and easy to see.
-1.  **Look Before You Leap** (LBYL): before proceeding on to the next statement
+0.  **Look Before You Leap** (LBYL): before proceeding on to the next statement
     in the program first check that the previous statement was successful.
     Errors are detected and handled immediately as they occur.  The resulting
     code is 50% productive and 50% error handling, all mixed together.
     Readability is hampered as it can be difficult to discern which lines of
     code progress the program toward its goal and which lines are present to
     clean up any messes that may occur.
-
-
-### Easier to Ask Forgiveness than Permission (EAFP)
-
-EAFP is achieved by the mechanism of exception handling.  In Python, this
-facility is used with the `try/except/finally` keywords that precede an
-indented block.
-
-Like all nice things in programming it was [first developed in LISP](https://www.joelonsoftware.com/2003/10/13/13/)
-in the 1960's.  Exception handling is common in recent high-level and
-Object-Oriented programming languages.  It is seen as an improvement over the
-older style of error handling characteristic of code from the 70's and 80's and
-which is still common in languages such as C which don't have exceptions.  In
-modern languages exception handling is the accepted practice that most folks
-will expect you to use.
-
-Exception handling lets you just write your code together in one paragraph and
-handle the various problems at the bottom of the function.  Typically, the
-function that causes a problem is responsible for dealing with its aftermath.
-However, exception handling allows for errors to "bubble up" the call chain to
-an outer function that is equipped to handle the problem.  Instead of handling
-errors instantly as they come up, you have the option leave it to a part of the
-program which is dedicated to cleaning up messes.
+1.  **Easier to Ask Forgiveness than Permission** (EAFP): Accept that things
+    can and will go wrong, but that they are actually infrequent occurrences.
+    Instead of dealing with problems as they come, group the cleanup code
+    together in one, out-of-the-way location.  The main flow of the productive
+    code is clear and easy to see.
 
 
 ### Look Before You Leap (LBYL)
@@ -59,12 +36,12 @@ program which is dedicated to cleaning up messes.
 Lower-level programming languages (such as C, Pascal and Go) tend to follow the
 LBYL philosophy, making error handing very explicit.
 
-The alternative style, LBYL, is achieved by surrounding every line of code in
-an `if/else` block to can handle the errors as they come.  The trouble with
-this approach is that your error handling code is mixed in with the main idea
-that the function embodies.  Reading this code is a bit confusing because you
-are constantly switching between code that gets you closer to your goal, and
-code that cleans up any messes that may occur.
+LBYL error handling is achieved by surrounding every line of code in an
+`if/else` block to can handle the errors as they come.  The trouble with this
+approach is that your error handling code is mixed in with the main idea that
+the function embodies.  Reading this code is a bit confusing because you are
+constantly switching between code that gets you closer to your goal, and code
+that cleans up any messes that may occur.
 
 Here is a snippet of C code that illustrates what
 error-handling-mixed-in-with-the-main-idea looks like so you can appreciate how
@@ -132,10 +109,39 @@ int doconnect (rad, rp, lad, lp) {
 ```
 
 
+### Easier to Ask Forgiveness than Permission (EAFP)
+
+EAFP is achieved through exception handling.  In Python, this is done with the
+`try/except/finally` keywords preceding an indented block.  Any error which
+occurs in the indented `try` block can be handled by a matching `except` block
+that follows.
+
+Exception handling lets you just write your code together in one paragraph and
+handle the various problems at the bottom of the function.  Typically, the
+function that causes a problem is responsible for dealing with its aftermath.
+However, exception handling allows for errors to "bubble up" the call chain to
+an outer function that is equipped to handle the problem.
+
+Instead of handling errors instantly as they come up, in low-level code, you
+have the option leave it to a high-level part of the program that is dedicated
+to cleaning up messes.  This enables you to respect the *layers of abstraction*
+in your system, letting high-level functions deal with big-picture errors, and
+leaving low-level details to functions that have a limited view of the overall
+system.
+
+Like all nice things in programming it was [first developed in LISP](https://www.joelonsoftware.com/2003/10/13/13/)
+in the 1960's.  Exception handling is common in modern high-level and
+Object-Oriented programming languages.  It is seen as an improvement over the
+older style of error handling characteristic of code from the 70's and 80's and
+which is still common in languages such as C and Go which don't have
+exceptions.  In *most* modern languages, exception handling is the accepted
+practice that most folks will expect you to use.
+
+
 ## Comparing The Two Approaches
 
 Compare the two approaches by reading [two sets of
-programs](./exceptions/README.md) written in C and Python.  These demo programs
+programs](./echo_server/README.md) written in C and Python.  These demo programs
 implement an Echo client & server.  An Echo server receives messages from a
 client program and sends them right back.  These two pairs of source code
 implement the exact same programs using the same underlying functionality; the
@@ -483,4 +489,5 @@ raise Derp("I derped!")
 * https://www.joelonsoftware.com/2003/10/13/13/
 * https://softwareengineering.stackexchange.com/a/139179
 
-*Updated Sun Apr  9 20:54:56 MDT 2023*
+
+*Updated Mon Apr 10 12:58:56 MDT 2023*

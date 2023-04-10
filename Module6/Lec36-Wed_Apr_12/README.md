@@ -2,7 +2,6 @@ CS1440 - Wednesday, April 12 - Lecture 36 - Module 6
 
 # Topics:
 * [Announcements](#announcements)
-* [Discussion: "The Mythical Man-Month" by Fred Brooks, Jr](#discussion-the-mythical-man-month-by-fred-brooks-jr)
 * [Any final questions about Assignment 5.1](#any-final-questions-about-assignment-51)
 * [Exception Best-Practices](#exception-best-practices)
 * [Exceptions in Python](#exceptions-in-python)
@@ -18,6 +17,16 @@ CS1440 - Wednesday, April 12 - Lecture 36 - Module 6
 I hope to see you there!
 
 
+## Free Software and Linux Club
+
+*   **What**  Ruling the Modern  Web With Free and Open Source Software
+*   **When**  6:30pm Thursday, April 13th
+*   **Where** ESLC 053, [FSLC Discord server](https://discord.gg/GKWhbVDN38)
+*   **Streaming** https://linux.usu.edu/streams
+
+The presentation will be by Simponic on the current state of the modern web - from the perspective of the general user in addition to that of us developers (including those looking to get started). We'll discover how Free Software can be used to mitigate a lot of the webs' problems, and its role in increasing user choice, privacy, and security. I will also be showing a simple application as it would have been developed through the ages of the internet, to get a good understanding of how we got here. Maybe a little bit of NGINX RTMP stuff if there's time, since I've picked up there's some interest in that and how it's setup for the club.
+
+
 ## Take the IDEA Survey
 
 *   So far we're at a XX% response rate!
@@ -30,61 +39,6 @@ I hope to see you there!
 
 *	Call on 2 designated questioners
 *	Hold a 3-minute stand-up scrum meeting with your team
-
-
-
-# Discussion: "The Mythical Man-Month" by Fred Brooks, Jr.
-
-## What is the big idea Brooks wants to get across?
-
-*   ...
-*   ...
-
-## Does a bigger team of programmers make a project come together faster?
-
-*   ...
-*   ...
-
-## Do teams spend enough time testing their code?
-
-*   ...
-*   ...
-
-## How much time does Brooks recommend a project spend in testing?
-
-*   ...
-*   ...
-
-## What should you do if your schedule starts to slip?
-
-*   ...
-*   ...
-
-
-## Key take-aways
-
-<details>
-<summary>Ideas that you must remember from this essay</summary>
-
-*   Developers are **irresponsibly optimistic** when it comes to estimating project schedules
-    *   On the other hand, some developers give up on estimations entirely and **just throw out huge numbers** without paying much thought to the matter
-*   With experience you can become a **good estimator**
-    *   This is helped by **gaining knowledge** both in the problem domain as well as with the tools/technologies used
-*   One reason large projects exceed their schedule is **communication**
-    *   As more programmers become involved, more **coordination** is needed
-    *   This increases time spent in large meetings
-    *   Meeting time is very expensive (programmers cost a lot per hour), and is time not spent creating code or running tests
-*   System testing is **deferred** until all production is completed *(you don't have a system to test until then)*
-    *   If the production schedule has slipped, **testing time is foreshortened**
-    *   This is a **grave mistake**, and one that is repeated to this day
-*   Brooks recommends spending up to **50% of a project's time in testing**
-    *   Most projects don't plan for this and go past the due date by at least this much anyway
-*   Programmers need to stiffen their backbones and tell managers & customers that **the best thing to do for a late software project is be patient**
-    *   *Nothing* you do can possibly make it finish **sooner**
-    *   *Anything* you do will most likely make it even **later**!
-    *   Remember Brooks's Law: *Adding manpower to a late software project makes it later*
-
-</details>
 
 
 

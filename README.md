@@ -241,7 +241,6 @@ $ git pull origin master
 	* [Pros & Cons of Exception Handling](./Module6/Lec35-Mon_Apr_10/README.md#pros-cons-of-exception-handling)
 	* [What is "Turing's Curse"](./Module6/Lec35-Mon_Apr_10/README.md#what-is-turings-curse)
 36. [Wednesday, April 12](./Module6/Lec36-Wed_Apr_12/README.md)
-	* [Discussion: "The Mythical Man-Month" by Fred Brooks, Jr](./Module6/Lec36-Wed_Apr_12/README.md#discussion-the-mythical-man-month-by-fred-brooks-jr)
 	* [Any final questions about Assignment 5.1](./Module6/Lec36-Wed_Apr_12/README.md#any-final-questions-about-assignment-51)
 	* [Exception Best-Practices](./Module6/Lec36-Wed_Apr_12/README.md#exception-best-practices)
 	* [Exceptions in Python](./Module6/Lec36-Wed_Apr_12/README.md#exceptions-in-python)

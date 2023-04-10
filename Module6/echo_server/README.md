@@ -2,7 +2,7 @@
 
 An **echo server** is a program that takes messages from a **client** program and sends them right back again.  These programs exhibit one approach to Inter-Process Communication (IPC).
 
-I've adapted a simple echo server/client pair written by [Brian "Beej Jorgensen" Hall](http://beej.us/guide/bgipc/html/multi/unixsock.html) in C and translated it directly into Python.  These two pairs of programs are identical in every detail, except for how they handle errors.  The C programs necessarily follow the *look before you leap* error handling philosophy while the Python programs employ exception handling and adhere to the *easier to ask forgiveness* school of thought.
+I've adapted a simple echo server/client pair written by [Brian "Beej Jorgensen" Hall](https://beej.us/guide/bgipc/html/split/unixsock.html) in C and translated it directly into Python.  These two pairs of programs are identical in every detail, except for how they handle errors.  The C programs necessarily follow the *look before you leap* error handling philosophy while the Python programs employ exception handling and adhere to the *easier to ask forgiveness* school of thought.
 
 Because both pairs of programs do exactly the same things, the Python server will happily converse with the C client, and vice-versa.  Indeed, the server neither knows nor cares which language its counterpart is written in.
 
@@ -70,3 +70,5 @@ The point of this demo is to learn something about different styles of writing c
 *   `echos.py` - Echo client in Python
 *   `echo_socket` - A special file to facilitate IPC between server and client
     *   This file is treated specially by the OS.  You may need to delete it before you are allowed to remove or rename this folder.
+
+*Updated Mon Apr 10 12:58:46 MDT 2023*
