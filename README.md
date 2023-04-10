@@ -194,7 +194,9 @@ $ git pull origin master
 </details>
 
 
-### Module 5
+<details>
+<summary><h3>Module 5</h3></summary>
+
 29. [Monday, March 27](./Module5/Lec29-Mon_Mar_27/README.md)
 	* [What is Object-Oriented Programming?](./Module5/Lec29-Mon_Mar_27/README.md#what-is-object-oriented-programming)
 	* [Classification](./Module5/Lec29-Mon_Mar_27/README.md#classification)
@@ -227,6 +229,22 @@ $ git pull origin master
 	* [Code Reuse](./Module5/Lec34-Fri_Apr_07/README.md#code-reuse)
 	* [Factory Method Pattern](./Module5/Lec34-Fri_Apr_07/README.md#factory-method-pattern)
 	* [Strategy Pattern](./Module5/Lec34-Fri_Apr_07/README.md#strategy-pattern)
+
+</details>
+
+
+### Module 6
+35. [Monday, April 10](./Module6/Lec35-Mon_Apr_10/README.md)
+	* [Exception Handling](./Module6/Lec35-Mon_Apr_10/README.md#exception-handling)
+	* [Two Approaches to Error Handling](./Module6/Lec35-Mon_Apr_10/README.md#two-approaches-to-error-handling)
+	* [Comparing The Two Approaches to Handling Errors](./Module6/Lec35-Mon_Apr_10/README.md#comparing-the-two-approaches-to-handling-errors)
+	* [Pros & Cons of Exception Handling](./Module6/Lec35-Mon_Apr_10/README.md#pros-cons-of-exception-handling)
+	* [What is "Turing's Curse"](./Module6/Lec35-Mon_Apr_10/README.md#what-is-turings-curse)
+36. [Wednesday, April 12](./Module6/Lec36-Wed_Apr_12/README.md)
+	* [Discussion: "The Mythical Man-Month" by Fred Brooks, Jr](./Module6/Lec36-Wed_Apr_12/README.md#discussion-the-mythical-man-month-by-fred-brooks-jr)
+	* [Any final questions about Assignment 5.1](./Module6/Lec36-Wed_Apr_12/README.md#any-final-questions-about-assignment-51)
+	* [Exception Best-Practices](./Module6/Lec36-Wed_Apr_12/README.md#exception-best-practices)
+	* [Exceptions in Python](./Module6/Lec36-Wed_Apr_12/README.md#exceptions-in-python)
 
 
 
