@@ -10,7 +10,7 @@ CS1440 - Wednesday, April 12 - Lecture 36 - Module 6
 ------------------------------------------------------------
 # Announcements
 
-## Friday'S Class Is Cancelled For BSidesSLC
+## Friday's Class Is Cancelled For BSidesSLC
 
 *   Friday, April 14th: Professional Growth Day
     *   Industry Experts, CTF, workshops, lock picking, soldering circuits, and more.
@@ -19,7 +19,7 @@ CS1440 - Wednesday, April 12 - Lecture 36 - Module 6
     *   Workshops & Trainings
     *   Special Event — Women in Tech (WiT) Brunch (10:30 am -12:00 pm)
 
-![./02-bsides-logo.png]
+![](./02-bsides-logo.png)
 
 I hope to see you there!
 
