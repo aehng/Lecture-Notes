@@ -104,7 +104,7 @@ Solves a general problem. Is not necessarily code: a design pattern is an idea
 # The Factory Method Pattern
 
 In a system containing many related classes the question "which kind of object
-do I need to make now?" often arises.  In many places in the program a block of
+do I need to make now?" often arises.  In many places in the program, a block of
 code must be written to decide which possibility should be chosen given the
 circumstances.  This may take the form of a big `if/else if/else` decision tree
 in each location where these objects need to be created.
@@ -121,7 +121,7 @@ commonly-accepted way to break this cycle.
 The idea of the Factory Method design pattern is to separate the location of
 creation from the choice of what to create.  Consider how the Logan city
 council has zoned our community such that all of the factories and
-manufacturing businesses are out on the west end of town along 10th west (zoned
+manufacturing businesses are out on the west end of town along 10th West (zoned
 as "Industrial Park") while the consumer-facing stores are located along Main
 Street (zoned as "Commercial").  Other parts of the city are designated as
 residential neighborhoods.
@@ -129,16 +129,15 @@ residential neighborhoods.
 ![Logan City Zone Map](./assets/zoning.png "Logan City Zone Map")
 
 
-In a well-organized program some modules/classes are designated to be in the
-"industrial zone".  These units of code are responsible for producing objects
-which are consumed by other parts of the program in the "commercial" zone.
+In a well-organized program, some modules/classes are designated to be in the
+"industrial zone".  These units of code produce objects consumed by other parts
+of the program in the "commercial" zone.
 
 The consequence of this organization is that the `if/else if/else` decision
-tree is hidden away in a Factory object in the "industrial" zone of the city.
-This leaves the nice store-front in the user-facing portion of the program.
-The user-facing "commercial" zone can be rearranged as needed without impacting
-the layout of the factories.  And the converse is true: the Factories can be
-refactored with a minimum of impact on the user-facing code.
+tree is hidden away in a Factory in the "industrial" zone of the city. This
+creates an attractive storefront in the user-facing part of the program that
+can be rearranged without disturbing the factories. And the converse is true:
+the Factory can be re-designed without impacting the user-facing code.
 
 *   [Factory Method on Sourcemaking.com](https://sourcemaking.com/design_patterns/factory_method)
 *   [Factory Method Pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_method_pattern)
