@@ -29,7 +29,7 @@ The presentation will be by Simponic on the current state of the modern web - fr
 
 ## Take the IDEA Survey
 
-*   So far we're at a XX% response rate!
+*   So far we're at a 31% response rate!
     *   My goal for the class is 80%
 *   It's worth 25 points of extra credit
 *   The survey closes 04/26/2023 at 11:59 PM
