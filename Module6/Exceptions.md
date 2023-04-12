@@ -34,7 +34,7 @@ Broadly speaking, there are two approaches to handling problems that arise as a 
 ### Look Before You Leap (LBYL)
 
 Lower-level programming languages (such as C, Pascal and Go) tend to follow the
-LBYL philosophy, making error handing very explicit.
+LBYL philosophy, making error handling very explicit.
 
 LBYL error handling is achieved by surrounding every line of code in an
 `if/else` block to can handle the errors as they come.  The trouble with this
@@ -191,7 +191,7 @@ entirely up to you and how you employ it:
 -   Don't adopt the habit of *swallowing* exceptions:
     ```
     try:
-        # Risky Buisiness up in here
+        # Risky Business up in here
         ...
     except:
         # Did something go wrong?  I'll never tell!
