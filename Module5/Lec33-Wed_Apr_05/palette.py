@@ -1,4 +1,4 @@
-# Install Python's `colour` module
+from colour import Color
 import sys
 from HTML_Palette import stylesheet, html_palette
 
@@ -37,18 +37,19 @@ hardcoded = [
         ]
 
 # Uncomment to print the hardcoded palette on STDERR
-#print_palette("hardcoded", hardcoded)
+print_palette("hardcoded", hardcoded)
 
 # Uncomment to create an HTML file to visualize the palette
-#stylesheet()  # output the CSS only once
-#html_palette("hardcoded", hardcoded)  # call this function as desired
+stylesheet()  # output the CSS only once
+html_palette("hardcoded", hardcoded)  # call this function as desired
 
 
 # Use a for loop and colour.Color's `.range_to()` method to generate 111 colors
 # spanning from `hardcoded[0]` to `hardcoded[-1]`
-start = hardcoded[0]  # TODO - create a new Color object
+start = Color(hardcoded[0])
 dynamic = []
-
+for c in start.range_to(hardcoded[-1], len(hardcoded)):
+    dynamic.append(c.hex_l)
 
 # This `assert` statement proves that `hardcoded` is identical to `dynamic`.
 # If they differed the program would crash with an `AssertionError`
@@ -57,54 +58,64 @@ print("`hardcoded` is the same as the palette made with a for loop", file=sys.st
 
 
 # Python's list comprehesion feature generates the list of colors compactly
-dynamic = []
+dynamic = [c.hex_l for c in start.range_to('#002277', len(hardcoded))]
 assert hardcoded == dynamic, "dynamic colors made with a list comprehension"
 print("`hardcoded` is the same as the palette made in a list comprehension", file=sys.stderr)
 
 
 # For your reference, this is how one would create the dynamic array using
 # the functional approach using map() and a lambda function
-dynamic = list('map', 'lambda')
+dynamic = list(map(lambda c: c.hex_l, start.range_to('#002277', len(hardcoded))))
 assert hardcoded == dynamic, "dynamic colors made with a lambda"
 print("`hardcoded` is the same as the palette made with a lambda", file=sys.stderr)
-#print_palette("dynamic", dynamic)
-#html_palette("dynamic", dynamic)
+print_palette("dynamic", dynamic)
+html_palette("dynamic", dynamic)
 
 
 # Recreate this palette in 32 steps
-shorter = [None] * 32
-#print_palette("shorter", shorter)
-#html_palette("shorter", shorter)  # Or, output an HTML file to visualize the palette
+shorter = [c.hex_l for c in start.range_to('#002277', 32)]
+print_palette("shorter", shorter)
+html_palette("shorter", shorter)  # Or, output an HTML file to visualize the palette
 
 
 # Stretch this palette out over 256 colors
-longer = [None] * 256
-#print_palette("longer", longer)
-#html_palette("longer", longer)
+longer = [c.hex_l for c in start.range_to('#002277', 256)]
+print_palette("longer", longer)
+html_palette("longer", longer)
 
 
 # Make the palette take 694 steps instead
 # Do you see a problem?
-too_long = [None] * 694
-#print_palette("too_long", too_long)
-#html_palette("too_long", too_long)
+too_long = [c.hex_l for c in start.range_to('#002277', 694)]
+print_palette("too_long", too_long)
+html_palette("too_long", too_long)
 
 
 # Make a new palette spanning 694 colors around the RGB color cube,
 # interspersed with black
 # https://en.wikipedia.org/wiki/RGB_color_spaces#/media/File:RGB_Cube_Show_lowgamma_cutout_b.png
-red = 'red'
-yel = 'yellow'
-grn = 'green'
-cya = 'cyan'
-blu = 'blue'
-mag = 'magenta'
-blk = 'black'
+red = Color('red')
+yel = Color('yellow')
+grn = Color('green')
+cya = Color('cyan')
+blu = Color('blue')
+mag = Color('magenta')
+blk = Color('black')
 
-really_long = [None] * 694
+really_long  = [c.hex_l for c in red.range_to(blk, 64)]
+really_long += [c.hex_l for c in blk.range_to(yel, 64)][1:]
+really_long += [c.hex_l for c in yel.range_to(blk, 64)][1:]
+really_long += [c.hex_l for c in blk.range_to(grn, 64)][1:]
+really_long += [c.hex_l for c in grn.range_to(blk, 64)][1:]
+really_long += [c.hex_l for c in blk.range_to(cya, 64)][1:]
+really_long += [c.hex_l for c in cya.range_to(blk, 64)][1:]
+really_long += [c.hex_l for c in blk.range_to(blu, 64)][1:]
+really_long += [c.hex_l for c in blu.range_to(blk, 64)][1:]
+really_long += [c.hex_l for c in blk.range_to(mag, 64)][1:]
+really_long += [c.hex_l for c in mag.range_to(blk, 64)][1:]
 
-# print_palette("really_long", really_long)
-# html_palette("really_long", really_long)
+print_palette("really_long", really_long)
+html_palette("really_long", really_long)
 
 
 # Vim magic - plz ignore
