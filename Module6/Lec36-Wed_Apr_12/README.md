@@ -12,6 +12,13 @@ CS1440 - Wednesday, April 12 - Lecture 36 - Module 6
 
 ## Friday'S Class Is Cancelled For BSidesSLC
 
+*   Friday, April 14th: Professional Growth Day
+    *   Industry Experts, CTF, workshops, lock picking, soldering circuits, and more.
+    *   Special Event — Student Networking Mixer (11:45 am - 12:50 pm)
+*   Saturday, April 15th: Core Skills Day
+    *   Workshops & Trainings
+    *   Special Event — Women in Tech (WiT) Brunch (10:30 am -12:00 pm)
+
 ![./02-bsides-logo.png]
 
 I hope to see you there!
@@ -29,7 +36,7 @@ The presentation will be by Simponic on the current state of the modern web - fr
 
 ## Take the IDEA Survey
 
-*   So far we're at a 31% response rate!
+*   So far we're at a 34% response rate!
     *   My goal for the class is 80%
 *   It's worth 25 points of extra credit
 *   The survey closes 04/26/2023 at 11:59 PM
