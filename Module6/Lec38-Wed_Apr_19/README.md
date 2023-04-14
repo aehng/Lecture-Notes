@@ -27,7 +27,7 @@ The topic of the last lecture of the semester is **Ask Me Anything**
 
 I'd love to hear what you'd like to learn a little more about, and what topics may pique your interest!  There is a Canvas discussion thread called **Ask Me Anything** (Canvas Sidebar -> Discussions).  There you can post questions you've been dying to ask all semester, and I will do my best to answer them in the last lecture.
 
-You will receive **10 participation points** for posting/responding in this thread.  If you'd rather share your question in the Discord `#AMA` channel instead of on Canvas, just post a link to your question on Discord so I can credit the participation points to you.  You are encouraged to strike up a discussion on each others' questions, and your participation will help craft our final lecture!
+You will receive **10 participation points** for posting in/responding to this thread.  If you'd rather share your question in the Discord `#AMA` channel instead of on Canvas, just post a link to your question on Discord so I can credit the participation points to you.  You are encouraged to strike up a discussion on each others' questions, and your participation will help craft our final lecture!
 
 *The AMA thread will be locked at midnight on Friday, April 21st to give me time to put the lecture together*
 
