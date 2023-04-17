@@ -15,7 +15,7 @@ CS1440 - Monday, April 17 - Lecture 37 - Module 6
 
 ## Take the IDEA Survey
 
-*   So far we're at a XX% response rate!
+*   So far we're at a 49% response rate!
     *   My goal for the class is 80%
 *   It's worth 25 points of extra credit
 *   The survey closes 04/26/2023 at 11:59 PM
@@ -37,7 +37,6 @@ You will receive **10 participation points** for posting in/responding to this t
 *   Work on phase **0. Requirements Analysis** of the new assignment *today*
     *   Wrap it up *tomorrow*
 *	Call on 2 designated questioners
-*	Hold a 3-minute stand-up scrum meeting with your team
 
 
 
@@ -131,6 +130,264 @@ There were 14 days from *Monday, Nov. 14* to *Monday, Nov. 28*
 *Disclaimer: Please don't take it personally if it is your code shown here.  I wanted to show the most common mistakes I came across throughout all of the submissions.  If I happened to pick yours, it was just the luck of the draw*
 
 
+## Repetition, tedium, propensity to errors
+
+Whenever something is repetitive, tedious, and error prone, it is best to get the computer to do it for you.  Automation is your friend. This can be as easy as a `for` loop that re-uses a piece of code more than once instead of duplicating it through copy & paste.
+
+```python
+class FractalInformation:
+    def __init__(self, path = None):
+        self.path = path
+        self.config = {}
+
+        if path is None:
+            self.config = {
+                'type': 'mandelbrot',
+                'centerx': -0.6,
+                'centery': 0.0,
+                'axislength': 2.5,
+                'pixels': 520,
+                'iterations': 111,
+            }
+
+        else:
+            config = open(path)
+            for line in config:
+                line = line.rstrip()
+                if not line.replace(" ", "").startswith('#'):
+                    if line.replace(" ", "").lower().startswith('type'):
+                        sb = line.lower().replace(" ", "").split(":")
+                        self.config['type'] = sb[1].replace('\n', "")
+                    elif line.lower().replace(" " , "").startswith('creal'):
+                        sb = line.lower().replace(" ", "").split(":")
+                        self.config['creal'] = sb[1].replace('\n', "")
+                    elif line.lower().replace(" " , "").startswith('cimag'):
+                        sb = line.lower().replace(" ", "").split(":")
+                        self.config['cimag'] = (sb[1].replace('\n', ""))
+                    elif line.lower().replace(" " , "").startswith('centerx'):
+                        sb = line.lower().replace(" ", "").split(":")
+                        self.config['centerx'] = (sb[1].replace('\n', ""))
+                    elif line.lower().replace(" " , "").startswith('centery'):
+                        sb = line.lower().replace(" ", "").split(":")
+                        self.config['centery'] = (sb[1].replace('\n', ""))
+                    elif line.lower().replace(" " , "").startswith('axislength'):
+                        sb = line.lower().replace(" ", "").split(":")
+                        self.config['axislength'] = (sb[1].replace('\n', ""))
+                    elif line.lower().replace(" " , "").startswith('pixels'):
+                        sb = line.lower().replace(" ", "").split(":")
+                        self.config['pixels'] = (sb[1].replace('\n', ""))
+                    elif line.lower().replace(" " , "").startswith('iterations'):
+                        sb = line.lower().replace(" ", "").split(":")
+                        self.config['iterations'] = (sb[1].replace('\n', ""))
+            errorCheck(self.config)
+
+def errorCheck(fractal):
+    ''' This section simply checks for possible errors the fractal dictionary may run into '''
+    ...
+```
+
+This implementation weighs in at 44 SLoC, of which 8 lines are *completely* identical, and 16 are *essentially* identical.  If you are asked to add a new key/value pair, this long if/else chain must be lengthened.  Whenever you find yourself writing code such as this, remember that **you** will probably be the person who gets to maintain it!  The easiest code to maintain is code which doesn't exist!
+
+
+<details>
+<summary>Erik's implementation</summary>
+
+```python
+class FractalInformation:
+    def __init__(self, path = None):
+        if path is None:
+            # I'd keep this the same as before
+            self.config = { ... }
+
+        else:
+            f = open(path)
+            self.config = {}
+            for line in f:
+                if line.startswith('#'):
+                    continue  # skip comments
+
+                # do this once!
+                line = line.rstrip().replace(" ", "").lower()
+
+                if line == '':
+                    continue  # while we're at it, skip blank lines
+
+                kv = line.split(":", maxsplit=1)
+                if len(kv) != 2 or kv[1] == '':
+                    raise RuntimeError(f"Configuration item '{kv[0]}' does not have a value")
+                else:
+                    self.config[kv[0]] = kv[1]
+
+            f.close()  # Remember to close our files!
+            self.errorCheck()  # promote this into a method
+
+    def errorCheck(self):
+        ''' This section simply checks for possible errors the fractal dictionary may run into '''
+        ...
+```
+
+More functionality is attained in only 20 SLoC:
+
+*   This version skips blank lines
+*   The file is closed
+
+More importantly, this version is much easier to extend and maintain.
+
+</details>
+
+
+## A curious way to iterate through a file
+
+This implementation gives up at the first sight of a blank line, and neglects to handle comments (well, it ignores comments, so it "accidentally" gets this right).  Additionally, this suffers from the same redundancy as the previous example.
+
+
+```python
+fileobj = open(filename)
+emptyString = False
+while not emptyString:
+    line = fileobj.readline().lower()
+    if line.startswith('type'):
+        key, value = line.split(':')
+        fractal_data[key.strip()] = value.strip()
+    if line.startswith('centerx'):
+        key, value = line.split(':')
+        fractal_data[key.strip()] = value.strip()
+    if line.startswith('centery'):
+        key, value = line.split(':')
+        fractal_data[key.strip()] = value.strip()
+    if line.startswith('axislength'):
+        key, value = line.split(':')
+        fractal_data[key.strip()] = value.strip()
+    if line.startswith('pixels'):
+        key, value = line.split(':')
+        fractal_data[key.strip()] = value.strip()
+    if line.startswith('iterations'):
+        key, value = line.split(':')
+        fractal_data[key.strip()] = value.strip()
+    if line.startswith('creal'):
+        key, value = line.split(':')
+        fractal_data[key.strip()] = value.strip()
+    if line.startswith('cimag'):
+        key, value = line.split(':')
+        fractal_data[key.strip()] = value.strip()
+
+    if line == "":  # <---- This one
+        emptyString = True
+fileobj.close()
+```
+
+*   You've already seen how I would handle the long sequence of `if` tests.
+*   I would instead use an ordinary `for line in fileobj` loop; it is more robust **and** does not require keeping track of an extra detail in a boolean variable.
+*   Here's an additional tip about some long sequences of repeated `if` tests: consider whether the guarded statements are *mutually exclusive*.
+    *   Mutually exclusive means that if one condition is true, the others cannot be true
+    *   Mutual exclusion is more clearly expressed using `elif`
+        *   `elif` is also more efficient: as soon as the one true condition is met, no time is wasted testing the remainders which *could not* possibly be true.
+*   Writing a group of guarded statements as this student did *suggests* that any or all of them could be true
+    *   Because the tests use `str.startswith()`, this cannot possibly be the case
+
+
+## This may be a redundant way to get the name of the fractal, but it sure works!
+
+*   The title of this section is the code comment this student wrote above this block of code
+*   The problem being solved here is that of converting a path name into the *stem* of a file name
+    *   For example, `data/8points.frac` -> `8points`
+*   Given what you've learned so far in this class, and working within the constraints of this assignment, this is not a bad way to do it:
+
+```python
+separated_by_slash = filename.split("/")
+separated_by_dot = separated_by_slash[-1].split(".")
+name = separated_by_dot[0]
+fractal_data['name'] = name
+```
+
+Now that you've done this "The Hard Way (TM)", you have earned the privilege to use a library to do it for you.
+
+`pathlib` is part of Python's standard library, and offers an easy way to extract the stem of a filename:
+
+```python
+import pathlib
+...
+fractal_data['name'] = pathlib.Path(filename).stem
+```
+
+
+## "You keep using that word. I do not think it means what you think it means."
+
+This example illustrates the importance of exercising failure cases in unit tests.
+
+I like to call code like this *Vizzini Code*:
+
+```python
+if not self.config['pixels'].isdigit:
+    raise RuntimeError(f"'pixels' needs to be an integer value, not {self.config['pixels']}")
+if not self.config['axislength'].replace(".", "").isdigit:
+    raise RuntimeError("'axislength' needs to be a float value.")
+if not self.config['centerx'].replace(".", "").isdigit:
+    raise RuntimeError("'centerx' needs to be a float value.")
+if not self.config['centery'].replace(".", "").isdigit:
+    raise RuntimeError("'centery' needs to be a float value.")
+if not self.config['iterations'].isdigit:
+    raise RuntimeError("'iterations' needs to be an integer value.")
+```
+
+**Q:** Under what circumstances will each of these exceptions be raised?
+
+<details>
+<summary><strong>The answer may shock you</strong></summary>
+
+**A:** Never!
+
+*   `isdigit` is a method that must be *called*
+*   Referring to a method without calling it returns a *function object* which evaluates to `True` in a boolean context
+*   Thus, all of these `if` statements are *always* true, and no exception can ever be raised, no matter how wrong the contents of `self.config` are
+
+</details>
+
+
+## `print("FractalFactory: Creating default fractal")` found in main.py
+
+The instructions and the video said the program is supposed to print this message out, so I'm going to print it out at all costs!
+
+
+```python
+if len(sys.argv) < 2:
+    fractalInfo = {'type': 'mandelbrot', 'pixels': '640', 'axislength': '4.0', 'iterations': 100, 'min': {'X': -2.0, 'Y': -2.0}, 'max': {'X': 2.0, 'Y': 2.0}, 'pixelsize': 0.00625, 'imagename': 'mandelbrot.png'}
+    print("FractalFactory: Creating default fractal")
+else:
+    fractalInfo = makeFractalDictionary(sys.argv[1])
+```
+
+...even if it is not factually correct.
+
+
+## Better Safe Than Sorry
+
+In `main.py`:
+
+```python
+if len(sys.argv) >= 3:
+    fractalInfo = FractalParser.parseFracFile(sys.argv[1])
+    ...
+elif len(sys.argv) == 2:
+    fractalInfo = FractalParser.parseFracFile(sys.argv[1])
+    ...
+```
+
+In `FractalParser.py`:
+
+```python
+def parseFracFile(fileName):
+    if len(sys.argv) > 1:
+        file = open(fileName)
+```
+
+So let me get this straight:
+
+0.  `parseFracFile()` is only called when `len(sys.argv)` is >= 2 ...
+1.  ... in which case `sys.argv[1]` is passed to `parseFracFile()` ...
+2.  ... but the string in `sys.argv[1]` is only opened *after* checking that `sys.argv` is long enough to have had an element 1
+
+What Lovecraftian horrors did you witness to write this test?
 
 
 
