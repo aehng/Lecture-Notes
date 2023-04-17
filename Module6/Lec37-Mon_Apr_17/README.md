@@ -44,28 +44,25 @@ You will receive **10 participation points** for posting in/responding to this t
 
 ## What is the big idea Brooks wants to get across?
 
-*   ...
-*   ...
+*   What one programmer can do in one month, two programmers can do in two months
+*   Adding more people to teams doesn't increase their velocity.  There is training overhead, more communications, all of this takes time
+*   Testing is the most mis-scheduled part of the project
 
 ## Does a bigger team of programmers make a project come together faster?
 
-*   ...
-*   ...
+*   **NO!!!**
 
 ## Do teams spend enough time testing their code?
 
-*   ...
-*   ...
+*   **NO!!!**
 
 ## How much time does Brooks recommend a project spend in testing?
 
-*   ...
-*   ...
+*   50%
 
 ## What should you do if your schedule starts to slip?
 
-*   ...
-*   ...
+*   Stop, re-evaluate, adjust
 
 
 ## Key take-aways
