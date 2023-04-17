@@ -249,7 +249,7 @@ $ git pull origin master
 	* [Assignment 5.1 Retrospective - Quick Wins](./Module6/Lec37-Mon_Apr_17/README.md#assignment-51-retrospective-quick-wins)
 	* [Assignment #5.1 Code ~~Review~~ Roast](./Module6/Lec37-Mon_Apr_17/README.md#assignment-51-code-review-roast)
 	* [Assignment #6: Recursive Web Crawler](./Module6/Lec37-Mon_Apr_17/README.md#assignment-6-recursive-web-crawler)
-	* [A tour of some useful Python libraries](./Module6/Lec37-Mon_Apr_17/README.md#a-tour-of-some-useful-python-libraries)
+	* [A Tour Of Some Useful Python Libraries](./Module6/Lec37-Mon_Apr_17/README.md#a-tour-of-some-useful-python-libraries)
 	* [Uniform Resource Locators](./Module6/Lec37-Mon_Apr_17/README.md#uniform-resource-locators)
 38. [Wednesday, April 19](./Module6/Lec38-Wed_Apr_19/README.md)
 	* [What is recursion, really?](./Module6/Lec38-Wed_Apr_19/README.md#what-is-recursion-really)

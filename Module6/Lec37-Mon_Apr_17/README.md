@@ -6,7 +6,7 @@ CS1440 - Monday, April 17 - Lecture 37 - Module 6
 * [Assignment 5.1 Retrospective - Quick Wins](#assignment-51-retrospective-quick-wins)
 * [Assignment #5.1 Code ~~Review~~ Roast](#assignment-51-code-review-roast)
 * [Assignment #6: Recursive Web Crawler](#assignment-6-recursive-web-crawler)
-* [A tour of some useful Python libraries](#a-tour-of-some-useful-python-libraries)
+* [A Tour Of Some Useful Python Libraries](#a-tour-of-some-useful-python-libraries)
 * [Uniform Resource Locators](#uniform-resource-locators)
 
 
@@ -117,9 +117,8 @@ Pick up a sticky note, write your name and/or A number, and answer one of the fo
 *   How did refactoring the starter code set you up for a quick win?
 *   In the end, was refactoring worthwhile to you?  Why or why not?
 
+This assignment was open from **Monday, April 3rd** to **Friday, April 14th**
 Put your sticky note along the timeline on the white board.
-
-There were 14 days from *Monday, Nov. 14* to *Monday, Nov. 28*
 
 
 
@@ -130,7 +129,66 @@ There were 14 days from *Monday, Nov. 14* to *Monday, Nov. 28*
 *Disclaimer: Please don't take it personally if it is your code shown here.  I wanted to show the most common mistakes I came across throughout all of the submissions.  If I happened to pick yours, it was just the luck of the draw*
 
 
-## Repetition, tedium, propensity to errors
+## `print("FractalFactory: Creating default fractal")` found in main.py
+
+I imagine this student's thought process was "The instructions and the video said the program is supposed to print this message out, so I'm going to print it out at all costs..."
+
+
+```python
+### main.py
+
+if len(sys.argv) < 2:
+    fractalInfo = {'type': 'mandelbrot', 'pixels': '640', 'axislength': '4.0', 'iterations': 100, 'min': {'X': -2.0, 'Y': -2.0}, 'max': {'X': 2.0, 'Y': 2.0}, 'pixelsize': 0.00625, 'imagename': 'mandelbrot.png'}
+    print("FractalFactory: Creating default fractal")
+else:
+    fractalInfo = makeFractalDictionary(sys.argv[1])
+```
+
+"...even if it is incorrect."
+
+The `True` branch of this `if` statement contains logic that belongs in the fractal factory, not in `main.py`.  Writing this code in this file defeats the whole point of having a factory.
+
+
+## Better Safe Than Sorry
+
+```python
+### main.py
+import sys
+
+if len(sys.argv) >= 3:
+    fractalInfo = FractalParser.parseFracFile(sys.argv[1])
+    fractal = FractalFactory.makeFractal(fractalInfo)
+    ...
+elif len(sys.argv) == 2:
+    fractalInfo = FractalParser.parseFracFile(sys.argv[1])
+    fractal = FractalFactory.makeFractal(fractalInfo)
+    ...
+else:
+    fractal = FractalFactory.makeFractal(defaultFractalInfo)
+    ...
+
+
+
+### FractalParser.py
+import sys
+
+def parseFracFile(fileName):
+    if len(sys.argv) > 1:
+        file = open(fileName)
+```
+
+So let me get this straight:
+
+0.  `FractalParser.parseFracFile()` is only called when `len(sys.argv)` is >= 2 ...
+1.  ... in which case `sys.argv[1]` is passed to `FractalParser.parseFracFile()` ...
+2.  ... but the string in `sys.argv[1]` is only opened *after* checking that `sys.argv` is long enough to have had an element `1`
+
+What Lovecraftian horror did you witness that compelled you to write code like this?
+
+![](./32-horror.jpg)
+
+
+## Repetition, Tedium, Propensity To Errors
 
 Whenever something is repetitive, tedious, and error prone, it is best to get the computer to do it for you.  Automation is your friend. This can be as easy as a `for` loop that re-uses a piece of code more than once instead of duplicating it through copy & paste.
 
@@ -229,14 +287,14 @@ class FractalInformation:
 More functionality is attained in only 20 SLoC:
 
 *   This version skips blank lines
-*   The file is closed
+*   The file is closed at the end
 
 More importantly, this version is much easier to extend and maintain.
 
 </details>
 
 
-## A curious way to iterate through a file
+## A Curious Way To Iterate Through A File
 
 This implementation gives up at the first sight of a blank line, and neglects to handle comments (well, it ignores comments, so it "accidentally" gets this right).  Additionally, this suffers from the same redundancy as the previous example.
 
@@ -286,31 +344,6 @@ fileobj.close()
     *   Because the tests use `str.startswith()`, this cannot possibly be the case
 
 
-## This may be a redundant way to get the name of the fractal, but it sure works!
-
-*   The title of this section is the code comment this student wrote above this block of code
-*   The problem being solved here is that of converting a path name into the *stem* of a file name
-    *   For example, `data/8points.frac` -> `8points`
-*   Given what you've learned so far in this class, and working within the constraints of this assignment, this is not a bad way to do it:
-
-```python
-separated_by_slash = filename.split("/")
-separated_by_dot = separated_by_slash[-1].split(".")
-name = separated_by_dot[0]
-fractal_data['name'] = name
-```
-
-Now that you've done this "The Hard Way (TM)", you have earned the privilege to use a library to do it for you.
-
-`pathlib` is part of Python's standard library, and offers an easy way to extract the stem of a filename:
-
-```python
-import pathlib
-...
-fractal_data['name'] = pathlib.Path(filename).stem
-```
-
-
 ## "You keep using that word. I do not think it means what you think it means."
 
 This example illustrates the importance of exercising failure cases in unit tests.
@@ -344,52 +377,6 @@ if not self.config['iterations'].isdigit:
 </details>
 
 
-## `print("FractalFactory: Creating default fractal")` found in main.py
-
-The instructions and the video said the program is supposed to print this message out, so I'm going to print it out at all costs!
-
-
-```python
-if len(sys.argv) < 2:
-    fractalInfo = {'type': 'mandelbrot', 'pixels': '640', 'axislength': '4.0', 'iterations': 100, 'min': {'X': -2.0, 'Y': -2.0}, 'max': {'X': 2.0, 'Y': 2.0}, 'pixelsize': 0.00625, 'imagename': 'mandelbrot.png'}
-    print("FractalFactory: Creating default fractal")
-else:
-    fractalInfo = makeFractalDictionary(sys.argv[1])
-```
-
-...even if it is not factually correct.
-
-
-## Better Safe Than Sorry
-
-In `main.py`:
-
-```python
-if len(sys.argv) >= 3:
-    fractalInfo = FractalParser.parseFracFile(sys.argv[1])
-    ...
-elif len(sys.argv) == 2:
-    fractalInfo = FractalParser.parseFracFile(sys.argv[1])
-    ...
-```
-
-In `FractalParser.py`:
-
-```python
-def parseFracFile(fileName):
-    if len(sys.argv) > 1:
-        file = open(fileName)
-```
-
-So let me get this straight:
-
-0.  `parseFracFile()` is only called when `len(sys.argv)` is >= 2 ...
-1.  ... in which case `sys.argv[1]` is passed to `parseFracFile()` ...
-2.  ... but the string in `sys.argv[1]` is only opened *after* checking that `sys.argv` is long enough to have had an element 1
-
-What Lovecraftian horrors did you witness to write this test?
-
-
 
 # Assignment #6: Recursive Web Crawler
 
@@ -413,7 +400,7 @@ I have provided some demo programs in the starter code to help you learn how to 
 
 
 
-# A tour of some useful Python libraries
+# A Tour Of Some Useful Python Libraries
 
 This assignment will see you combining 3rd party Python libraries into a
 web-crawling bot.  I've written some demo programs to help you become familiar
@@ -421,7 +408,7 @@ with each library.  It is my hope that you will hack on these programs to
 answer your own questions about how these libraries will fit into your own
 program.
 
-## Installing the libraries
+## Installing The Libraries
 
 If you haven't yet begun, **do this today!**
 
@@ -429,7 +416,7 @@ If you haven't yet begun, **do this today!**
 $ python3 -m pip install requests beautifulsoup4
 ```
 
-## The demo programs
+## The Demo Programs
 
 *   [urlparse - understanding the anatomy of a URL](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn6/-/blob/master/demo/demo_urlparse.py)
 *   [urljoin - making an absolute URL from a relative one](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn6/-/blob/master/demo/demo_urljoin.py)
@@ -437,7 +424,7 @@ $ python3 -m pip install requests beautifulsoup4
 *   [Beautiful Soup - Finding order in chaos](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn6/-/blob/master/demo/demo_beautifulsoup.py)
 
 
-## What resources can help you with questions about these libraries?
+## What Resources Can Help You Answer Questions About These Libraries?
 
 *   ...
 *   ...
