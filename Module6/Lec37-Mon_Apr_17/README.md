@@ -36,7 +36,6 @@ You will receive **10 participation points** for posting in/responding to this t
 
 *   Work on phase **0. Requirements Analysis** of the new assignment *today*
     *   Wrap it up *tomorrow*
-*	Call on 2 designated questioners
 
 
 
@@ -420,11 +419,6 @@ $ python3 -m pip install requests beautifulsoup4
 *   [Requests - GETting data from the web](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn6/-/blob/master/demo/demo_requests.py)
 *   [Beautiful Soup - Finding order in chaos](https://gitlab.cs.usu.edu/erik.falor/cs1440-falor-erik-assn6/-/blob/master/demo/demo_beautifulsoup.py)
 
-
-## What Resources Can Help You Answer Questions About These Libraries?
-
-*   ...
-*   ...
 
 
 
