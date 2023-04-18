@@ -45,7 +45,7 @@ https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 *   `path`
     *   Represents the path to a file or directory on the remote server
     *   Doesn't *need* to correspond to any real files
-    *   Use Unix file separator `/` (a.ka. frontslask), not a backslash `\` as on Windows 
+    *   Use the Unix file separator `/` (a.k.a. frontslash), not a backslash `\` as on Windows
 *   `query`
     *   Must follow a question mark `?` after the hostname and path (if any)
     *   Allows extra information to be sent to the server
@@ -132,3 +132,5 @@ Try visiting different relative URLs in your browser
     *   Where does that URL take you?
     *   Why do you think you went where you did?
 *   How much of the **original** address must you add to the address bar before you are taken to your intended destination?
+
+*Updated Tue Apr 18 16:48:04 MDT 2023*
