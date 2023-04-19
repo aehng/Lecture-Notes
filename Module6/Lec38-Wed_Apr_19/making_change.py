@@ -21,7 +21,11 @@ def iChange(amount, coins):
 # What does the recursive solution look like?
 # Use Anton's Big Recursive Idea to evolve it
 def rChange(amount, coins):
-    pass
+    if amount == 0:
+        return []
+    elif amount < coins[0]:
+        return rChange(amount, coins[1:])
+    return [coins[0]] + rChange(amount - coins[0], coins)
 
 
 # Make change for 87 cents by default,

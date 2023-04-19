@@ -7,9 +7,36 @@ def iterativeFactorial(n):
     return r
 
 
+def middleman0(n):
+    print(f"I'm a lazy middleman, and n = {n}")
+    return iterativeFactorial(n)
+
+
+def middleman1(n):
+    print(f"I'm a lazy middleman, and n = {n}")
+    if n < 2:
+        return 1
+    return iterativeFactorial(n)
+
+
+def middleman2(n):
+    print(f"I'm a lazy middleman, and n = {n}")
+    if n < 2:
+        return 1
+    return n * iterativeFactorial(n-1)
+
+
+def middleman3(n):
+    print(f"I'm a lazy middleman, and n = {n}")
+    if n < 2:
+        return 1
+    return n * middleman3(n-1)
+
+
 # ...Can you derive a simple, recursive function?
 def recursiveFactorial(n):
-    if n <= 2:
-        return n
+    print(f"At this call n = {n}")
+    if n < 2:
+        return 1
     else:
         return n * recursiveFactorial(n - 1)
