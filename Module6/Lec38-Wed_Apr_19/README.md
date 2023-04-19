@@ -15,7 +15,7 @@ CS1440 - Wednesday, April 19 - Lecture 38 - Module 6
 
 ## Take the IDEA Survey
 
-*   So far we're at a XX% response rate!
+*   So far we're at a 61% response rate!
     *   My goal for the class is 80%
 *   It's worth 25 points of extra credit
 *   The survey closes 04/26/2023 at 11:59 PM
