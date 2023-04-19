@@ -255,7 +255,6 @@ $ git pull origin master
 	* [What is recursion, really?](./Module6/Lec38-Wed_Apr_19/README.md#what-is-recursion-really)
 	* [Tips for thinking about problems recursively](./Module6/Lec38-Wed_Apr_19/README.md#tips-for-thinking-about-problems-recursively)
 	* [Learn the one recursion trick they don't want you to know](./Module6/Lec38-Wed_Apr_19/README.md#learn-the-one-recursion-trick-they-dont-want-you-to-know)
-	* [Why am I making you use recursion on Assn6](./Module6/Lec38-Wed_Apr_19/README.md#why-am-i-making-you-use-recursion-on-assn6)
 	* [Practical considerations when using recursion](./Module6/Lec38-Wed_Apr_19/README.md#practical-considerations-when-using-recursion)
 	* [Conquering Stack Overflow](./Module6/Lec38-Wed_Apr_19/README.md#conquering-stack-overflow)
 39. [Friday, April 21](./Module6/Lec39-Fri_Apr_21/README.md)

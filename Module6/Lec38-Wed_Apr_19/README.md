@@ -5,7 +5,6 @@ CS1440 - Wednesday, April 19 - Lecture 38 - Module 6
 * [What is recursion, really?](#what-is-recursion-really)
 * [Tips for thinking about problems recursively](#tips-for-thinking-about-problems-recursively)
 * [Learn the one recursion trick they don't want you to know](#learn-the-one-recursion-trick-they-dont-want-you-to-know)
-* [Why am I making you use recursion on Assn6](#why-am-i-making-you-use-recursion-on-assn6)
 * [Practical considerations when using recursion](#practical-considerations-when-using-recursion)
 * [Conquering Stack Overflow](#conquering-stack-overflow)
 
@@ -71,55 +70,6 @@ Use the BRI to write a recursive function that solves the problem of [making cha
 1.  Make the middleman just a little less lazy by handling the base cases
 2.  Force the middleman to do at just **one** step before pawning the rest of the work off
 3.  And... BAM!  Now we got you right where we want you!  Replace the call to the iterative function with a recursive call to the lazy middleman function.  You're not so lazy now, huh?
-
-
-
-# Why am I making you use recursion on Assn6?
-
-**Why am I making you approach this assignment this way?**
-
-Take a moment to respond to this question on your mud card with your thoughts and impressions.
-
-
-<details>
-
-<summary>A few reasons why</summary>
-
-*   As a problem-solving technique, recursion best embodies **divide the problem**.
-*   Recursion is more "dynamic"; with a `for` loop I have to know ahead of time
-    how far it needs to go/how many iterations it must take.  A `while`
-    loop insists that I clearly state at the top all of the exit conditions
-    (though some coders prefer to sprinkle `return` or `break` statements
-    throughout a loop where it makes sense.  Recursion can just "go" no matter
-    how deep it needs to.
-*   With recursion, each possible path in the web document can have its own
-    "bottom", and each path knows how deep it is.
-
-I want to teach you recursion to give you another problem-solving tool.  For
-all of its mystery and reputation of complexity, recursion can lend itself to
-very short and elegant solutions to problems which have one of these
-properties:
-
-*   The data structure underlying the problem is itself recursive
-*   You can identify a trivial "base case" *and* an inductive step which
-    changes a complex case into something that's closer to being the base case.
-
-
-Problems with these properties include:
-
-*   Search algorithms (i.e. chess, checkers, go, tic-tac-toe, etc.)
-*   Parsing programming languages (your compiler or interpreter is recursive)
-*   Traversing a recursive data structure (like your file system or the internet)
-
-However, recursion isn't just for problems that naturally have recursive
-characteristics.  *Any* iterative algorithm can be converted into an equivalent
-recursive algorithm, even if the above properties don't apply.
-
-In other words, a problem **does not** need to be essentially recursive to have a recursive solution applied to it.  Nor is it the case that a recursive problem **must** be solved with recursion.  But a recursive solution is likely the **most simple & elegant** way to solve a recursive problem.
-
-Iteration isn't worse than recursion, nor is recursion worse than iteration.  They're just different tools that you should learn to use appropriately.
-
-</details>
 
 
 
