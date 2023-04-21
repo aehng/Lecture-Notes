@@ -102,6 +102,17 @@ specified resource (webpage, image, stylesheet, etc.).
     *   This applies to you when you move your own website
 
 
+### Examples of Absolute URLs:
+
+```
+http://example.com/
+https://www-cs-faculty.stanford.edu/~knuth/
+https://en.wikipedia.org/wiki/Donald_Knuth
+https://www.w3.org/People/Berners-Lee/
+https://awards.acm.org/about/2016-turing
+```
+
+
 #### Relative URL
 A partial address which locates a resource within an assumed context
 
@@ -114,6 +125,18 @@ A partial address which locates a resource within an assumed context
     *   Less work when moving website to another location
 *   Cons:
     *   Cannot be used to refer to an outside website
+
+
+### Examples of Absolute URLs:
+
+```
+/
+~knuth/news.html
+/wiki/TeX
+../../Security
+/binaries/content/assets/press-releases/2017/april/turing-award-2016.pdf
+```
+
 
 
 ### Practice
@@ -133,4 +156,4 @@ Try visiting different relative URLs in your browser
     *   Why do you think you went where you did?
 *   How much of the **original** address must you add to the address bar before you are taken to your intended destination?
 
-*Updated Tue Apr 18 16:48:04 MDT 2023*
+*Updated Fri Apr 21 15:53:07 MDT 2023*
