@@ -222,11 +222,13 @@ too little energy into.
 
 There are plenty of these out there; here are a few I've enjoyed:
 
-*   https://adventofcode.com/ **going on right now!**
-*   https://exercism.io/
-*   https://programmingpraxis.com/
+*   https://code.golf/
+*   https://exercism.org/
 *   https://projecteuler.net/
 *   https://www.hackerrank.com/
+*   https://adventofcode.com/ **New challenges every December**
+*   https://programmingpraxis.com/
+
 
 Combine these challenges with a new language for double the benefit.  In fact,
 when you pick a new language it's helpful to have some project in mind to focus
