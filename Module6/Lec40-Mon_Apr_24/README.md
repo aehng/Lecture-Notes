@@ -212,6 +212,10 @@ CS 5300 Compiler Construction was good in *so* many ways
         2.  Evaluate the module's `__file__` dunder to see the name of the file the library resides in `re.__file__`
         3.  Find that file with your File Explorer
     *   Watch out for modules that are loaded from binary .DLL or .SO files
+*   Python Subreddits:
+    *   [r/learnpython](https://www.reddit.com/r/learnpython/)
+    *   [r/Python](https://www.reddit.com/r/Python/)
+    *   [r/madeinpython](https://www.reddit.com/r/madeinpython/)
 
 
 ## The intro courses for CS and ECE are nearly identical
@@ -255,6 +259,8 @@ See [last Friday's](../Lec39-Fri_Apr_21/README.md#take-part-in-coding-competitio
 ## Do you have any experience working on audio applications like Virtual Studio Technology or Digital Audio Workstations?
 
 No, I don't.
+
+Jaxton suggested that you check out the [Sonic Pi](https://sonic-pi.net) project.  It's an interactive-coding environment for making music.
 
 > What would you recommend doing to start programming one?
 
