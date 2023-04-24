@@ -100,7 +100,7 @@ It just takes practice.  You should try it sometime!  The people in your life wi
 *   I've not had much success doing this myself, but I've seen demos where the user is able to coax the AI into correcting mistakes it makes in code
     *   I'm not convinced that coding this way is faster than just doing it yourself (at this point in time)
 *   I use AI as a *prototyping* tool to quickly build a quasi-working system
-    *   Since I didn't work for the code, I feel no regret scrapping it and re-writing a better version
+    *   Since I didn't put in the work to get the code, I have no compunctions about throwing it away
 
 > Will we become dependant on AI?
 
@@ -146,14 +146,14 @@ It just takes practice.  You should try it sometime!  The people in your life wi
 ## How do I know which field of CS would be best for me?
 
 *   What sorts of things do you like?
-    *   If you like breaking/fixing things, go into cybersecurity
-    *   If you like making things happen in the real world, go into robotics or embedded programming
-    *   If you need validation from others, go into web development
-    *   If you don't mind being an unsung hero, look into systems programming, data science
-    *   If you want to be on the cutting edge, AI and machine learning is looking promising right now
-    *   If you like molding young minds, look into CS education
-*   Take some classes in different areas
-    *   Graduating seniors often tell me that they took an undesired class because of a scheduling conflict, and it ended up being their favorite class of all
+    *   If you like **breaking/fixing** things, go into cybersecurity
+    *   If you like making things happen in the **real world**, go into robotics or embedded programming
+    *   If you need **validation** from others, go into web development
+    *   If you don't mind being an **unsung hero**, look into systems programming, data science
+    *   If you want to be on the **cutting edge**, AI and machine learning is looking promising right now
+    *   If you want to **mold young minds**, look into CS education
+*   While you are here, take classes in different areas, even if you don't think they look interesting
+    *   Graduating seniors often tell me that they took an undesired class because of a scheduling conflict, and it ended up being their favorite class
 
 
 ## What classes would you recommend as most useful/interesting? 
@@ -166,7 +166,7 @@ It just takes practice.  You should try it sometime!  The people in your life wi
 
 ## What was one of the most helpful classes that helped prepare you for working in the industry?
 
-CS 5300 was good in so many ways
+CS 5300 Compiler Construction was good in *so* many ways
 
 *   I *really* learned what my programming languages were trying to accomplish
     *   ...and what their error messages were trying to tell me!
@@ -200,7 +200,7 @@ CS 5300 was good in so many ways
     *   Software Engineering Radio
 
 
-## You mentioned in class that it is very important to be able to read a lot of different types of code.
+## Where can I find good Python code to read?
 > **Related:** What are some recommendations of code repositories or public programs that would be beneficial for students to look at and read through?
 
 *   The Hitchhiker's Guide to Python offers [this list](https://docs.python-guide.org/writing/reading/)
@@ -233,12 +233,17 @@ See [last Friday's](../Lec39-Fri_Apr_21/README.md#take-part-in-coding-competitio
         *   Autodesk
         *   Altium
     *   If you know how to code, you can automate the *tedious*, *repetitive* and *error prone* parts of your job
+*   Everybody needs to use Spreadsheets
+    *   Knowing how to code in a **real** programming language makes writing sophisticated spreadsheets very easy
+*   Lots of engineers need to put their work on the web
+    *   Taking even one web development class gives you a head start in this important area
+
 
 # Coding
 
 ## Why do you put writing the unit tests into the design phase rather than the implementation phase?
 
-*   Test Driven Development
+*   To make you follow **Test Driven Development**
     *   As you *design* your software, you should consider:
         *   How might it fail, and what would that look like?
         *   What would success look like?
@@ -262,20 +267,20 @@ Jump into the FSLC Discord - one of my former students (@KernelPanic) has told m
     *   Consider the requirements for the documentation
     *   Think about what problems the docs should solve   
     *   Define what "good" documentation will look like (so you'll know when you're done)
-*   As for apps... I personally don't like word processors, and prefer to write in something like Markdown
+*   As for apps... I personally don't like word processors, and prefer to write in something like Markdown or $`\LaTeX`$
 
 > How do you ensure that the documentation remains up-to-date and relevant as the software evolves over time, and what strategies do you use to manage version control for documentation?
 
-*   Plan some time each sprint to update docs that will be affected by the changes to the application you plan on making
+Plan to take time every sprint to update docs that are effected by code changes.  This task is very commonly overlooked.
 
 
 # Opinions on Programming and Technology
 
 ## What are the best practices for maintaining internet privacy / anonymity?
 
-There is one technique that is guaranteed to protect a system from attack: pull the plug.  A computer that is not running can't be hacked into.
+There is one technique that is guaranteed to protect a system from attack: pull the plug.  A computer that is turned off cannot be hacked.
 
-Seriously, tho...
+Seriously, though...
 
 *   Practice good [password hygiene](https://pages.nist.gov/800-63-3/)
 *   Protect your primary email account with your strongest password, and use 2FA
@@ -328,8 +333,13 @@ They are a pale imitation of the real thing
 
 ## In your opinion, which computer programming language is the most useful?
 
-*   As a Linux user, C has the most useful language to know
+*   As a Linux user, **C** has been the most useful language to know
     *   My OS is written primarily in C, so understanding this language helps me to understand documentation, blogs and articles about Linux
+    *   Many of the tools on my computer are C programs:
+        *   The core utilities like `ls`, `cat`, `less`, `head`, `tail`, etc.
+        *   My shell [Zsh](https://zsh.sourceforge.io/)
+        *   My favorite text editor [Vim](https://www.vim.org)
+        *   My window manager [DWM](http://dwm.suckless.org/)
     *   C is like Latin in that it is a mother tongue to many other programming languages; understanding C makes understanding Perl, Python, C++ so much easier
 
 
@@ -348,7 +358,7 @@ I think Scheme is a good 3rd or 4th language to learn, because it is:
 *   Many of the features in your current programming language that were likely inspired by Scheme (or LISP, of which Scheme is a dialect).
     *   I gave an introductory talk on Scheme to the FSLC in the spring of 2021.  If you are interested in learning more, check it out on [Odysee](https://odysee.com/@fadein:0/SchemeTalk2021:f)
 
-After Scheme, I like C and Perl.
+After Scheme, C and Perl are my next favorites.
 
 
 # My Professional Life
@@ -356,7 +366,7 @@ After Scheme, I like C and Perl.
 ## What kinds of programming languages did you use the most when working in the industry?
 
 *   Perl
-*   C
+*   C/C++
 *   Java/C#
 *   XSLT/XML
 *   Shell
@@ -394,7 +404,7 @@ After Scheme, I like C and Perl.
     *   That puts it in the same ballpark as PyCharm and LibreOffice
 *   For comparison:
 
-|: Program      :|: SLoC :|: Files :|: Languages                          :|: Notes                                                    :|
+| Program        | :SLoC: | :Files: | Languages                            |  Notes                                                     |
 |----------------|--------|---------|--------------------------------------|-------------------------------------------------------------
 | My Assn5.0 sln | 808    | 34      | Python                               | I went a bit overboard on mine; yours likely won't be so big
 | Nano           | 17k    | 18      | 100% C                               | v5.6  
@@ -415,8 +425,9 @@ After Scheme, I like C and Perl.
     *   I spent around 6 weeks on it; there wasn't very much code nor testing to do
     *   Most of that time was familiarizing myself with the programming environment (Windows CE OS, micro version of .NET, learning how to get data from the barcode reader, etc.)
 *   I worked on a handful of embedded systems while at APG
-    *   They were maybe a few thousand lines of C code
-    *   The PCBs (printed circuit boards) were all smaller than a 3x5 card
+    *   These were a few thousand lines of C code apiece
+    *   The PCBs (printed circuit boards) were all smaller than a 3x5 index card
+
 
 ## What made you decide to get into teaching instead of staying in the industry?
 
