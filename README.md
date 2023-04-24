@@ -262,6 +262,8 @@ $ git pull origin master
 	* [Wisdom vs. Knowledge](./Module6/Lec39-Fri_Apr_21/README.md#wisdom-vs-knowledge)
 	* [Suggested activities to continue your growth as a programmer](./Module6/Lec39-Fri_Apr_21/README.md#suggested-activities-to-continue-your-growth-as-a-programmer)
 	* [Things Which Have Made Me a Better Programmer](./Module6/Lec39-Fri_Apr_21/README.md#things-which-have-made-me-a-better-programmer)
+40. [Monday, April 24](./Module6/Lec40-Mon_Apr_24/README.md)
+	* [Ask Me Anything](./Module6/Lec40-Mon_Apr_24/README.md#ask-me-anything)
 
 
 
