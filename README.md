@@ -233,7 +233,9 @@ $ git pull origin master
 </details>
 
 
-### Module 6
+<details>
+<summary><h3>Module 6</h3></summary>
+
 35. [Monday, April 10](./Module6/Lec35-Mon_Apr_10/README.md)
 	* [Exception Handling](./Module6/Lec35-Mon_Apr_10/README.md#exception-handling)
 	* [Two Approaches to Error Handling](./Module6/Lec35-Mon_Apr_10/README.md#two-approaches-to-error-handling)
@@ -264,6 +266,8 @@ $ git pull origin master
 	* [Things Which Have Made Me a Better Programmer](./Module6/Lec39-Fri_Apr_21/README.md#things-which-have-made-me-a-better-programmer)
 40. [Monday, April 24](./Module6/Lec40-Mon_Apr_24/README.md)
 	* [Ask Me Anything](./Module6/Lec40-Mon_Apr_24/README.md#ask-me-anything)
+
+</details>
 
 
 
