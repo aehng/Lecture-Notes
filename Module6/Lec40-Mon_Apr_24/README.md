@@ -36,11 +36,12 @@ CS1440 - Monday, April 24 - Lecture 40 - Module 6
 *Like an AMA on Reddit, but totally different*
 
 
-* [Career Advice](#career-advice)
-* [Education Advice](#education-advice)
-* [Coding](#coding)
-* [Opinions on Programming and Technology](#opinions-on-programming-and-technology)
-* [About Me](#about-me)
+*   [Career Advice](#career-advice)
+*   [Education Advice](#education-advice)
+*   [Coding](#coding)
+*   [Opinions on Programming and Technology](#opinions-on-programming-and-technology)
+*   [My Professional Life](#my-professional-life)
+*   [About Me](#about-me)
 
 
 
